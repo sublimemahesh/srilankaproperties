@@ -1,0 +1,136 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 16, 2020, 10:19:32 AM
+    Author     : user
+*/
+@media (min-width: 992px) and (max-width: 1199px){
+    .circle-bottom{
+        margin-bottom: 51px;
+    }
+}
+
+@media (max-width: 991px){
+    .partners{
+        margin-left: -16px;
+        margin-right: -16px;
+    }
+    .submit-left{
+        margin-left: 1px;
+    }
+    .a-img{
+        margin-left: 145px;
+    }
+    .a-img-p{
+        margin-left: 0px;
+    }
+}
+
+@media (max-width: 767px){
+    .submit{
+        margin-left: 1px;
+    }
+    .f-mrg{
+        margin-left: 22px;
+    }
+    .padd{
+        margin-left: 0!important;
+    }
+    
+}
+
+@media (max-width: 480px){
+    .abt-txt{
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .f-design{
+        padding-left: 0;
+    }
+    .agent-h{
+        margin-left: -4px;
+    }
+    .c-form-submit{
+        margin-left: 1px;
+    }
+    .location-box{
+        margin-right: -105px;
+    }
+    .social-f{
+        margin-left: 20px;
+    }
+    .view-city{
+        font-size: 23px;
+    }
+    .view-d-a{
+        margin-top: 1px;
+    }
+    .location-box-s{
+        margin-right: 88px!important;
+        margin-right: 0!important;
+        padding-right: 0!important;
+    }
+    .f{
+        margin-left: 0!important;
+    }
+    .add{
+        height: 123px;
+    }
+    .soci{
+        margin-left: 0px;
+    }
+    .refresh-res{
+        margin-left: 46px;
+    }
+    .our{
+        margin-top: 65px;
+    }
+    .view-font-span{
+        font-size: 10px;
+    }
+    .view-font{
+        font-size: 10px;
+    }
+    .mrg{
+        margin-left: 0px;
+    }
+    .our-location{
+        margin-top: 55px;
+    }
+}
+
+@media (max-width: 320px){
+
+}
+
+@media (min-width: 768px) and (max-width: 992px){
+    .circle-title{
+        font-size: 19px;
+    }
+
+    .box-mrg{
+        margin-top: 0px;
+    }
+
+    .res-padd{
+        padding-left: 104px;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 1024px){
+    /*    .circle-title{
+            font-size: 19px;
+        }*/
+
+    .circle-bottom{
+        margin-bottom: 51px;
+    }
+}
+
+@media only screen and (max-width: 576px){
+
+}
