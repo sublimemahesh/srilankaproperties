@@ -14,18 +14,22 @@
 class Property {
 
     public $id;
+    public $member;
     public $title;
+    public $category;
+    public $sub_category;
+    public $district;
+    public $city;
     public $image_name;
     public $short_description;
     public $description;
     public $price;
-    public $category;
-    public $sub_category;
     public $housetype;
     public $contact;
     public $map;
     public $features;
     public $queue;
+    public $status;
 
     public function __construct($id) {
         if ($id) {
@@ -37,18 +41,22 @@ class Property {
             $result = mysql_fetch_array($db->readQuery($query));
 
             $this->id = $result['id'];
+            $this->member = $result['member'];
             $this->title = $result['title'];
+            $this->category = $result['category'];
+            $this->sub_category = $result['sub_category'];
+            $this->district = $result['district'];
+            $this->city = $result['city'];
             $this->image_name = $result['image_name'];
             $this->short_description = $result['short_description'];
             $this->description = $result['description'];
             $this->price = $result['price'];
-            $this->category = $result['category'];
-            $this->sub_category = $result['sub_category'];
             $this->housetype = $result['housetype'];
             $this->contact = $result['contact'];
             $this->map = $result['map'];
             $this->features = $result['features'];
             $this->queue = $result['queue'];
+            $this->status = $result['status'];
 
             return $this;
         }
@@ -57,32 +65,38 @@ class Property {
     public function create() {
 
         $query = "INSERT INTO `property` ("
+                . "`member`,"
                 . "`title`,"
+                . "`category`,"
+                . "`sub_category`,"
+                . "`district`,"
+                . "`city`,"
                 . "`image_name`,"
                 . "`short_description`,"
                 . "`description`,"
                 . "`price`,"
-                . "`category`,"
-                . "`sub_category`,"
                 . "`housetype`,"
                 . "`contact`,"
                 . "`map`," 
                 . "`features`,"
                 . "`queue`"
                 . ") VALUES  ('"
+                . $this->member . "','"
                 . $this->title . "','"
+                . $this->category . "', '"
+                . $this->sub_category . "', '"
+                . $this->district . "', '"
+                . $this->city . "', '"
                 . $this->image_name . "', '"
                 . $this->short_description . "', '"
                 . $this->description . "', '"
                 . $this->price . "', '"
-                . $this->category . "', '"
-                . $this->sub_category . "', '"
                 . $this->housetype . "', '"
                 . $this->contact . "', '"
                 . $this->map . "', '"
                 . $this->features . "', '"
                 . $this->queue . "')";
-
+// dd($query);
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -175,16 +189,17 @@ class Property {
 
         $query = "UPDATE  `property` SET "
                 . "`title` ='" . $this->title . "', "
+                . "`category` ='" . $this->category . "', "
+                . "`sub_category` ='" . $this->sub_category . "', "
+                . "`district` ='" . $this->district . "', "
+                . "`city` ='" . $this->city . "', "
                 . "`image_name` ='" . $this->image_name . "', "
                 . "`short_description` ='" . $this->short_description . "', "
                 . "`description` ='" . $this->description . "', "
                 . "`price` ='" . $this->price . "', "
-                . "`category` ='" . $this->category . "', "
-                . "`sub_category` ='" . $this->sub_category . "', "
                 . "`housetype` ='" . $this->housetype . "', "
                 . "`contact` ='" . $this->contact . "', "
                 . "`map` ='" . $this->map . "', "
-//                . "`plan_image` ='" . $this->plan_image . "', "
                 . "`features` ='" . $this->features . "', "
                 . "`queue` ='" . $this->queue . "' "
                 . "WHERE `id` = '" . $this->id . "'";
@@ -235,6 +250,20 @@ class Property {
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
+    }
+
+    public function getPropertiseByMemberAndStatus($member, $status) {
+
+        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = $status ORDER BY `id` DESC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
     }
 
 }

@@ -109,4 +109,18 @@ class SubCategory {
         return $result;
     }
 
+    public function getSubCategoriesByCategory($category) {
+
+        $query = "SELECT * FROM `sub_category` WHERE `category` = $category ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
 }
