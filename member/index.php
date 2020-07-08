@@ -1,20 +1,14 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-include './auth.php';
+//include './auth.php';
 
-$MEMBER = new Member($_SESSION["m_id"]);
+//$MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
     <head>
         <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-        <title>Cash on Delivery - Online Shopping Store</title>
-
-        <!-- Favicon Icon Css -->
-        <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
+         <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
         <!-- Animation CSS -->
         <link rel="stylesheet" href="../css/animate.css" type="text/css">  
         <!-- Font Css -->
@@ -22,49 +16,52 @@ $MEMBER = new Member($_SESSION["m_id"]);
         <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
         <!-- Bootstrap Css --> 
-        <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css"/>
 
         <!-- main css --> 
-        <link href="../css/style.css" type="text/css" rel="stylesheet">
-        <link href="../css/responsive.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="css/responsive.css" type="text/css" rel="stylesheet">
         <link href="css/custom.css" type="text/css" rel="stylesheet">
+        <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
 
     </head>
     <body class="theme-2">
         <!-- LOADER -->
-        <div id="preloader">
+<!--        <div id="preloader">
             <div class="loading_wrap">
                 <img src="../image/logo.jpg" alt="logo">
             </div>
-        </div>
+        </div>-->
         <!-- LOADER -->
 
         <?php include './header.php'; ?>
         <div class="container">
-            <div class="header-bar">
-                <i class="fa fa-dashboard"></i> : Dashboard 
+            <div class="header-bar font-color">
+                <i class="fa fa-dashboard"></i>  Dashboard 
             </div>
 
             <div class="row">
                 <div class="col-md-3">
-                    <a class="sub-box text-center" href="pending-orders.php">
-                        <b>Pending Orders</b> 
+                    <a class="sub-box text-center text-c" href="manage-properties.php?status=0">
+                        <b>Pending Properties</b> 
                         <hr/>
                         <i class="fa fa-spinner"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getPendingOrdersByDealerAreas($MEMBER->id)); ?></b> 
+
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a class="sub-box text-center" href="confirmed-orders.php">
-                        <b>Confirmed Orders</b> 
+                    <a class="sub-box text-center text-c" href="cnage-properties.php?status=1">
+                        <b>Approval Properties</b> 
                         <hr/>
                         <i class="fa fa-check-circle-o text-danger"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getDealerConfirmedOrders($MEMBER->id)); ?></b> 
+
                     </a>
                 </div> 
-                <div class="col-md-3">
+<!--                <div class="col-md-3">
                     <a class="sub-box text-center" href="completed-orders.php">
                         <b>Competed Orders</b> 
                         <hr/>
@@ -72,8 +69,8 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         <hr/>
                         <b><?php echo count(Order::getDealerCompletedOrders($MEMBER->id)); ?></b> 
                     </a>
-                </div>
-                <div class="col-md-3">
+                </div>-->
+<!--                <div class="col-md-3">
                     <div class="sub-box text-center">
                         <b>Due Payment</b> 
                         <hr/>
@@ -82,23 +79,26 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         <b>00.00LKR</b> 
                     </div>
                 </div>
-            </div>
+            </div>-->
 
         </div>
         <?php include './footer.php'; ?> 
 
         <!-- Jquery js -->
-        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
 
-        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
 
         <!-- Custom css -->
-        <script src="../js/custom.js" type="text/javascript"></script>   
+        <script src="js/custom.js" type="text/javascript"></script> 
+        <script src="js/city.js" type="text/javascript"></script> 
+        <script src="js/dealer_area.js" type="text/javascript"></script>   
         <?php
-        $MEMBER = new Dealer($_SESSION["d_id"]);
-
-        $result = $MEMBER->checkEmptyData();
-        if ($result != 0) {
+//        $MEMBER = new Dealer($_SESSION["d_id"]);
+//
+//        $result = $MEMBER->checkEmptyData();
+//        if ($result != 0) {
             ?>
             <script type="text/javascript">
                 $(document).ready(function () {
@@ -106,7 +106,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                 });
             </script>
             <?php
-        }
+//        }
 
         $agreement = $MEMBER->checkAgreement();
     

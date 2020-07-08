@@ -575,6 +575,9 @@ cite {
 .text-center {
   text-align: center;
 }
+.text-c{
+    color: #666678
+}
 
 .page-header {
   padding-bottom: 9px;
@@ -1711,7 +1714,7 @@ th {
 
 .table-striped > tbody > tr:nth-child(odd) > td,
 .table-striped > tbody > tr:nth-child(odd) > th {
-  background-color: #f9f9f9;
+  background-color: rgba(0,0,0,.05);
 }
 
 .table-hover > tbody > tr:hover > td,
@@ -2487,8 +2490,8 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
+  background-color: #00c6fa;
+  border-color: #00c6fa;
 }
 
 .btn-success:hover,
@@ -2497,8 +2500,8 @@ fieldset[disabled] .btn-danger.active {
 .btn-success.active,
 .open .dropdown-toggle.btn-success {
   color: #ffffff;
-  background-color: #5cb85c;
-  border-color: #398439;
+  background-color: #5bc0de;
+  border-color: #269abc;
 }
 
 .btn-success:active,

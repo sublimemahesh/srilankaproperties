@@ -8,18 +8,18 @@
 }
 
 .sub-box{ 
-    background: #f8e1ff;
+    background: #e6fbfc;
     padding: 10px 20px 10px 20px;
     font-size: 19px;
     line-height: 20px;
-    border: 1px #b500e8 solid;
+    border: 1px #00c6fa solid;
     width: 100%;
 }
 .sub-box i{
     background: white;
     padding: 14px;
     border-radius: 50px;
-    border: 1px solid #eca9ff;
+    border: 1px solid #00c6fa;
 }
 
 
