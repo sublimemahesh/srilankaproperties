@@ -2,7 +2,7 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include './auth.php';
 
-//$DEALER = new Dealer($_SESSION["d_id"]);
+$MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
@@ -52,7 +52,7 @@ include './auth.php';
                         <hr/>
                         <i class="fa fa-spinner"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getPendingOrdersByDealerAreas($DEALER->id)); ?></b> 
+                        <b><?php echo count(Order::getPendingOrdersByDealerAreas($MEMBER->id)); ?></b> 
                     </a>
                 </div>
                 <div class="col-md-3">
@@ -61,7 +61,7 @@ include './auth.php';
                         <hr/>
                         <i class="fa fa-check-circle-o text-danger"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getDealerConfirmedOrders($DEALER->id)); ?></b> 
+                        <b><?php echo count(Order::getDealerConfirmedOrders($MEMBER->id)); ?></b> 
                     </a>
                 </div> 
                 <div class="col-md-3">
@@ -70,7 +70,7 @@ include './auth.php';
                         <hr/>
                         <i class="fa fa-money text-danger"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getDealerCompletedOrders($DEALER->id)); ?></b> 
+                        <b><?php echo count(Order::getDealerCompletedOrders($MEMBER->id)); ?></b> 
                     </a>
                 </div>
                 <div class="col-md-3">
@@ -95,9 +95,9 @@ include './auth.php';
         <!-- Custom css -->
         <script src="../js/custom.js" type="text/javascript"></script>   
         <?php
-        $DEALER = new Dealer($_SESSION["d_id"]);
+        $MEMBER = new Dealer($_SESSION["d_id"]);
 
-        $result = $DEALER->checkEmptyData();
+        $result = $MEMBER->checkEmptyData();
         if ($result != 0) {
             ?>
             <script type="text/javascript">
@@ -108,7 +108,7 @@ include './auth.php';
             <?php
         }
 
-        $agreement = $DEALER->checkAgreement();
+        $agreement = $MEMBER->checkAgreement();
     
         if ($agreement == 0) {
             ?>
