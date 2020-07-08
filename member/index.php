@@ -1,8 +1,8 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
-//include './auth.php';
+include './auth.php';
 
-//$MEMBER = new Member($_SESSION["m_id"]);
+$MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
@@ -67,7 +67,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                         <hr/>
                         <i class="fa fa-money text-danger"></i> 
                         <hr/>
-                        <b><?php echo count(Order::getDealerCompletedOrders($MEMBER->id)); ?></b> 
+                        <b></b> 
                     </a>
                 </div>-->
 <!--                <div class="col-md-3">
@@ -94,31 +94,6 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
         <script src="js/dealer_area.js" type="text/javascript"></script>   
-        <?php
-//        $MEMBER = new Dealer($_SESSION["d_id"]);
-//
-//        $result = $MEMBER->checkEmptyData();
-//        if ($result != 0) {
-            ?>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    window.location.replace("edit-profile.php?status=complate");
-                });
-            </script>
-            <?php
-//        }
-
-        $agreement = $MEMBER->checkAgreement();
-    
-        if ($agreement == 0) {
-            ?>
-            <script type="text/javascript">
-                $(document).ready(function () {
-                    window.location.replace("agreement.php?status=complate");
-                });
-            </script>
-            <?php
-        }
-        ?>  
+        
     </body>
 </html>	

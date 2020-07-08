@@ -50,7 +50,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
         </div>
 
         <div class="row">
-            <div class="col-md-8">
+            <div class="col-md-12">
                 <div class="panel-box form-box-inner">
                     <form class="form-horizontal" id="property-form" method="post" action="" enctype="multipart/form-data">
 

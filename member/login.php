@@ -8,7 +8,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <title>Cash on Delivery - Online Shopping Store</title>
+        <title>Sri Lanka properties</title>
 
         <!-- Favicon Icon Css -->
         <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
@@ -103,6 +103,6 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
-        <script src="js/dealer_area.js" type="text/javascript"></script> 
+        <script src="ajax/js/login.js" type="text/javascript"></script> 
     </body>
 </html>	
