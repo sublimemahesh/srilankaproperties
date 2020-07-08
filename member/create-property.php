@@ -21,7 +21,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
         <!-- Bootstrap Css --> 
-        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+        <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css"/>
 
         <!-- main css --> 
         <link href="css/style.css" type="text/css" rel="stylesheet">
@@ -42,12 +44,12 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <?php include './header.php'; ?>
         <div class="container">
             <div class="header-bar font-color">
-                <i class="fa fa-map-marker"></i> : Add New Property
+                <i class="fa fa-plus-circle"></i>  Add New Property
             </div>
 
             <div class="row"> 
                 <div class="col-md-8">
-                    <div class="panel-box">
+                    <div class="panel-box form-box-inner">
                         <form class="form-horizontal" id="dealer-form" method="post" action="" enctype="multipart/form-data"> 
 
                             <div class="row">
@@ -204,7 +206,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                 </div>
                             </div>
 
-                             <div class="row">
+                            <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right">
                                     <label for="features">Features<span class="text-danger">*</span></label>
                                 </div>
@@ -216,8 +218,8 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     </div>
                                 </div>
                             </div>
-                            
-                             <div class="row">
+
+                            <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right">
                                     <label for="description">Description<span class="text-danger">*</span></label>
                                 </div>
@@ -229,14 +231,14 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     </div>
                                 </div>
                             </div>
-                          
-                                <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right"> 
-                                    </div>
-                                    <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0"> 
-                                        <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property"/>
-                                    </div>
+
+                            <div class="row">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right"> 
                                 </div>
+                                <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0"> 
+                                    <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property"/>
+                                </div>
+                            </div>
 
 
                         </form>

@@ -6257,3 +6257,14 @@ p.resend-code-p:hover, p.change-phone-number-p:hover {
 .shop-hover-wrap h5 {
     margin-bottom: 10px;
 }
+.header-full-mrg{
+    margin-top: 9px;
+    margin-bottom: 5px;
+}
+.link-mrg{
+    margin-top: 4px;
+    margin-left: -46px;
+}
+.form-box-inner{
+    padding-right: 31px;
+}
