@@ -1,6 +1,21 @@
 ﻿<?php
-include_once(dirname(__FILE__) . '/../class/include.php');
-include_once(dirname(__FILE__) . '/auth.php');
+
+    include_once(dirname(__FILE__) . '/../class/include.php');
+    include_once(dirname(__FILE__) . '/auth.php');
+
+    $PROPERTY = [];
+    $title = "Manage";
+    if (isset($_GET['type'])) { 
+        if ($_GET['type'] == 0) {
+            $PROPERTY = Property::getAllPendingProperties();
+            $title = "Pending";
+        }elseif ($_GET['type'] == 1) {
+            $PROPERTY = Property::getAllApprovedProperties();
+            $title = "Approved";
+        }
+    }
+ 
+
 ?>
 ﻿<!DOCTYPE html>
 <html>
@@ -14,7 +29,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="plugins/node-waves/waves.css" rel="stylesheet" />
         <link href="plugins/animate-css/animate.css" rel="stylesheet" />
-        <link href="plugins/sweetalert/sweetalert.css" rel="stylesheet" />
+        <link href="plugins/sweetalert/sweetalert2.all.min.css" rel="stylesheet" />
         <link href="plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
@@ -32,7 +47,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                         <div class="card">
                             <div class="header">
                                 <h2>
-                                    Manage Property
+                                    <?= $title; ?> Property
                                 </h2>
                                 <ul class="header-dropdown">
                                     <li>
@@ -43,38 +58,52 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 </ul>
                             </div>
                             <div class="body">
-                                <!--                                <div class="table-responsive">-->
+                                <!-- <div class="table-responsive">-->
                                 <div>
                                     <div class="row clearfix">
-                                        <?php
-                                        $PROPERTY = Property::all();
-                                        if (count($PROPERTY) > 0) {
-                                            foreach ($PROPERTY as $key => $property) {
-                                                ?>
-                                                <div class="col-md-3"  id="div<?php echo $property['id']; ?>">
-                                                    <div class="photo-img-container">
-                                                        <img src="../upload/property/<?php echo $property['image_name']; ?>" class="img-responsive ">
-                                                    </div>
-                                                    <div class="img-caption">
-                                                        <p class="maxlinetitle"><?php echo $property['title']; ?></p>
-                                                        <div class="d">
-                                                            <a href="#"  class="delete-property" data-id="<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                            <a href="edit-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                            <a href="arrange-property.php?id=<?php echo $property['id']; ?>">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
-                                                            <a href="view-property-photos.php?id=<?php echo $property['id']; ?>">  <button class="glyphicon glyphicon-picture arrange-btn"></button></a>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <?php
-                                            }
-                                        } else {
-                                            ?> 
+                                        <?php  if (count($PROPERTY) > 0) : ?> 
+                                                <div class="table-responsive m-l-20 m-r-20">
+                                                    <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
+                                                        <thead>
+                                                            <tr> 
+                                                                <th>Title</th>
+                                                                <th>Category</th>
+                                                                <th>Sub Category</th> 
+                                                                <th>Options</th> 
+                                                            </tr>
+                                                        </thead>
+                                                        <tfoot>
+                                                            <tr> 
+                                                                <th>Title</th>
+                                                                <th>Category</th>
+                                                                <th>Sub Category</th> 
+                                                                <th>Options</th> 
+                                                            </tr>
+                                                        </tfoot>
+                                                        <tbody>
+                                                            <?php foreach( $PROPERTY as $property) : ?>
+                                                                <tr>
+                                                                    <!-- <td><img src="../upload/property/<?php echo $property['image_name']; ?>" class="img-responsive img-thumbnail" width="100"></td> -->
+                                                                    <td><?= $property['title']; ?></td>
+                                                                    <td><?= $property['category_name']; ?></td>
+                                                                    <td><?= $property['sub_category_name']; ?></td>
+                                                                    <td> 
+                                                                        <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="	glyphicon glyphicon-eye-open edit-btn"></button></a>  
+                                                                        <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"> </button> </a>
+                                                                    </td> 
+                                                                </tr>
+                                                            <?php endforeach; ?>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div> 
+                                        <?php else : ?> 
                                             <b style="padding-left: 15px;">No Properties in the database.</b> 
-                                        <?php } ?> 
+                                        <?php endif ?> 
 
                                     </div>
                                 </div>
-                                <!--                                </div>-->
+                                <!--</div>-->
                             </div>
                         </div>
                     </div>
@@ -104,11 +133,12 @@ include_once(dirname(__FILE__) . '/auth.php');
 
         <script src="js/demo.js"></script>
 
-        <script src="plugins/sweetalert/sweetalert.min.js"></script>
+        <script src="plugins/sweetalert/sweetalert2.all.min.js"></script>
         <script src="plugins/bootstrap-notify/bootstrap-notify.js"></script>
         <script src="js/pages/ui/dialogs.js"></script>
         <script src="js/demo.js"></script>
         <script src="delete/js/property.js" type="text/javascript"></script>
+        <script src="js/property-approve.js" type="text/javascript"></script>
     </body>
 
 </html> 

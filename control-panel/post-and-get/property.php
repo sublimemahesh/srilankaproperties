@@ -3,7 +3,7 @@
 include_once(dirname(__FILE__) . '/../../class/include.php');
 
 if (isset($_POST['create'])) {
-
+    // dd($_POST);
     $PROPERTY = new Property(NULL);
     $VALID = new Validator();
 
@@ -156,4 +156,27 @@ if (isset($_POST['save-data'])) {
 
         header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+}
+
+
+if ($_POST['option'] == "APPROVEPROPERTY") {
+    
+    if (Property::approveOrRejectProperty($_POST['property'],1)) {
+        
+        echo json_encode("approved");
+        exit;
+
+    }
+
+}
+
+if ($_POST['option'] == "REJECTPROPERTY") {
+
+    if (Property::approveOrRejectProperty($_POST['property'],0)) {
+        
+        echo json_encode("rejected");
+        exit;
+
+    }
+
 }

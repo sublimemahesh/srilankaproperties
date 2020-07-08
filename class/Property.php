@@ -110,6 +110,34 @@ class Property {
         return $array_res;
     }
 
+    public function getAllPendingProperties() {
+
+        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 0 ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
+    public function getAllApprovedProperties() {
+
+        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 1 ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
     public function getPropertysByCategory($category) {
 
         $query = "SELECT * FROM `property` WHERE `type` = $type ORDER BY queue ASC";
@@ -122,6 +150,25 @@ class Property {
         }
 
         return $array_res;
+    }
+
+    public function approveOrRejectProperty($property,$approvation) {
+        
+        $query = "UPDATE `property` SET  `status`= $approvation WHERE `id` = $property";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if ($result) {
+ 
+            return TRUE;
+
+        } else {
+
+            return FALSE;
+        }
+
     }
 
     public function update() {

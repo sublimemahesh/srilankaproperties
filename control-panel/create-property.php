@@ -48,7 +48,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                             <div class="body">
                                 <form class="form-horizontal"  method="post" action="post-and-get/property.php" enctype="multipart/form-data"> 
 
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="title" class="form-control"  autocomplete="off" name="title" required="true">
@@ -56,7 +56,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <select class="form-control" name="category" id="category">
@@ -73,7 +73,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <select class="form-control" name="sub_category" id="sub_category">
@@ -90,7 +90,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="housetype" class="form-control"  autocomplete="off" name="housetype" required="true">
@@ -98,22 +98,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">                                       
+                                    <div class="col-xs-12 p-l-30">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="file" id="image" class="form-control" name="image"  required="true">
                                             </div>
                                         </div>
-                                    </div>
-<!--                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="discount" class="form-control" autocomplete="off" name="discount" required="true">
-                                                <label class="form-label">Land Extent</label>
-                                            </div>
-                                        </div>
-                                    </div>-->
-                                    <div class="col-md-12">
+                                    </div> 
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="short_description" class="form-control" autocomplete="off" name="short_description" required="true">
@@ -121,7 +113,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="map" class="form-control" autocomplete="off" name="map" required="true">
@@ -129,41 +121,30 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="price" class="form-control" autocomplete="off" name="price" required="true">
                                                 <label class="form-label">Price</label>
                                             </div>
                                         </div>
-                                    </div>
-
-<!--                                    <div class="col-md-12">                                       
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="file" id="plan_image" class="form-control" name="plan_image"  required="true">
-                                            </div>
-                                        </div>
-                                    </div>-->
-
-                                    <div class="col-md-12">
+                                    </div> 
+                                    <div class="col-xs-12 p-l-30">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="contact" class="form-control" autocomplete="off" name="contact" required="true">
                                                 <label class="form-label">Contact</label>
                                             </div>
                                         </div>
-                                    </div>
-
-
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    </div> 
+                                    <div class="col-xs-12">
                                         <label for="features">Features</label>
                                         <div class="form-line">
                                             <textarea id="features" name="features" class="form-control" rows="5"></textarea> 
                                         </div>
 
                                     </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <div class="col-xs-12">
                                         <label for="description">Description</label>
                                         <div class="form-line">
                                             <textarea id="description" name="description" class="form-control" rows="5"></textarea> 
