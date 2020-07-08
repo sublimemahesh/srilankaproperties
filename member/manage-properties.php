@@ -1,7 +1,7 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 //include './auth.php';
-
+//
 //$DEALER = new Dealer($_SESSION["d_id"]);
 ?>
 <!doctype html>
@@ -22,31 +22,32 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
 
         <!-- Bootstrap Css --> 
-        <link href="../css/bootstrap.min.css" type="text/css" rel="stylesheet">
+        <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css"/>
 
         <!-- main css --> 
-        <link href="../css/style.css" type="text/css" rel="stylesheet">
-        <link href="../css/responsive.css" type="text/css" rel="stylesheet">
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="css/responsive.css" type="text/css" rel="stylesheet">
         <link href="css/custom.css" type="text/css" rel="stylesheet">
         <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-
 
         <link href="../control-panel/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 
     </head>
     <body class="theme-2">
         <!-- LOADER -->
-        <div id="preloader">
+<!--        <div id="preloader">
             <div class="loading_wrap">
                 <img src="../image/logo.jpg" alt="logo">
             </div>
-        </div>
+        </div>-->
         <!-- LOADER -->
 
         <?php include './header.php'; ?>
         <div class="container">
-            <div class="header-bar">
-                <i class="fa fa-map-marker"></i> : Manage My Properties
+            <div class="header-bar font-color">
+                <i class="fa fa-link"></i> : Manage My Properties
             </div>
 
             <div class="row"> 
@@ -64,42 +65,42 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                             </thead>
                             <tbody>
                                 <?php
-                                $DEALERAREA = new DealerArea(NULL);
-                                foreach ($DEALERAREA->getAreasByDealer($DEALER->id) as $key => $area) {
-                                    $key++;
-                                    ?>
-                                    <tr id="row_<?php echo $area['id']; ?>" >
-                                        <td><?php echo $key; ?></td>  
+//                                $DEALERAREA = new DealerArea(NULL);
+//                                foreach ($DEALERAREA->getAreasByDealer($DEALER->id) as $key => $area) {
+//                                    $key++;
+//                                    ?>
+<!--                                    <tr id="row_//<?php echo $area['id']; ?>" >-->
+<!--                                        <td><?php echo $key; ?></td>  -->
                                         <td>
                                             <?php
-                                            $CITY = new City($area['city']);
-                                            $DISTRICT = new District($CITY->district);
-                                            echo $DISTRICT->name;
-                                            ?>
+//                                            $CITY = new City($area['city']);
+//                                            $DISTRICT = new District($CITY->district);
+//                                            echo $DISTRICT->name;
+//                                            ?>
                                         </td>
                                         <td>
                                             <?php
-                                            $CITY = new City($area['city']);
-                                            echo $CITY->name;
-                                            ?>
+//                                            $CITY = new City($area['city']);
+//                                            echo $CITY->name;
+//                                            ?>
                                         </td> 
                                         <td>
                                             <?php
-                                            if ($area['status']) {
-                                                echo "Active";
-                                            } else {
-
-                                                echo "In Active";
-                                            }
-                                            ?>
+//                                            if ($area['status']) {
+//                                                echo "Active";
+//                                            } else {
+//
+//                                                echo "In Active";
+//                                            }
+//                                            ?>
                                         </td>  
                                         <td class="text-center">    
-                                            <div class="edit-area btn btn-sm btn-info" data-id="<?php echo $area['id']; ?>"> <i class="fa fa-pencil"></i></div> | 
-                                            <div href="#"  class="delete-area btn btn-sm btn-danger" data-id="<?php echo $area['id']; ?>"> <i class="fa fa-trash"></i></div>
+                                            <div class="edit-area btn btn-sm btn-info" data-id=""> <i class="fa fa-pencil"></i></div> | 
+                                            <div href="#"  class="delete-area btn btn-sm btn-danger" data-id=""> <i class="fa fa-trash"></i></div>
                                         </td>
                                     </tr>
                                     <?php
-                                }
+//                                }
                                 ?>   
                             </tbody>
                             <tfoot>
@@ -119,19 +120,15 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <?php include './footer.php'; ?> 
 
         <!-- Jquery js -->
-        <script src="../js/jquery.min.js" type="text/javascript"></script>
+        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
 
-        <script src="../js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
 
         <!-- Custom css -->
-        <script src="../js/custom.js" type="text/javascript"></script> 
+        <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
         <script src="js/dealer_area.js" type="text/javascript"></script> 
-
-        <script src="../control-panel/plugins/jquery-datatable/jquery.dataTables.js"></script> 
-        <script src="../control-panel/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
-        <script src="js/data_tables.js" type="text/javascript"></script> 
 
         <?php
         $DEALER = new Dealer($_SESSION["d_id"]);
