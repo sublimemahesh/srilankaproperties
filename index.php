@@ -1,10 +1,13 @@
+<?php include_once 'class/include.php' ?>
+
+
 <!DOCTYPE HTML>
 <html class="no-js">
     <head>
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Real State - Wordpress Real Estate Theme</title>
+        <title>Sri Lanka Properties</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
@@ -104,125 +107,21 @@
                                 </div>
                                 <div class="row">
                                     <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
+                                      <?php foreach( Property::all() as $property) : ?>
                                         <li class="item property-block">
                                             <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p1.jpg" alt="">
+                                                <img src="upload/property/<?= $property['image_name']?>" alt="">
                                                 <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
                                                 <span class="badges">Rent</span>
                                             </a>
                                             <div class="property-info">
-                                                <h4><a href="#">116 Waverly Place</a></h4>
+                                                <h4><a href="#"><?= $property['title']; ?></a></h4>
                                                 <span class="location">Colombo</span>
                                                 <div class="price"><strong>$</strong><span>2800 Monthly</span></div>
                                             </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p2.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Buy</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">232 East 63rd Street</a></h4>
-                                                <span class="location">Kandy</span>
-                                                <div class="price"><strong>$</strong><span>250000</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p3.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">55 Warren Street</a></h4>
-                                                <span class="location">Maharagama</span>
-                                                <div class="price"><strong>$</strong><span>300000</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p4.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Buy</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">232 East 63rd Street</a></h4>
-                                                <span class="location">Colombo</span>
-                                                <div class="price"><strong>$</strong><span>250000</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p1.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">459 West Broadway</a></h4>
-                                                <span class="location">Colombo</span>
-                                                <div class="price"><strong>$</strong><span>3100 Monthly</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p2.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">232 East 63rd Street</a></h4>
-                                                <span class="location">Nugegoda</span>
-                                                <div class="price"><strong>$</strong><span>250000</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p2.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">116 Waverly Place</a></h4>
-                                                <span class="location">Panadura</span>
-                                                <div class="price"><strong>$</strong><span>2800 Monthly</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p2.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Buy</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">232 East 63rd Street</a></h4>
-                                                <span class="location">Kandy</span>
-                                                <div class="price"><strong>$</strong><span>250000</span></div>
-                                            </div>
-                                        </li>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p3.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Buy</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">232 East 63rd Street</a></h4>
-                                                <span class="location">Maharagama</span>
-                                                <div class="price"><strong>$</strong><span>250000</span></div>
-                                            </div>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="images/realstate/p4.jpg" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#">116 Waverly Place</a></h4>
-                                                <span class="location">Nugegoda</span>
-                                                <div class="price"><strong>$</strong><span>2800 Monthly</span></div>
-                                            </div>
-                                        </li>
+                                        </li> 
+                                      <?php endforeach; ?>
+                                        
                                     </ul>
                                 </div>
                             </div>
