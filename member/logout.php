@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<?php
-include '../class/include.php';
-
-$DEALER = new Dealer(NULL);
-
-if ($DEALER->logOut()) {
-    header('Location: index.php');
-}
-?>
- 
+<!DOCTYPE html>
+<?php
+include '../class/include.php';
+
+$MEMBER = new Member(NULL);
+
+if ($MEMBER->logOut()) {
+    header('Location: index.php');
+}
+?>
+ 

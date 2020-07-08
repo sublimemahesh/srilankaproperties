@@ -32,6 +32,9 @@ include_once(dirname(__FILE__) . '/TourPackagePhotosNormal.php');
 include_once(dirname(__FILE__) . '/TourType.php');
 include_once(dirname(__FILE__) . '/Category.php');
 include_once(dirname(__FILE__) . '/SubCategory.php');
+include_once(dirname(__FILE__) . '/Member.php');
+include_once(dirname(__FILE__) . '/District.php');
+include_once(dirname(__FILE__) . '/City.php');
 
 function dd($data) {
     var_dump($data);
