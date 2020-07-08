@@ -47,7 +47,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <?php include './header.php'; ?>
         <div class="container">
             <div class="header-bar font-color">
-                <i class="fa fa-link"></i> : Manage My Properties
+                <i class="fa fa-link"></i>  Manage My Properties
             </div>
 
             <div class="row"> 

@@ -239,12 +239,12 @@ label {
     box-shadow: none;
 }
 .btn-primary {
-    background-color: #b500e8;
+    background-color: #00c6fa;
     border-radius: 50px;
     padding: 10px 25px;
     color: #fff;
     transition: all 0.3s ease-in-out;
-    border: 2px solid #b500e8;
+    border: 2px solid #00c6fa;
     position: relative;
     z-index: 99;
     text-transform: capitalize;
@@ -6044,7 +6044,7 @@ body.switch-open {
     height: 25px;
     width: 25px;
     background-color: #f9f9f9;
-    border: 1px solid #b500e8;
+    border: 1px solid #00c6fa;
     margin-left: 0px;
 }
 .agree-check-box {
@@ -6267,4 +6267,7 @@ p.resend-code-p:hover, p.change-phone-number-p:hover {
 }
 .form-box-inner{
     padding-right: 31px;
+}
+.memberr-log{
+    margin-left: 12px;
 }
