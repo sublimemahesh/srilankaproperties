@@ -1550,6 +1550,7 @@ html[xmlns] .slides {
 .featured-block {
     position: relative;
     text-align: center;
+    margin-bottom: 30px;
 }
 
 .featured-block img {

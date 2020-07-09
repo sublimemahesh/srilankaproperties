@@ -12,15 +12,7 @@
                 </div>
                 <div class="col-md-8 col-sm-6">
                     <ul class="horiz-nav pull-right">
-                        <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login 
-                                <!--<b class="caret"></b>-->
-                            </a>
-<!--                            <ul class="dropdown-menu">
-                                <li><a href="#">My properties</a></li>
-                                <li><a href="#">Add a property</a></li>
-                                <li><a href="#">My Profile</a></li>
-                            </ul>-->
-                        </li>
+                        <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login </a></li>
                         <li><a href="member/login.php"><i class="fa fa-check-circle"></i> Register</a></li>
                     </ul>
                 </div>
@@ -61,20 +53,10 @@
                         <ul class="sf-menu">
                             <li><a href="./">Home</a>
                             </li>
-                            <li><a href="sales.php">Sales</a></li>
-                            <li><a href="rentals.php">Rentals</a></li>
-                            <li><a href="lands.php">Lands</a>
-                                <!--                  <ul class="dropdown">
-                                                    <li><a href="agents.html">Agents</a></li>
-                                                    <li><a href="agent-detail.html">Agent Single</a></li>
-                                                    <li><a href="my-properties.html">Agent Properties</a></li>
-                                                    <li><a href="submit.html">List a property</a></li>
-                                                    <li><a href="pricing.html">Pricing</a></li>
-                                                    <li><a href="login.html">Register/Login</a></li>
-                                                    <li><a href="404.html">404</a></li>
-                                                  </ul>-->
-                            </li>
-                            <li><a href="development.php">New Developments</a></li>
+                            <li><a href="properties.php?category=1">Sales</a></li>
+                            <li><a href="properties.php?category=2">Rentals</a></li>
+                            <li><a href="properties.php?category=3">Lands</a></li>
+                            <li><a href="properties.php?category=4">New Developments</a></li>
                             <li><a href="agents.php">Agents</a></li>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="contact.php">Contact Us</a></li>
