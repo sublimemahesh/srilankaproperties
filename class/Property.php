@@ -109,7 +109,7 @@ class Property
             . $this->map . "', '"
             . $this->features . "', '"
             . $this->queue . "')";
-        // dd($query);
+        
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -171,17 +171,21 @@ class Property
     public function getPropertysByCategory($category)
     {
 
-        $query = "SELECT * FROM `property` WHERE `type` = $type ORDER BY queue ASC";
+        $query = "SELECT * FROM `property` WHERE `category` = $category ORDER BY queue ASC";
         $db = new Database();
         $result = $db->readQuery($query);
+              
         $array_res = array();
 
         while ($row = mysql_fetch_array($result)) {
             array_push($array_res, $row);
+            
         }
 
         return $array_res;
+          
     }
+  
 
     public function approveOrRejectProperty($property, $approvation)
     {

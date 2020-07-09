@@ -1,6 +1,6 @@
-<?php include_once 'class/include.php' ?>
+<?php include_once 'class/include.php';
 
-
+?>
 <!DOCTYPE HTML>
 <html class="no-js">
     <head>
@@ -48,12 +48,17 @@
                         <div class="featured-blocks">
                             <div class="container">
                                 <div class="row">
-                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="images/realstate/h1.jpg" alt="" class="img-thumbnail">
-                                        <h3 class="circle-title">Apartments</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
+                                       <?php
+                                        foreach (Category::all() as $category) :
+                                            ?>
+                                   
+                                    
+                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="upload/category/<?= $category['image_name'] ?>" alt="" class="img-thumbnail">
+                                        <h3 class="circle-title"><?php echo $category['name']; ?></h3>
+                                        <p><?php echo substr($category['short_description'], 0, 60) . '...'; ?></p>
                                         <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
                                     </div>
-                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="images/realstate/h2.jpg" alt="" class="img-thumbnail">
+<!--                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="images/realstate/h2.jpg" alt="" class="img-thumbnail">
                                         <h3 class="circle-title">Houses</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
                                         <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
@@ -62,9 +67,9 @@
                                         <h3 class="circle-title">Commercial Properties</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
                                         <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
-                                    </div>
-                                    <div class="spacer-40"></div>
-                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="images/realstate/h4.jpg" alt="Search Anywhere" class="img-thumbnail">
+                                    </div>-->
+<!--                                    <div class="spacer-40"></div>-->
+<!--                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="images/realstate/h4.jpg" alt="Search Anywhere" class="img-thumbnail">
                                         <h3 class="circle-title">New Developments</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
                                         <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
@@ -78,7 +83,8 @@
                                         <h3 class="circle-title">Lands</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel.</p>
                                         <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
-                                    </div>
+                                    </div>-->
+                                     <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
