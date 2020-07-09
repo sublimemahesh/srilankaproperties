@@ -102,7 +102,7 @@ class PropertyPhoto {
         return $db->readQuery($query);
     }
 
-    public function getproPertyPhotosById($property) {
+    public function getPropertyPhotosByProperty($property) {
 
         $query = "SELECT * FROM `property_photo` WHERE `property`= $property ORDER BY queue ASC";
 
