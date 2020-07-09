@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <nav class="navbar navbar-expand-lg categories_menu navbar-light header-full-mrg">
-                        <a href="index.php"><img src="../images/realstate/sl-property-logo.png" alt="logo"></a>
+                        <a href="../"><img src="../images/realstate/sl-property-logo.png" alt="logo"></a>
 
                         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
 
@@ -37,7 +37,7 @@
                                     <div class="sub-menu dropdown-menu">
                                         <ul class="all-menu">
                                             <li><a href="edit-profile.php">Update My Details<i class="fa fa-user"></i></a></li>
-                                            <li><a href="#">Change Password <i class="fa fa-key"></i> </a></li>
+                                            <li><a href="change-password.php">Change Password <i class="fa fa-key"></i> </a></li>
                                             <li><a href="logout.php">Log Out <i class="fa fa-sign-out"></i> </a></li>
                                         </ul>
                                     </div>

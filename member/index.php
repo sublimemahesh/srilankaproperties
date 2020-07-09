@@ -53,7 +53,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                     </a>
                 </div>
                 <div class="col-md-3">
-                    <a class="sub-box text-center text-c" href="cnage-properties.php?status=1">
+                    <a class="sub-box text-center text-c" href="manage-properties.php?status=1">
                         <b>Approval Properties</b> 
                         <hr/>
                         <i class="fa fa-check-circle-o text-danger"></i> 

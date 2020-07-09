@@ -7,7 +7,7 @@
     border: 1px #71b317 solid;
 }
 
-.sub-box{ 
+.sub-box {
     background: #e6fbfc;
     padding: 10px 20px 10px 20px;
     font-size: 19px;
@@ -79,4 +79,16 @@ table.table-bordered.dataTable tbody td {
 
 .navbar-nav.link-mrg {
     float: right;
+}
+
+.btn-success {
+    color: #ffffff;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+.btn-success:hover {
+    color: #ffffff;
+    background-color: #5bcc75;
+    border-color: #28a745;
 }

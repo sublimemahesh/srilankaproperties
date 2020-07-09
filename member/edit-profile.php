@@ -36,7 +36,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
         <?php include './header.php'; ?>
         <div class="container">
             <div class="header-bar">
-                <i class="fa fa-user-circle"></i> : Edit Profile 
+                <i class="fa fa-pencil"></i> : Edit Profile 
             </div>
             <div class="row"> 
                 <div class="col-md-12">
@@ -57,7 +57,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <input type="text" id="name" class="form-control <?php echo $class; ?>"  autocomplete="off" name="name" required="true" value="<?php echo $MEMBER->name; ?>">
+                                                    <input type="text" id="name" class="form-control <?= $class; ?>"  autocomplete="off" name="name" required="true" value="<?= $MEMBER->name; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -75,7 +75,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <input type="text" id="phone" class="form-control <?php echo $class; ?>"  autocomplete="off" name="phone" required="true" value="<?php echo $MEMBER->phone; ?>">
+                                                    <input type="text" id="phone" class="form-control <?= $class; ?>"  autocomplete="off" name="phone" required="true" value="<?= $MEMBER->phone; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -93,7 +93,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?>  
-                                                    <input type="text" id="email" class="form-control <?php echo $class; ?>"  autocomplete="off" name="email" required="true" value="<?php echo $MEMBER->email; ?>">
+                                                    <input type="text" id="email" class="form-control <?= $class; ?>"  autocomplete="off" name="email" required="true" value="<?= $MEMBER->email; ?>">
                                                 </div>
                                             </div>
                                         </div>
@@ -111,18 +111,18 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <select class="form-control <?php echo $class; ?>" type="text" id="district" autocomplete="off" name="district">
+                                                    <select class="form-control <?= $class; ?>" type="text" id="district" autocomplete="off" name="district">
                                                         <option value=""  class="active light-c"> -- Please  Select Your District -- </option>
                                                         <?php
                                                         $DISTRICT = new District(NULL);
                                                         foreach ($DISTRICT->all() as $key => $district) {
                                                             if ($MEMBER->district == $district['id']) {
                                                                 ?>
-                                                                <option value="<?php echo $district['id']; ?>" selected=""><?php echo $district['name']; ?></option>
+                                                                <option value="<?= $district['id']; ?>" selected=""><?= $district['name']; ?></option>
                                                                 <?php
                                                             } else {
                                                                 ?>
-                                                                <option value="<?php echo $district['id']; ?>"  ><?php echo $district['name']; ?></option>
+                                                                <option value="<?= $district['id']; ?>"  ><?= $district['name']; ?></option>
                                                                 <?php
                                                             }
                                                         }
@@ -145,17 +145,17 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?>
-                                                    <select class="form-control <?php echo $class; ?>" autocomplete="off" type="text" id="city" autocomplete="off" name="city" required="TRUE">
+                                                    <select class="form-control <?= $class; ?>" autocomplete="off" type="text" id="city" autocomplete="off" name="city" required="TRUE">
                                                         <option value=""  class="active light-c"> -- Please  Select Your City -- </option>
                                                         <?php
                                                         $CITY = new City(NULL);
                                                         foreach ($CITY->GetCitiesByDistrict($MEMBER->district) as $city) {
                                                             if ($city['id'] == $MEMBER->city) {
                                                                 ?>
-                                                                <option value="<?php echo $city['id'] ?>" selected=""><?php echo $city['name']; ?>  </option>
+                                                                <option value="<?= $city['id'] ?>" selected=""><?= $city['name']; ?>  </option>
                                                             <?php } else {
                                                                 ?>
-                                                                <option value="<?php echo $city['id'] ?>" ><?php echo $city['name']; ?>  </option>
+                                                                <option value="<?= $city['id'] ?>" ><?= $city['name']; ?>  </option>
                                                                 <?php
                                                             }
                                                         }
@@ -178,7 +178,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <input type="text" name="address" class="form-control <?php echo $class; ?>" id="address" value="<?php echo $MEMBER->address; ?>"> 
+                                                    <input type="text" name="address" class="form-control <?= $class; ?>" id="address" value="<?= $MEMBER->address; ?>"> 
                                                 </div>
                                             </div>
                                         </div>
@@ -196,7 +196,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <input type="text" name="nic" class="form-control <?php echo $class; ?>" id="nic" value="<?php echo $MEMBER->nic; ?>"> 
+                                                    <input type="text" name="nic" class="form-control <?= $class; ?>" id="nic" value="<?= $MEMBER->nic; ?>"> 
                                                 </div>
                                             </div>
                                         </div>
@@ -214,15 +214,15 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         $class = 'border-danger';
                                                     }
                                                     ?> 
-                                                    <input type="file" name="image_name" class="form-control <?php echo $class; ?>" id="image_name"> 
-                                                    <input type="hidden" name="image_name_ex"  id="image_name_ex" value="<?php echo $MEMBER->picture; ?>"> 
+                                                    <input type="file" name="image_name" class="form-control <?= $class; ?>" id="image_name"> 
+                                                    <input type="hidden" name="image_name_ex"  id="image_name_ex" value="<?= $MEMBER->picture; ?>"> 
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 p-bottom">
                                             <div class="form-group">
                                                 <div class="form-line">  
-                                                    <a href="../upload/member/profile/<?php echo $MEMBER->picture; ?>" target="_blank" class="btn btn-lg btn-info">
+                                                    <a href="../upload/member/profile/<?= $MEMBER->picture; ?>" target="_blank" class="btn btn-lg btn-info">
                                                         <i class="fa fa-image"></i>
                                                     </a>
                                                 </div>
@@ -233,7 +233,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                         <div class="col-lg-3 col-md-3 form-control-label text-right"> 
                                         </div>
                                         <div class="col-lg-9  col-md-9 col-sm-12 col-xs-12 p-l-0">
-                                            <input type="hidden" name="id" id="customer" value="<?php echo $MEMBER->id; ?>">
+                                            <input type="hidden" name="id" id="customer" value="<?= $MEMBER->id; ?>">
                                             <input type="submit" name="update" id="btn-update" class="btn btn-info" value="Update Details"/>
                                             <img src="img/loading.gif" id="update-loading"/>
                                         </div>

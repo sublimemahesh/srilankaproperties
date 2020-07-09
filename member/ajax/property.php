@@ -59,6 +59,7 @@ if (isset($_POST['add-new-property'])) {
     }
 }
 if (isset($_POST['edit-property'])) {
+   
     $PROPERTY = new Property($_POST['id']);
     $PROPERTY->member = $_POST['member'];
     $PROPERTY->title = $_POST['title'];

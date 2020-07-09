@@ -57,7 +57,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-street-view"></i> View Order -
+            <i class="fa fa-eye"></i> View Property Details - #<?= $PROPERTY->id; ?>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -67,51 +67,51 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                             <table class="table table-striped table-hover">
                                 <tr>
                                     <th>Property ID</th>
-                                    <td><?php echo '#' . $PROPERTY->id; ?></td>
+                                    <td><?= '#' . $PROPERTY->id; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Created At</th>
-                                    <td><?php echo $PROPERTY->createdAt; ?></td>
+                                    <td><?= $PROPERTY->createdAt; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Title</th>
-                                    <td><?php echo $PROPERTY->title; ?></td>
+                                    <td><?= $PROPERTY->title; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Category</th>
-                                    <td><?php echo $CATEGORY->name; ?></td>
+                                    <td><?= $CATEGORY->name; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Sub Category</th>
-                                    <td><?php echo $SUBCAT->name; ?></td>
+                                    <td><?= $SUBCAT->name; ?></td>
                                 </tr>
                                 <tr>
                                     <th>District</th>
-                                    <td><?php echo $DISTRICT->name; ?></td>
+                                    <td><?= $DISTRICT->name; ?></td>
                                 </tr>
                                 <tr>
                                     <th>City</th>
-                                    <td><?php echo $CITY->name; ?></td>
+                                    <td><?= $CITY->name; ?></td>
                                 </tr>
                                 <tr>
                                     <th>House Type</th>
-                                    <td><?php echo $PROPERTY->housetype; ?></td>
+                                    <td><?= $PROPERTY->housetype; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Location</th>
-                                    <td><?php echo $PROPERTY->location; ?></td>
+                                    <td><?= $PROPERTY->location; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Map Code</th>
-                                    <td><?php echo $PROPERTY->map; ?></td>
+                                    <td><?= $PROPERTY->map; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Phone Number</th>
-                                    <td><?php echo $PROPERTY->contact; ?></td>
+                                    <td><?= $PROPERTY->contact; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Price</th>
-                                    <td><?php echo 'Rs.' . number_format($PROPERTY->price, 2); ?></td>
+                                    <td><?= 'Rs.' . number_format($PROPERTY->price, 2); ?></td>
                                 </tr>
                                 <tr>
                                     <th>Status</th>
@@ -127,15 +127,15 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                 </tr>
                                 <tr>
                                     <th>Short Description</th>
-                                    <td><?php echo $PROPERTY->short_description; ?></td>
+                                    <td><?= $PROPERTY->short_description; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Description</th>
-                                    <td><?php echo $PROPERTY->description; ?></td>
+                                    <td><?= $PROPERTY->description; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Features</th>
-                                    <td><?php echo $PROPERTY->features; ?></td>
+                                    <td><?= $PROPERTY->features; ?></td>
                                 </tr>
                             </table>
                         </div>
