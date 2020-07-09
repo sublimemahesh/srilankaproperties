@@ -221,7 +221,6 @@ class Property
             . "`features` ='" . $this->features . "', "
             . "`queue` ='" . $this->queue . "' "
             . "WHERE `id` = '" . $this->id . "'";
-
         $db = new Database();
 
         $result = $db->readQuery($query);

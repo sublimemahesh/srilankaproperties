@@ -272,4 +272,38 @@ class Member
         $result = $db->readQuery($query);
         return $result;
     }
+    public function checkOldPass($id, $password) {
+
+        $enPass = md5($password);
+
+        $query = "SELECT `id` FROM `member` WHERE `id`= '" . $id . "' AND `password`= '" . $enPass . "'";
+
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        if (!$result) {
+            return FALSE;
+        } else {
+            return TRUE;
+        }
+    }
+    public function changePassword($id, $password) {
+
+        $enPass = md5($password);
+
+        $query = "UPDATE  `member` SET "
+                . "`password` ='" . $enPass . "' "
+                . "WHERE `id` = '" . $id . "'";
+
+        $db = new Database();
+
+        $result = $db->readQuery($query);
+
+        if ($result) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
 }
