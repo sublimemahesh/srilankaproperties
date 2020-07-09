@@ -63,7 +63,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
             <div class="col-md-12">
                 <div class="panel-box">
                     <div class="row">
-                        <div class="col-md-8">
+                        <div class="col-md-12">
                             <table class="table table-striped table-hover">
                                 <tr>
                                     <th>Property ID</th>
