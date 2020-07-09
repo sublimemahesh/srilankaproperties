@@ -102,8 +102,9 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                         <td><?php echo $SUBCAT->name; ?> </td>
                                         <td><?php echo $DISTRICT->name; ?> </td>
                                         <td class="text-center">
-                                            <!-- <div class="edit-area btn btn-sm btn-info" data-id=""> <i class="fa fa-pencil"></i></div> |
-                                        <div href="#" class="delete-area btn btn-sm btn-danger" data-id=""> <i class="fa fa-trash"></i></div> -->
+                                            <a href="view-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-warning" data-id=""> <i class="fa fa-eye"></i></a> |
+                                            <a href="edit-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-info" data-id=""> <i class="fa fa-pencil"></i></a> |
+                                            <a href="#" class="delete-property btn btn-sm btn-danger" data-id="<?= $property['id']; ?>"> <i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php
@@ -143,7 +144,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <!-- Custom css -->
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/city.js" type="text/javascript"></script>
-    <script src="js/dealer_area.js" type="text/javascript"></script>
+    <script src="js/property.js" type="text/javascript"></script>
 
 
 </body>

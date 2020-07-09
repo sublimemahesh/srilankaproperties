@@ -2,6 +2,11 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include './auth.php';
 $MEMBER = new Member($_SESSION["m_id"]);
+$id = '';
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
+    $PROPERTY = new Property($id);
+}
 ?>
 <!doctype html>
 <html lang="en">
@@ -46,13 +51,13 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-plus-circle"></i> Add New Property
+            <i class="fa fa-pencil"></i> Edit Property - #<?= $id; ?>
         </div>
 
         <div class="row">
             <div class="col-md-12">
                 <div class="panel-box form-box-inner">
-                    <form class="form-horizontal" id="property-form" method="post" action="" enctype="multipart/form-data">
+                    <form class="form-horizontal" id="edit-property-form" method="post" action="" enctype="multipart/form-data">
 
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
@@ -61,7 +66,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="title" class="form-control" autocomplete="off" name="title" required="true">
+                                        <input type="text" id="title" class="form-control" autocomplete="off" name="title" value="<?= $PROPERTY->title; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -78,8 +83,12 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                             <?php
                                             $CATEGORY = new Category(NULL);
                                             foreach ($CATEGORY->all() as $key => $category) {
+                                                $selected = '';
+                                                if ($PROPERTY->category == $category['id']) {
+                                                    $selected = 'selected';
+                                                }
                                             ?>
-                                                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <option value="<?php echo $category['id']; ?>" <?= $selected; ?>><?php echo $category['name']; ?></option>
                                             <?php
                                             }
                                             ?>
@@ -97,6 +106,18 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     <div class="form-line">
                                         <select class="form-control" autocomplete="off" type="text" id="sub-category" autocomplete="off" name="sub_category" required="TRUE">
                                             <option value="" class="active light-c"> -- Please Select Sub Category -- </option>
+                                            <?php
+                                            $SUBCATEGORY = new SubCategory(NULL);
+                                            foreach ($SUBCATEGORY->getSubCategoriesByCategory($PROPERTY->category) as $key => $subcategory) {
+                                                $selected = '';
+                                                if ($PROPERTY->sub_category == $subcategory['id']) {
+                                                    $selected = 'selected';
+                                                }
+                                            ?>
+                                                <option value="<?php echo $subcategory['id']; ?>" <?= $selected; ?>><?php echo $subcategory['name']; ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -115,8 +136,12 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                             <?php
                                             $DISTRICT = new District(NULL);
                                             foreach ($DISTRICT->all() as $key => $district) {
+                                                $selected = '';
+                                                if ($PROPERTY->district == $district['id']) {
+                                                    $selected = 'selected';
+                                                }
                                             ?>
-                                                <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                <option value="<?php echo $district['id']; ?>" <?= $selected; ?>><?php echo $district['name']; ?></option>
                                             <?php
                                             }
                                             ?>
@@ -134,6 +159,18 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     <div class="form-line">
                                         <select class="form-control" autocomplete="off" type="text" id="city" autocomplete="off" name="city" required="TRUE">
                                             <option value="" class="active light-c"> -- Please Select Your City -- </option>
+                                            <?php
+                                            $CITY = new City(NULL);
+                                            foreach ($CITY->GetCitiesByDistrict($PROPERTY->district) as $key => $city) {
+                                                $selected = '';
+                                                if ($PROPERTY->city == $city['id']) {
+                                                    $selected = 'selected';
+                                                }
+                                            ?>
+                                                <option value="<?php echo $city['id']; ?>" <?= $selected; ?>><?php echo $city['name']; ?></option>
+                                            <?php
+                                            }
+                                            ?>
                                         </select>
                                     </div>
                                 </div>
@@ -147,7 +184,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="house-type" class="form-control" autocomplete="off" name="house_type" required="true">
+                                        <input type="text" id="house-type" class="form-control" autocomplete="off" name="house_type" value="<?= $PROPERTY->housetype; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -161,6 +198,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="file" id="image" class="form-control" name="image" required="true">
+                                        <img src="../upload/properties/<?= $PROPERTY->image_name; ?>" />
                                     </div>
                                 </div>
                             </div>
@@ -173,8 +211,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="location" class="form-control" autocomplete="off" name="location" required="true">
-                                        <!--                                            <label class="form-label">Title</label>-->
+                                        <input type="text" id="location" class="form-control" autocomplete="off" name="location" value="<?= $PROPERTY->location; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -187,7 +224,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="map-code" class="form-control" autocomplete="off" name="map_code" required="true">
+                                        <input type="text" id="map-code" class="form-control" autocomplete="off" name="map_code" value="<?= $PROPERTY->map; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -200,7 +237,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="price" id="price" class="form-control" autocomplete="off" name="price" required="true">
+                                        <input type="price" id="price" class="form-control" autocomplete="off" name="price" value="<?= $PROPERTY->price; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -213,7 +250,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="phone-number" class="form-control" autocomplete="off" name="phone_number" required="true">
+                                        <input type="text" id="phone-number" class="form-control" autocomplete="off" name="phone_number" value="<?= $PROPERTY->contact; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -225,7 +262,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="short_description" class="form-control" autocomplete="off" name="short_description" required="true">
+                                        <input type="text" id="short_description" class="form-control" autocomplete="off" name="short_description" value="<?= $PROPERTY->short_description; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -237,7 +274,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <textarea id="features" name="features" class="form-control" rows="5"></textarea>
+                                        <textarea id="features" name="features" class="form-control" rows="5"><?= $PROPERTY->features; ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -250,7 +287,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <textarea id="description" name="description" class="form-control" rows="5"></textarea>
+                                        <textarea id="description" name="description" class="form-control" rows="5"><?= $PROPERTY->description; ?></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -261,8 +298,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
-                                <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property" />
-                                <input type="hidden" name="add-new-property" />
+                                <input type="hidden" name="id" value="<?= $id; ?>" />
+                                <input type="hidden" name="image_name_old" id="image_name_old" value="<?= $PROPERTY->image_name; ?>" />
+                                <input type="submit" name="btn-save" id="btn-update" class="btn btn-info" value="Update" />
+                                <input type="hidden" name="edit-property" />
                             </div>
                         </div>
 
