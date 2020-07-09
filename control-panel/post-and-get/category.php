@@ -98,7 +98,7 @@ if (isset($_POST['update'])) {
     $VALID->check($CATEGORY, [
         'name' => ['required' => TRUE],
         'short_description' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE]
+        // 'image_name' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
