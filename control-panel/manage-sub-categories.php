@@ -80,16 +80,6 @@ $CATEGORY = new Category($id);
                                         </a>
                                     </div>
 
-
-                                    <?php
-                                    $SUB_CATEGORY = new SubCategory(NULL);
-                                    foreach ($SUB_CATEGORY->all() as $key => $sub_category) {
-                                        ?>
-
-                                        <?php
-                                    }
-                                    ?>   
-
                                     <div>
                                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                             <thead>
@@ -111,7 +101,7 @@ $CATEGORY = new Category($id);
                                             <tbody>
 
                                                 <?php
-                                                foreach ($SUB_CATEGORY->all() as $key => $sub_category) {
+                                                foreach (SubCategory::getSubCategoriesByCategory($id) as $key => $sub_category) {
                                                     $key++;
                                                     ?>
                                                     <tr id="row_<?php echo $sub_category['id']; ?>">
@@ -173,36 +163,6 @@ $CATEGORY = new Category($id);
 <script src="plugins/sweetalert/sweetalert.min.js"></script>
 <script src="plugins/bootstrap-notify/bootstrap-notify.js"></script>
 <script src="js/pages/ui/dialogs.js"></script>
-
-
-<script src="tinymce/js/tinymce/tinymce.min.js"></script>
-<script>
-    tinymce.init({
-        selector: "#description",
-        // ===========================================
-        // INCLUDE THE PLUGIN
-        // ===========================================
-
-        plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table contextmenu paste"
-        ],
-        // ===========================================
-        // PUT PLUGIN'S BUTTON on the toolbar
-        // ===========================================
-
-        toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-        // ===========================================
-        // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-        // ===========================================
-
-        relative_urls: false
-
-    });
-
-
-</script>
 </body>
 
 </html>

@@ -257,7 +257,7 @@
                         </li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="edit-profile.php?id=<?php echo $_SESSION['id']; ?>"><i class="material-icons">edit</i>Edit My Profile</a></li>
-                        <li><a href="change-password.php?id=<?php echo $_SESSION['id']; ?>"><i class="material-icons">vpn_key</i>Change Password</a></li> 
+                        <li><a href="change-password.php?id=<?php echo $_SESSION['id']; ?>"><i class="material-icons">vpn_key</i>Change Password</a></li>
                         <li role="seperator" class="divider"></li>
                         <li><a href="post-and-get/log-out.php"><i class="material-icons">input</i>Sign Out</a></li>
                     </ul>
@@ -275,21 +275,13 @@
                         <span>Home</span>
                     </a>
                 </li>
-                <li class="qqq">
+                <!-- <li class="qqq">
                     <a href="create-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Slider</span>
                     </a>
 
                 </li>
-                <!--                <li class="qqq">
-                                    <a href="create-banner.php" class="">
-                                        <i class="material-icons">chevron_right</i>
-                                        <span>Banner</span>
-                                    </a>
-                
-                                </li>-->
-
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -336,7 +328,7 @@
                         </li>
 
                     </ul>
-                </li> 
+                </li>  -->
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -344,52 +336,46 @@
                     </a>
                     <ul class="ml-menu">
                         <li>
-                            <a href="create-property.php">
+                            <a href="manage-property.php?type=0">
+                                <i class="material-icons">list</i>
+                                <span>Manage Pending Properties</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-property.php?type=1">
+                                <i class="material-icons">list</i>
+                                <span>Manage Approved Properties</span>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="javascript:void(0);" class="menu-toggle">
+                        <i class="material-icons">location_on</i>
+                        <span>District</span>
+                    </a>
+                    <ul class="ml-menu">
+                        <li>
+                            <a href="create-district.php">
                                 <i class="material-icons">add</i>
                                 <span>Add New</span>
                             </a>
                         </li>
                         <li>
-                            <a href="manage-property.php">
+                            <a href="manage-district.php">
                                 <i class="material-icons">list</i>
                                 <span>Manage</span>
                             </a>
                         </li>
                         <li>
-                            <a href="arrange-property.php">
+                            <a href="arrange-district.php">
                                 <i class="material-icons">compare_arrows</i>
                                 <span>Arrange</span>
                             </a>
                         </li>
                     </ul>
                 </li>
-                <li>
-                        <a href="javascript:void(0);" class="menu-toggle">
-                            <i class="material-icons">location_on</i>
-                            <span>District</span>
-                        </a>
-                        <ul class="ml-menu">
-                            <li>
-                                <a href="create-district.php">
-                                    <i class="material-icons">add</i>
-                                    <span>Add New</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="manage-district.php">
-                                    <i class="material-icons">list</i>
-                                    <span>Manage</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a href="arrange-district.php">
-                                    <i class="material-icons">compare_arrows</i>
-                                    <span>Arrange</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </li>
-                <li class="qqq">
+                <!-- <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
                         <span>Projects</span>
@@ -414,7 +400,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> -->
 
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
@@ -442,87 +428,6 @@
                         </li>
                     </ul>
                 </li>
-
-
-<!--                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Sub Categories</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="manage-sub-categories.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-sub-categories.php ">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>-->
-
-                <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Product Type</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-product-type.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-product-type.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-product-type.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li>
-                <!--                <li>
-                                    <a href="javascript:void(0);" class="menu-toggle">
-                                        <i class="material-icons">chevron_right</i>
-                                        <span>Hotel</span>
-                                    </a>
-                                    <ul class="ml-menu">
-                                        <li>
-                                            <a href="create-room.php">
-                                                <i class="material-icons">add</i>
-                                                <span>Add New</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="manage-room.php">
-                                                <i class="material-icons">list</i>
-                                                <span>Manage</span>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="arrange-room.php">
-                                                <i class="material-icons">compare_arrows</i>
-                                                <span>Arrange</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>-->
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
