@@ -107,21 +107,28 @@
                                 </div>
                                 <div class="row">
                                     <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
-                                      <?php foreach( Property::all() as $property) : ?>
-                                        <li class="item property-block">
-                                            <a href="#" class="property-featured-image">
-                                                <img src="upload/property/<?= $property['image_name']?>" alt="">
-                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                <span class="badges">Rent</span>
-                                            </a>
-                                            <div class="property-info">
-                                                <h4><a href="#"><?= $property['title']; ?></a></h4>
-                                                <span class="location">Colombo</span>
-                                                <div class="price"><strong>$</strong><span>2800 Monthly</span></div>
-                                            </div>
-                                        </li> 
-                                      <?php endforeach; ?>
-                                        
+                                        <?php
+                                        foreach (Property::all() as $property) :
+                                            $CATEGORY = new Category($property['category']);
+                                            $DISTRICT = new District($property ['district']);
+                                            ?>
+
+                                            <li class="item property-block">
+                                                <a href="#" class="property-featured-image">
+                                                    <img src="upload/properties/<?= $property['image_name'] ?>" alt="">
+                                                    <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
+                                                    <span class="badges"><?= $CATEGORY->name; ?></span>
+                                                </a>
+                                                <div class="property-info">
+                                                    <h4><a href="#"><?= $property['title']; ?></a></h4>
+                                                    <span class="location"><?= $DISTRICT->name; ?></span>
+                                                 
+                                                    <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
+                                                    <div class="price"><strong>Rs</strong><span><?= number_format($property['price'],2); ?></span></div>
+                                                </div>
+                                            </li> 
+                                        <?php endforeach; ?>
+
                                     </ul>
                                 </div>
                             </div>
@@ -150,7 +157,7 @@
                                                             <br><cite><strong>Nikoki Weerakoon</strong>
                                                             </cite>
                                                         </li>
-                                                         <li>
+                                                        <li>
                                                             <p class="testi-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus</p>
                                                             <div class="spacer-40"></div>
                                                             <img src="images/realstate/c3.png" alt="Happy Client" class="testimonial-sender">
