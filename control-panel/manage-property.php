@@ -49,7 +49,7 @@ if (isset($_GET['type'])) {
                     <div class="card">
                         <div class="header">
                             <h2>
-                                <?= $title; ?> Property
+                                <?= $title; ?> Properties
                             </h2>
                             <ul class="header-dropdown">
                                 <li>
