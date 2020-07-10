@@ -4,7 +4,7 @@
         <!-- Basic Page Needs
           ================================================== -->
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Real Spaces - Wordpress Real Estate Theme</title>
+        <title>Contact Us || Sri Lanka Properties</title>
         <meta name="description" content="">
         <meta name="keywords" content="">
         <meta name="author" content="">
