@@ -97,12 +97,12 @@ $comments = $COMMENT->all();
                                             ?>
 
                                             <li class="item property-block">
-                                                <a href="view-property.php" class="property-featured-image">
+                                                <a href="view-property.php?id=<?= $property['id']; ?>" class="property-featured-image">
                                                     <img src="upload/properties/<?= $property['image_name'] ?>" alt=""></a>
-                                                    <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
+<!--                                                    <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>-->
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                 <div class="property-info">
-                                                    <h4><a href="view-property.php"><?= $property['title']; ?></a></h4>
+                                                    <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
                                                     <span class="location"><?= $DISTRICT->name; ?></span>
 
                                                     <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
@@ -133,7 +133,7 @@ $comments = $COMMENT->all();
                                                                     <li>
                                                                         <p class="testi-content"><?php echo $comment['comment']; ?></p>
                                                                         <div class="spacer-40"></div>
-                                                                        <img src="upload/comments/<?php echo $comment['image_name']; ?>" alt="Happy Client" class="testimonial-sender rounded-circle img-width">
+                                                                        <img src="upload/comments/<?php echo $comment['image_name']; ?>" alt="Happy Client" class="testimonial-sender img-circle rounded-circle img-width">
                                                                         <br><cite><strong><?php echo $comment['name']; ?></strong>
                                                                         </cite>
                                                                     </li>
