@@ -9,6 +9,7 @@
 class Member
 {
     public $id;
+    public $joinedAt;
     public $name;
     public $phone;
     public $email;
@@ -20,6 +21,7 @@ class Member
     public $password;
     private $authToken;
     public $resetcode;
+    public $isActive;
     public function __construct($id)
     {
         if ($id) {
@@ -27,6 +29,7 @@ class Member
             $db = new Database();
             $result = mysql_fetch_array($db->readQuery($query));
             $this->id = $result['id'];
+            $this->joinedAt = $result['joined_at'];
             $this->name = $result['name'];
             $this->phone = $result['phone'];
             $this->email = $result['email'];
@@ -37,12 +40,17 @@ class Member
             $this->picture = $result['picture'];
             $this->password = $result['password'];
             $this->authToken = $result['auth_token'];
+            $this->isActive = $result['is_active'];
             return $this;
         }
     }
     public function create()
     {
+        date_default_timezone_set('Asia/Colombo');
+        $createdAt = date('Y-m-d H:i:s');
+
         $query = "INSERT INTO `member` ("
+            . "`joined_at`, "
             . "`name`, "
             . "`phone`, "
             . "`email`,"
@@ -52,7 +60,9 @@ class Member
             . "`district`,"
             . "`city`,"
             . "`picture`"
+            . "`is_active`"
             . ") VALUES  ('"
+            . $this->joinedAt . "','"
             . $this->name . "','"
             . $this->phone . "', '"
             . $this->email . "', '"
@@ -61,7 +71,8 @@ class Member
             . $this->address . "', '"
             . $this->district . "', '"
             . $this->city . "', '"
-            . $this->picture . "')";
+            . $this->picture . "', '"
+            . $this->isActive . "')";
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {
@@ -300,6 +311,19 @@ class Member
 
         $result = $db->readQuery($query);
 
+        if ($result) {
+            return TRUE;
+        } else {
+            return FALSE;
+        }
+    }
+    public function MemberActivation($id, $status)
+    {
+        $query = "UPDATE  `member` SET "
+            . "`is_active` ='" . $status . "' "
+            . "WHERE `id` = '" . $id . "'";
+        $db = new Database();
+        $result = $db->readQuery($query);
         if ($result) {
             return TRUE;
         } else {
