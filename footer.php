@@ -10,20 +10,28 @@
             </div>
             <div class="col-md-2 footer-widget widget">
                 <h3 class="widgettitle">Useful Links</h3>
-                    <ul>
-                        <li><a href="sales.php">Sales</a></li>
-                        <li><a href="rentals.php">Rentals</a></li>
-                        <li><a href="lands.php">Lands</a></li>
-                        <li><a href="agents.php">Agents</a></li>
-                        <li><a href="contact.php">Contact Us</a></li>
-                    </ul>
-                </div>
-            <div class="col-md-3 footer-widget widget">
-                <h3 class="widgettitle">New Developments</h3>
                 <ul>
-                    <li>STAR LIFE Residencies</li>
-                    <li>PEAK Residencies</li>
-                    <li>96 Residencies</li>
+                    <li><a href="index.php">Home</a></li>
+                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="development.php">New Development</a></li>
+                    <li><a href="contact.php">Contact Us</a></li>
+                    <li><a href="inquiry.php">Inquiry at</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3 footer-widget widget">
+                <h3 class="widgettitle">Categories</h3>
+                <ul>
+                    <?php
+                    foreach (Category::all() as $key => $category) :
+                        if ($key < 5) {
+                            ?>
+
+                            <li><?php echo $category['name']; ?></li>
+                            
+                            <?php
+                        }
+                    endforeach;
+                    ?>
                 </ul>
             </div>
             <div class="col-md-3 footer-widget widget">
@@ -64,7 +72,6 @@
                                         </div>
                                     </div>
                                 </div>
-                                <!--</footer>-->
                             </div>
                         </div>
                     </div>
