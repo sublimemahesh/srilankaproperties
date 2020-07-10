@@ -32,7 +32,7 @@
                             <span>+94 11 366 3500</span>
                         </div>
                         <div>
-                            <i class="fa fa-envelope"></i> Email 
+                            <i class="fa fa-envelope"></i> Email
                             <span>mail@synotec.lk</span>
                         </div>
                         <div>
@@ -51,12 +51,31 @@
                 <div class="col-md-12">
                     <nav class="navigation">
                         <ul class="sf-menu">
-                            <li><a href="./">Home</a>
-                            </li>
-                            <li><a href="properties.php">Sales</a></li>
-                            <li><a href="properties.php?category=2">Rentals</a></li>
-                            <li><a href="properties.php?category=3">Lands</a></li>
-                            <li><a href="properties.php?category=4">New Developments</a></li>
+                            <li><a href="./">Home</a></li>
+                            <?php
+                            foreach (Category::all() as $category) {
+                                $subcategories = SubCategory::getSubCategoriesByCategory($category['id']);
+                            ?>
+                                <li><a href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
+                                    <?php
+                                    if (count($subcategories) > 0) {
+                                    ?>
+                                        <ul class="dropdown">
+                                            <?php
+                                            foreach ($subcategories as $subcategory) {
+                                            ?>
+                                                <li><a href="properties.php?subcategory=<?= $subcategory['id']; ?>"><?= $subcategory['name']; ?></a></li>
+                                            <?php
+                                            }
+                                            ?>
+                                        </ul>
+                                    <?php
+                                    }
+                                    ?>
+                                </li>
+                            <?php
+                            }
+                            ?>
                             <li><a href="agents.php">Agents</a></li>
                             <li><a href="about.php">About Us</a></li>
                             <li><a href="contact.php">Contact Us</a></li>

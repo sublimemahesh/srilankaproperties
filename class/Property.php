@@ -109,7 +109,7 @@ class Property
             . $this->map . "', '"
             . $this->features . "', '"
             . $this->queue . "')";
-        
+
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -168,24 +168,37 @@ class Property
         return $array_res;
     }
 
-    public function getPropertysByCategory($category)
+    public function getPropertiesByCategory($category)
     {
 
         $query = "SELECT * FROM `property` WHERE `category` = $category ORDER BY queue ASC";
         $db = new Database();
         $result = $db->readQuery($query);
-              
+
         $array_res = array();
 
         while ($row = mysql_fetch_array($result)) {
             array_push($array_res, $row);
-            
         }
 
         return $array_res;
-          
     }
-  
+    public function getPropertiesBySubCategory($subcategory)
+    {
+
+        $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory ORDER BY queue ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+
 
     public function approveOrRejectProperty($property, $approvation)
     {
