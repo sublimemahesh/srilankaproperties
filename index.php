@@ -59,7 +59,7 @@ $comments = $COMMENT->all();
                                         <div class="col-md-4 col-sm-4 featured-block"> <img src="upload/category/<?= $category['image_name'] ?>" alt="" class="img-thumbnail">
                                             <h3 class="circle-title"><?php echo $category['name']; ?></h3>
                                             <p><?php echo substr($category['short_description'], 0, 60) . '...'; ?></p>
-                                            <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
+                                            <a href="properties.php?category=<?= $category['id']; ?>" class="btn btn-sm btn-primary read-more">View More</a>
                                         </div>
                                     <?php endforeach; ?>
                                 </div>
@@ -97,13 +97,12 @@ $comments = $COMMENT->all();
                                             ?>
 
                                             <li class="item property-block">
-                                                <a href="#" class="property-featured-image">
-                                                    <img src="upload/properties/<?= $property['image_name'] ?>" alt="">
+                                                <a href="view-property.php" class="property-featured-image">
+                                                    <img src="upload/properties/<?= $property['image_name'] ?>" alt=""></a>
                                                     <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
-                                                </a>
                                                 <div class="property-info">
-                                                    <h4><a href="#"><?= $property['title']; ?></a></h4>
+                                                    <h4><a href="view-property.php"><?= $property['title']; ?></a></h4>
                                                     <span class="location"><?= $DISTRICT->name; ?></span>
 
                                                     <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>

@@ -18,11 +18,11 @@
                         <div class="row">
                             <div class="col-md-3">
                                 <select name="propery type" class="form-control input-lg selectpicker">
-                                    <option selected>Property Type</option>
+                                    <option selected>Category</option>
                                     <?php
-                                    foreach (Property::all() as $property) :
+                                    foreach (Category::all() as $category) :
                                         ?>
-                                        <option><?php echo $property['title']; ?></option>
+                                        <option><?php echo $category['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
                             </div>
