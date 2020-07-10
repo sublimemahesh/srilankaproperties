@@ -53,7 +53,7 @@
                         <ul class="sf-menu">
                             <li><a href="./">Home</a>
                             </li>
-                            <li><a href="properties.php?category=1">Sales</a></li>
+                            <li><a href="properties.php">Sales</a></li>
                             <li><a href="properties.php?category=2">Rentals</a></li>
                             <li><a href="properties.php?category=3">Lands</a></li>
                             <li><a href="properties.php?category=4">New Developments</a></li>
