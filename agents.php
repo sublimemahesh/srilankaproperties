@@ -1,3 +1,6 @@
+<?php
+include_once 'class/include.php';
+?>
 <!DOCTYPE HTML>
 <html class="no-js">
     <head>

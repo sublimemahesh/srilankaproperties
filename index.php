@@ -91,7 +91,7 @@ $comments = $COMMENT->all();
                                 <div class="row">
                                     <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
                                         <?php
-                                        foreach (Property::all() as $property) :
+                                        foreach (Property::getAllPropertiesByActiveMembers() as $property) :
                                             $CATEGORY = new Category($property['category']);
                                             $DISTRICT = new District($property ['district']);
                                             ?>
