@@ -1,5 +1,8 @@
-<?php include_once 'class/include.php';
+<?php
+include_once 'class/include.php';
 
+$COMMENT = new Comments(NULL);
+$comments = $COMMENT->all();
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">
@@ -48,17 +51,17 @@
                         <div class="featured-blocks">
                             <div class="container">
                                 <div class="row">
-                                       <?php
-                                        foreach (Category::all() as $category) :
-                                            ?>
-                                   
-                                    
-                                    <div class="col-md-4 col-sm-4 featured-block"> <img src="upload/category/<?= $category['image_name'] ?>" alt="" class="img-thumbnail">
-                                        <h3 class="circle-title"><?php echo $category['name']; ?></h3>
-                                        <p><?php echo substr($category['short_description'], 0, 60) . '...'; ?></p>
-                                        <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
-                                    </div>
-                                     <?php endforeach; ?>
+                                    <?php
+                                    foreach (Category::all() as $category) :
+                                        ?>
+
+
+                                        <div class="col-md-4 col-sm-4 featured-block"> <img src="upload/category/<?= $category['image_name'] ?>" alt="" class="img-thumbnail">
+                                            <h3 class="circle-title"><?php echo $category['name']; ?></h3>
+                                            <p><?php echo substr($category['short_description'], 0, 60) . '...'; ?></p>
+                                            <a href="#" class="btn btn-sm btn-primary read-more">Read More</a>
+                                        </div>
+                                    <?php endforeach; ?>
                                 </div>
                             </div>
                         </div>
@@ -102,9 +105,9 @@
                                                 <div class="property-info">
                                                     <h4><a href="#"><?= $property['title']; ?></a></h4>
                                                     <span class="location"><?= $DISTRICT->name; ?></span>
-                                                 
+
                                                     <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
-                                                    <div class="price"><strong>Rs</strong><span><?= number_format($property['price'],2); ?></span></div>
+                                                    <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                 </div>
                                             </li> 
                                         <?php endforeach; ?>
@@ -122,28 +125,28 @@
                                             <div class="row testi-row">
                                                 <div class="col-md-6 col-sm-12 latest-testimonials column">
                                                     <h3 class="widgettitle client-title">Client Testimonials</h3>
-                                                    <ul class="testimonials owl-carousel img-thumbnail testi-padd" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
-                                                        <li>
-                                                            <p class="testi-content">Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus</p>
-                                                            <div class="spacer-40"></div>
-                                                            <img src="images/realstate/c1.png" alt="Happy Client" class="testimonial-sender">
-                                                            <br><cite><strong>Naduni Gunawardane</strong>
-                                                            </cite>
-                                                        </li>
-                                                        <li>
-                                                            <p class="testi-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus</p>
-                                                            <div class="spacer-40"></div>
-                                                            <img src="images/realstate/c2.png" alt="Happy Client" class="testimonial-sender">
-                                                            <br><cite><strong>Nikoki Weerakoon</strong>
-                                                            </cite>
-                                                        </li>
-                                                        <li>
-                                                            <p class="testi-content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla convallis egestas rhoncus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing. Nulla convallis egestas rhoncus. Donec facilisis fermentum sem, ac viverra ante luctus</p>
-                                                            <div class="spacer-40"></div>
-                                                            <img src="images/realstate/c3.png" alt="Happy Client" class="testimonial-sender">
-                                                            <br><cite><strong>Natasha Perera</strong>
-                                                            </cite>
-                                                        </li>
+                                                    <ul class="testimonials owl-carousel img-thumbnail testi-padd test-bottom" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
+                                                        <?php
+                                                        if (count($comments) > 0) {
+                                                            foreach ($comments as $key => $comment) {
+                                                                if ($key < 6) {
+                                                                    ?>
+                                                                    <li>
+                                                                        <p class="testi-content"><?php echo $comment['comment']; ?></p>
+                                                                        <div class="spacer-40"></div>
+                                                                        <img src="upload/comments/<?php echo $comment['image_name']; ?>" alt="Happy Client" class="testimonial-sender rounded-circle img-width">
+                                                                        <br><cite><strong><?php echo $comment['name']; ?></strong>
+                                                                        </cite>
+                                                                    </li>
+                                                                    <?php
+                                                                }
+                                                            }
+                                                        } else {
+                                                            ?>
+                                                            <h6>There no any comments in database</h6>
+                                                            <?php
+                                                        }
+                                                        ?> 
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-6 col-sm-12 popular-agent column">

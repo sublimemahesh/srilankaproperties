@@ -4029,3 +4029,15 @@ span.progress-bar-tooltip:after {
     padding-right: 13px;
     padding-left: 13px;
 }
+.img-width{
+    width: 90px;
+    margin-bottom: 14px;
+}
+
+.testi-text{
+    text-align: center;
+}
+
+.test-bottom{
+    padding-bottom: 28px;
+}
