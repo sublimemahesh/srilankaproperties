@@ -4028,15 +4028,20 @@ span.progress-bar-tooltip:after {
     padding-right: 13px;
     padding-left: 13px;
 }
-.img-width{
+
+.img-width {
     width: 90px;
     margin-bottom: 14px;
 }
 
-.testi-text{
+.testi-text {
     text-align: center;
 }
 
-.test-bottom{
+.test-bottom {
     padding-bottom: 28px;
+}
+
+.header-profile-pic {
+    width: 20px;
 }

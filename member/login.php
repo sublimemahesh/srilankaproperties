@@ -1,5 +1,9 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
+session_start();
+if (isset($_SESSION['m_id'])) {
+    header('Location: ./');
+}
 ?>
 <!doctype html>
 <html lang="en">

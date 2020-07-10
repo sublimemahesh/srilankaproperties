@@ -12,8 +12,32 @@
                 </div>
                 <div class="col-md-8 col-sm-6">
                     <ul class="horiz-nav pull-right">
-                        <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login </a></li>
-                        <li><a href="member/login.php"><i class="fa fa-check-circle"></i> Register</a></li>
+                        <?php
+                        session_start();
+                        if (isset($_SESSION['m_id'])) {
+                        ?>
+                            <li class="dropdown"><a href="member/">
+                                    <?php
+                                    if (isset($_SESSION['m_picture'])) {
+                                    ?>
+                                        <img src="upload/member/profile/<?= $_SESSION['m_picture']; ?>" class="header-profile-pic img-circle">
+                                    <?php
+                                    } else {
+                                    ?>
+                                        <img src="images/member.jpg" class="header-profile-pic img-circle">
+                                    <?php
+                                    }
+                                    ?>
+
+                                    My Account </a></li>
+                        <?php
+                        } else {
+                        ?>
+                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login </a></li>
+                        <?php
+                        }
+                        ?>
+
                     </ul>
                 </div>
             </div>
