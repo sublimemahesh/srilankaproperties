@@ -13,9 +13,9 @@
                 <ul>
                     <li><a href="index.php">Home</a></li>
                     <li><a href="about.php">About Us</a></li>
-                    <li><a href="development.php">New Development</a></li>
+                    <li><a href="agents.php">Agents</a></li>
                     <li><a href="contact.php">Contact Us</a></li>
-                    <li><a href="inquiry.php">Inquiry at</a></li>
+                    <li><a href="inquiry.php">Inquiry now</a></li>
                 </ul>
             </div>
             <div class="col-md-3 footer-widget widget">
@@ -25,9 +25,7 @@
                     foreach (Category::all() as $key => $category) :
                         if ($key < 5) {
                             ?>
-
-                            <li><?php echo $category['name']; ?></li>
-                            
+                            <li><a href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
                             <?php
                         }
                     endforeach;
