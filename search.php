@@ -3,19 +3,31 @@ include_once 'class/include.php';
 
 $category = '';
 $subcategory = '';
+$district = '';
+$city = '';
+
 if (isset($_GET['category'])) {
     $category = $_GET['category'];
-    $CATEGORY = new Category($category);
-    $properties = Property::getPropertiesByCategory($category);
-    $title = $CATEGORY->name;
 }
-if (isset($_GET['subcategory'])) {
-    $subcategory = $_GET['subcategory'];
-    $SUBCATEGORY = new SubCategory($subcategory);
-    $properties = Property::getPropertiesBySubCategory($subcategory);
-    $title = $SUBCATEGORY->name;
+if (isset($_GET['sub_category'])) {
+    $subcategory = $_GET['sub_category'];
 }
+if (isset($_GET['district'])) {
+    $district = $_GET['district'];
+}
+if (isset($_GET['city'])) {
+    $city = $_GET['city'];
+}
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+$setlimit = 20;
 
+$pagelimit = ($page * $setlimit) - $setlimit;
+
+$properties = Property::search($category, $subcategory, $district, $city, $pagelimit, $setlimit);
 ?>
 
 <!DOCTYPE HTML>
@@ -64,7 +76,7 @@ if (isset($_GET['subcategory'])) {
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1><?= $title; ?></h1>
+                            <h1>Properties</h1>
                         </div>
                     </div>
                 </div>
@@ -102,7 +114,7 @@ if (isset($_GET['subcategory'])) {
                                         <?php endforeach;
                                     } else {
                                         ?>
-                                        <h5>No any <?= strtolower($title); ?> in the database.</h5>
+                                        <h5>No any properties in the database.</h5>
                                     <?php
                                     } ?>
                                 </ul>
@@ -161,25 +173,24 @@ if (isset($_GET['subcategory'])) {
         <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
     </div>
     <script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
-    <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
-    <!--PrettyPhoto Plugin -->
-    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
-    <script src="js/helper-plugins.js"></script>
-    <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-    <!--Plugins-->
-    <script src="js/bootstrap.js"></script> <!-- UI -->
-    <script src="js/waypoints.js"></script>
-    <!--Waypoints-->
-    <script src="js/init.js"></script>
-    <script src="js/city.js"></script>
-    <script src="js/sub-category.js"></script>
-    <script src="js/search.js"></script>
-    <!--Waypoints-->
-    <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
-    <script src="style-switcher/js/jquery_cookie.js"></script>
-    <script src="style-switcher/js/script.js"></script>
-
+        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
+        <!--PrettyPhoto Plugin -->
+        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+        <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+        <script src="js/helper-plugins.js"></script>
+        <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!--Plugins-->
+        <script src="js/bootstrap.js"></script> <!-- UI -->
+        <script src="js/waypoints.js"></script>
+        <!--Waypoints-->
+        <script src="js/init.js"></script>
+        <script src="js/city.js"></script>
+        <script src="js/sub-category.js"></script>
+        <script src="js/search.js"></script>
+        <!--Waypoints-->
+        <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
+        <!-- <script src="style-switcher/js/jquery_cookie.js"></script>
+        <script src="style-switcher/js/script.js"></script> -->
 </body>
 
 </html>

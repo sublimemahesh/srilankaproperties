@@ -28,6 +28,9 @@
                                         </ul>
                                     </div>
                                 </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="manage-inquiries.php">My Inquiries</a>
+                                </li>
                                 <li class="dropdown">
                                     <a class="nav-link dropdown-toggler" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         My Profile

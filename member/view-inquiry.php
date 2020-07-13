@@ -7,12 +7,8 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$PROPERTY = new Property($id);
-$DISTRICT = new District($PROPERTY->district);
-$CITY = new City($PROPERTY->city);
-$CATEGORY = new Category($PROPERTY->category);
-$SUBCAT = new SubCategory($PROPERTY->sub_category);
-$PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
+$INQUIRY = new Inquiry($id);
+$PROPERTY = new Property($INQUIRY->property);
 ?>
 <!doctype html>
 <html lang="en">
@@ -22,7 +18,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <title>Property || Sri Lanka Properties</title>
+    <title>Inquiry || Sri Lanka Properties</title>
 
     <!-- Favicon Icon Css -->
     <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
@@ -57,7 +53,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-eye"></i> View Property Details - #<?= $PROPERTY->id; ?>
+            <i class="fa fa-eye"></i> View Inquiry Details - #<?= $INQUIRY->id; ?>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -70,72 +66,32 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                     <td><?= '#' . $PROPERTY->id; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Created At</th>
-                                    <td><?= $PROPERTY->createdAt; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Title</th>
+                                    <th>Property Title</th>
                                     <td><?= $PROPERTY->title; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Category</th>
-                                    <td><?= $CATEGORY->name; ?></td>
+                                    <th>Inquiry Date</th>
+                                    <td><?= $INQUIRY->created_at; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Sub Category</th>
-                                    <td><?= $SUBCAT->name; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>District</th>
-                                    <td><?= $DISTRICT->name; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>City</th>
-                                    <td><?= $CITY->name; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>House Type</th>
-                                    <td><?= $PROPERTY->housetype; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Location</th>
-                                    <td><?= $PROPERTY->location; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Map Code</th>
-                                    <td><?= $PROPERTY->map; ?></td>
+                                    <th>Customer Name</th>
+                                    <td><?= $INQUIRY->name; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Phone Number</th>
-                                    <td><?= $PROPERTY->contact; ?></td>
+                                    <td><?= $INQUIRY->phone; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Price</th>
-                                    <td><?= 'Rs.' . number_format($PROPERTY->price, 2); ?></td>
+                                    <th>Email</th>
+                                    <td><?= $INQUIRY->email; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Status</th>
-                                    <td>
-                                        <?php
-                                        if ($PROPERTY->status == 0) {
-                                            echo 'Pending';
-                                        } else if ($PROPERTY->status == 1) {
-                                            echo 'Approved';
-                                        }
-                                        ?>
-                                    </td>
+                                    <th>Address</th>
+                                    <td><?= $INQUIRY->address; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Short Description</th>
-                                    <td><?= $PROPERTY->short_description; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Description</th>
-                                    <td><?= $PROPERTY->description; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Features</th>
-                                    <td><?= $PROPERTY->features; ?></td>
+                                    <th>message</th>
+                                    <td><?= $INQUIRY->message; ?></td>
                                 </tr>
                             </table>
                         </div>
@@ -143,7 +99,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                     <div class="row">
                         <div class="col-md-12">
                             <div class="btn-back">
-                                <a href="manage-properties.php?status=<?= $PROPERTY->status; ?>" class="btn btn-success">Back</a>
+                                <a href="manage-inquiries.php" class="btn btn-success">Back</a>
                             </div>
                         </div>
                     </div>
@@ -155,6 +111,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
 
         <!-- Jquery js -->
         <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
 
