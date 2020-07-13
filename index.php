@@ -26,6 +26,7 @@ $comments = $COMMENT->all();
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     <!-- Color Style -->
     <link class="alt" href="colors/color1.css" rel="stylesheet" type="text/css">
     <link href="style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
@@ -211,20 +212,20 @@ $comments = $COMMENT->all();
         <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
         <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
         <script src="js/helper-plugins.js"></script>
+        <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
         <!--Plugins-->
         <script src="js/bootstrap.js"></script> <!-- UI -->
-        <script src="js/chosen/chosen.js" type="text/javascript"></script>
         <script src="js/waypoints.js"></script>
         <!--Waypoints-->
         <script src="js/init.js"></script>
+        <script src="js/city.js"></script>
+        <script src="js/sub-category.js"></script>
+        <script src="js/search.js"></script>
         <!--Waypoints-->
         <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
         <script src="style-switcher/js/jquery_cookie.js"></script>
         <script src="style-switcher/js/script.js"></script>
 
-        <script>
-            $(".chosen-select").chosen()
-        </script>
 </body>
 
 </html>

@@ -33,6 +33,7 @@ if (isset($_GET['id'])) {
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
+    <link href="control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     <link class="alt" href="colors/color1.css" rel="stylesheet" type="text/css">
     <link href="style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
@@ -67,7 +68,7 @@ if (isset($_GET['id'])) {
                 <div id="content" class="content full">
                     <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-9">
                                 <div class="single-property">
                                     <div class="property-amenities clearfix">
                                         <span class="area"><strong>Category</strong><?= $CATEGORY->name; ?></span>
@@ -176,6 +177,48 @@ if (isset($_GET['id'])) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="sidebar right-sidebar col-md-3 serch-dev">
+                                <div class="widget sidebar-widget">
+                                    <h3 class="widgettitle">Search Properties</h3>
+                                    <div class="full-search-form ">
+                                        <form action="search.php" id="search-form">
+                                            <select name="category" id="category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>Category</option>
+                                                <?php
+                                                foreach (Category::all() as $category) :
+                                                ?>
+                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>Sub Category</option>
+                                                <?php
+                                                foreach (SubCategory::all() as $subcategory) :
+                                                ?>
+                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="district" id="district" class="form-control input-lg selectpicker">
+                                                <option value="" selected>District</option>
+                                                <?php
+                                                foreach (District::all() as $district) :
+                                                ?>
+                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="city" id="city" class="form-control input-lg selectpicker">
+                                                <option value="" selected>City</option>
+                                                <?php
+                                                foreach (City::all() as $city) :
+                                                ?>
+                                                    <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,17 +229,24 @@ if (isset($_GET['id'])) {
             <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
         </div>
         <script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script> <!-- PrettyPhoto Plugin -->
-        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script> <!-- Owl Carousel -->
+        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
+        <!--PrettyPhoto Plugin -->
+        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
         <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
-        <script src="js/helper-plugins.js"></script> <!-- Plugins -->
+        <script src="js/helper-plugins.js"></script>
+        <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!--Plugins-->
         <script src="js/bootstrap.js"></script> <!-- UI -->
-        <script src="js/waypoints.js"></script> <!-- Waypoints -->
-        <script src="js/init.js"></script> <!-- All Scripts -->
+        <script src="js/waypoints.js"></script>
+        <!--Waypoints-->
+        <script src="js/init.js"></script>
+        <script src="js/city.js"></script>
+        <script src="js/sub-category.js"></script>
+        <script src="js/search.js"></script>
+        <!--Waypoints-->
         <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
         <script src="style-switcher/js/jquery_cookie.js"></script>
         <script src="style-switcher/js/script.js"></script>
-        <script src="js/custom.js" type="text/javascript"></script>
 </body>
 
 </html>
