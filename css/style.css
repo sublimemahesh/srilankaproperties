@@ -4045,3 +4045,13 @@ span.progress-bar-tooltip:after {
 .header-profile-pic {
     width: 20px;
 }
+.btn-inquiry-now {
+    width: 120px;
+padding: 10px;
+margin-top: -25px;
+margin-bottom: 17px;
+margin-left: 15px;
+}
+.site-search-module-inside .col-md-2{
+padding-right: 0;
+}
