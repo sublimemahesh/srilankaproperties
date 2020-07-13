@@ -126,6 +126,9 @@ if (isset($_GET['id'])) {
                                         </div>
                                     </div>
                                 </div>
+                                <div class="row">
+                                    <a href="inquiry.php?id=<?= $PROPERTY->id; ?>" class="btn btn-primary btn-inquiry-now"> Inquiry Now</a>
+                                </div>
                                 <h3>Related Properties</h3>
                                 <hr>
                                 <div class="property-grid">
