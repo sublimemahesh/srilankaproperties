@@ -165,8 +165,7 @@ $(document).ready(function() {
                             showConfirmButton: false
                         });
 
-                        // window.location.replace("view-property-photos.php?id=" + result.id);
-                        window.location.replace("add-new-property.php");
+                        window.location.replace("view-property-photos.php?id=" + result.id);
                     }
                 }
             });

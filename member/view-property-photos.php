@@ -45,7 +45,7 @@ if (isset($_GET['id'])) {
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-plus-circle"></i> Add New Property Photo - #<?= $id; ?>
+            <i class="fa fa-plus-circle"></i> Manage Property Photos - #<?= $id; ?>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -88,9 +88,7 @@ if (isset($_GET['id'])) {
                 </div>
             </div>
         </div>
-        <div class="header-bar font-color">
-            <i class="fa fa-list"></i> Manage Property Photos - #<?= $id; ?>
-        </div>
+
         <div class="row">
             <div class="col-md-12">
                 <div class="panel-box form-box-inner">
