@@ -48,10 +48,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                 <div class="panel-box form-box-inner">
                     <form class="form-horizontal" id="property-form" method="post" action="" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="title">Title <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="title" class="form-control title-input" autocomplete="off" name="title" required="true">
@@ -60,10 +60,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="district">Category <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <select class="form-control title-input" type="text" id="category" autocomplete="off" name="category">
@@ -82,10 +82,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="city">Sub Category <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <select class="form-control title-input" autocomplete="off" type="text" id="sub-category" autocomplete="off" name="sub_category" required="TRUE">
@@ -96,10 +96,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="district">District <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <select class="form-control title-input" type="text" id="district" autocomplete="off" name="district">
@@ -118,10 +118,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="city">City <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <select class="form-control title-input" autocomplete="off" type="text" id="city" autocomplete="off" name="city" required="TRUE">
@@ -132,10 +132,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="house_type">House Type</label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="house-type" class="form-control title-input" autocomplete="off" name="house_type" required="true">
@@ -144,10 +144,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="image">Image <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="file" id="image" class="form-control title-input" name="image" required="true">
@@ -156,10 +156,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="location">Location<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="location" class="form-control title-input" autocomplete="off" name="location" required="true">
@@ -169,10 +169,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="map_code">Map Code</label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="map-code" class="form-control title-input" autocomplete="off" name="map_code" required="true">
@@ -181,10 +181,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="price">Price<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
@@ -193,10 +193,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="contact">Phone Number<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="phone-number" class="form-control title-input" autocomplete="off" name="phone_number" required="true">
@@ -205,10 +205,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="short_description">Short Description</label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="text" id="short_description" class="form-control title-input" autocomplete="off" name="short_description" required="true">
@@ -217,10 +217,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row ">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile ">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="features">Features<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom title-input">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom title-input text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <textarea id="features" name="features" class="form-control " rows="5"></textarea>
@@ -229,10 +229,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="description">Description<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom title-input">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom title-input text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <textarea id="description" name="description" class="form-control title-input" rows="5"></textarea>
@@ -241,7 +241,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />

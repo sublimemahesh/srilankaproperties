@@ -4066,3 +4066,6 @@ span.progress-bar-tooltip:after {
 .pagination>.active>a:hover {
     border-color: #71b317;
 }
+.inq-code{
+    margin-left: -103px;
+}

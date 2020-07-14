@@ -26,6 +26,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
         <link href="css/custom.css" type="text/css" rel="stylesheet">
         <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     </head>
+    
     <body class="theme-2">
         <!-- LOADER -->
         <!-- <div id="preloader">
@@ -36,8 +37,8 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <!-- LOADER -->
     <?php include './header.php'; ?>
     <div class="container">
-        <div class="header-bar">
-            <i class="fa fa-pencil"></i> : Edit Profile
+        <div class="header-bar font-color">
+            <i class="fa fa-pencil "></i>  Edit Profile
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -46,10 +47,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         <div class="col-md-12">
                             <form class="form-horizontal" id="member-form" method="post" action="" enctype="multipart/form-data">
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="name">Name <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-box text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -64,10 +65,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="phone">Phone No <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -82,10 +83,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 hidden-sm hidden-xs form-control-label text-right text-l text-i">
                                         <label for="email">Email <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -100,10 +101,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="district">District <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -133,10 +134,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="city">City <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -166,10 +167,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="address">Address <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -184,10 +185,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="nic">NIC Number <span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -202,10 +203,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="nic_fr_photo">Profile Picture<span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 p-bottom">
+                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 p-bottom ">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -231,10 +232,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                 </div>
                                 <div class="row">
-                                    <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                    <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="nic_fr_photo">Description<span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                    <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input text-input-i">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -265,16 +266,16 @@ $MEMBER = new Member($_SESSION["m_id"]);
             <div id="chart_div"></div>
         </div>
     </div>
-    <?php include './footer.php'; ?>
-    <!-- Jquery js -->
-    <script src="js/jquery.min.js" type="text/javascript"></script>
-    <script src="../js/bootstrap.js" type="text/javascript"></script>
-    <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-    <!-- Custom css -->
-    <script src="../js/custom.js" type="text/javascript"></script>
-    <script src="js/city.js" type="text/javascript"></script>
-    <script src="js/member.js" type="text/javascript"></script>
-    <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
+   <?php include './footer.php'; ?> 
+        <!-- Jquery js -->
+        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+        <script src="../js/bootstrap.js" type="text/javascript"></script>
+        <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!-- Custom css -->
+        <script src="js/custom.js" type="text/javascript"></script> 
+        <script src="js/city.js" type="text/javascript"></script> 
+        <script src="js/dealer_area.js" type="text/javascript"></script>   
+        
     <script>
         tinymce.init({
             selector: "#description",

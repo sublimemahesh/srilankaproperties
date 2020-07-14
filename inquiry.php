@@ -94,18 +94,18 @@ if(isset($_GET['id'])) {
                                                 <div class="form-group col-md-12">
                                                     <textarea cols="6" rows="5" name="txtMessage" id="txtMessage" class="form-control" placeholder="Your Message" data-error="Write your message*"></textarea>
                                                 </div>
-                                                <div class="form-group col-md-6">
+                                                <div class="form-group col-md-6 ">
                                                     <input type="text" name="captchacode" id="captchacode" class="form-control input-validater" placeholder="Enter code">
                                                 </div>
-                                                <div class="form-group col-md-6 refresh-res">
+                                                <div class="form-group col-md-6  refresh-res inq-code">
                                                     <div style="margin-top: -12px; margin-left: 125px;" class="mrg">
                                                         <?php include("./contact-form/captchacode-widget.php"); ?>
                                                     </div>
                                                     <img id="checking" src="contact-form/img/checking.gif" alt="" />
                                                 </div>
                                             </div>
-                                            <div class="col-md-4 button-mrg">
-                                                <input id="btn-inquiry" name="submit" type="submit" class="btn btn-primary btn-lg btn-block submit-mrg c-form-submit submit submit-left" value="Submit now!">
+                                            <div class="col-md-4 button-mrg ">
+                                                <input id="btn-inquiry" name="submit" type="submit" class="btn btn-primary btn-lg btn-block submit-mrg c-form-submit submit submit-left btn-m btn-i" value="Submit now!">
                                             </div>
                                         </form>
                                     </div>

@@ -27,6 +27,9 @@ and open the template in the editor.
     .a-img-p{
         margin-left: 0px;
     }
+     .btn-i{
+        margin-left: -75px;
+    }
 }
 
 @media (max-width: 767px){
@@ -39,6 +42,7 @@ and open the template in the editor.
     .padd{
         margin-left: 0!important;
     }
+   
     
 }
 
@@ -83,7 +87,7 @@ and open the template in the editor.
         margin-left: 0px;
     }
     .refresh-res{
-        margin-left: 46px;
+        margin-left: -56px;
     }
     .our{
         margin-top: 65px;
@@ -99,6 +103,9 @@ and open the template in the editor.
     }
     .our-location{
         margin-top: 55px;
+    }
+    .btn-m{
+        margin-left: -83px ;
     }
 }
 
@@ -118,6 +125,7 @@ and open the template in the editor.
     .res-padd{
         padding-left: 104px;
     }
+    
 
 }
 
