@@ -12,6 +12,8 @@
                 </div>
                 <div class="col-md-8 col-sm-6">
                     <ul class="horiz-nav pull-right">
+                        <li><a href="about.php">About Us</a></li>
+                        <li><a href="contact.php">Contact Us</a></li>
                         <?php
                         session_start();
                         if (isset($_SESSION['m_id'])) {
@@ -33,7 +35,7 @@
                         <?php
                         } else {
                         ?>
-                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login </a></li>
+                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Member Login </a></li>
                         <?php
                         }
                         ?>
@@ -101,8 +103,6 @@
                             }
                             ?>
                             <li><a href="agents.php">Agents</a></li>
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="contact.php">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>

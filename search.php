@@ -1,16 +1,16 @@
 <?php
 include_once 'class/include.php';
 
-$category = '';
-$subcategory = '';
+$category1 = '';
+$subcategory1 = '';
 $district = '';
 $city = '';
 
 if (isset($_GET['category'])) {
-    $category = $_GET['category'];
+    $category1 = $_GET['category'];
 }
 if (isset($_GET['sub_category'])) {
-    $subcategory = $_GET['sub_category'];
+    $subcategory1 = $_GET['sub_category'];
 }
 if (isset($_GET['district'])) {
     $district = $_GET['district'];
@@ -23,11 +23,11 @@ if (isset($_GET["page"])) {
 } else {
     $page = 1;
 }
-$setlimit = 20;
+$setlimit = 12;
 
 $pagelimit = ($page * $setlimit) - $setlimit;
 
-$properties = Property::search($category, $subcategory, $district, $city, $pagelimit, $setlimit);
+$properties = Property::search($category1, $subcategory1, $district, $city, $pagelimit, $setlimit);
 ?>
 
 <!DOCTYPE HTML>
@@ -48,13 +48,13 @@ $properties = Property::search($category, $subcategory, $district, $city, $pagel
     <!-- CSS
           ================================================== -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
     <link href="control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     <link class="alt" href="colors/color1.css" rel="stylesheet" type="text/css">
     <link href="style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- SCRIPTS
           ================================================== -->
@@ -119,6 +119,9 @@ $properties = Property::search($category, $subcategory, $district, $city, $pagel
                                     } ?>
                                 </ul>
                             </div>
+                            <div class="">
+                                <?php Property::showPaginationForSearch($category1, $subcategory1, $district, $city, $setlimit, $page); ?>
+                            </div>
                         </div>
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 serch-dev">
@@ -173,23 +176,23 @@ $properties = Property::search($category, $subcategory, $district, $city, $pagel
         <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
     </div>
     <script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
-        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
-        <!--PrettyPhoto Plugin -->
-        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
-        <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
-        <script src="js/helper-plugins.js"></script>
-        <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <!--Plugins-->
-        <script src="js/bootstrap.js"></script> <!-- UI -->
-        <script src="js/waypoints.js"></script>
-        <!--Waypoints-->
-        <script src="js/init.js"></script>
-        <script src="js/city.js"></script>
-        <script src="js/sub-category.js"></script>
-        <script src="js/search.js"></script>
-        <!--Waypoints-->
-        <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
-        <!-- <script src="style-switcher/js/jquery_cookie.js"></script>
+    <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
+    <!--PrettyPhoto Plugin -->
+    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+    <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+    <script src="js/helper-plugins.js"></script>
+    <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    <!--Plugins-->
+    <script src="js/bootstrap.js"></script> <!-- UI -->
+    <script src="js/waypoints.js"></script>
+    <!--Waypoints-->
+    <script src="js/init.js"></script>
+    <script src="js/city.js"></script>
+    <script src="js/sub-category.js"></script>
+    <script src="js/search.js"></script>
+    <!--Waypoints-->
+    <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
+    <!-- <script src="style-switcher/js/jquery_cookie.js"></script>
         <script src="style-switcher/js/script.js"></script> -->
 </body>
 

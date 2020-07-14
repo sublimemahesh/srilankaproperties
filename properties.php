@@ -1,20 +1,30 @@
 <?php
 include_once 'class/include.php';
 
-$category = '';
-$subcategory = '';
+$category1 = '';
+$subcategory1 = '';
+$page = '';
+if (isset($_GET["page"])) {
+    $page = (int) $_GET["page"];
+} else {
+    $page = 1;
+}
+$setlimit = 1;
+
+$pagelimit = ($page * $setlimit) - $setlimit;
 if (isset($_GET['category'])) {
-    $category = $_GET['category'];
-    $CATEGORY = new Category($category);
-    $properties = Property::getPropertiesByCategory($category);
+    $category1 = $_GET['category'];
+    $CATEGORY = new Category($category1);
+    $properties = Property::getPropertiesByCategoryWithLimit($category1, $pagelimit, $setlimit);
     $title = $CATEGORY->name;
 }
 if (isset($_GET['subcategory'])) {
-    $subcategory = $_GET['subcategory'];
-    $SUBCATEGORY = new SubCategory($subcategory);
-    $properties = Property::getPropertiesBySubCategory($subcategory);
+    $subcategory1 = $_GET['subcategory'];
+    $SUBCATEGORY = new SubCategory($subcategory1);
+    $properties = Property::getPropertiesBySubCategoryWithLimit($subcategory1, $pagelimit, $setlimit);
     $title = $SUBCATEGORY->name;
 }
+
 
 ?>
 
@@ -36,13 +46,13 @@ if (isset($_GET['subcategory'])) {
     <!-- CSS
           ================================================== -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.carousel.css" rel="stylesheet" type="text/css">
     <link href="plugins/owl-carousel/css/owl.theme.css" rel="stylesheet" type="text/css">
     <link href="control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     <link class="alt" href="colors/color1.css" rel="stylesheet" type="text/css">
     <link href="style-switcher/css/style-switcher.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <!-- SCRIPTS
           ================================================== -->
@@ -92,7 +102,7 @@ if (isset($_GET['subcategory'])) {
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
-                                                        <h4><a href="member/view-property.php"><?= $property['title']; ?></a></h4>
+                                                        <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
                                                         <span class="location"><?= $DISTRICT->name; ?></span>
                                                         <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
                                                         <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
@@ -107,6 +117,9 @@ if (isset($_GET['subcategory'])) {
                                     } ?>
                                 </ul>
                             </div>
+                            <div class="">
+                                <?php Property::showPagination($category1, $subcategory1, $setlimit, $page); ?>
+                            </div>
                         </div>
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 serch-dev">
@@ -117,17 +130,17 @@ if (isset($_GET['subcategory'])) {
                                         <select name="category" id="category" class="form-control input-lg selectpicker">
                                             <option value="" selected>Category</option>
                                             <?php
-                                            foreach (Category::all() as $category) :
+                                            foreach (Category::all() as $cat) :
                                             ?>
-                                                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <option value="<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                             <option value="" selected>Sub Category</option>
                                             <?php
-                                            foreach (SubCategory::all() as $subcategory) :
+                                            foreach (SubCategory::all() as $subcat) :
                                             ?>
-                                                <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                <option value="<?php echo $subcat['id']; ?>"><?php echo $subcat['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">

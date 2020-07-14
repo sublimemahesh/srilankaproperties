@@ -388,26 +388,26 @@ class Member
                         else
                             $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
                     }
-                    $setPaginate .= "<li class='dot'>...</li>";
+                    $setPaginate .= "<li class='dot'><a>...</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$lpm1'>$lpm1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
                 } elseif ($setLastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
                     $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
-                    $setPaginate .= "<li class='dot'>...</li>";
+                    $setPaginate .= "<li class='dot'><a>...</a></li>";
                     for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++) {
                         if ($counter == $page)
                             $setPaginate .= "<li class='active'><a>$counter</a></li>";
                         else
                             $setPaginate .= "<li><a href='{$page_url}page=$counter'>$counter</a></li>";
                     }
-                    $setPaginate .= "<li class='dot'>..</li>";
+                    $setPaginate .= "<li class='dot'><a>...</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$lpm1'>$lpm1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=$setLastpage'>$setLastpage</a></li>";
                 } else {
                     $setPaginate .= "<li><a href='{$page_url}page=1'>1</a></li>";
                     $setPaginate .= "<li><a href='{$page_url}page=2'>2</a></li>";
-                    $setPaginate .= "<li class='dot'>..</li>";
+                    $setPaginate .= "<li class='dot'><a>...</a></li>";
                     for ($counter = $setLastpage - (2 + ($adjacents * 2)); $counter <= $setLastpage; $counter++) {
                         if ($counter == $page)
                             $setPaginate .= "<li class='active'><a>$counter</a></li>";
