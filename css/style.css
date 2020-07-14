@@ -4045,13 +4045,26 @@ span.progress-bar-tooltip:after {
 .header-profile-pic {
     width: 20px;
 }
+
 .btn-inquiry-now {
     width: 120px;
-padding: 10px;
-margin-top: -25px;
-margin-bottom: 17px;
-margin-left: 15px;
+    padding: 10px;
+    margin-top: -25px;
+    margin-bottom: 17px;
+    margin-left: 15px;
 }
-.site-search-module-inside .col-md-2{
-padding-right: 0;
+
+.site-search-module-inside .col-md-2 {
+    padding-right: 0;
+}
+
+.pagination .disable a,
+.pagination .disable a:hover {
+    background-color: #e3e3e3;
+    color: #999;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:hover {
+    border-color: #71b317;
 }

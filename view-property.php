@@ -9,6 +9,7 @@ if (isset($_GET['id'])) {
     $SUBCATEGORY = new SubCategory($PROPERTY->sub_category);
     $DISTRICT = new District($PROPERTY->district);
     $CITY = new City($PROPERTY->city);
+    $MEMBER = new Member($PROPERTY->member);
 }
 ?>
 <!DOCTYPE HTML>
@@ -130,50 +131,68 @@ if (isset($_GET['id'])) {
                                 <div class="row">
                                     <a href="inquiry.php?id=<?= $PROPERTY->id; ?>" class="btn btn-primary btn-inquiry-now"> Inquiry Now</a>
                                 </div>
-                                <h3>Related Properties</h3>
-                                <hr>
-                                <div class="property-grid">
-                                    <div class="row">
+                                <div class="row widget single-property">
+                                    <h3 class="widgettitle">Agent</h3>
+                                    <div class="agent">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="<?= $MEMBER->name; ?>">
+                                            </div>
+                                            <div class="col-md-8">
+                                                <h4><?= $MEMBER->name; ?></h4>
+                                                <?= $MEMBER->description; ?>
+                                                <div class="agent-contacts clearfix">
+                                                    <!-- <a href="#" class="btn btn-primary pull-right btn-sm">Contact Agent</a> -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row widget">
+                                    <h3 class="widgettitle">Related Properties</h3>
+                                    <div class="property-grid">
+                                        <div class="row">
 
-                                        <?php
-                                        $properties = Property::getPropertiesByCategory($PROPERTY->category);
-                                        if (count($properties) - 1 > 0) {
-                                        ?>
-                                            <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
-                                                <?php
-                                                foreach ($properties as $property) :
-                                                    if ($property['id'] != $PROPERTY->id) :
-                                                        $CATEGORY = new Category($property['category']);
-                                                        $DISTRICT = new District($property['district']);
-                                                ?>
+                                            <?php
+                                            $properties = Property::getPropertiesByCategory($PROPERTY->category);
+                                            if (count($properties) - 1 > 0) {
+                                            ?>
+                                                <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
+                                                    <?php
+                                                    foreach ($properties as $property) :
+                                                        if ($property['id'] != $PROPERTY->id) :
+                                                            $CATEGORY = new Category($property['category']);
+                                                            $DISTRICT = new District($property['district']);
+                                                    ?>
 
-                                                        <li class="item property-block">
-                                                            <a href="view-property.php?id=" class="property-featured-image">
-                                                                <img src="upload/properties/<?= $property['image_name'] ?>" alt="">
-                                                                <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
-                                                                <span class="badges"><?= $CATEGORY->name; ?></span>
-                                                            </a>
-                                                            <div class="property-info">
-                                                                <h4><a href="#"><?= $property['title']; ?></a></h4>
-                                                                <span class="location"><?= $DISTRICT->name; ?></span>
+                                                            <li class="item property-block">
+                                                                <a href="view-property.php?id=" class="property-featured-image">
+                                                                    <img src="upload/properties/<?= $property['image_name'] ?>" alt="">
+                                                                    <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
+                                                                    <span class="badges"><?= $CATEGORY->name; ?></span>
+                                                                </a>
+                                                                <div class="property-info">
+                                                                    <h4><a href="#"><?= $property['title']; ?></a></h4>
+                                                                    <span class="location"><?= $DISTRICT->name; ?></span>
 
-                                                                <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
-                                                                <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
-                                                            </div>
-                                                        </li>
-                                                <?php
-                                                    endif;
-                                                endforeach;
-                                                ?>
-                                            </ul>
-                                        <?php
-                                        } else {
-                                        ?>
-                                            <h5>No any related properties in the database.</h5>
-                                        <?php
-                                        } ?>
+                                                                    <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
+                                                                    <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
+                                                                </div>
+                                                            </li>
+                                                    <?php
+                                                        endif;
+                                                    endforeach;
+                                                    ?>
+                                                </ul>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <h5>No any related properties in the database.</h5>
+                                            <?php
+                                            } ?>
 
 
+                                        </div>
                                     </div>
                                 </div>
                             </div>
