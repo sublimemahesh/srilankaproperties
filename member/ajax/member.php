@@ -9,6 +9,7 @@ $MEMBER->district = $_POST['district'];
 $MEMBER->city = $_POST['city'];
 $MEMBER->address = $_POST['address'];
 $MEMBER->nic = $_POST['nic'];
+$MEMBER->description = $_POST['description'];
 /////NIC PHOTO FRONT
 $handle1 = new Upload($_FILES['image_name']);
 if ($handle1->uploaded) {
@@ -36,6 +37,7 @@ $VALID->check($MEMBER, [
     'address' => ['required' => TRUE],
     'nic' => ['required' => TRUE],
     'picture' => ['required' => TRUE],
+    'description' => ['required' => TRUE]
 ]);
 $checkEmail = $MEMBER->checkEmail($_POST['id'], $_POST['email']);
 if (!$checkEmail || $checkEmail['id'] == $_POST['id']) {

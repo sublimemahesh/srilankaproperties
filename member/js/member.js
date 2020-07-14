@@ -2,6 +2,7 @@
 $(document).ready(function() {
     $('#btn-update').click(function(event) {
         event.preventDefault();
+        tinyMCE.triggerSave();
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
         $('#btn-update').hide();
@@ -106,9 +107,20 @@ $(document).ready(function() {
             $('#btn-update').show();
             $('#update-loading').hide();
 
+        } else if (!$('#description').val() || $('#description').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter the description...",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+            $('#btn-update').show();
+            $('#update-loading').hide();
+
         } else {
 
-            var formData = new FormData($("form#dealer-form")[0]);
+            var formData = new FormData($("form#member-form")[0]);
 
             $.ajax({
                 url: "ajax/member.php",
