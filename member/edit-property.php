@@ -168,18 +168,6 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="house_type">House Type</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" id="house-type" class="form-control" autocomplete="off" name="house_type" value="<?= $PROPERTY->housetype; ?>">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="image">Image <span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -193,36 +181,24 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="location">Location<span class="text-danger">*</span></label>
+                                <label for="address">Address<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="location" class="form-control" autocomplete="off" name="location" value="<?= $PROPERTY->location; ?>">
+                                        <input type="text" id="address" class="form-control" autocomplete="off" name="address" value="<?= $PROPERTY->address; ?>">
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="map_code">Map Code</label>
+                                <label for="email">Email<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="map-code" class="form-control" autocomplete="off" name="map_code" value="<?= $PROPERTY->map; ?>">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="price">Price<span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="price" id="price" class="form-control" autocomplete="off" name="price" value="<?= $PROPERTY->price; ?>">
+                                        <input type="text" id="email" class="form-control" autocomplete="off" name="email" value="<?= $PROPERTY->email; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -241,12 +217,12 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="short_description">Short Description</label>
+                                <label for="price">Price<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="short_description" class="form-control" autocomplete="off" name="short_description" value="<?= $PROPERTY->short_description; ?>">
+                                        <input type="price" id="price" class="form-control" autocomplete="off" name="price" value="<?= $PROPERTY->price; ?>">
                                     </div>
                                 </div>
                             </div>

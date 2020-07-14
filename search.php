@@ -95,18 +95,20 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                     if (count($properties) > 0) {
                                         foreach ($properties as $property) :
                                             $CATEGORY = new Category($property['category']);
+                                            $SUBCATEGORY = new SubCategory($property['sub_category']);
                                             $DISTRICT = new District($property['district']);
+                                            $CITY = new City($property['city']);
                                     ?>
                                             <li class="grid-item type-rent">
                                                 <div class="property-block">
                                                     <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
-                                                        <img src="upload/properties/<?= $property['image_name'] ?>"><span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
+                                                        <img src="upload/properties/<?= $property['image_name'] ?>">
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
-                                                        <h4><a href="member/view-property.php"><?= $property['title']; ?></a></h4>
-                                                        <span class="location"><?= $DISTRICT->name; ?></span>
-                                                        <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
+                                                        <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
+                                                        <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
+                                                        <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
                                                         <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                     </div>
                                                 </div>

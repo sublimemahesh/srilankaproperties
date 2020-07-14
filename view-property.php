@@ -157,25 +157,26 @@ if (isset($_GET['id'])) {
                                             $properties = Property::getPropertiesByCategory($PROPERTY->category);
                                             if (count($properties) - 1 > 0) {
                                             ?>
-                                                <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
+                                                <ul class="owl-carousel owl-alt-controls" data-columns="3" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
                                                     <?php
                                                     foreach ($properties as $property) :
                                                         if ($property['id'] != $PROPERTY->id) :
                                                             $CATEGORY = new Category($property['category']);
+                                                            $SUBCATEGORY = new SubCategory($property['sub_category']);
                                                             $DISTRICT = new District($property['district']);
+                                                            $CITY = new City($property['city']);
                                                     ?>
 
                                                             <li class="item property-block">
-                                                                <a href="view-property.php?id=" class="property-featured-image">
+                                                                <a href="view-property.php?id=<?= $property['id']; ?>" class="property-featured-image">
                                                                     <img src="upload/properties/<?= $property['image_name'] ?>" alt="">
-                                                                    <span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
                                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                                 </a>
                                                                 <div class="property-info">
-                                                                    <h4><a href="#"><?= $property['title']; ?></a></h4>
-                                                                    <span class="location"><?= $DISTRICT->name; ?></span>
+                                                                    <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
+                                                                    <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
+                                                                    <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
 
-                                                                    <p><?php echo substr($property['short_description'], 0, 60) . '...'; ?></p>
                                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                                 </div>
                                                             </li>
@@ -193,48 +194,6 @@ if (isset($_GET['id'])) {
 
 
                                         </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="sidebar right-sidebar col-md-3 serch-dev">
-                                <div class="widget sidebar-widget">
-                                    <h3 class="widgettitle">Search Properties</h3>
-                                    <div class="full-search-form ">
-                                        <form action="search.php" id="search-form">
-                                            <select name="category" id="category" class="form-control input-lg selectpicker">
-                                                <option value="" selected>Category</option>
-                                                <?php
-                                                foreach (Category::all() as $category) :
-                                                ?>
-                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
-                                                <option value="" selected>Sub Category</option>
-                                                <?php
-                                                foreach (SubCategory::all() as $subcategory) :
-                                                ?>
-                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <select name="district" id="district" class="form-control input-lg selectpicker">
-                                                <option value="" selected>District</option>
-                                                <?php
-                                                foreach (District::all() as $district) :
-                                                ?>
-                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <select name="city" id="city" class="form-control input-lg selectpicker">
-                                                <option value="" selected>City</option>
-                                                <?php
-                                                foreach (City::all() as $city) :
-                                                ?>
-                                                    <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
-                                                <?php endforeach; ?>
-                                            </select>
-                                            <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
-                                        </form>
                                     </div>
                                 </div>
                             </div>

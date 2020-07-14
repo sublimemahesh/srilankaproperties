@@ -132,19 +132,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="house_type">House Type</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" id="house-type" class="form-control title-input" autocomplete="off" name="house_type" required="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
                                 <label for="image">Image <span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
@@ -156,26 +144,27 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="location">Location<span class="text-danger">*</span></label>
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                                <label for="address">Address<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="location" class="form-control title-input" autocomplete="off" name="location" required="true">
+                                        <input type="text" id="address" class="form-control title-input" autocomplete="off" name="address" required="true">
                                         <!--                                            <label class="form-label">Title</label>-->
                                     </div>
                                 </div>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="map_code">Map Code</label>
+
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                                <label for="email">Email<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="map-code" class="form-control title-input" autocomplete="off" name="map_code" required="true">
+                                        <input type="text" id="email" class="form-control title-input" autocomplete="off" name="email" required="true">
                                     </div>
                                 </div>
                             </div>
@@ -204,18 +193,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="short_description">Short Description</label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" id="short_description" class="form-control title-input" autocomplete="off" name="short_description" required="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+
                         <div class="row ">
                             <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                 <label for="features">Features<span class="text-danger">*</span></label>
