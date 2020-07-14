@@ -73,10 +73,16 @@ $comments = $COMMENT->all();
                         <div class="slider-mask overlay-transparent"></div>
                         <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
                             <ul class="slides add">
-                                <li class=" parallax" style="background-image:url(images/realstate/add1.jpg);"></li>
-                                <li class="parallax" style="background-image:url(images/realstate/add3.jpg);"></li>
-                                <li class="parallax" style="background-image:url(images/realstate/add2.jpg);"></li>
-                                <li class="parallax" style="background-image:url(images/realstate/add4.jpg);"></li>
+                                <?php if(COUNT(Advertisement::all())) : ?> 
+                                    <?php foreach( Advertisement::all() as $ad) : ?>
+                                        <li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);"></li>
+                                    <?php endforeach; ?> 
+                                <?php else : ?>
+                                    <li class=" parallax" style="background-image:url(images/realstate/add1.jpg);"></li>
+                                    <li class="parallax" style="background-image:url(images/realstate/add3.jpg);"></li>
+                                    <li class="parallax" style="background-image:url(images/realstate/add2.jpg);"></li>
+                                    <li class="parallax" style="background-image:url(images/realstate/add4.jpg);"></li>
+                                <?php endif; ?> 
                             </ul>
                         </div>
                     </div>
