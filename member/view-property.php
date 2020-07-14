@@ -1,7 +1,6 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include './auth.php';
-
 $MEMBER = new Member($_SESSION["m_id"]);
 $id = '';
 if (isset($_GET['id'])) {
@@ -16,35 +15,30 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
 ?>
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <title>Property || Sri Lanka Properties</title>
-
-    <!-- Favicon Icon Css -->
-    <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
-    <!-- Animation CSS -->
-    <link rel="stylesheet" href="../css/animate.css" type="text/css">
-    <!-- Font Css -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
-    <!-- Bootstrap Css -->
-    <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
-
-    <!-- main css -->
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <link href="css/responsive.css" type="text/css" rel="stylesheet">
-    <link href="css/custom.css" type="text/css" rel="stylesheet">
-    <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <title>Property || Sri Lanka Properties</title>
+        <!-- Favicon Icon Css -->
+        <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
+        <!-- Animation CSS -->
+        <link rel="stylesheet" href="../css/animate.css" type="text/css">
+        <!-- Font Css -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <!-- Bootstrap Css -->
+        <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
+        <!-- main css -->
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="css/responsive.css" type="text/css" rel="stylesheet">
+        <link href="css/custom.css" type="text/css" rel="stylesheet">
+        <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
+  
 </head>
-
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -53,7 +47,6 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
             </div>
         </div>-->
     <!-- LOADER -->
-
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
@@ -147,17 +140,21 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
-        <?php include './footer.php'; ?>
 
-        <!-- Jquery js -->
-        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    </div>
+    <?php include './footer.php'; ?>
+    <!-- Jquery js -->
+    <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    <!-- Custom css -->
+    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/city.js" type="text/javascript"></script>
+    <script src="js/dealer_area.js" type="text/javascript"></script>
+
 
 </body>
-
 </html>

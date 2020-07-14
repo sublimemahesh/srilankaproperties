@@ -19,6 +19,7 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
         <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
 
         <title>Cash on Delivery - Online Shopping Store</title>
 
@@ -55,8 +56,8 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
 
         <?php include './header.php'; ?>
         <div class="container">
-            <div class="header-bar">
-                <i class="fa fa-map-marker"></i> : View Order - #<?php echo $id; ?>
+            <div class="header-bar font-color">
+                <i class="fa fa-map-marker"></i> View Order - #<?php echo $id; ?>
             </div>
             <div class="row">
                 <div class="col-md-12">
@@ -213,12 +214,9 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
                                         <?php
                                     }
                                     ?>
-
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
@@ -290,7 +288,6 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
                     </div>
                 </div>
             </div>
-
             <div id="edit-pro-modal" class="modal fade" tabindex="-1">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -351,24 +348,19 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
             </div>
         </div>
         <?php include './footer.php'; ?> 
-
         <!-- Jquery js -->
         <script src="../js/jquery.min.js" type="text/javascript"></script>
-
         <script src="../js/bootstrap.min.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
         <!-- Custom css -->
         <script src="../js/custom.js" type="text/javascript"></script>  
         <script src="js/confirm-order.js" type="text/javascript"></script>
         <script src="js/order-products.js" type="text/javascript"></script> 
-
         <script src="../control-panel/plugins/jquery-datatable/jquery.dataTables.js"></script> 
         <script src="../control-panel/plugins/jquery-datatable/extensions/export/dataTables.buttons.min.js"></script>
         <script src="js/data_tables.js" type="text/javascript"></script>    
         <?php
         $DEALER = new Dealer($_SESSION["d_id"]);
-
         $result = $DEALER->checkEmptyData();
         if ($result != 0) {
             ?>
@@ -379,9 +371,7 @@ $ORDER_PRODUCT = OrderProduct::getOrdersById($id);
             </script>
             <?php
         }
-
         $agreement = $DEALER->checkAgreement();
-
         if ($agreement == 0) {
             ?>
             <script type="text/javascript">

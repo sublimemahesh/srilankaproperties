@@ -7,6 +7,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
 <!doctype html>
 <html lang="en">
     <head>
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <!-- Required meta tags -->
          <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
         <!-- Animation CSS -->
@@ -38,27 +39,26 @@ $MEMBER = new Member($_SESSION["m_id"]);
 
         <?php include './header.php'; ?>
         <div class="container">
-            <div class="header-bar font-color">
+            <div class="header-bar font-color header-text dashboard dash-top">
                 <i class="fa fa-dashboard"></i>  Dashboard 
             </div>
 
             <div class="row">
                 <div class="col-md-3">
-                    <a class="sub-box text-center text-c" href="manage-properties.php?status=0">
-                        <b>Pending Properties</b> 
+                    <a class="sub-box text-center text-c dash-box " href="manage-properties.php?status=0">
+                        <b class="font-member-box">Pending Properties</b> 
                         <hr/>
                         <i class="fa fa-spinner"></i> 
                         <hr/>
 
                     </a>
                 </div>
-                <div class="col-md-3">
-                    <a class="sub-box text-center text-c" href="manage-properties.php?status=1">
+                <div class="col-md-3 box-bottom ">
+                    <a class="sub-box text-center text-c " href="manage-properties.php?status=1">
                         <b>Approval Properties</b> 
                         <hr/>
                         <i class="fa fa-check-circle-o text-danger"></i> 
                         <hr/>
-
                     </a>
                 </div> 
 <!--                <div class="col-md-3">
@@ -80,16 +80,12 @@ $MEMBER = new Member($_SESSION["m_id"]);
                     </div>
                 </div>
             </div>-->
-
         </div>
         <?php include './footer.php'; ?> 
-
         <!-- Jquery js -->
         <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 

@@ -10,14 +10,12 @@ if (isset($_GET['id'])) {
 ?>
 <!doctype html>
 <html lang="en">
-
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
     <title>Properties || Sri Lanka Properties</title>
-
     <!-- Favicon Icon Css -->
     <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
     <!-- Animation CSS -->
@@ -25,20 +23,16 @@ if (isset($_GET['id'])) {
     <!-- Font Css -->
     <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
     <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
     <!-- Bootstrap Css -->
     <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
     <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
-
     <!-- main css -->
     <link href="css/style.css" type="text/css" rel="stylesheet">
     <link href="css/responsive.css" type="text/css" rel="stylesheet">
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-
 </head>
-
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -47,18 +41,15 @@ if (isset($_GET['id'])) {
                     </div>
                 </div>-->
     <!-- LOADER -->
-
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-pencil"></i> Edit Property - #<?= $id; ?>
         </div>
-
         <div class="row">
             <div class="col-md-12">
                 <div class="panel-box form-box-inner">
                     <form class="form-horizontal" id="edit-property-form" method="post" action="" enctype="multipart/form-data">
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="title">Title <span class="text-danger">*</span></label>
@@ -123,7 +114,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="district">District <span class="text-danger">*</span></label>
@@ -176,7 +166,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="house_type">House Type</label>
@@ -189,7 +178,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="image">Image <span class="text-danger">*</span></label>
@@ -202,7 +190,6 @@ if (isset($_GET['id'])) {
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
@@ -216,7 +203,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="map_code">Map Code</label>
@@ -229,7 +215,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="price">Price<span class="text-danger">*</span></label>
@@ -242,7 +227,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="contact">Phone Number<span class="text-danger">*</span></label>
@@ -279,7 +263,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="description">Description<span class="text-danger">*</span></label>
@@ -292,7 +275,6 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                             </div>
@@ -305,22 +287,17 @@ if (isset($_GET['id'])) {
                             </div>
                         </div>
 
-
                     </form>
                 </div>
-
             </div>
         </div>
         <div id="chart_div"></div>
     </div>
     <?php include './footer.php'; ?>
-
     <!-- Jquery js -->
     <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-
     <script src="../js/bootstrap.js" type="text/javascript"></script>
     <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
     <!-- Custom css -->
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/city.js" type="text/javascript"></script>
@@ -333,7 +310,6 @@ if (isset($_GET['id'])) {
             // ===========================================
             // INCLUDE THE PLUGIN
             // ===========================================
-
             plugins: [
                 "advlist autolink lists link image charmap print preview anchor",
                 "searchreplace visualblocks code fullscreen",
@@ -342,21 +318,17 @@ if (isset($_GET['id'])) {
             // ===========================================
             // PUT PLUGIN'S BUTTON on the toolbar
             // ===========================================
-
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
             // ===========================================
             // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
             // ===========================================
-
             relative_urls: false
-
         });
         tinymce.init({
             selector: "#features",
             // ===========================================
             // INCLUDE THE PLUGIN
             // ===========================================
-
             plugins: [
                 "advlist autolink lists link image charmap print preview anchor",
                 "searchreplace visualblocks code fullscreen",
@@ -365,16 +337,12 @@ if (isset($_GET['id'])) {
             // ===========================================
             // PUT PLUGIN'S BUTTON on the toolbar
             // ===========================================
-
             toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
             // ===========================================
             // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
             // ===========================================
-
             relative_urls: false
-
         });
     </script>
 </body>
-
 </html>

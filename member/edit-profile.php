@@ -5,31 +5,30 @@ $MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
-
-<head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Sri Lanka Properties</title>
-    <!-- Favicon Icon Css -->
-    <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
-    <!-- Animation CSS -->
-    <link rel="stylesheet" href="../css/animate.css" type="text/css">
-    <!-- Font Css -->
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-    <link rel="stylesheet" href="../css/font-awesome.css">
-    <!-- Bootstrap Css -->
-    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
-    <!-- main css -->
-    <link href="css/style.css" type="text/css" rel="stylesheet">
-    <link href="css/responsive.css" type="text/css" rel="stylesheet">
-    <link href="css/custom.css" type="text/css" rel="stylesheet">
-    <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-</head>
-
-<body class="theme-2">
-    <!-- LOADER -->
-    <!-- <div id="preloader">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Sri Lanka Properties</title>
+        <!-- Favicon Icon Css -->
+        <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
+        <!-- Animation CSS -->
+        <link rel="stylesheet" href="../css/animate.css" type="text/css">  
+        <!-- Font Css -->
+        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link rel="stylesheet" href="../css/font-awesome.css">
+        <!-- Bootstrap Css --> 
+        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+        <!-- main css --> 
+        <link href="css/style.css" type="text/css" rel="stylesheet">
+        <link href="css/responsive.css" type="text/css" rel="stylesheet">
+        <link href="css/custom.css" type="text/css" rel="stylesheet">
+        <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
+    </head>
+    <body class="theme-2">
+        <!-- LOADER -->
+        <!-- <div id="preloader">
             <div class="loading_wrap">
                 <img src="../image/logo.jpg" alt="logo">
             </div>
@@ -124,7 +123,6 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                         <?php
                                                         } else {
                                                         ?>
-                                                            <option value="<?= $district['id']; ?>"><?= $district['name']; ?></option>
                                                     <?php
                                                         }
                                                     }
@@ -218,6 +216,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                 ?>
                                                 <input type="file" name="image_name" class="form-control <?= $class; ?>" id="image_name">
                                                 <input type="hidden" name="image_name_ex" id="image_name_ex" value="<?= $MEMBER->picture; ?>">
+
                                             </div>
                                         </div>
                                     </div>
