@@ -3,9 +3,16 @@
     <!-- Start Hero Slider -->
     <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
         <ul class="slides">
-            <li class=" parallax" style="background-image:url(images/realstate/slider6.jpg);"></li>
-            <li class="parallax" style="background-image:url(images/realstate/slider5.jpg);"></li>
-            <li class="parallax" style="background-image:url(images/realstate/slider33.jpg);"></li>
+            <?php if(COUNT(Slider::all())) : ?>
+                <?php foreach( Slider::all() as $slide) : ?>
+                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);"></li>
+                <?php endforeach; ?>
+            <?php else : ?>
+                    <li class="parallax" style="background-image:url(images/realstate/slider6.jpg);"></li>
+                    <li class="parallax" style="background-image:url(images/realstate/slider5.jpg);"></li>
+                    <li class="parallax" style="background-image:url(images/realstate/slider33.jpg);"></li>
+            <?php endif; ?>
+            
         </ul>
     </div>
     <!-- End Hero Slider --> 

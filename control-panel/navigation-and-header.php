@@ -275,14 +275,20 @@
                         <span>Home</span>
                     </a>
                 </li>
-                <!-- <li class="qqq">
+                <li class="qqq">
                     <a href="create-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Slider</span>
                     </a>
 
                 </li>
-                <li class="qqq">
+                <li>
+                    <a href="create-ads-slider.php" class="">
+                        <i class="material-icons">chevron_right</i>
+                        <span>Advertisement Slider</span>
+                    </a> 
+                </li>
+                <!-- <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
                         <span>Offer</span>
@@ -348,7 +354,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li> 
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">location_on</i>
