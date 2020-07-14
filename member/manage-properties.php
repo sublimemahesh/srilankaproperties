@@ -43,11 +43,11 @@ $MEMBER = new Member($_SESSION["m_id"]);
             <?php
             if ($_GET['status'] == 0) {
             ?>
-                <i class="fa fa-link"></i> : Manage Pending Properties
+                <i class="fa fa-link"></i>  Manage Pending Properties
             <?php
             } else {
             ?>
-                <i class="fa fa-link"></i> : Manage Approved Properties
+                <i class="fa fa-link"></i>  Manage Approved Properties
             <?php
             }
             ?>

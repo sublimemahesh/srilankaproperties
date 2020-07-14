@@ -50,7 +50,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-link"></i> : Manage Property Inquiries
+            <i class="fa fa-link"></i>  Manage Property Inquiries
         </div>
 
         <div class="row">

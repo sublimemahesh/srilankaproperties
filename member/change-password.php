@@ -36,7 +36,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                     </div>
                 </div>-->
     <!-- LOADER -->
-    <?php include './header.php'; ?>
+     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-fa-user"></i> Change Password
@@ -46,10 +46,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                 <div class="panel-box form-box-inner">
                     <form class="form-horizontal" id="change-password-form" method="post" action="" enctype="multipart/form-data">
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                 <label for="oldPass">Old Password <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i text-l">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="password" id="oldPass" class="form-control" autocomplete="off" name="oldPass" required="true">
@@ -58,10 +58,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                 <label for="newPass">New Password <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="password" id="newPass" class="form-control" autocomplete="off" name="newPass" required="true">
@@ -70,10 +70,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                 <label for="confPass">Confirm Password <span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="password" id="confPass" class="form-control" autocomplete="off" name="confPass" required="true">
@@ -83,7 +83,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         </div>
                         
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
