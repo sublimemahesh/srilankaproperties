@@ -4045,6 +4045,7 @@ span.progress-bar-tooltip:after {
 .header-profile-pic {
     width: 20px;
 }
+
 .btn-inquiry-now {
     width: 120px;
     padding: 10px;
@@ -4052,6 +4053,7 @@ span.progress-bar-tooltip:after {
     margin-bottom: 17px;
     margin-left: 15px;
 }
+
 .site-search-module-inside .col-md-2 {
     padding-right: 0;
 }
@@ -4066,6 +4068,20 @@ span.progress-bar-tooltip:after {
 .pagination>.active>a:hover {
     border-color: #71b317;
 }
+
 .inq-code{
     margin-left: -103px;
+}
+
+.category {
+    display: block;
+    font-size: 100%;
+    padding: 0 0 10px 0;
+    color: #999;
+    font-family: 'Open Sans', sans-serif !important;
+    font-style: italic;
+}
+
+.category i {
+    color: #00c1f9;
 }

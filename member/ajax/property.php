@@ -9,16 +9,13 @@ if (isset($_POST['add-new-property'])) {
     $PROPERTY->sub_category = $_POST['sub_category'];
     $PROPERTY->district = $_POST['district'];
     $PROPERTY->city = $_POST['city'];
-    $PROPERTY->housetype = $_POST['house_type'];
-    $PROPERTY->location = $_POST['location'];
-    $PROPERTY->map = $_POST['map_code'];
+    $PROPERTY->address = $_POST['address'];
+    $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
     $PROPERTY->contact = $_POST['phone_number'];
-    $PROPERTY->short_description = $_POST['short_description'];
     $PROPERTY->features = $_POST['features'];
     $PROPERTY->description = $_POST['description'];
-    // $PROPERTY->short_description = $_POST['short_description'];
-    /////NIC PHOTO FRONT
+    
     $handle1 = new Upload($_FILES['image']);
     if ($handle1->uploaded) {
         $handle1->image_resize = true;
@@ -39,12 +36,11 @@ if (isset($_POST['add-new-property'])) {
         'sub_category' => ['required' => TRUE],
         'district' => ['required' => TRUE],
         'city' => ['required' => TRUE],
-        'location' => ['required' => TRUE],
+        'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'features' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'short_description' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {
@@ -67,16 +63,13 @@ if (isset($_POST['edit-property'])) {
     $PROPERTY->sub_category = $_POST['sub_category'];
     $PROPERTY->district = $_POST['district'];
     $PROPERTY->city = $_POST['city'];
-    $PROPERTY->housetype = $_POST['house_type'];
-    $PROPERTY->location = $_POST['location'];
-    $PROPERTY->map = $_POST['map_code'];
+    $PROPERTY->address = $_POST['address'];
+    $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
     $PROPERTY->contact = $_POST['phone_number'];
-    $PROPERTY->short_description = $_POST['short_description'];
     $PROPERTY->features = $_POST['features'];
     $PROPERTY->description = $_POST['description'];
-    // $PROPERTY->short_description = $_POST['short_description'];
-    /////NIC PHOTO FRONT
+    
     $handle1 = new Upload($_FILES['image']);
     $img = $_POST["image_name_old"];
     if ($handle1->uploaded) {
@@ -100,12 +93,11 @@ if (isset($_POST['edit-property'])) {
         'sub_category' => ['required' => TRUE],
         'district' => ['required' => TRUE],
         'city' => ['required' => TRUE],
-        'location' => ['required' => TRUE],
+        'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'features' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'short_description' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {

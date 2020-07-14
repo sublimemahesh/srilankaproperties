@@ -73,15 +73,26 @@ $(document).ready(function() {
             $('#btn-save').show();
             $('#update-loading').hide();
 
-        } else if (!$('#location').val() || $('#location').val().length === 0) {
+        } else if (!$('#address').val() || $('#address').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter the location...",
+                text: "Please enter the address...",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
             });
             $('#btn-save').show();
+            $('#update-loading').hide();
+
+        } else if (!$('#email').val() || $('#email').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter the email...",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+            $('#btn-update').show();
             $('#update-loading').hide();
 
         } else if (!$('#price').val() || $('#price').val().length === 0) {
@@ -244,10 +255,21 @@ $(document).ready(function() {
             $('#btn-update').show();
             $('#update-loading').hide();
 
-        } else if (!$('#location').val() || $('#location').val().length === 0) {
+        } else if (!$('#address').val() || $('#address').val().length === 0) {
             swal({
                 title: "Error!",
-                text: "Please enter the location...",
+                text: "Please enter the address...",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+            $('#btn-update').show();
+            $('#update-loading').hide();
+
+        } else if (!$('#email').val() || $('#email').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please enter the email...",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
@@ -336,7 +358,6 @@ $(document).ready(function() {
                             showConfirmButton: false
                         });
 
-                        // window.location.replace("view-property-photos.php?id=" + result.id);
                         window.location.replace("edit-property.php?id=" + result.id);
                     }
                 }

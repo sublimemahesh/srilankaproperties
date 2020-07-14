@@ -23,13 +23,11 @@ class Property
     public $district;
     public $city;
     public $image_name;
-    public $short_description;
     public $description;
     public $price;
-    public $housetype;
     public $contact;
-    public $location;
-    public $map;
+    public $address;
+    public $email;
     public $features;
     public $queue;
     public $status;
@@ -53,13 +51,11 @@ class Property
             $this->district = $result['district'];
             $this->city = $result['city'];
             $this->image_name = $result['image_name'];
-            $this->short_description = $result['short_description'];
             $this->description = $result['description'];
             $this->price = $result['price'];
-            $this->housetype = $result['housetype'];
             $this->contact = $result['contact'];
-            $this->location = $result['location'];
-            $this->map = $result['map'];
+            $this->address = $result['address'];
+            $this->email = $result['email'];
             $this->features = $result['features'];
             $this->queue = $result['queue'];
             $this->status = $result['status'];
@@ -82,13 +78,11 @@ class Property
             . "`district`,"
             . "`city`,"
             . "`image_name`,"
-            . "`short_description`,"
             . "`description`,"
             . "`price`,"
-            . "`housetype`,"
             . "`contact`,"
-            . "`location`,"
-            . "`map`,"
+            . "`address`,"
+            . "`email`,"
             . "`features`,"
             . "`queue`"
             . ") VALUES  ('"
@@ -100,13 +94,11 @@ class Property
             . $this->district . "', '"
             . $this->city . "', '"
             . $this->image_name . "', '"
-            . $this->short_description . "', '"
             . $this->description . "', '"
             . $this->price . "', '"
-            . $this->housetype . "', '"
             . $this->contact . "', '"
-            . $this->location . "', '"
-            . $this->map . "', '"
+            . $this->address . "', '"
+            . $this->email . "', '"
             . $this->features . "', '"
             . $this->queue . "')";
 
@@ -273,13 +265,11 @@ class Property
             . "`district` ='" . $this->district . "', "
             . "`city` ='" . $this->city . "', "
             . "`image_name` ='" . $this->image_name . "', "
-            . "`short_description` ='" . $this->short_description . "', "
             . "`description` ='" . $this->description . "', "
             . "`price` ='" . $this->price . "', "
-            . "`housetype` ='" . $this->housetype . "', "
             . "`contact` ='" . $this->contact . "', "
-            . "`location` ='" . $this->location . "', "
-            . "`map` ='" . $this->map . "', "
+            . "`address` ='" . $this->address . "', "
+            . "`email` ='" . $this->email . "', "
             . "`features` ='" . $this->features . "', "
             . "`queue` ='" . $this->queue . "' "
             . "WHERE `id` = '" . $this->id . "'";

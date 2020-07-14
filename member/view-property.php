@@ -87,16 +87,12 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                     <td><?= $CITY->name; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>House Type</th>
-                                    <td><?= $PROPERTY->housetype; ?></td>
+                                    <th>Address</th>
+                                    <td><?= $PROPERTY->address; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Location</th>
-                                    <td><?= $PROPERTY->location; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Map Code</th>
-                                    <td><?= $PROPERTY->map; ?></td>
+                                    <th>Email</th>
+                                    <td><?= $PROPERTY->email; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Phone Number</th>
@@ -117,10 +113,6 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                         }
                                         ?>
                                     </td>
-                                </tr>
-                                <tr>
-                                    <th>Short Description</th>
-                                    <td><?= $PROPERTY->short_description; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Description</th>
