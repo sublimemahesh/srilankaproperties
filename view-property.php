@@ -238,6 +238,48 @@ if (isset($_GET['id'])) {
                                     </div>
                                 </div>
                             </div>
+                            <div class="sidebar right-sidebar col-md-3 serch-dev">
+                                <div class="widget sidebar-widget">
+                                    <h3 class="widgettitle">Search Properties</h3>
+                                    <div class="full-search-form ">
+                                        <form action="search.php" id="search-form">
+                                            <select name="category" id="category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>Category</option>
+                                                <?php
+                                                foreach (Category::all() as $category) :
+                                                ?>
+                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>Sub Category</option>
+                                                <?php
+                                                foreach (SubCategory::all() as $subcategory) :
+                                                ?>
+                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="district" id="district" class="form-control input-lg selectpicker">
+                                                <option value="" selected>District</option>
+                                                <?php
+                                                foreach (District::all() as $district) :
+                                                ?>
+                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="city" id="city" class="form-control input-lg selectpicker">
+                                                <option value="" selected>City</option>
+                                                <?php
+                                                foreach (City::all() as $city) :
+                                                ?>
+                                                    <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

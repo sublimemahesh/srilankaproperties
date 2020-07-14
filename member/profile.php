@@ -1,7 +1,6 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/../auth.php');
-
 if (!isset($_SESSION)) {
     session_start();
 }
@@ -11,19 +10,16 @@ $CITY = new City($CUSTOMER->city);
 ?>
 <!DOCTYPE HTML>
 <html lang="en-US"> 
-    <head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <title>FRESHCART.LK</title>
-
-
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta name="description" content="" />
         <meta name="keywords" content="" />
         <meta name="robots" content="noodp,index,follow" />
         <meta name='revisit-after' content='1 days' />
-
         <link rel="icon" href="../images/logo-favicon.png" type="images/logo-favicon.png">
-
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="../css/libs/font-awesome.min.css"/>
         <link rel="stylesheet" type="text/css" href="../css/libs/font-linearicons.css"/>
@@ -42,11 +38,8 @@ $CITY = new City($CUSTOMER->city);
         <link href="../control-panel/plugins/sweetalert/sweetalert.css" rel="stylesheet" type="text/css"/>
         <link href="../css/modle-login.css" rel="stylesheet" type="text/css"/>
         <link href="css/custom.css" rel="stylesheet" type="text/css"/>
-
-
         <link href="../css/caption-hover-effects/default.css" rel="stylesheet" type="text/css"/>
         <link href="../css/caption-hover-effects/component.css" rel="stylesheet" type="text/css"/> 
-
         <link href="../control-panel/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
     </head>
     <body>
@@ -55,7 +48,6 @@ $CITY = new City($CUSTOMER->city);
             <div id="content">
                 <div class="container">
                     <div class="row">
-
                         <!--  Navigation Main Categories-->
                         <div class="col-md-4 col-sm-4 col-xs-12">
                             <div class="col-md-12 col-sm-12 col-xs-12">
@@ -74,7 +66,6 @@ $CITY = new City($CUSTOMER->city);
                                                 <?php
                                             }
                                             ?>
-
                                         </a>
                                     </div>
                                     <div class="feature-box-info">
@@ -89,14 +80,11 @@ $CITY = new City($CUSTOMER->city);
                             </div>
                         </div> 
                         <!--  Navigation Main Categories -->
-
                         <!--  Offers -->
-
                         <div class="col-md-8 col-sm-8 col-xs-12">
                             <div class="panel pane-info">
                                 <div class="panel-body">
                                     <div class="table-responsive">
-
                                         <table class="table table-bordered table-striped table-hover js-basic-example dataTable" id="view-data-table">
                                             <thead>
                                                 <tr>
@@ -154,7 +142,6 @@ $CITY = new City($CUSTOMER->city);
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>	
             </div>

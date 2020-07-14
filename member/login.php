@@ -11,9 +11,8 @@ if (isset($_SESSION['m_id'])) {
           <!-- Required meta tags -->
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <title>Sri Lanka properties</title>
-
         <!-- Favicon Icon Css -->
         <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
         <!-- Animation CSS -->
@@ -21,12 +20,10 @@ if (isset($_SESSION['m_id'])) {
         <!-- Font Css -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
         <!-- Bootstrap Css --> 
         <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
         <link href="../css/font-awesome.css" rel="stylesheet" type="text/css"/>
-
         <!-- main css --> 
         <link href="css/style.css" type="text/css" rel="stylesheet">
         <link href="css/responsive.css" type="text/css" rel="stylesheet">
@@ -67,7 +64,7 @@ if (isset($_SESSION['m_id'])) {
                         </form>
                     </div>
                     <div class="col-md-6">
-                        <div class="title">
+                        <div class="title register-mob">
                             <h4>Register</h4>
                         </div>
                         <form method="post" class="login_form " id="registration-form">
@@ -100,10 +97,8 @@ if (isset($_SESSION['m_id'])) {
         <a href="#" class="scrollup" style="display: none;"><i class="ion-ios-arrow-up"></i></a>
           <!-- Jquery js -->
       <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 

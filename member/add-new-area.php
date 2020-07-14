@@ -1,7 +1,6 @@
 <?php
 include_once(dirname(__FILE__) . '/../class/include.php');
 //include './auth.php';
-
 //$DEALER = new Dealer($_SESSION["d_id"]);
 ?>
 <!doctype html>
@@ -9,10 +8,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
     <head>
         <!-- Required meta tags -->
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
         <title>Cash on Delivery - Online Shopping Store</title>
-
         <!-- Favicon Icon Css -->
         <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
         <!-- Animation CSS -->
@@ -20,16 +18,14 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <!-- Font Css -->
         <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
         <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-
         <!-- Bootstrap Css --> 
         <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
-
         <!-- main css --> 
         <link href="css/style.css" type="text/css" rel="stylesheet">
         <link href="css/responsive.css" type="text/css" rel="stylesheet">
         <link href="css/custom.css" type="text/css" rel="stylesheet">
         <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-
+          
     </head>
     <body class="theme-2">
         <!-- LOADER -->
@@ -39,19 +35,15 @@ include_once(dirname(__FILE__) . '/../class/include.php');
             </div>
         </div>-->
         <!-- LOADER -->
-
         <?php include './header.php'; ?>
         <div class="container">
-            <div class="header-bar">
-                <i class="fa fa-map-marker"></i> : Add New Area
+            <div class="header-bar font-color">
+                <i class="fa fa-map-marker"></i>  Add New Area
             </div>
-
             <div class="row"> 
                 <div class="col-md-8">
                     <div class="panel-box">
                         <form class="form-horizontal" id="dealer-form" method="post" action="" enctype="multipart/form-data"> 
-
-
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right">
                                     <label for="district">District <span class="text-danger">*</span></label>
@@ -67,12 +59,10 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                                     if ($DEALER->district == $district['id']) {
                                                         ?>
                                                         <option value="<?php echo $district['id']; ?>" selected=""><?php echo $district['name']; ?></option>
-
                                                         <?php
                                                     } else {
                                                         ?>
                                                         <option value="<?php echo $district['id']; ?>"  ><?php echo $district['name']; ?></option>
-
                                                         <?php
                                                     }
                                                 }
@@ -82,7 +72,6 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right">
                                     <label for="city">City <span class="text-danger">*</span></label>
@@ -100,13 +89,11 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                                     <?php
                                                 }
                                                 ?>
-
                                             </select>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right"> 
                                 </div>
@@ -114,22 +101,17 @@ include_once(dirname(__FILE__) . '/../class/include.php');
                                     <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Area"/>
                                 </div>
                             </div>
-
                         </form>
                     </div>
-
                 </div> 
             </div> 
             <div id="chart_div"></div>
         </div>
         <?php include './footer.php'; ?> 
-
         <!-- Jquery js -->
         <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-
         <script src="../js/bootstrap.js" type="text/javascript"></script>
         <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
@@ -137,7 +119,6 @@ include_once(dirname(__FILE__) . '/../class/include.php');
    
         <?php
         $DEALER = new Dealer($_SESSION["d_id"]);
-
         $result = $DEALER->checkEmptyData();
         if ($result != 0) {
             ?>
@@ -148,9 +129,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
             </script>
             <?php
         }
-
         $agreement = $DEALER->checkAgreement();
-
         if ($agreement == 0) {
             ?>
             <script type="text/javascript">
