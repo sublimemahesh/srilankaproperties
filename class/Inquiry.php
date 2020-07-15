@@ -558,7 +558,7 @@ class Inquiry
             'username' => $username,
             'password' => $password
         ));
-        $companyMail = $smtp->send($webmail, $companyHeaders, $company_message);
+        $companyMail = $smtp->send($MEMBER->email, $companyHeaders, $company_message);
         if (PEAR::isError($companyMail)) {
             return TRUE;
         } else {
