@@ -1,5 +1,9 @@
 <?php
 include_once 'class/include.php';
+$WHO_WE_ARE = new Page(1);
+$VISION = new Page(2);
+$MISSION = new Page(3);
+$VALUES = new Page(4);
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">
@@ -52,21 +56,14 @@ include_once 'class/include.php';
         </div>
         <div class="spacer-40"></div>
         <div class="container home-abt-img-padd">
-            <h3><a href="#" class="welcome-title">Welcome</a></h3>
+            <h3><a href="#" class="welcome-title">Who We Are</a></h3>
             <div class="row">
                 <div class="col-md-6 col-sm-6">
-                    <ul class="owl-carousel" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
-                        <li class="item"> <a href="#"><img src="images/realstate/welcome1.jpg" alt="" class="img-thumbnail"></a> </li>
-                        <li class="item"> <a href="#"><img src="images/realstate/welcome2.jpg" alt="" class="img-thumbnail"></a> </li>
-                        <li class="item"> <a href="#"><img src="images/realstate/welcome3.jpg" alt="" class="img-thumbnail"></a> </li>
-                        <li class="item"> <a href="#"><img src="images/realstate/welcome2.jpg" alt="" class="img-thumbnail"></a> </li>
-                    </ul>
+                    <img src="upload/page/<?= $WHO_WE_ARE->image_name; ?>" alt="" class="img-thumbnail">
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-6 abt-txt">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula dapibus mauris, quis ullamcorper enim aliquet sed. Maecenas quis eget tellus dui. Vivamus condimentum egestas.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod sollicitudin nunc, eget pretium massa. Ut sed adipiscing enim, pellentesque ultrices erat. Integer placerat felis neque, et semper augue ullamcorper in. Pellentesque iaculis leo iaculis aliquet ultrices. Suspendisse potenti. Aenean ac magna faucibus, consectetur ligula vel, feugiat est. Nullam imperdiet semper neque eget euismod. Nunc commodo volutpat semper.</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod sollicitudin nunc, eget pretium massa. Ut sed adipiscing enim, pellentesque ultrices erat. Integer placerat felis neque, et semper augue ullamcorper in. Pellentesque iaculis leo iaculis aliquet ultrices. Suspendisse potenti. Aenean ac magna faucibus, consectetur ligula vel, feugiat est. Nullam imperdiet semper neque eget euismod. Nunc commodo volutpat semper.</p>
+                        <?= $WHO_WE_ARE->description; ?>
                     </div>
                 </div>
             </div>
@@ -83,7 +80,7 @@ include_once 'class/include.php';
                                         <h3>Vision</h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
-                                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </li>
+                                                <li><?= $VISION->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
@@ -94,7 +91,7 @@ include_once 'class/include.php';
                                         <h3>Our Values<span class="highlight-reason"></span></h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
-                                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </li>
+                                                <li><?= $MISSION->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -105,7 +102,7 @@ include_once 'class/include.php';
                                         <h3>Mission</h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
-                                                <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. </li>
+                                                <li><?= $VALUES->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
                                                 <i class="fa fa-rocket" aria-hidden="true"></i>

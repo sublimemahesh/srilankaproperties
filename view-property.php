@@ -5,10 +5,10 @@ if (isset($_GET['id'])) {
     $id = $_GET['id'];
     $PROPERTY = new Property($id);
     $photos = PropertyPhoto::getPropertyPhotosByProperty($id);
-    $CATEGORY = new Category($PROPERTY->category);
-    $SUBCATEGORY = new SubCategory($PROPERTY->sub_category);
-    $DISTRICT = new District($PROPERTY->district);
-    $CITY = new City($PROPERTY->city);
+    $CATEGORY1 = new Category($PROPERTY->category);
+    $SUBCATEGORY1 = new SubCategory($PROPERTY->sub_category);
+    $DISTRICT1 = new District($PROPERTY->district);
+    $CITY1 = new City($PROPERTY->city);
     $MEMBER = new Member($PROPERTY->member);
 }
 ?>
@@ -72,10 +72,10 @@ if (isset($_GET['id'])) {
                             <div class="col-md-9">
                                 <div class="single-property">
                                     <div class="property-amenities clearfix">
-                                        <span class="area"><strong>Category</strong><?= $CATEGORY->name; ?></span>
-                                        <span class="area"><strong>Sub Category</strong><?= $SUBCATEGORY->name; ?></span>
-                                        <span class="baths"><strong>District</strong><?= $DISTRICT->name; ?></span>
-                                        <span class="beds"><strong>City</strong><?= $CITY->name; ?></span>
+                                        <span class="area"><strong>Category</strong><?= $CATEGORY1->name; ?></span>
+                                        <span class="area"><strong>Sub Category</strong><?= $SUBCATEGORY1->name; ?></span>
+                                        <span class="baths"><strong>District</strong><?= $DISTRICT1->name; ?></span>
+                                        <span class="beds"><strong>City</strong><?= $CITY1->name; ?></span>
                                     </div>
                                     <div class="property-slider">
                                         <div id="property-images" class="flexslider">
@@ -109,17 +109,23 @@ if (isset($_GET['id'])) {
                                     </ul>
                                     <div class="tab-content">
                                         <div id="description" class="tab-pane active">
-                                            <div class="additional-amenities">
                                                 <div class="price"><strong>Rs.</strong><span><?= number_format($PROPERTY->price, 2); ?></span></div>
-                                                <br />
-                                                <span class="available"><i class="fa fa-check-square"></i> <strong>Location: </strong><?= $PROPERTY->location; ?></span>
-                                                <?php
-                                                if ($PROPERTY->housetype) {
-                                                ?>
-                                                    <br /><span class="available"><i class="fa fa-check-square"></i> <strong>House Type: </strong><?= $PROPERTY->housetype; ?></span>
-                                                <?php
-                                                }
-                                                ?>
+                                               
+                                            <div class="property-contact-details">
+                                                <div class="contact-info-blocks hidden-sm hidden-xs">
+                                                    <div>
+                                                        <i class="fa fa-phone"></i> Phone
+                                                        <span><?= $PROPERTY->contact; ?></span>
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-envelope"></i> Email
+                                                        <span><?= $PROPERTY->email; ?></span>
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-map-marker"></i> Address
+                                                        <span><?= $PROPERTY->address; ?></span>
+                                                    </div>
+                                                </div>
                                             </div>
                                             <?= $PROPERTY->description; ?>
                                         </div>
@@ -173,7 +179,17 @@ if (isset($_GET['id'])) {
                                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                                 </a>
                                                                 <div class="property-info">
-                                                                    <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
+                                                                    <h4>
+                                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                                            <?php
+                                                                            if (strlen($property['title']) > 27) {
+                                                                                echo substr($property['title'], 0, 23) . '...';
+                                                                            } else {
+                                                                                echo $property['title'];
+                                                                            }
+                                                                            ?>
+                                                                        </a>
+                                                                    </h4>
                                                                     <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
                                                                     <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
 

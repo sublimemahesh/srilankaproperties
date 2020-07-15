@@ -4,8 +4,14 @@
             <div class="col-md-4 footer-widget widget">
                 <h3 class="widgettitle">About Us</h3>
                 <ul>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula dapibus mauris, quis ullamcorper enim aliquet sed. Maecenas quis eget tellus dui. Vivamus condimentum egestas.</p>
-                    <p>Lorem ipsum dolor sit amet,Maecenas quis eget tellus dui Morbi vehicula. Vivamus condimentum egestas. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vehicula dapibus mauris, quis ullamcorper enim aliquet sed. Maecenas quis eget tellus dui. Vivamus condimentum egestas</p>
+                    <?php
+                    $ABOUT = new Page(1);
+                    if (strlen($ABOUT->description) > 50) {
+                        echo substr($ABOUT->description, 0, 500) . '...';
+                    } else {
+                        echo $ABOUT->description;
+                    }
+                    ?>
                 </ul>
             </div>
             <div class="col-md-2 footer-widget widget">
@@ -24,12 +30,12 @@
                     <?php
                     foreach (Category::all() as $key => $category) :
                         if ($key < 5) {
-                            ?>
+                    ?>
                             <li><a href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
-                            <?php
+                        <?php
                         }
                     endforeach;
-                    ?>
+                        ?>
                 </ul>
             </div>
             <div class="col-md-3 footer-widget widget">
@@ -82,11 +88,11 @@
     <div class="container">
         <div class="row">
             <div class="copyrights-col-left col-md-6 col-sm-6 ">
-                <p>&copy; <?php echo date('Y'); ?>. All rights reserved.</p>
+                <p>&copy; <?php echo date('Y'); ?>. All rights reserved by Sri Lanka Properties.</p>
             </div>
 
             <div class="copyrights-col-right col-md-6 col-sm-6 copy-marg f-design padd res-padd">
-                Design By:<a target="_blank" class="copy-link" href="https://www.synotec.lk"> Synotec Holdings (Pvt) Ltd.</a> 
+                Design By:<a target="_blank" class="copy-link" href="https://www.synotec.lk"> Synotec Holdings (Pvt) Ltd.</a>
             </div>
         </div>
     </div>
