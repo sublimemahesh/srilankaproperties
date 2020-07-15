@@ -1573,6 +1573,7 @@ html[xmlns] .slides {
     -o-transition: all 0.3s ease 0.2s;
     transition: all 0.3s ease 0.1s;
     background: #ffffff;
+    margin-bottom: 15px;
 }
 
 .property-block:hover {
@@ -4098,4 +4099,9 @@ span.progress-bar-tooltip:after {
 
 .property-contact-details .contact-info-blocks>div:first-child {
     padding: 0 20px 0 0;
+}
+
+.padding-t50b20 {
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
