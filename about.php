@@ -73,7 +73,8 @@ $VALUES = new Page(4);
                     <div class="page">
                         <div class="row">
                             <div class="col-md-12 col-sm-12">
-                                <h2>Our Importance</h2>
+                                 <div class="widget sidebar-widget featured-properties-widget">
+                                <h3 class="widgettitle">Our Importance</h3>
                                 <div class="pricing-table three-cols margin-0">
                                     <div class="pricing-column col-sm-4">
                                         <h3>Vision</h3>

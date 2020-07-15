@@ -36,9 +36,6 @@ and open the template in the editor.
     .code-i{
         margin-left: 70px;
     }
-    .index-set{
-        margin-left: 14px;
-    }
     .footer-sec1{
         margin-left: 1px;
     }
@@ -158,7 +155,7 @@ and open the template in the editor.
         margin-left: 22px;
     }
     .b-overlay{
-        
+
     }
 
 }
@@ -174,5 +171,8 @@ and open the template in the editor.
 }
 
 @media only screen and (max-width: 576px){
-
+    .testi-padd {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
 }

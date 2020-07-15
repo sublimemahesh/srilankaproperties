@@ -28,6 +28,7 @@ include_once 'class/include.php';
     <link href="css/responsive.css" rel="stylesheet" type="text/css" />
     <link href="contact-form/style.css" rel="stylesheet" type="text/css" />
     <link href="control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css"/>
     <!-- SCRIPTS
           ================================================== -->
     <script src="js/modernizr.js"></script><!-- Modernizr -->
@@ -116,29 +117,30 @@ include_once 'class/include.php';
                                         <h3>Our Location</h3>
                                         <div class="padding-as25 lgray-bg location-box">
 
+
                                             <p><i class="fa fa-phone" aria-hidden="true"></i><a href="#"><strong class="contact-icon">+94 70 277 3500</strong></a></p><br>
                                             <p><i class="fa fa-envelope" aria-hidden="true"></i><a href="#"><strong class="contact-icon">mail@synotec.lk </strong></a></p><br>
                                             <p><i class="fa fa-map-marker" aria-hidden="true"></i><a href="#"><strong class="contact-icon">No.55 Isipathanarama Rd, Maharagama 10280 </strong></a></p><br>
                                         </div>
-                                    </div>
-                                    <div class="col-md-8 col-sm-6 contact-social-link contact-social-box location-box-s  contact-social-box">
-                                        <h3>Add Our Social Media</h3>
-                                        <div class="padding-as25 lgray-bg location-box-s">
-                                            <p><strong>Please find us through the following social media</strong></p>
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="copyrights-col-right ">
-                                                        <div class="social-icons social-list">
-                                                            <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
-                                                            <a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a>
-                                                            <a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a>
-                                                            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+
+                                        <div class="col-md-12 col-sm-12 contact-social-box location-box-s contact-social-box">
+                                            <h3>Add Our Social Media</h3>
+                                            <div class="padding-as25 lgray-bg location-box-s">
+                                                <p><strong>Please find us through the following social media</strong></p>
+                                                <div class="container">
+                                                    <div class="row">
+                                                        <div class="copyrights-col-right ">
+                                                            <div class="social-icons social-list">
+                                                                <a href="#" target="_blank"><i class="fa fa-facebook-square"></i></a>
+                                                                <a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a>
+                                                                <a href="#" target="_blank"><i class="fa fa-pinterest-square"></i></a>
+                                                                <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -149,26 +151,26 @@ include_once 'class/include.php';
                 <iframe src="https://maps.google.com/?ie=UTF8&amp;ll=40.717989,-74.002705&amp;spn=0.043846,0.077162&amp;t=m&amp;z=14&amp;output=embed" width="100%" height="220px"></iframe>
             </div>
         </div>
-        <!-- Start Site Footer -->
-        <?php include './footer.php'; ?>
-        <!-- End Site Footer -->
-        <a id="back-to-top"><i class="fa fa-angle-double-up"></i></a>
-    </div>
-    <script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
-    <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
-    <!--PrettyPhoto Plugin -->
-    <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
-    <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
-    <script src="js/helper-plugins.js"></script>
-    <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-    <!--Plugins-->
-    <script src="js/bootstrap.js"></script> <!-- UI -->
-    <script src="js/waypoints.js"></script>
-    <!--Waypoints-->
-    <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
-    <script src="style-switcher/js/jquery_cookie.js"></script>
-    <script src="style-switcher/js/script.js"></script>
-    <script src="contact-form/scripts.js" type="text/javascript"></script>
+        <script src="js/jquery-2.0.0.min.js"></script> <!-- Jquery Library Call -->
+        <script src="plugins/prettyphoto/js/prettyphoto.js"></script>
+        <!--PrettyPhoto Plugin -->
+        <script src="plugins/owl-carousel/js/owl.carousel.min.js"></script>
+        <script src="plugins/flexslider/js/jquery.flexslider.js"></script> <!-- FlexSlider -->
+        <script src="js/helper-plugins.js"></script>
+        <script src="control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+        <!--Plugins-->
+        <script src="js/bootstrap.js"></script> <!-- UI -->
+        <script src="js/waypoints.js"></script>
+        <!--Waypoints-->
+        <script src="js/init.js"></script>
+        <script src="js/city.js"></script>
+        <script src="js/sub-category.js"></script>
+        <script src="js/search.js"></script>
+        <!--Waypoints-->
+        <!--[if lte IE 9]><script src="js/script_ie.js"></script><![endif]-->
+        <script src="style-switcher/js/jquery_cookie.js"></script>
+        <script src="style-switcher/js/script.js"></script>
+        <script src="contact-form/scripts.js" type="text/javascript"></script>
 </body>
 
 </html>
