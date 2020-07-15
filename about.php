@@ -56,7 +56,6 @@ $VALUES = new Page(4);
         </div>
         <div class="spacer-40"></div>
         <div class="container home-abt-img-padd">
-            <h3><a href="#" class="welcome-title">Who We Are</a></h3>
             <div class="row">
                 <div class="col-md-6 col-sm-6">
                     <img src="upload/page/<?= $WHO_WE_ARE->image_name; ?>" alt="" class="img-thumbnail">

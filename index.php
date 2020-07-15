@@ -106,7 +106,7 @@ $comments = $COMMENT->all();
                                         <div class="col-md-3 col-sm-4">
                                             <div class="item property-block">
                                                 <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
-                                                    <img src="upload/properties/<?= $property['image_name'] ?>"><span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
+                                                    <img src="upload/properties/<?= $property['image_name'] ?>">
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                 </a>
                                                 <div class="property-info">
