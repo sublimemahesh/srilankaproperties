@@ -82,7 +82,7 @@ $comments = $COMMENT->all();
                             </ul>
                         </div>
                     </div>
-                    <div class="spacer-40"></div>
+                    <div class="spacer-30"></div>
                     <div class="spacer-40"></div>
                     <div id="featured-properties">
                         <div class="container">
@@ -94,17 +94,17 @@ $comments = $COMMENT->all();
                                 </div>
                             </div>
                             <div class="row">
-                                <ul class="owl-carousel owl-alt-controls" data-columns="4" data-autoplay="no" data-pagination="no" data-arrows="yes" data-single-item="no">
-                                    <?php
-                                    foreach (Property::getAllPropertiesByActiveMembers() as $key => $property) :
-                                        if ($key < 12) :
-                                            $CATEGORY = new Category($property['category']);
-                                            $SUBCATEGORY = new SubCategory($property['sub_category']);
-                                            $DISTRICT = new District($property['district']);
-                                            $CITY = new City($property['city']);
-                                    ?>
+                                <?php
+                                foreach (Property::getAllPropertiesByActiveMembers() as $key => $property) :
+                                    if ($key < 20) :
+                                        $CATEGORY = new Category($property['category']);
+                                        $SUBCATEGORY = new SubCategory($property['sub_category']);
+                                        $DISTRICT = new District($property['district']);
+                                        $CITY = new City($property['city']);
+                                ?>
 
-                                            <li class="item property-block">
+                                        <div class="col-md-3 col-sm-4">
+                                            <div class="item property-block">
                                                 <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                     <img src="upload/properties/<?= $property['image_name'] ?>"><span class="images-count"><i class="fa fa-picture-o"></i> 2</span>
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
@@ -126,20 +126,18 @@ $comments = $COMMENT->all();
 
                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                 </div>
-                                            </li>
-                                    <?php
-                                        endif;
-                                    endforeach;
-                                    ?>
-
-                                </ul>
+                                            </div>
+                                        </div>
+                                <?php
+                                    endif;
+                                endforeach;
+                                ?>
                             </div>
                         </div>
                     </div>
-                    <div class="spacer-40"></div>
                     <div class="container">
                         <div class="row">
-                            <div class="padding-tb45 bottom-blocks">
+                            <div class="padding-t50b20 bottom-blocks">
                                 <div class="container">
                                     <div class="row">
                                         <div class="row testi-row">
