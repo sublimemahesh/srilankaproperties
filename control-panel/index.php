@@ -3,14 +3,9 @@ include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
 $COUNT_COMMENT = count(Comments::pendingComments());
-$COUNT_OFFER = count(Offer::all());
-$COUNT_PROPERTY = count(Property::all());
-$COUNT_ATTRACTION = count(Attraction::all());
-$COUNT_ROOM = count(Room::all());
+$COUNT_PENDING_PROPERTY = count(Property::getAllPendingProperties());
+$COUNT_APPROVED_PROPERTY = count(Property::getAllApprovedProperties());
 $SLIDER_IMAGES = count(Slider::all());
-$COUNT_TOUR = count(TourPackage::all());
-//$CATEGORY = count(Categoy::all());
-$COUNT_GALLERY = count(AlbumPhoto::getAlbumPhotosById(6));
 ?> 
 <!DOCTYPE html>
 <html> 
@@ -74,7 +69,7 @@ $COUNT_GALLERY = count(AlbumPhoto::getAlbumPhotosById(6));
                                 </div>
                                 <div class="content">
                                     <div class="text">PENDING PROPERTIES</div>
-                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PROPERTY; ?>" data-speed="1000"" data-fresh-interval="20"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PENDING_PROPERTY; ?>" data-speed="1000"" data-fresh-interval="20"></div>
                                 </div>
                             </div>
                         </div>
@@ -87,7 +82,7 @@ $COUNT_GALLERY = count(AlbumPhoto::getAlbumPhotosById(6));
                                 </div>
                                 <div class="content">
                                     <div class="text">APPROVED PROPERTIES</div>
-                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PROPERTY; ?>" data-speed="1000" data-fresh-interval="20"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_APPROVED_PROPERTY; ?>" data-speed="1000" data-fresh-interval="20"></div>
                                 </div>
                             </div>
                         </div>

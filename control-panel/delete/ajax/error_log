@@ -1,2 +1,0 @@
-[18-Dec-2019 06:33:57 America/New_York] PHP Strict Standards:  Non-static method User::authenticate() should not be called statically in /home/gallnwxt/sites/mylands/control-panel/auth.php on line 7
-[18-Dec-2019 06:33:57 America/New_York] PHP Strict Standards:  Non-static method Helper::getSitePath() should not be called statically, assuming $this from incompatible context in /home/gallnwxt/sites/mylands/class/Attraction.php on line 124
