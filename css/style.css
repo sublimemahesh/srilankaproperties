@@ -2708,7 +2708,7 @@ html[xmlns] .slides {
 }
 
 .tab-content {
-    padding: 20px 0;
+    padding: 20px 0 10px;
     background: #ffffff;
 }
 
@@ -3875,8 +3875,8 @@ span.progress-bar-tooltip:after {
 .testi-padd {
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 18px;
-    padding-right: 10px;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 .footer-social-icon {
@@ -4050,7 +4050,7 @@ span.progress-bar-tooltip:after {
     width: 120px;
     padding: 10px;
     margin-top: -25px;
-    margin-bottom: 17px;
+    margin-bottom: 30px;
     margin-left: 15px;
 }
 
@@ -4069,7 +4069,7 @@ span.progress-bar-tooltip:after {
     border-color: #71b317;
 }
 
-.inq-code{
+.inq-code {
     margin-left: -103px;
 }
 
@@ -4084,4 +4084,18 @@ span.progress-bar-tooltip:after {
 
 .category i {
     color: #00c1f9;
+}
+
+.property-contact-details .contact-info-blocks {
+    text-align: left;
+}
+
+.property-contact-details .contact-info-blocks>div {
+    display: inline-block;
+    margin: 20px 0 20px 0;
+    padding: 0 20px;
+}
+
+.property-contact-details .contact-info-blocks>div:first-child {
+    padding: 0 20px 0 0;
 }

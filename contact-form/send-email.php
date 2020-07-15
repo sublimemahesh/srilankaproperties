@@ -34,12 +34,12 @@ $message = $_POST['message'];
 //---------------------- SERVER WEBMAIL LOGIN ------------------------
 
 $host = "sg1-ls7.a2hosting.com";
-$username = "info@srilankaproperties.com";
-$password = "%!oA=jm7b]pU";
+$username = "test@airportcars.lk";
+$password = "TestEmail123";
 
 //------------------------ MAIL ESSENTIALS --------------------------------
 
-$webmail = "info@srilankaproperties.com";
+$webmail = "test@airportcars.lk";
 $visitorSubject = "Thank You " . $visitor_name . " - Sri Lanka Properties";
 $companySubject = "Contact Inquiry - " . $visitor_name;
 

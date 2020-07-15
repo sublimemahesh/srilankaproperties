@@ -110,7 +110,17 @@ $comments = $COMMENT->all();
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                 </a>
                                                 <div class="property-info">
-                                                    <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
+                                                    <h4>
+                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                            <?php
+                                                            if (strlen($property['title']) > 27) {
+                                                                echo substr($property['title'], 0, 23) . '...';
+                                                            } else {
+                                                                echo $property['title'];
+                                                            }
+                                                            ?>
+                                                        </a>
+                                                    </h4>
                                                     <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
                                                     <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
 
@@ -133,9 +143,13 @@ $comments = $COMMENT->all();
                                 <div class="container">
                                     <div class="row">
                                         <div class="row testi-row">
-                                            <div class="col-md-6 col-sm-12 latest-testimonials column">
-                                                <h3 class="widgettitle client-title">Client Testimonials</h3>
-                                                <ul class="testimonials owl-carousel img-thumbnail testi-padd test-bottom" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
+                                            <div class="col-md-12 col-sm-12 latest-testimonials column">
+                                                <div class="row">
+                                                    <div class="block-heading">
+                                                        <h4><span class="heading-icon"><i class="fa fa-users"></i></span>Client Testimonials</h4>
+                                                    </div>
+                                                </div>
+                                                <ul class="testimonials owl-carousel img-thumbnail testi-padd test-bottom" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
                                                     <?php
                                                     if (count($comments) > 0) {
                                                         foreach ($comments as $key => $comment) {
@@ -159,44 +173,10 @@ $comments = $COMMENT->all();
                                                     ?>
                                                 </ul>
                                             </div>
-                                            <div class="col-md-6 col-sm-12 popular-agent column">
-                                                <h3 class="widgettitle">Our Agents</h3>
-                                                <ul class="testimonials owl-carousel  testi-padd i-agent" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">
-                                                    <li>
-                                                        <a href="#p"><img src="images/realstate/add6.jpg" alt="" class=""></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><img src="images/realstate/add7.jpg" alt="" class=""></a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#"><img src="images/realstate/add8.jpg" alt="" class=""></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <!-- Start Sidebar -->
-                            </div>
-                        </div>
-                        <div class="spacer-40"></div>
-                        <div class="container partners">
-                            <div class="block-heading">
-                                <h4><span class="heading-icon"><i class="fa fa-users"></i></span>Our Partners</h4>
-                            </div>
-                            <div class="row">
-                                <ul class="owl-carousel partners-padd" id="clients-slider" data-columns="6" data-autoplay="yes" data-pagination="no" data-arrows="no" data-single-item="no" data-items-desktop="6" data-items-desktop-small="4" data-items-mobile="2" data-items-tablet="4">
-                                    <li class="item"> <a href="#"><img src="images/partner-1.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-2.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-3.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-4.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-5.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-1.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-2.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-3.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-4.png" alt=""></a> </li>
-                                    <li class="item"> <a href="#"><img src="images/partner-5.png" alt=""></a> </li>
-                                </ul>
                             </div>
                         </div>
                     </div>

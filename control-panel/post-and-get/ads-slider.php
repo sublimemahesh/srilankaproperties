@@ -9,7 +9,7 @@ if (isset($_POST['create'])) {
 
     $ADVERTISEMENT->caption = $_POST['caption']; 
 
-    $dir_dest = '../../upload/Advertisement/';
+    $dir_dest = '../../upload/advertisement/';
 
     $handle = new Upload($_FILES['image']);
 
@@ -61,7 +61,7 @@ if (isset($_POST['create'])) {
 }
 
 if (isset($_POST['update'])) {
-    $dir_dest = '../../upload/Advertisement/';
+    $dir_dest = '../../upload/advertisement/';
 
     $handle = new Upload($_FILES['image']);
 

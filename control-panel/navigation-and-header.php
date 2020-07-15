@@ -286,7 +286,7 @@
                     <a href="create-ads-slider.php" class="">
                         <i class="material-icons">chevron_right</i>
                         <span>Advertisement Slider</span>
-                    </a> 
+                    </a>
                 </li>
                 <!-- <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
@@ -313,7 +313,7 @@
                             </a>
                         </li>
                     </ul>
-                </li>
+                </li>-->
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -334,7 +334,7 @@
                         </li>
 
                     </ul>
-                </li>  -->
+                </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>
@@ -354,7 +354,7 @@
                             </a>
                         </li>
                     </ul>
-                </li> 
+                </li>
                 <li>
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">location_on</i>
@@ -381,33 +381,6 @@
                         </li>
                     </ul>
                 </li>
-                <!-- <li class="qqq">
-                    <a href="javascript:void(0);" class="menu-toggle">
-                        <i class="material-icons">chevron_right</i>
-                        <span>Projects</span>
-                    </a>
-                    <ul class="ml-menu">
-                        <li>
-                            <a href="create-attraction.php">
-                                <i class="material-icons">add</i>
-                                <span>Add New</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="manage-attraction.php">
-                                <i class="material-icons">list</i>
-                                <span>Manage</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="arrange-attraction.php">
-                                <i class="material-icons">compare_arrows</i>
-                                <span>Arrange</span>
-                            </a>
-                        </li>
-                    </ul>
-                </li> -->
-
                 <li class="qqq">
                     <a href="javascript:void(0);" class="menu-toggle">
                         <i class="material-icons">chevron_right</i>

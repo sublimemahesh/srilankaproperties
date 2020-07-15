@@ -137,10 +137,10 @@ class Inquiry
 
         //---------------------- SERVER WEBMAIL LOGIN ------------------------
         $host = "sg1-ls7.a2hosting.com";
-        $username = "info@srilankaproperties.com";
-        $password = "%!oA=jm7b]pU";
+        $username = "test@airportcars.lk";
+        $password = "TestEmail123";
         //------------------------ MAIL ESSENTIALS --------------------------------
-        $webmail = "info@srilankaproperties.com";
+        $webmail = "test@airportcars.lk";
         $visitorSubject = "Thank You " . $visitor_name . " - Sri Lanka Properties";
         $companySubject = "Property Inquiry - #" . $property;
         $visitor_message = '<html xmlns="http://www.w3.org/1999/xhtml">
@@ -370,10 +370,10 @@ class Inquiry
         $MEMBER = new Member($PROPERTY->member);
         //---------------------- SERVER WEBMAIL LOGIN ------------------------
         $host = "sg1-ls7.a2hosting.com";
-        $username = "info@srilankaproperties.com";
-        $password = "%!oA=jm7b]pU";
+        $username = "test@airportcars.lk";
+        $password = "TestEmail123";
         //------------------------ MAIL ESSENTIALS --------------------------------
-        $webmail = "info@srilankaproperties.com";
+        $webmail = "test@airportcars.lk";
         $visitorSubject = "Thank You " . $visitor_name . " - Sri Lanka Properties";
         $companySubject = "Property Inquiry - #" . $property;
         $company_message = '<html xmlns="http://www.w3.org/1999/xhtml">

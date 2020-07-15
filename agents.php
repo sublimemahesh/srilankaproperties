@@ -113,7 +113,17 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                     ?>
                                             <li class="item property-block"> <a href="#" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt=""> <span class="badges"><?= $CATEGORY->name; ?></span> </a>
                                                 <div class="property-info">
-                                                    <h4><a href="view-property.php?id=<?= $property['id']; ?>"><?= $property['title']; ?></a></h4>
+                                                    <h4>
+                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                            <?php
+                                                            if (strlen($property['title']) > 27) {
+                                                                echo substr($property['title'], 0, 23) . '...';
+                                                            } else {
+                                                                echo $property['title'];
+                                                            }
+                                                            ?>
+                                                        </a>
+                                                    </h4>
                                                     <span class="location"><?= $DISTRICT->name; ?></span>
                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                 </div>
