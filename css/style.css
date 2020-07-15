@@ -3978,7 +3978,7 @@ span.progress-bar-tooltip:after {
 }
 
 .contact-social-box {
-    margin-top: 88px;
+    margin-top: 43px;
 }
 
 .contact-location-box {
@@ -4127,5 +4127,9 @@ span.progress-bar-tooltip:after {
 
 .banner-overlay {
     background: linear-gradient(0deg, rgba(200, 200, 200, 0.3), rgba(0, 0, 0, 0.67)), url(../images/page-header1.jpg);
-    background-size: cover;
+    background-size:cover;
 }
+.panel-primary > .panel-footer + .panel-collapse .panel-body, .widget .widgettitle {
+    border-bottom-color: #00c1f9;
+}
+

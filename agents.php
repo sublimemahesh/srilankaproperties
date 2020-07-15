@@ -76,11 +76,11 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                         foreach ($members as $member) {
                                             $properties = Property::getPropertiesByMember($member['id']);
                                     ?>
-                                            <li class="col-md-12">
-                                                <div class="col-md-4 img-padding">
+                                            <li class="col-md-12 col-sm-12">
+                                                <div class="col-md-4 col-sm-4 img-padding">
                                                     <a class=""> <img src="upload/member/profile/<?= $member['picture']; ?>" alt=""></a>
                                                 </div>
-                                                <div class="col-md-8 agent-name">
+                                                <div class="col-md-8 col-sm-8 agent-name">
                                                     <div class="agent-info">
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
                                                         <h3><a class="a-name"><?= $member['name']; ?></a></h3>
