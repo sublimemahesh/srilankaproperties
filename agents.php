@@ -51,7 +51,8 @@ $pagelimit = ($page * $setlimit) - $setlimit;
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-            <div class="parallax page-header" style="background-image:url(images/page-header1.jpg);">
+            
+            <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -76,13 +77,13 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                             $properties = Property::getPropertiesByMember($member['id']);
                                     ?>
                                             <li class="col-md-12">
-                                                <div class="col-md-4">
+                                                <div class="col-md-4 img-padding">
                                                     <a class=""> <img src="upload/member/profile/<?= $member['picture']; ?>" alt=""></a>
                                                 </div>
-                                                <div class="col-md-8">
+                                                <div class="col-md-8 agent-name">
                                                     <div class="agent-info">
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
-                                                        <h3><a><?= $member['name']; ?></a></h3>
+                                                        <h3><a class="a-name"><?= $member['name']; ?></a></h3>
                                                         <?= $member['description']; ?>
                                                     </div>
 

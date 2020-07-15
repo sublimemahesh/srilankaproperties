@@ -43,7 +43,7 @@ $VALUES = new Page(4);
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-            <div class="parallax page-header" style="background-image:url(images/page-header1.jpg);">
+            <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -73,12 +73,12 @@ $VALUES = new Page(4);
                 <div class="container">
                     <div class="page">
                         <div class="row">
-                            <div class="col-md-12">
+                            <div class="col-md-12 col-sm-12">
                                 <h2>Our Importance</h2>
                                 <div class="pricing-table three-cols margin-0">
-                                    <div class="pricing-column ">
+                                    <div class="pricing-column col-sm-4">
                                         <h3>Vision</h3>
-                                        <div class="pricing-column-content">
+                                        <div class="pricing-column-content  ">
                                             <ul class="features">
                                                 <li><?= $VISION->description; ?></li>
                                             </ul>
@@ -87,7 +87,7 @@ $VALUES = new Page(4);
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="pricing-column highlight accent-color">
+                                    <div class="pricing-column highlight accent-color col-sm-4">
                                         <h3>Our Values<span class="highlight-reason"></span></h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
@@ -98,7 +98,7 @@ $VALUES = new Page(4);
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="pricing-column">
+                                    <div class="pricing-column col-sm-4">
                                         <h3>Mission</h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">

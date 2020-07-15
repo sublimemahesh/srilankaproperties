@@ -47,7 +47,7 @@ if(isset($_GET['id'])) {
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-            <div class="parallax page-header" style="background-image:url(images/page-header1.jpg);">
+             <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">

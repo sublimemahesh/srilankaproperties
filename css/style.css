@@ -1080,7 +1080,7 @@ body.boxed .body {
 }
 
 .navigation>ul>li>a {
-    padding: 15px 20px;
+    padding: 15px 21px;
     display: block;
     text-decoration: none;
     border-right: 1px solid rgba(0, 0, 0, .05);
@@ -3285,6 +3285,7 @@ span.progress-bar-tooltip:after {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: #eee;
+
 }
 
 .touch .parallax,
@@ -3920,6 +3921,9 @@ span.progress-bar-tooltip:after {
 .footer-padd-bottom {
     margin-bottom: -17px;
 }
+.footer-i{
+     margin-bottom: 17px !important;
+}
 
 .social-list {
     font-size: 25px;
@@ -3979,8 +3983,11 @@ span.progress-bar-tooltip:after {
 
 .contact-location-box {
     padding-right: 118px;
+    
 }
-
+.contact-location-box .a{
+    text-decoration: none;
+}
 .agent-title {
     margin-top: 111px;
 }
@@ -4105,3 +4112,20 @@ span.progress-bar-tooltip:after {
     padding-top: 50px;
     padding-bottom: 20px;
 }
+
+.page-bg{
+    background-attachment: fixed!important;
+    background-position: center center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #eee;
+    opacity: 0.5;
+}
+
+.banner-overlay{
+    background: linear-gradient(0deg, rgba(200, 200, 200, 0.3), rgba(0, 0, 0, 0.67)), url(../images/page-header1.jpg);
+    background-size:cover;
+}
+

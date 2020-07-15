@@ -48,7 +48,7 @@ $comments = $COMMENT->all();
         <?php include './slider.php'; ?>
 
         <!-- Start Content -->
-        <div class="main" role="main">
+        <div class="main index-set" role="main">
             <div id="content" class="content full">
                 <div class="featured-blocks">
                     <div class="featured-blocks">

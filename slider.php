@@ -21,7 +21,7 @@
         <div class="container">
             <div class="site-search-module-inside">
                 <form action="search.php" id="search-form">
-                    <div class="form-group">
+                    <div class="form-group slider-heading slider-i">
                         <div class="row">
                             <div class="col-md-2 col-md-offset-1 ">
                                 <select name="category" id="category" class="form-control input-lg selectpicker">

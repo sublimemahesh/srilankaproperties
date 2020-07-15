@@ -1,7 +1,7 @@
-<footer class="site-footer footer-padd-bottom">
+<footer class="site-footer footer-padd-bottom footer-i col-sm-12">
     <div class="container footer-marg-top">
-        <div class="row">
-            <div class="col-md-4 footer-widget widget">
+        <div class="row ">
+            <div class="col-md-4 footer-widget widget col-sm-6">
                 <h3 class="widgettitle">About Us</h3>
                 <ul>
                     <?php
@@ -14,7 +14,7 @@
                     ?>
                 </ul>
             </div>
-            <div class="col-md-2 footer-widget widget">
+            <div class="col-md-2 footer-widget widget col-sm-6">
                 <h3 class="widgettitle">Useful Links</h3>
                 <ul>
                     <li><a href="index.php">Home</a></li>
@@ -24,7 +24,7 @@
                     <li><a href="inquiry.php">Inquiry now</a></li>
                 </ul>
             </div>
-            <div class="col-md-3 footer-widget widget">
+            <div class="col-md-3 footer-widget widget col-sm-6 footer-sec1">
                 <h3 class="widgettitle">Categories</h3>
                 <ul>
                     <?php
@@ -38,7 +38,7 @@
                         ?>
                 </ul>
             </div>
-            <div class="col-md-3 footer-widget widget">
+            <div class="col-md-3 footer-widget widget col-sm-6 footer-sec2">
                 <h3 class="widgettitle">Contact Us</h3>
 
                 <div class="widget">
