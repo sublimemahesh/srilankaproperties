@@ -51,7 +51,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-            
+
             <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
@@ -109,27 +109,29 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                     $properties = Property::getAllPropertiesByLimit($pagelimit, $setlimit);
                                     if (count($properties) > 0) {
                                         foreach ($properties as $key => $property) {
-                                            $CATEGORY = new Category($property['category']);
-                                            $DISTRICT = new District($property['district']);
+                                            if ($key < count($members)) {
+                                                $CATEGORY = new Category($property['category']);
+                                                $DISTRICT = new District($property['district']);
                                     ?>
-                                            <li class="item property-block"> <a href="#" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt=""> <span class="badges"><?= $CATEGORY->name; ?></span> </a>
-                                                <div class="property-info">
-                                                    <h4>
-                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
-                                                            <?php
-                                                            if (strlen($property['title']) > 27) {
-                                                                echo substr($property['title'], 0, 23) . '...';
-                                                            } else {
-                                                                echo $property['title'];
-                                                            }
-                                                            ?>
-                                                        </a>
-                                                    </h4>
-                                                    <span class="location"><?= $DISTRICT->name; ?></span>
-                                                    <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
-                                                </div>
-                                            </li>
+                                                <li class="item property-block"> <a href="#" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt=""> <span class="badges"><?= $CATEGORY->name; ?></span> </a>
+                                                    <div class="property-info">
+                                                        <h4>
+                                                            <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                                <?php
+                                                                if (strlen($property['title']) > 27) {
+                                                                    echo substr($property['title'], 0, 23) . '...';
+                                                                } else {
+                                                                    echo $property['title'];
+                                                                }
+                                                                ?>
+                                                            </a>
+                                                        </h4>
+                                                        <span class="location"><?= $DISTRICT->name; ?></span>
+                                                        <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
+                                                    </div>
+                                                </li>
                                         <?php
+                                            }
                                         }
                                     } else {
                                         ?>
