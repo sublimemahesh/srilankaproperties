@@ -10,6 +10,7 @@ if (isset($_GET['id'])) {
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -33,6 +34,7 @@ if (isset($_GET['id'])) {
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -45,6 +47,11 @@ if (isset($_GET['id'])) {
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-plus-circle"></i> Edit Property Photo - #<?= $id; ?>
+            <div class="header-bar-icon">
+                <a href="view-property-photos.php?id=<?= $PHOTO->property; ?>">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -62,29 +69,30 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="image">Image <span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="file" id="image" class="form-control" name="image" required="true">
-                                    <img src="../upload/properties/gallery/thumb/<?= $PHOTO->image_name; ?>" />
+                        <div class=" row">
+                                        <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                            <label for="image">Image <span class="text-danger">*</span></label>
+                                        </div>
+                                        <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                            <div class="form-group">
+                                                <div class="form-line">
+                                                    <input type="file" id="image" class="form-control" name="image" required="true">
+                                                    <img src="../upload/properties/gallery/thumb/<?= $PHOTO->image_name; ?>" />
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
-                            </div>
-                            <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
-                                <input type="hidden" name="id" value="<?= $id; ?>" />
-                                <input type="hidden" name="image_name_old" id="image_name_old"  value="<?= $PHOTO->image_name; ?>" />
-                                <input type="submit" name="btn-update" id="btn-update" class="btn btn-info" value="Edit Property Photo" />
-                                <input type="hidden" name="edit-property-image" />
-                            </div>
-                        </div>
+                                    <div class="row">
+                                        <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                        </div>
+                                        <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
+                                            <input type="hidden" name="id" value="<?= $id; ?>" />
+                                            <input type="hidden" name="image_name_old" id="image_name_old" value="<?= $PHOTO->image_name; ?>" />
+                                            <input type="submit" name="btn-update" id="btn-update" class="btn btn-info" value="Edit Property Photo" />
+                                            <input type="hidden" name="edit-property-image" />
+                                            <img src="img/loading.gif" id="update-loading" />
+                                        </div>
+                                    </div>
                     </form>
                 </div>
             </div>
@@ -100,4 +108,5 @@ if (isset($_GET['id'])) {
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/property-photo.js" type="text/javascript"></script>
 </body>
+
 </html>

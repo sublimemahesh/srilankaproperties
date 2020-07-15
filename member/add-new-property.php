@@ -30,6 +30,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -42,6 +43,11 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-plus-circle"></i> Add New Property
+            <div class="header-bar-icon">
+                <a href="manage-properties.php?status=1">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -225,6 +231,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
                                 <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property" />
                                 <input type="hidden" name="add-new-property" />
+                                <img src="img/loading.gif" id="update-loading" />
                             </div>
                         </div>
                     </form>
@@ -285,4 +292,5 @@ $MEMBER = new Member($_SESSION["m_id"]);
         });
     </script>
 </body>
+
 </html>

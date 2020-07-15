@@ -47,6 +47,11 @@ if (isset($_GET['id'])) {
 
         <div class="header-bar font-color">
             <i class="fa fa-list"></i> Arrange Property Photos - #<?= $id; ?>
+            <div class="header-bar-icon">
+                <a href="view-property-photos.php?id=<?= $id; ?>">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -76,6 +81,7 @@ if (isset($_GET['id'])) {
                                 <div class="col-sm-12 text-center" style="margin-top: 19px;">
                                     <input type="submit" class="btn btn-info" id="btn-arrange" value="Arrange Photos" name="save-data">
                                     <input type="hidden" name="arrange-property-photos" />
+                                    <img src="img/loading.gif" id="update-loading" />
                                 </div>
                             </div>
                         </div>

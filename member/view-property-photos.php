@@ -11,6 +11,7 @@ if (isset($_GET['id'])) {
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -34,6 +35,7 @@ if (isset($_GET['id'])) {
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -45,7 +47,12 @@ if (isset($_GET['id'])) {
     <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-plus-circle"></i> Manage Property Photos - #<?= $id; ?>
+            <i class="fa fa-link"></i> Manage Property Photos - #<?= $id; ?>
+            <div class="header-bar-icon">
+                <a href="manage-properties.php?status=<?= $PROPERTY->status; ?>">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -82,6 +89,7 @@ if (isset($_GET['id'])) {
                                 <input type="hidden" name="property" value="<?= $id; ?>" />
                                 <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property Photo" />
                                 <input type="hidden" name="add-new-property-image" />
+                                <img src="img/loading.gif" id="update-loading" />
                             </div>
                         </div>
                     </form>
@@ -134,4 +142,5 @@ if (isset($_GET['id'])) {
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property-photo.js" type="text/javascript"></script>
 </body>
+
 </html>

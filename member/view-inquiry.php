@@ -54,6 +54,11 @@ $PROPERTY = new Property($INQUIRY->property);
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-eye"></i> View Inquiry Details - #<?= $INQUIRY->id; ?>
+            <div class="header-bar-icon">
+                <a href="manage-inquiries.php">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">

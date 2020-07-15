@@ -39,7 +39,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
      <?php include './header.php'; ?>
     <div class="container">
         <div class="header-bar font-color">
-            <i class="fa fa-fa-user"></i> Change Password
+            <i class="fa fa-pencil"></i> Change Password
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -89,6 +89,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
                                 <input type="submit" name="btn-change" id="btn-change" class="btn btn-info" value="Change Password" />
                                 <input type="hidden" name="change_password" />
+                                <img src="img/loading.gif" id="update-loading" />
                             </div>
                         </div>
                     </form>

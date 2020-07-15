@@ -45,6 +45,11 @@ if (isset($_GET['id'])) {
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-pencil"></i> Edit Property - #<?= $id; ?>
+            <div class="header-bar-icon">
+                <a href="manage-properties.php?status=<?= $PROPERTY->status; ?>">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -260,6 +265,7 @@ if (isset($_GET['id'])) {
                                 <input type="hidden" name="image_name_old" id="image_name_old" value="<?= $PROPERTY->image_name; ?>" />
                                 <input type="submit" name="btn-save" id="btn-update" class="btn btn-info" value="Update" />
                                 <input type="hidden" name="edit-property" />
+                                <img src="img/loading.gif" id="update-loading" />
                             </div>
                         </div>
 
