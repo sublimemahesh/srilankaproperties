@@ -70,7 +70,7 @@ if (isset($_GET['subcategory'])) {
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-            <div class="parallax page-header" style="background-image:url(images/page-header1.jpg);">
+             <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -124,7 +124,7 @@ if (isset($_GET['subcategory'])) {
                                         <?php endforeach;
                                     } else {
                                         ?>
-                                        <h5>No any <?= strtolower($title); ?> in the database.</h5>
+                                            <h5 class="db-mrg">No any <?= strtolower($title); ?> in the database.</h5>
                                     <?php
                                     } ?>
                                 </ul>

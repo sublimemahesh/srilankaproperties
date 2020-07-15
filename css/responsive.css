@@ -27,8 +27,23 @@ and open the template in the editor.
     .a-img-p{
         margin-left: 0px;
     }
-     .btn-i{
+    .btn-i{
         margin-left: -75px;
+    }
+    .agent-name{
+        margin-top: 20px;
+    }
+    .code-i{
+        margin-left: 70px;
+    }
+    .index-set{
+        margin-left: 14px;
+    }
+    .footer-sec1{
+        margin-left: 1px;
+    }
+    .footer-sec2{
+        margin-left: -2px;
     }
 }
 
@@ -42,9 +57,9 @@ and open the template in the editor.
     .padd{
         margin-left: 0!important;
     }
-   
-    
+
 }
+
 
 @media (max-width: 480px){
     .abt-txt{
@@ -107,6 +122,17 @@ and open the template in the editor.
     .btn-m{
         margin-left: -83px ;
     }
+    .slider-heading{
+        margin-right: 14px;
+    }
+    .img-padding{
+        padding-left: 15px !important;
+        padding-top: 17px;
+        padding-bottom: 20px;
+    }
+    .a-name{
+        margin-right: 2px;
+    }
 }
 
 @media (max-width: 320px){
@@ -125,7 +151,15 @@ and open the template in the editor.
     .res-padd{
         padding-left: 104px;
     }
-    
+    .slider-i{
+        margin-right: 14px;
+    }
+    .db-mrg{
+        margin-left: 22px;
+    }
+    .b-overlay{
+        
+    }
 
 }
 

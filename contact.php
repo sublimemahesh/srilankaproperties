@@ -37,18 +37,19 @@ include_once 'class/include.php';
     <!--[if lt IE 7]>
                 <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
         <![endif]-->
-    <div class="body">
-        <!-- Start Site Header -->
-        <?php include './header.php'; ?>
-        <!-- End Site Header -->
-        <!-- Site Showcase -->
-        <div class="site-showcase">
-            <!-- Start Page Header -->
-            <div class="parallax page-header" style="background-image:url(images/page-header1.jpg);">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            <h1>Contact Us</h1>
+        <div class="body">
+            <!-- Start Site Header -->
+            <?php include './header.php'; ?>
+            <!-- End Site Header --> 
+            <!-- Site Showcase -->
+            <div class="site-showcase">
+                <!-- Start Page Header -->
+                 <div class="parallax page-header banner-overlay">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h1>Contact Us</h1>
+                            </div>
                         </div>
                     </div>
                 </div>
