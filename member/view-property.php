@@ -15,30 +15,32 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
 ?>
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <title>Property || Sri Lanka Properties</title>
-        <!-- Favicon Icon Css -->
-        <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
-        <!-- Animation CSS -->
-        <link rel="stylesheet" href="../css/animate.css" type="text/css">
-        <!-- Font Css -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-        <!-- Bootstrap Css -->
-        <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-        <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
-        <!-- main css -->
-        <link href="css/style.css" type="text/css" rel="stylesheet">
-        <link href="css/responsive.css" type="text/css" rel="stylesheet">
-        <link href="css/custom.css" type="text/css" rel="stylesheet">
-        <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-  
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <title>Property || Sri Lanka Properties</title>
+    <!-- Favicon Icon Css -->
+    <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+    <!-- Font Css -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!-- Bootstrap Css -->
+    <!--        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">-->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+    <link href="../css/font-awesome.css" rel="stylesheet" type="text/css" />
+    <!-- main css -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
+
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -51,6 +53,11 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
     <div class="container">
         <div class="header-bar font-color">
             <i class="fa fa-eye"></i> View Property Details - #<?= $PROPERTY->id; ?>
+            <div class="header-bar-icon">
+                <a href="manage-properties.php?status=<?= $PROPERTY->status; ?>">
+                    <i class="fa fa-list"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -149,4 +156,5 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
 
 
 </body>
+
 </html>

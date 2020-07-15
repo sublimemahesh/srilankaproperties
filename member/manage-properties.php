@@ -5,6 +5,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -29,6 +30,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/jquery-datatable/skin/bootstrap/css/dataTables.bootstrap.css" rel="stylesheet">
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -43,14 +45,19 @@ $MEMBER = new Member($_SESSION["m_id"]);
             <?php
             if ($_GET['status'] == 0) {
             ?>
-                <i class="fa fa-link"></i>  Manage Pending Properties
+                <i class="fa fa-link"></i> Manage Pending Properties
             <?php
             } else {
             ?>
-                <i class="fa fa-link"></i>  Manage Approved Properties
+                <i class="fa fa-link"></i> Manage Approved Properties
             <?php
             }
             ?>
+            <div class="header-bar-icon">
+                <a href="add-new-property.php">
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
         </div>
         <div class="row">
             <div class="col-md-12 table-mrg">
@@ -92,7 +99,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                             <a href="view-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-warning" data-id=""> <i class="fa fa-eye"></i></a> |
                                             <a href="edit-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-info" data-id=""> <i class="fa fa-pencil"></i></a> |
                                             <a href="view-property-photos.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-success" data-id=""> <i class="fa fa-image"></i></a> |
-                                            <a  class="delete-property btn btn-sm btn-danger" data-id="<?= $property['id']; ?>"> <i class="fa fa-trash"></i></a>
+                                            <a class="delete-property btn btn-sm btn-danger" data-id="<?= $property['id']; ?>"> <i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>
                                 <?php
@@ -131,4 +138,5 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/property.js" type="text/javascript"></script>
 </body>
+
 </html>

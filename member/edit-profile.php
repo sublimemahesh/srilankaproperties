@@ -274,8 +274,8 @@ $MEMBER = new Member($_SESSION["m_id"]);
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
-        <script src="js/dealer_area.js" type="text/javascript"></script>   
-        
+        <script src="js/member.js" type="text/javascript"></script>   
+        <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
             selector: "#description",
