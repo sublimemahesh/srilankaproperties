@@ -7809,3 +7809,7 @@ p.change-phone-number-p:hover {
 a.forgot-password:hover {
     color: #8fdd18;
 }
+
+.img-caption .d {
+    margin-top: 10px;
+}

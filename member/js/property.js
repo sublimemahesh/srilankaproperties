@@ -117,17 +117,6 @@ $(document).ready(function() {
             $('#btn-save').show();
             $('#update-loading').hide();
 
-        } else if (!$('#features').val() || $('#features').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter the features...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-save').show();
-            $('#update-loading').hide();
-
         } else if (!$('#description').val() || $('#description').val().length === 0) {
             swal({
                 title: "Error!",
@@ -292,17 +281,6 @@ $(document).ready(function() {
             swal({
                 title: "Error!",
                 text: "Please enter the phone number...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-update').show();
-            $('#update-loading').hide();
-
-        } else if (!$('#features').val() || $('#features').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter the features...",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false

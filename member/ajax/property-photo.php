@@ -33,7 +33,6 @@ if (isset($_POST['add-new-property-image'])) {
 
     $VALID = new Validator();
     $VALID->check($PROPERTYPHOTO, [
-        'caption' => ['required' => TRUE],
         'image_name' => ['required' => TRUE],
         'property' => ['required' => TRUE]
     ]);
@@ -81,7 +80,6 @@ if (isset($_POST['edit-property-image'])) {
 
     $VALID = new Validator();
     $VALID->check($PROPERTYPHOTO, [
-        'caption' => ['required' => TRUE],
         'image_name' => ['required' => TRUE],
         'property' => ['required' => TRUE]
     ]);

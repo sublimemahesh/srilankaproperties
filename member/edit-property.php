@@ -234,18 +234,6 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="features">Features<span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <textarea id="features" name="features" class="form-control" rows="5"><?= $PROPERTY->features; ?></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="description">Description<span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -288,26 +276,7 @@ if (isset($_GET['id'])) {
     <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
-            selector: "#description",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
-            relative_urls: false
-        });
-        tinymce.init({
-            selector: "#features",
+            selector: "#description1",
             // ===========================================
             // INCLUDE THE PLUGIN
             // ===========================================

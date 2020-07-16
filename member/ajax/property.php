@@ -13,7 +13,6 @@ if (isset($_POST['add-new-property'])) {
     $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
     $PROPERTY->contact = $_POST['phone_number'];
-    $PROPERTY->features = $_POST['features'];
     $PROPERTY->description = $_POST['description'];
     
     $handle1 = new Upload($_FILES['image']);
@@ -39,7 +38,6 @@ if (isset($_POST['add-new-property'])) {
         'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
-        'features' => ['required' => TRUE],
         'description' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
@@ -67,7 +65,6 @@ if (isset($_POST['edit-property'])) {
     $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
     $PROPERTY->contact = $_POST['phone_number'];
-    $PROPERTY->features = $_POST['features'];
     $PROPERTY->description = $_POST['description'];
     
     $handle1 = new Upload($_FILES['image']);
@@ -96,7 +93,6 @@ if (isset($_POST['edit-property'])) {
         'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
-        'features' => ['required' => TRUE],
         'description' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);

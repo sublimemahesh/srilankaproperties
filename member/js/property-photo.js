@@ -5,18 +5,7 @@ $(document).ready(function() {
         $('#btn-save').hide();
         $('#update-loading').show();
 
-        if (!$('#caption').val() || $('#caption').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter the caption...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-save').show();
-            $('#update-loading').hide();
-
-        } else if (!$('#image').val() || $('#image').val().length === 0) {
+        if (!$('#image').val() || $('#image').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please select image...",
@@ -77,18 +66,7 @@ $(document).ready(function() {
         $('#btn-update').hide();
         $('#update-loading').show();
 
-        if (!$('#caption').val() || $('#caption').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please enter the title...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-update').show();
-            $('#update-loading').hide();
-
-        } else if (!$('#image_name_old').val() || $('#image_name_old').val().length === 0) {
+        if (!$('#image_name_old').val() || $('#image_name_old').val().length === 0) {
             swal({
                 title: "Error!",
                 text: "Please select image111...",
