@@ -1,4 +1,4 @@
-<footer class="site-footer footer-padd-bottom footer-i col-sm-12">
+<footer class="site-footer footer-padd-bottom footer-i footer-m col-sm-12">
     <div class="container footer-marg-top">
         <div class="row ">
             <div class="col-md-4 footer-widget widget col-sm-6">

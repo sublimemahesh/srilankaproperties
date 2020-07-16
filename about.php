@@ -57,7 +57,7 @@ $VALUES = new Page(4);
         <div class="spacer-40"></div>
         <div class="container home-abt-img-padd">
             <div class="row">
-                <div class="col-md-6 col-sm-6">
+                <div class="col-md-6 col-sm-6  text-m">
                     <img src="upload/page/<?= $WHO_WE_ARE->image_name; ?>" alt="" class="img-thumbnail">
                 </div>
                 <div class="row">
@@ -68,7 +68,7 @@ $VALUES = new Page(4);
             </div>
         </div>
         <div class="main" role="main">
-            <div id="content" class="content full importance-mrg">
+            <div id="content" class="content full im-sec">
                 <div class="container">
                     <div class="page">
                         <div class="row">
@@ -82,7 +82,7 @@ $VALUES = new Page(4);
                                             <ul class="features">
                                                 <li><?= $VISION->description; ?></li>
                                             </ul>
-                                            <div class="fact-ico-about">
+                                            <div class="fact-ico-about abt-icon-m">
                                                 <i class="fa fa-eye" aria-hidden="true"></i>
                                             </div>
                                         </div>
@@ -91,7 +91,7 @@ $VALUES = new Page(4);
                                         <h3>Our Values<span class="highlight-reason"></span></h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
-                                                <li><?= $MISSION->description; ?></li>
+                                                <li><?= $VALUES->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
                                                 <i class="fa fa-thumbs-up" aria-hidden="true"></i>
@@ -102,7 +102,7 @@ $VALUES = new Page(4);
                                         <h3>Mission</h3>
                                         <div class="pricing-column-content">
                                             <ul class="features">
-                                                <li><?= $VALUES->description; ?></li>
+                                                <li><?= $MISSION->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
                                                 <i class="fa fa-rocket" aria-hidden="true"></i>
