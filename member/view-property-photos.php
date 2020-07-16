@@ -58,18 +58,7 @@ if (isset($_GET['id'])) {
             <div class="col-md-12">
                 <div class="panel-box form-box-inner">
                     <form class="form-horizontal" id="property-photo-form" method="post" action="" enctype="multipart/form-data">
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="caption">Caption <span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" id="caption" class="form-control" autocomplete="off" name="caption" required="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                                 <label for="image">Image <span class="text-danger">*</span></label>
@@ -84,10 +73,22 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <label for="caption">Caption</label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="caption" class="form-control" autocomplete="off" name="caption" required="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right">
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="property" value="<?= $id; ?>" />
-                                <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property Photo" />
+                                <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Upload Photo" />
                                 <input type="hidden" name="add-new-property-image" />
                                 <img src="img/loading.gif" id="update-loading" />
                             </div>

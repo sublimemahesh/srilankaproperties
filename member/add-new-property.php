@@ -170,7 +170,19 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="email" class="form-control title-input" autocomplete="off" name="email" required="true">
+                                        <input type="text" id="email" class="form-control title-input" autocomplete="off" name="email" required="true" value="<?= $MEMBER->email; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="contact">Phone Number<span class="text-danger">*</span></label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="text" id="phone-number" class="form-control title-input" autocomplete="off" name="phone_number" required="true" value="<?= $MEMBER->phone; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -183,31 +195,6 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="contact">Phone Number<span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <input type="text" id="phone-number" class="form-control title-input" autocomplete="off" name="phone_number" required="true">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="row ">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="features">Features<span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom title-input text-input-i">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <textarea id="features" name="features" class="form-control " rows="5"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -253,26 +240,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
-            selector: "#description",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
-            relative_urls: false
-        });
-        tinymce.init({
-            selector: "#features",
+            selector: "#description1",
             // ===========================================
             // INCLUDE THE PLUGIN
             // ===========================================
