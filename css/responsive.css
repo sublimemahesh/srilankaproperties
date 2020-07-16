@@ -42,6 +42,15 @@ and open the template in the editor.
     .footer-sec2{
         margin-left: -2px;
     }
+    .a-i{
+        margin-top: 0px;
+    }
+    .ami-f{
+        font-size: 13px;
+    }
+    .pricing-m{
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 767px){
@@ -174,5 +183,60 @@ and open the template in the editor.
     .testi-padd {
         padding-left: 50px;
         padding-right: 50px;
+    }
+    .footer-m {
+        margin-bottom: 0px !important;
+    }
+    .mobile-nav{
+        padding: 11px 20.5px !important;
+    }
+    .text-m{
+        margin-bottom: 33px;
+    }
+    .abt-icon-m{
+        margin: 0px;
+    }
+    .im-sec{
+        padding-bottom: 1px;
+    }
+    .price-mrg{
+        margin-bottom: 12px;
+    }
+    .title-m{
+        margin-left: 18px;
+    }
+    .font-m{
+        font-size: 18px;
+    }
+    .a-details{
+        margin-top: -9px;
+    }
+    .upper-padd{
+        margin-top: 6px;
+    }
+    .code-m{
+        margin-left: 125px !important;
+    }
+    .l-box-m{
+        margin-right: 15px;
+    }
+    .social{
+        margin-left: -22px;
+    }
+    .add{
+        margin-left: -13px;
+    }
+    .view-am{
+        font-size: 13px;
+    }
+    .a-mar{
+        padding-left: 14px;
+    }
+    .header-nav{
+        margin-top: -14px !important;
+        padding-bottom: 4px !important;
+    }
+    .search{
+        margin-top: 0px;
     }
 }

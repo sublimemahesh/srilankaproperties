@@ -9,7 +9,7 @@ if (isset($_GET["page"])) {
 } else {
     $page = 1;
 }
-$setlimit = 12;
+$setlimit = 40;
 
 $pagelimit = ($page * $setlimit) - $setlimit;
 if (isset($_GET['category'])) {

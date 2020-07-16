@@ -20,7 +20,7 @@
                         ?>
                             <li class="dropdown"><a href="member/">
                                     <?php
-                                    if (isset($_SESSION['m_picture'])) {
+                                    if (isset($_SESSION['m_picture']) && !empty($_SESSION['m_picture'])) {
                                     ?>
                                         <img src="upload/member/profile/<?= $_SESSION['m_picture']; ?>" class="header-profile-pic img-circle">
                                     <?php
@@ -77,12 +77,12 @@
                 <div class="col-md-12">
                     <nav class="navigation">
                         <ul class="sf-menu">
-                            <li><a href="./">Home</a></li>
+                            <li><a class="header-nav" href="./">Home</a></li>
                             <?php
                             foreach (Category::all() as $category) {
                                 $subcategories = SubCategory::getSubCategoriesByCategory($category['id']);
                             ?>
-                                <li><a href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
+                                <li><a class="header-nav" href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
                                     <?php
                                     if (count($subcategories) > 0) {
                                     ?>
@@ -102,7 +102,9 @@
                             <?php
                             }
                             ?>
-                            <li><a href="agents.php">Agents</a></li>
+                                <li><a class="header-nav" href="agents.php">Agents</a></li>
+                            <li class="visible-xs"><a class="header-nav" href="about.php">About Us</a></li>
+                            <li class="visible-xs"><a class="header-nav" href="contact.php">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>

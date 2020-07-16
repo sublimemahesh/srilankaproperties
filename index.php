@@ -142,7 +142,7 @@ $comments = $COMMENT->all();
                                     <div class="row">
                                         <div class="row testi-row">
                                             <div class="col-md-12 col-sm-12 latest-testimonials column">
-                                                <div class="row">
+                                                <div class="row client-title-bar">
                                                     <div class="block-heading">
                                                         <h4><span class="heading-icon"><i class="fa fa-users"></i></span>Client Testimonials</h4>
                                                     </div>

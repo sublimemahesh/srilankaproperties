@@ -1080,7 +1080,7 @@ body.boxed .body {
 }
 
 .navigation>ul>li>a {
-    padding: 15px 20.5px;
+    padding: 15px 20px;
     display: block;
     text-decoration: none;
     border-right: 1px solid rgba(0, 0, 0, .05);
@@ -2414,7 +2414,7 @@ html[xmlns] .slides {
 .widget ul>li {
     padding: 0 0 12px 0;
     margin-bottom: 12px;
-    border-bottom: 1px solid #efefef;
+/*    border-bottom: 1px solid #efefef;*/
 }
 
 .widget a {
@@ -3380,15 +3380,15 @@ span.progress-bar-tooltip:after {
 
 .pricing-column ul li {
     padding: 10px 25px;
-    border-bottom: 1px solid #eeeeee;
+/*    border-bottom: 1px solid #eeeeee;*/
     color: #666666!important;
     list-style: none;
     line-height: 18px;
 }
 
-.pricing-column ul li:first-child {
+/*.pricing-column ul li:first-child {
     border-top: 1px solid #eeeeee;
-}
+}*/
 
 .pricing-column ul li:nth-child(2n+1) {
     background-color: #f8f8f8;
@@ -3687,9 +3687,9 @@ span.progress-bar-tooltip:after {
     .pricing-table.four-cols>div {
         width: 50%;
     }
-    .pricing-table.three-cols>div {
+/*    .pricing-table.three-cols>div {
         width: 50%;
-    }
+    }*/
     .pricing-table.two-cols>div {
         width: 50%;
     }
@@ -3982,7 +3982,7 @@ span.progress-bar-tooltip:after {
 }
 
 .contact-location-box {
-    padding-right: 118px;
+    padding-right: 0px;
 }
 
 .contact-location-box a {
@@ -4133,3 +4133,24 @@ span.progress-bar-tooltip:after {
     border-bottom-color: #00c1f9;
 }
 
+.contact-sec{
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.client-title-bar{
+    padding-right: 18px !important;
+}
+
+.view-p-agent{
+    color: #00c1f9;
+    font-size: 24px;
+}
+.a-text{
+    margin-top: -7px;
+}
+.amenities{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 15px;
+
+}
