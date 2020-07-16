@@ -56,7 +56,7 @@ if (isset($_SESSION['m_id'])) {
                                     <input class="defult-check" type="checkbox" checked="checked">
                                     <span class="checkmark"></span>
                                 </label>
-                                <a href="#" class="forgot-password float-right">Forgot Password ?</a>
+                                <a href="forget-password.php" class="forgot-password float-right">Forgot Password ?</a>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary" name="login" id="login" value="Log in">Log in</button>
@@ -102,6 +102,6 @@ if (isset($_SESSION['m_id'])) {
         <!-- Custom css -->
         <script src="js/custom.js" type="text/javascript"></script> 
         <script src="js/city.js" type="text/javascript"></script> 
-        <script src="ajax/js/login.js" type="text/javascript"></script> 
+        <script src="js/login.js" type="text/javascript"></script> 
     </body>
 </html>	
