@@ -364,7 +364,7 @@ label {
 .title::before {
     content: "";
     position: absolute;
-    background-color: #b500e8;
+    background-color: #00c6fa;
     width: 80px;
     height: 2px;
     bottom: 0;
@@ -7804,4 +7804,8 @@ p.change-phone-number-p:hover {
 
 .border-danger {
     border: 1px solid red;
+}
+
+a.forgot-password:hover {
+    color: #8fdd18;
 }

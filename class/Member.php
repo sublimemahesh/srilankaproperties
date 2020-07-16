@@ -170,6 +170,20 @@ class Member
             return TRUE;
         }
     }
+    public function checkEmailForResetPassword($email) {
+
+        $query = "SELECT `email`,`name` FROM `member` WHERE `email`= '" . $email . "'";
+
+        $db = new Database();
+
+        $result = mysql_fetch_array($db->readQuery($query));
+
+        if (!$result) {
+            return FALSE;
+        } else {
+            return $result;
+        }
+    }
     public function checkEmail($id, $email)
     {
         $query = "SELECT `email`,`name` FROM `member` WHERE `email`= '" . $email . "' AND `id` != '" . $id . "'";
@@ -185,7 +199,7 @@ class Member
     {
         $rand = rand(10000, 99999);
         $query = "UPDATE  `member` SET "
-            . "`resetcode` ='" . $rand . "' "
+            . "`reset_code` ='" . $rand . "' "
             . "WHERE `email` = '" . $email . "'";
         $db = new Database();
         $result = $db->readQuery($query);
@@ -198,18 +212,18 @@ class Member
     public function selectForgetMember($email)
     {
         if ($email) {
-            $query = "SELECT `email`,`name`,`resetcode` FROM `member` WHERE `email`= '" . $email . "'";
+            $query = "SELECT `email`,`name`,`reset_code` FROM `member` WHERE `email`= '" . $email . "'";
             $db = new Database();
             $result = mysql_fetch_array($db->readQuery($query));
             $this->name = $result['name'];
             $this->email = $result['email'];
-            $this->restCode = $result['resetcode'];
+            $this->resetcode = $result['reset_code'];
             return $result;
         }
     }
     public function selectResetCode($code)
     {
-        $query = "SELECT `id` FROM `member` WHERE `resetcode`= '" . $code . "'";
+        $query = "SELECT `id` FROM `member` WHERE `reset_code`= '" . $code . "'";
         $db = new Database();
         $result = mysql_fetch_array($db->readQuery($query));
         if (!$result) {
@@ -222,8 +236,9 @@ class Member
     {
         $enPass = md5($password);
         $query = "UPDATE  `member` SET "
-            . "`password` ='" . $enPass . "' "
-            . "WHERE `resetcode` = '" . $code . "'";
+            . "`password` ='" . $enPass . "', "
+            . "`reset_code` ='" . 0 . "' "
+            . "WHERE `reset_code` = '" . $code . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {
