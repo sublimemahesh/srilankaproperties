@@ -87,7 +87,7 @@ include_once 'class/include.php';
                                                 <input type="text" name="captchacode" id="captchacode" class="form-control input-validater" placeholder="Enter code ">
                                                 <span id="capspan"></span>
                                             </div>
-                                            <div class="form-group col-md-6 refresh-res">
+                                            <div class="form-group col-md-6 refresh-res code-i">
                                                 <div style="margin-top: -12px; margin-left: -15px;" class="mrg code-m">
                                                     <?php include("./contact-form/captchacode-widget.php"); ?>
                                                 </div>

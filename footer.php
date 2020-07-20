@@ -45,7 +45,7 @@
 
                     <div class="wi-content  info-line">
                         <div class="row">
-                            <div class="col-xs-12 infor-details">
+                            <div class="col-xs-12 infor-details list-m">
                                 <ul class="wi-list">
                                     <li>
                                         <a href="#">

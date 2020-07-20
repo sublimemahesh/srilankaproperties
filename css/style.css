@@ -2412,9 +2412,9 @@ html[xmlns] .slides {
 }
 
 .widget ul>li {
-    padding: 0 0 12px 0;
-    margin-bottom: 12px;
-/*    border-bottom: 1px solid #efefef;*/
+    /*    padding: 0 0 12px 0;*/
+    /*    margin-bottom: 12px;*/
+    /*    border-bottom: 1px solid #efefef;*/.
 }
 
 .widget a {
@@ -3380,7 +3380,7 @@ span.progress-bar-tooltip:after {
 
 .pricing-column ul li {
     padding: 10px 25px;
-/*    border-bottom: 1px solid #eeeeee;*/
+    /*    border-bottom: 1px solid #eeeeee;*/
     color: #666666!important;
     list-style: none;
     line-height: 18px;
@@ -3687,9 +3687,9 @@ span.progress-bar-tooltip:after {
     .pricing-table.four-cols>div {
         width: 50%;
     }
-/*    .pricing-table.three-cols>div {
-        width: 50%;
-    }*/
+    /*    .pricing-table.three-cols>div {
+            width: 50%;
+        }*/
     .pricing-table.two-cols>div {
         width: 50%;
     }
@@ -4153,4 +4153,16 @@ span.progress-bar-tooltip:after {
     padding-bottom: 5px;
     font-size: 15px;
 
+}
+.vision{
+    margin-bottom: -60px;
+}
+.vision-sec{
+    margin-top: -80px;
+}
+.v-s{
+    margin-bottom: -62px !important;
+}
+.list-m{
+    margin-bottom: 15px;
 }

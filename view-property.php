@@ -71,9 +71,9 @@ if (isset($_GET['id'])) {
                             <div class="row">
                                 <div class="col-md-9 ">
                                     <div class="single-property">
-                                        <div class="property-amenities clearfix row amenities view-am ami-f">
+                                        <div class="property-amenities clearfix row amenities view-am ami-f detail-box">
                                             <div class="area col-sm-3 col-xs-6"><strong>Category</strong><?= $CATEGORY1->name; ?></div>
-                                            <div class="area col-sm-3 col-xs-6"><strong>Sub Category</strong><?= $SUBCATEGORY1->name; ?></div>
+                                            <div class="area col-sm-3 col-xs-6 mg"><strong>Sub Category</strong><?= $SUBCATEGORY1->name; ?></div>
                                             <div class="baths col-sm-3 col-xs-6"><strong>District</strong><?= $DISTRICT1->name; ?></div>
                                             <div class="beds col-sm-3 col-xs-6"><strong>City</strong><?= $CITY1->name; ?></div>
                                         </div>
@@ -198,7 +198,7 @@ if (isset($_GET['id'])) {
                                                     <?php
                                                 } else {
                                                     ?>
-                                                    <h5>No any related properties in the database.</h5>
+                                                <h5 class="no-p no-p-i">No any related properties in the database.</h5>
                                                     <?php }
                                                 ?>
 

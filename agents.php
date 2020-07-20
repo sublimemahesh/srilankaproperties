@@ -76,7 +76,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                             foreach ($members as $member) {
                                                 $properties = Property::getPropertiesByMember($member['id']);
                                                 ?>
-                                                <li class="col-md-12 col-sm-12">
+                                                <li class="col-md-12 col-sm-12 a-detail-i">
                                                     <div class="col-md-4 col-sm-4 img-padding">
                                                         <a class="">
                                                             <?php
