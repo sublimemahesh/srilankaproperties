@@ -76,7 +76,7 @@ class Member
             . $this->city . "', '"
             . $this->picture . "', '"
             . $this->description . "', '"
-            . $this->isActive . "')";
+            . 1 . "')";
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {

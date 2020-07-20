@@ -78,12 +78,12 @@ $VALUES = new Page(4);
                                 <div class="pricing-table three-cols margin-0">
                                     <div class="pricing-column col-sm-4">
                                         <h3>Vision</h3>
-                                        <div class="pricing-column-content  ">
-                                            <ul class="features">
+                                        <div class="pricing-column-content">
+                                            <ul class="features v-s">
                                                 <li><?= $VISION->description; ?></li>
                                             </ul>
-                                            <div class="fact-ico-about abt-icon-m">
-                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            <div class="fact-ico-about abt-icon-m vision-sec">
+                                                <i class="fa fa-eye vision" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                     </div>
@@ -101,11 +101,11 @@ $VALUES = new Page(4);
                                     <div class="pricing-column col-sm-4">
                                         <h3>Mission</h3>
                                         <div class="pricing-column-content">
-                                            <ul class="features">
+                                            <ul class="features v-s">
                                                 <li><?= $MISSION->description; ?></li>
                                             </ul>
                                             <div class="fact-ico-about">
-                                                <i class="fa fa-rocket" aria-hidden="true"></i>
+                                                <i class="fa fa-rocket vision" aria-hidden="true"></i>
                                             </div>
                                         </div>
                                     </div>

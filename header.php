@@ -2,7 +2,7 @@
     <div class="top-header hidden-xs">
         <div class="container">
             <div class="row">
-                <div class="col-md-4 col-sm-6">
+                <div class="col-md-4 col-sm-4">
                     <ul class="horiz-nav pull-left">
 
                         <li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
@@ -10,7 +10,7 @@
                         <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-8 col-sm-6">
+                <div class="col-md-8 col-sm-8">
                     <ul class="horiz-nav pull-right">
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
@@ -49,7 +49,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-8 col-xs-8">
-                    <h1 class="logo"> <a href="index.php"><img src="images/realstate/sl-property-logo.png" alt="Logo"></a> </h1>
+                    <h1 class="logo"><a href="index.php"><img src="images/realstate/sl-property-logo.png" alt="Logo"></a></h1>
                 </div>
                 <div class="col-md-8 col-sm-4 col-xs-4">
                     <div class="contact-info-blocks hidden-sm hidden-xs">

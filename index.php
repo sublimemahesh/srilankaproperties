@@ -113,8 +113,8 @@ $comments = $COMMENT->all();
                                                     <h4>
                                                         <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                             <?php
-                                                            if (strlen($property['title']) > 27) {
-                                                                echo substr($property['title'], 0, 23) . '...';
+                                                            if (strlen($property['title']) > 20) {
+                                                                echo substr($property['title'], 0, 15) . '...';
                                                             } else {
                                                                 echo $property['title'];
                                                             }

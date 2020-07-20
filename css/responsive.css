@@ -51,6 +51,22 @@ and open the template in the editor.
     .pricing-m{
         margin-bottom: 10px;
     }
+    .mg{
+        padding-left: 1px;
+    }
+    .detail-box{
+        margin-right: 0px;
+        margin-left: 1px;
+    }
+    .no-p-i{
+        margin-left: 15px;
+    }
+    .a-detail-i{
+        padding-bottom: 1px !important;
+    }
+    .code-i{
+        margin-left: 70px;
+    }
 }
 
 @media (max-width: 767px){
@@ -239,4 +255,15 @@ and open the template in the editor.
     .search{
         margin-top: 0px;
     }
+    .tab-m{
+        margin-left: 9px;
+    }
+    .list-m{
+        margin-bottom: 15px;
+    }
+    .no-p{
+        font-size: 14px;
+        margin-left: 15px;
+    }
+
 }
