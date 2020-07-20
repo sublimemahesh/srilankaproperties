@@ -5,31 +5,32 @@ $MEMBER = new Member($_SESSION["m_id"]);
 ?>
 <!doctype html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <title>Sri Lanka Properties</title>
-        <!-- Favicon Icon Css -->
-        <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png"> 
-        <!-- Animation CSS -->
-        <link rel="stylesheet" href="../css/animate.css" type="text/css">  
-        <!-- Font Css -->
-        <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-        <link rel="stylesheet" href="../css/font-awesome.css">
-        <!-- Bootstrap Css --> 
-        <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
-        <!-- main css --> 
-        <link href="css/style.css" type="text/css" rel="stylesheet">
-        <link href="css/responsive.css" type="text/css" rel="stylesheet">
-        <link href="css/custom.css" type="text/css" rel="stylesheet">
-        <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
-    </head>
-    
-    <body class="theme-2">
-        <!-- LOADER -->
-        <!-- <div id="preloader">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Sri Lanka Properties</title>
+    <!-- Favicon Icon Css -->
+    <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <!-- Animation CSS -->
+    <link rel="stylesheet" href="../css/animate.css" type="text/css">
+    <!-- Font Css -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!-- Bootstrap Css -->
+    <link href="../css/bootstrap.css" type="text/css" rel="stylesheet">
+    <!-- main css -->
+    <link href="css/style.css" type="text/css" rel="stylesheet">
+    <link href="css/responsive.css" type="text/css" rel="stylesheet">
+    <link href="css/custom.css" type="text/css" rel="stylesheet">
+    <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
+</head>
+
+<body class="theme-2">
+    <!-- LOADER -->
+    <!-- <div id="preloader">
             <div class="loading_wrap">
                 <img src="../image/logo.jpg" alt="logo">
             </div>
@@ -37,8 +38,12 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <!-- LOADER -->
     <?php include './header.php'; ?>
     <div class="container">
+        <div class="alert alert-danger alert-dismissible" id="alert_profile" role="alert" style="display: none;">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <strong>Not Completed!</strong> You must enter all required details before continuing.
+        </div>
         <div class="header-bar font-color">
-            <i class="fa fa-pencil "></i>  Edit Profile
+            <i class="fa fa-pencil "></i> Edit Profile
         </div>
         <div class="row">
             <div class="col-md-12">
@@ -266,16 +271,17 @@ $MEMBER = new Member($_SESSION["m_id"]);
             <div id="chart_div"></div>
         </div>
     </div>
-   <?php include './footer.php'; ?> 
-        <!-- Jquery js -->
-        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
-        <!-- Custom css -->
-        <script src="js/custom.js" type="text/javascript"></script> 
-        <script src="js/city.js" type="text/javascript"></script> 
-        <script src="js/member.js" type="text/javascript"></script>   
-        <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
+    <?php include './footer.php'; ?>
+    <!-- Jquery js -->
+    <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    <!-- Custom css -->
+    <script src="js/custom.js" type="text/javascript"></script>
+    <script src="js/city.js" type="text/javascript"></script>
+    <script src="js/member.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
+    <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script>
         tinymce.init({
             selector: "#description",

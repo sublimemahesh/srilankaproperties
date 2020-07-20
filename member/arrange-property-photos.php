@@ -102,6 +102,7 @@ if (isset($_GET['id'])) {
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property-photo.js" type="text/javascript"></script>
     <script src="../control-panel/plugins/jquery-ui/jquery-ui.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
     <script>
         $(function() {
             $("#sortable").sortable();
