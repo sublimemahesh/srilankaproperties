@@ -174,5 +174,6 @@ $CITY = new City($CUSTOMER->city);
         <script src="../control-panel/plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
         <script src="../control-panel/plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
         <script src="../control-panel/js/pages/tables/jquery-datatable.js"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
     </body> 
 </html>

@@ -238,6 +238,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property.js" type="text/javascript"></script>
     <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
     <script>
         tinymce.init({
             selector: "#description1",

@@ -23,6 +23,9 @@ class Member
     private $authToken;
     public $resetcode;
     public $isActive;
+    public $email_verified;
+    public $e_verification_code;
+    
     public function __construct($id)
     {
         if ($id) {
@@ -43,6 +46,8 @@ class Member
             $this->password = $result['password'];
             $this->authToken = $result['auth_token'];
             $this->isActive = $result['is_active'];
+            $this->email_verified = $result['email_verified'];
+            $this->e_verification_code = $result['e_verification_code'];
             return $this;
         }
     }
@@ -170,7 +175,8 @@ class Member
             return TRUE;
         }
     }
-    public function checkEmailForResetPassword($email) {
+    public function checkEmailForResetPassword($email)
+    {
 
         $query = "SELECT `email`,`name` FROM `member` WHERE `email`= '" . $email . "'";
 
@@ -258,7 +264,9 @@ class Member
             . "`city` ='" . $this->city . "', "
             . "`address` ='" . $this->address . "', "
             . "`picture` ='" . $this->picture . "', "
-            . "`description` ='" . $this->description . "' "
+            . "`description` ='" . $this->description . "', "
+            . "`email_verified` ='" . $this->email_verified . "', "
+            . "`e_verification_code` ='" . $this->e_verification_code . "' "
             . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
@@ -442,5 +450,25 @@ class Member
         }
 
         echo $setPaginate;
+    }
+    public function checkEmptyBasicData()
+    {
+
+        $query = "SELECT `name`,`email`,`district`,`city`,`address`,`phone`,`nic`, `picture`, `description` FROM `member` WHERE `id` = '" . $this->id . "'";
+
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $count = 0;
+        foreach (mysql_fetch_assoc($result) as $key => $data) {
+
+            if (!empty($data) && $data != '0') {
+                $count++;
+            }
+        }
+        if ($count == '9') {
+            return 1;
+        } else {
+            return 0;
+        }
     }
 }

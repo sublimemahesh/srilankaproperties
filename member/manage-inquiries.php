@@ -118,6 +118,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
 
     <script src="../js/bootstrap.js" type="text/javascript"></script>
     <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
 
 
 </body>

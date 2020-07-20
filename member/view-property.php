@@ -153,6 +153,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/dealer_area.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
 
 
 </body>

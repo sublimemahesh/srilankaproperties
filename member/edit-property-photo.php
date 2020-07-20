@@ -107,6 +107,7 @@ if (isset($_GET['id'])) {
     <!-- Custom css -->
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/property-photo.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
 </body>
 
 </html>
