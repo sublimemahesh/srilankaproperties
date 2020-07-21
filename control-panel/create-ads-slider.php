@@ -54,43 +54,58 @@ include_once(dirname(__FILE__) . '/auth.php');
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
-                                                <input type="file" id="image" class="form-control" name="image"  required="true">
-                                            </div>
-                                        </div>
-                                    </div>
- 
-                                    <div class="col-md-12"> 
-                                        <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
-                                    </div>
- 
-                                </form>
-                                <div class="row">
-                                </div>
-                                <div class="row clearfix">
-                                    <hr/>
-                                    <?php $ADVERTISEMENT = Advertisement::all();
-                                    if (count($ADVERTISEMENT) > 0) {
-                                        foreach ($ADVERTISEMENT as $key => $ad) {
-                                            ?>
-                                            <div class="col-md-3" id="div<?php echo $ad['id']; ?>">
-                                                <div class="photo-img-container">
-                                                    <img src="../upload/advertisement/<?php echo $ad['image_name']; ?>" class="img-responsive ">
-                                                </div>
-                                                <div class="img-caption">
-                                                    <p class="maxlinetitle"><?php echo $ad['caption']; ?></p>
-                                                    <div class="d">
-                                                        <a href="#" class="delete-ads-slider" data-id="<?php echo $ad['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
-                                                        <a href="edit-ads-slider.php?id=<?php echo $ad['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
-                                                        <a href="arrange-slider.php">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
+                                                <select class="form-control" name="property" id="property">
+                                                    <option value=""> --Please Select the Property-- </option>
+                                                    <?php
+                                                    $PROPERTY = Property::getAllPropertiesByActiveMembers($id);
+                                                    if (count($PROPERTY) > 0) {
+                                                        foreach ($PROPERTY as $key => $property) {
+                                                            ?>
+                                                    <option value="<?php echo $property['id'] ?>">
+                                                            <?php echo $property['title'] ?>
+                                                        </option>
+                                                    <?php 
+                                                    
+                                                    }
+                                                    ?>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
+
+                                            <div class="col-md-12"> 
+                                                <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
+                                            </div>
+
+                                        </form>
+                                        <div class="row">
+                                        </div>
+                                        <div class="row clearfix">
+                                            <hr/>
                                             <?php
-                                        }
-                                    } else {
-                                        ?> 
-                                        <b style="padding-left: 15px;">No slides in the database.</b> 
-                                    <?php } ?> 
+                                            $ADVERTISEMENT = Advertisement::all();
+                                            if (count($ADVERTISEMENT) > 0) {
+                                                foreach ($ADVERTISEMENT as $key => $ad) {
+                                                    ?>
+                                                    <div class="col-md-3" id="div<?php echo $ad['id']; ?>">
+                                                        <div class="photo-img-container">
+                                                            <img src="../upload/advertisement/<?php echo $ad['image_name']; ?>" class="img-responsive ">
+                                                        </div>
+                                                        <div class="img-caption">
+                                                            <p class="maxlinetitle"><?php echo $ad['caption']; ?></p>
+                                                            <div class="d">
+                                                                <a href="#" class="delete-ads-slider" data-id="<?php echo $ad['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn"></button></a>
+                                                                <a href="edit-ads-slider.php?id=<?php echo $ad['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
+                                                                <a href="arrange-slider.php">  <button class="glyphicon glyphicon-random arrange-btn"></button></a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <?php
+                                                }
+                                            } else {
+                                                ?> 
+                                                <b style="padding-left: 15px;">No slides in the database.</b> 
+                                            <?php } ?> 
 
                                 </div>
                             </div>

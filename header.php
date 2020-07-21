@@ -2,15 +2,15 @@
  session_start();
  ?>
 <header class="site-header">
-    <div class="top-header hidden-xs">
+    <div class="top-header h-height hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <ul class="horiz-nav pull-left">
 
-                        <li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram"></i></a></li>
-                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram header-icon"></i></a></li>
+                        <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook header-icon"></i></a></li>
+                        <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter header-icon"></i></a></li>
                     </ul>
                 </div>
                 <div class="col-md-8 col-sm-8">
@@ -79,7 +79,7 @@
                         </div>
                         <div>
                             <i class="fa fa-clock-o"></i> Working Hours
-                            <span>09:00 to 17:00</span>
+                            <span>09:00 to 18:00</span>
                         </div>
                     </div>
                     <a href="#" class="visible-sm visible-xs menu-toggle"><i class="fa fa-bars"></i></a>

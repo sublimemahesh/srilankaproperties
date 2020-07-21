@@ -15,7 +15,8 @@ class Advertisement {
 
     public $id;
     public $caption;
-    public $image_name; 
+    public $image_name;
+    public $property; 
     public $queue;
 
     public function __construct($id) {
@@ -30,6 +31,7 @@ class Advertisement {
             $this->id = $result['id'];
             $this->caption = $result['caption'];
             $this->image_name = $result['image_name'];
+            $this->property = $result['property'];
             $this->queue = $result['queue']; 
 
             return $this;
@@ -38,9 +40,10 @@ class Advertisement {
 
     public function create() {
 
-        $query = "INSERT INTO `advertisement` (`caption`,`image_name`,`queue` ) VALUES  ('"
+        $query = "INSERT INTO `advertisement` (`caption`,`image_name`,`property`,`queue` ) VALUES  ('"
                 . $this->caption . "','"
-                . $this->image_name . "', '" 
+                . $this->image_name . "', '"
+                . $this->property . "', '" 
                 . $this->queue . "')";
 
         $db = new Database();
@@ -74,7 +77,8 @@ class Advertisement {
 
         $query = "UPDATE  `advertisement` SET "
                 . "`caption` ='" . $this->caption . "', "
-                . "`image_name` ='" . $this->image_name . "', " 
+                . "`image_name` ='" . $this->image_name . "', "
+                . "`property` ='" . $this->property . "', " 
                 . "`queue` ='" . $this->queue . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 

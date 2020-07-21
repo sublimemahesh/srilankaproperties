@@ -47,7 +47,6 @@ $OFFER_PHOTO = new OfferPhoto($id);
                                 <h2>
                                     Edit Property Photo
                                 </h2>
-
                             </div>
                             <div class="body">
                                 <form class="form-horizontal" method="post" action="post-and-get/property-photo.php" enctype="multipart/form-data"> 

@@ -954,7 +954,14 @@ body.boxed .body {
 }
 
 .top-header {
-    height: 30px;
+    height: 41px;
+}
+.h-height{
+    padding-top: 7px;
+}
+.header-icon{
+    font-size: 19px !important;
+    margin-top: 5px;
 }
 
 .middle-header {
@@ -1080,7 +1087,7 @@ body.boxed .body {
 }
 
 .navigation>ul>li>a {
-    padding: 15px 18.5px;
+    padding: 15px 18px;
     display: block;
     text-decoration: none;
     border-right: 1px solid rgba(0, 0, 0, .05);
@@ -2412,9 +2419,9 @@ html[xmlns] .slides {
 }
 
 .widget ul>li {
-        padding: 0 0 12px 0;
-        margin-bottom: 12px;
-        border-bottom: 1px solid #efefef;
+    padding: 0 0 12px 0;
+    margin-bottom: 12px;
+    border-bottom: 1px solid #efefef;
 }
 
 .widget a {
@@ -4168,4 +4175,20 @@ span.progress-bar-tooltip:after {
 }
 .header-list{
     margin-left: -38px !important;
+}
+.values{
+    margin-bottom: 0px !important;
+    border-bottom: 0px !important;
+}
+.values .pricing-column ul li {
+    padding: 10px 25px;
+    color: #666666 !important;
+    list-style: disc;
+    line-height: 0px;
+}
+.bed{
+    margin-top: 20px !important;
+}
+.icon-left{
+    margin-right: 5px;
 }

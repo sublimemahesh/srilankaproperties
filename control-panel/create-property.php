@@ -85,7 +85,10 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <option value="<?php echo $sub_category['id'] ?>">
                                                             <?php echo $sub_category['name'] ?>
                                                         </option>
-                                                    <?php } ?>
+                                                    <?php 
+                                                    
+                                                    }
+                                                    ?>
                                                 </select>
                                             </div>
                                         </div>
