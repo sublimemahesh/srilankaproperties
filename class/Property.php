@@ -25,12 +25,15 @@ class Property
     public $image_name;
     public $description;
     public $price;
+    public $price_dollar;
     public $contact;
     public $address;
     public $email;
     public $features;
     public $queue;
     public $status;
+    public $type;
+    public $no_of_bed_rooms;
 
     public function __construct($id)
     {
@@ -53,12 +56,15 @@ class Property
             $this->image_name = $result['image_name'];
             $this->description = $result['description'];
             $this->price = $result['price'];
+            $this->price_dollar = $result['price_dollar'];
             $this->contact = $result['contact'];
             $this->address = $result['address'];
             $this->email = $result['email'];
             $this->features = $result['features'];
             $this->queue = $result['queue'];
             $this->status = $result['status'];
+            $this->type = $result['type'];
+            $this->no_of_bed_rooms = $result['no_of_bed_rooms'];
 
             return $this;
         }
@@ -80,11 +86,14 @@ class Property
             . "`image_name`,"
             . "`description`,"
             . "`price`,"
+            . "`price_dollar`,"
             . "`contact`,"
             . "`address`,"
             . "`email`,"
             . "`features`,"
-            . "`queue`"
+            . "`queue`,"
+            . "`type`,"
+            . "`no_of_bed_rooms`"
             . ") VALUES  ('"
             . $createdAt . "','"
             . $this->member . "','"
@@ -96,11 +105,14 @@ class Property
             . $this->image_name . "', '"
             . $this->description . "', '"
             . $this->price . "', '"
+            . $this->price_dollar . "', '"
             . $this->contact . "', '"
             . $this->address . "', '"
             . $this->email . "', '"
             . $this->features . "', '"
-            . $this->queue . "')";
+            . $this->queue . "', '"
+            . $this->type . "', '"
+            . $this->no_of_bed_rooms . "')";
 
         $db = new Database();
 
@@ -267,11 +279,15 @@ class Property
             . "`image_name` ='" . $this->image_name . "', "
             . "`description` ='" . $this->description . "', "
             . "`price` ='" . $this->price . "', "
+            . "`price_dollar` ='" . $this->price_dollar . "', "
             . "`contact` ='" . $this->contact . "', "
             . "`address` ='" . $this->address . "', "
             . "`email` ='" . $this->email . "', "
             . "`features` ='" . $this->features . "', "
-            . "`queue` ='" . $this->queue . "' "
+            . "`status` ='" . 0 . "', "
+            . "`queue` ='" . $this->queue . "', "
+            . "`type` ='" . $this->type . "', "
+            . "`no_of_bed_rooms` ='" . $this->no_of_bed_rooms . "' "
             . "WHERE `id` = '" . $this->id . "'";
         $db = new Database();
 

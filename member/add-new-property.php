@@ -55,7 +55,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                     <form class="form-horizontal" id="property-form" method="post" action="" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="title">Title <span class="text-danger">*</span></label>
+                                <label for="title">Property Title <span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
@@ -139,7 +139,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
-                                <label for="image">Image <span class="text-danger">*</span></label>
+                                <label for="image">Main Image <span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
@@ -151,7 +151,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
-                                <label for="address">Address<span class="text-danger">*</span></label>
+                                <label for="address">Address</label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
@@ -189,12 +189,34 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="price">Price<span class="text-danger">*</span></label>
+                                <label for="price">Price (Rs)<span class="text-danger">*</span></label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 form-control-label text-right title-mobile text-i">
+                                <label for="price">Price ($)</label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="price" id="price-dollar" class="form-control title-input" autocomplete="off" name="price_dollar" required="true">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="price">No of Bed Rooms</label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
+                                        <input type="number" id="no-of-bed-rooms" class="form-control title-input" autocomplete="off" name="no_of_bed_rooms" required="true">
                                     </div>
                                 </div>
                             </div>
@@ -207,6 +229,72 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <div class="form-group">
                                     <div class="form-line">
                                         <textarea id="description" name="description" class="form-control title-input" rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="district">Type <span class="text-danger">*</span></label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <select class="form-control title-input" type="text" id="type" autocomplete="off" name="type">
+                                            <option value="" class="active light-c"> -- Please Select Your Type -- </option>
+                                            <option value="agent">Agent</option>
+                                            <option value="owner">Owner</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="district">Property Photos <span class="text-danger">*</span></label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i" title="Upload Property Photos">
+                                <div class="row">
+                                    <div class="property-images-section col-md-12">
+                                        <div class="panel-box form-box-inner">
+                                            <!-- <form method="post" id="post-data"> -->
+                                                <div class="flipScrollableArea hidden" id="image-list" style="/*! height: 112px; */ /*! width: 100%; */">
+                                                    <div class="flipScrollableAreaWrap">
+                                                        <div class="flipScrollableAreaBody" style="height: 112px;">
+                                                            <div class="flipScrollableAreaContent">
+                                                                <div class="flipScrollableAreaContent1">
+                                                                </div>
+
+                                                                
+                                                                <span class="_uploadloaderbox abc">
+                                                                    <div class="_m _6a">
+                                                                        <a class="_uploadbox" rel="ignore">
+                                                                            <div class="_upload">
+                                                                                <img src="img/blue-loader.gif" id="img_loader" />
+                                                                            </div>
+                                                                        </a>
+                                                                    </div>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="flipScrollableAreaTrack invisible_elem" style="opacity: 0;">
+                                                        <div class="flipScrollableAreaGripper hidden_elem"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="flie-list-section">
+                                                </div>
+                                                <div class="post-img" style="    margin-bottom: -10px;">
+                                                    <a href="#">
+                                                        <label class="custom-file-upload">
+                                                            <input type="file" data-toggle="tooltip" data-placement="top" title="Tooltip on top" id="upload_first_image" name="post-image"> <span class="fas fa fa-image"></span>
+                                                        </label>
+                                                    </a>
+                                                    <input type="hidden" name="upload-post-image" value="upload-post-image">
+
+                                                </div>
+                                            <!-- </form> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -227,18 +315,20 @@ $MEMBER = new Member($_SESSION["m_id"]);
         </div>
         <div id="chart_div"></div>
     </div>
+  
     <?php include './footer.php'; ?>
     <!-- Jquery js -->
     <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
     <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <!-- Custom css -->
-    <script src="js/custom.js" type="text/javascript"></script>
+    <!-- <script src="js/custom.js" type="text/javascript"></script> -->
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property.js" type="text/javascript"></script>
+    <script src="js/upload-photos.js" type="text/javascript"></script>
     <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
-    <script src="js/email-verification.js" type="text/javascript"></script>
+    <!-- <script src="js/email-verification.js" type="text/javascript"></script> -->
     <script>
         tinymce.init({
             selector: "#description1",
@@ -259,6 +349,26 @@ $MEMBER = new Member($_SESSION["m_id"]);
             // ===========================================
             relative_urls: false
         });
+    </script>
+    <script>
+        // jQuery(document).ready(function($) {
+
+        //     var currency_input = 1;
+        //     var currency_from = "LKR"; // currency codes : http://en.wikipedia.org/wiki/ISO_4217
+        //     var currency_to = "USD";
+
+        //     var yql_base_url = "https://query.yahooapis.com/v1/public/yql";
+        //     var yql_query = 'select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20("' + currency_from + currency_to + '")';
+        //     var yql_query_url = yql_base_url + "?q=" + yql_query + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
+
+        //     var op_data = 0;
+
+        //     $.get(yql_query_url, function(data) {
+        //         op_data = data.query.results.rate.Rate;
+        //         console.log(op_data);
+        //     });
+
+        // });
     </script>
 </body>
 

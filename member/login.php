@@ -32,7 +32,7 @@ if (isset($_SESSION['m_id'])) {
     </head>
     <body class="theme-2">
         <div class="container text-center">
-            <img src="../images/realstate/sl-property-logo.png" class="logo-login" style="width: 150px"/><B class="memberr-log">Member</B>
+            <a href="../"><img src="../images/realstate/sl-property-logo.png" class="logo-login" style="width: 150px"/></a>
         </div>
         <!-- Start My Account Section -->
         <section class="">
@@ -40,7 +40,7 @@ if (isset($_SESSION['m_id'])) {
                 <div class="row">
                     <div class="col-md-6 mb-4 mb-md-0">
                         <div class="title">
-                            <h4>Sign in...</h4>
+                            <h4>Member Sign in...</h4>
                         </div>
                         <form method="post" class="login_form " id="login-form">
                             <div class="form-group">
@@ -65,7 +65,7 @@ if (isset($_SESSION['m_id'])) {
                     </div>
                     <div class="col-md-6">
                         <div class="title register-mob">
-                            <h4>Register</h4>
+                            <h4>New Member Register</h4>
                         </div>
                         <form method="post" class="login_form " id="registration-form">
                             <div class="form-group">
