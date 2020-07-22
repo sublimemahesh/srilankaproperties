@@ -7,6 +7,12 @@ $MEMBER->name = $_POST['name'];
 $MEMBER->phone = $_POST['phone'];
 $MEMBER->email = $_POST['email'];
 $MEMBER->password = md5($_POST['password']);
+if (isset($_POST['subscribe'])) {
+    $MEMBER->is_subscribed = 1;
+} else {
+    $MEMBER->is_subscribed = 0;
+}
+
 $checkEmail = $MEMBER->checkEmail(null, $_POST['email']);
 if (!$checkEmail) {
     $MEMBER->create();

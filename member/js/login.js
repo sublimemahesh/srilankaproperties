@@ -106,6 +106,14 @@ $(document).ready(function() {
                 timer: 2000,
                 showConfirmButton: false
             });
+        } else if (!$('#terms-and-conditions').is(':checked')) {
+            swal({
+                title: "Error!",
+                text: "Please accept the company terms and conditions..!",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
         } else {
 
             var formData = new FormData($("form#registration-form")[0]);
