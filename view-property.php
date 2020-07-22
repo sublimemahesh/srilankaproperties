@@ -29,6 +29,7 @@ if (isset($_GET['id'])) {
         <meta name="format-detection" content="telephone=no">
         <!-- CSS
               ================================================== -->
+        <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
         <link href="css/style.css" rel="stylesheet" type="text/css">
         <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
@@ -109,7 +110,13 @@ if (isset($_GET['id'])) {
                                         <div class="tab-content">
                                             <div id="description" class="tab-pane active">
                                                 <div class="price price-mrg pricing-m"><strong>Rs.</strong><span><?= number_format($PROPERTY->price, 2); ?></span></div>
-
+                                                <?php
+                                                if ($PROPERTY->price_dollar != 0.00) {
+                                                    ?>
+                                                    <div class="price price-mrg pricing-m"><strong>$</strong><span><?= number_format($PROPERTY->price_dollar, 2) ?></span></div>
+                                                    <?php
+                                                }
+                                                ?>
                                                 <div class="property-contact-details">
                                                     <div class="contact-info-blocks hidden-sm hidden-xs">
                                                         <div>
@@ -124,6 +131,18 @@ if (isset($_GET['id'])) {
                                                             <i class="fa fa-map-marker"></i> Address
                                                             <span><?= $PROPERTY->address; ?></span>
                                                         </div>
+
+                                                        <?php
+                                                        if ($PROPERTY->no_bed_rooms != 0) {
+                                                            ?>
+
+                                                            <div>
+                                                                <i class="fa fa-bed"></i> Bed Rooms
+                                                                <span><?= $PROPERTY->no_of_bed_rooms; ?></span>
+                                                            </div>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                     </div>
                                                 </div>
                                                 <p><?= $PROPERTY->description; ?></p>
@@ -133,23 +152,29 @@ if (isset($_GET['id'])) {
                                     <div class="row">
                                         <a href="inquiry.php?id=<?= $PROPERTY->id; ?>" class="btn btn-primary btn-inquiry-now"> Inquiry Now</a>
                                     </div>
-                                    <div class="widget sidebar-widget featured-properties-widget">
-                                        <h3 class="widgettitle">Agents</h3>
-                                        <div class="agent a-mar">
-                                            <div class="row">
-                                                <div class="col-md-4 col-sm-4">
-                                                    <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="<?= $MEMBER->name; ?>">
-                                                </div>
-                                                <div class="col-md-8 col-sm-8">
-                                                    <h4 class="view-p-agent"><?= $MEMBER->name; ?></h4>
-                                                    <?= $MEMBER->description; ?>
-                                                    <div class="agent-contacts clearfix">
-                                                        <!-- <a href="#" class="btn btn-primary pull-right btn-sm">Contact Agent</a> -->
+                                    <?php
+                                    if ($PROPERTY->type =='agent') {
+                                        ?>
+                                        <div class="widget sidebar-widget featured-properties-widget">
+                                            <h3 class="widgettitle">Agents</h3>
+                                            <div class="agent a-mar">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-4">
+                                                        <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="<?= $MEMBER->name; ?>">
+                                                    </div>
+                                                    <div class="col-md-8 col-sm-8">
+                                                        <h4 class="view-p-agent"><?= $MEMBER->name; ?></h4>
+                                                        <?= $MEMBER->description; ?>
+                                                        <div class="agent-contacts clearfix">
+                                                            <!-- <a href="#" class="btn btn-primary pull-right btn-sm">Contact Agent</a> -->
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
+                                        <?php
+                                    }
+                                    ?>
                                     <div class="widget sidebar-widget featured-properties-widget">
                                         <h3 class="widgettitle">Related Properties</h3>
                                         <div class="property-grid">
@@ -198,8 +223,8 @@ if (isset($_GET['id'])) {
                                                     <?php
                                                 } else {
                                                     ?>
-                                                <h5 class="no-p no-p-i">No any related properties in the database.</h5>
-                                                    <?php }
+                                                    <h5 class="no-p no-p-i">No any related properties in the database.</h5>
+                                                <?php }
                                                 ?>
 
                                             </div>

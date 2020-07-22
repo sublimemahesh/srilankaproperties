@@ -16,7 +16,7 @@ $OFFER_PHOTO = new OfferPhoto($id);
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Property-Photo</title>
         <!-- Favicon-->
-        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -47,7 +47,6 @@ $OFFER_PHOTO = new OfferPhoto($id);
                                 <h2>
                                     Edit Property Photo
                                 </h2>
-
                             </div>
                             <div class="body">
                                 <form class="form-horizontal" method="post" action="post-and-get/property-photo.php" enctype="multipart/form-data"> 
