@@ -139,25 +139,26 @@ if (isset($_GET['subcategory'])) {
                             <div class="widget sidebar-widget">
                                 <h3 class="widgettitle">Search Properties</h3>
                                 <div class="full-search-form ">
-                                    <form action="search.php" id="search-form">
+                                <form action="search.php" id="search-form">
+                                        <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
                                         <select name="category" id="category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>Category</option>
+                                            <option value="" selected>Select Category</option>
                                             <?php
-                                            foreach (Category::all() as $cat) :
+                                            foreach (Category::all() as $category) :
                                             ?>
-                                                <option value="<?php echo $cat['id']; ?>"><?php echo $cat['name']; ?></option>
+                                                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>Sub Category</option>
+                                            <option value="" selected>All Sub Categories</option>
                                             <?php
-                                            foreach (SubCategory::all() as $subcat) :
+                                            foreach (SubCategory::all() as $subcategory) :
                                             ?>
-                                                <option value="<?php echo $subcat['id']; ?>"><?php echo $subcat['name']; ?></option>
+                                                <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">
-                                            <option value="" selected>District</option>
+                                            <option value="" selected>All Districts</option>
                                             <?php
                                             foreach (District::all() as $district) :
                                             ?>
@@ -165,7 +166,7 @@ if (isset($_GET['subcategory'])) {
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="city" id="city" class="form-control input-lg selectpicker">
-                                            <option value="" selected>City</option>
+                                            <option value="" selected>All Cities</option>
                                             <?php
                                             foreach (City::all() as $city) :
                                             ?>

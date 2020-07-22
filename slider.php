@@ -14,14 +14,17 @@
     <!-- End Hero Slider -->
     <!-- Site Search Module -->
     <div class="site-search-module">
-        <div class="container">
+        <div class="container-fluid">
             <div class="site-search-module-inside">
                 <form action="search.php" id="search-form">
                     <div class="form-group slider-heading slider-i">
                         <div class="row">
-                            <div class="col-md-2 col-md-offset-1 ">
+                            <div class="col-md-2">
+                                <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
+                            </div>
+                            <div class="col-md-2">
                                 <select name="category" id="category" class="form-control input-lg selectpicker">
-                                    <option value="" selected>Category</option>
+                                    <option value="" selected>Select Category</option>
                                     <?php
                                     foreach (Category::all() as $category) :
                                     ?>
@@ -31,7 +34,7 @@
                             </div>
                             <div class="col-md-2">
                                 <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
-                                    <option value="" selected>Sub Category</option>
+                                    <option value="" selected>All Sub Categories</option>
                                     <?php
                                     foreach (SubCategory::all() as $subcategory) :
                                     ?>
@@ -41,7 +44,7 @@
                             </div>
                             <div class="col-md-2">
                                 <select name="district" id="district" class="form-control input-lg selectpicker">
-                                    <option value="" selected>District</option>
+                                    <option value="" selected>All Districts</option>
                                     <?php
                                     foreach (District::all() as $district) :
                                     ?>
@@ -51,7 +54,7 @@
                             </div>
                             <div class="col-md-2">
                                 <select name="city" id="city" class="form-control input-lg selectpicker">
-                                    <option value="" selected>City</option>
+                                    <option value="" selected>All Cities</option>
                                     <?php
                                     foreach (City::all() as $city) :
                                     ?>
