@@ -76,7 +76,7 @@ $comments = $COMMENT->all();
                             <ul class="slides add">
                                 <?php if (COUNT(Advertisement::all())) : ?>
                                     <?php foreach (Advertisement::all() as $ad) : ?>
-                                <a href="about.php"><li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);"></li></a>
+                                <a href="view-property.php?id=<?= $ad['property'] ?>"><li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);"></li></a>
                                     <?php endforeach; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
