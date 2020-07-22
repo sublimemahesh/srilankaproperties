@@ -1,62 +1,73 @@
 $(document).ready(function() {
     $('#btn-save').click(function(event) {
         event.preventDefault();
+        if ($('.photo-img-container').length < 8) {
+            $('#btn-save').hide();
+            $('#update-loading').show();
 
-        $('#btn-save').hide();
-        $('#update-loading').show();
+            if (!$('#image').val() || $('#image').val().length === 0) {
+                swal({
+                    title: "Error!",
+                    text: "Please select image...",
+                    type: 'error',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+                $('#btn-save').show();
+                $('#update-loading').hide();
 
-        if (!$('#image').val() || $('#image').val().length === 0) {
+            } else {
+
+                var formData = new FormData($("form#property-photo-form")[0]);
+
+                $.ajax({
+                    url: "ajax/property-photo.php",
+                    type: 'POST',
+                    data: formData,
+                    async: false,
+                    cache: false,
+                    contentType: false,
+                    processData: false,
+                    dataType: "JSON",
+                    success: function(result) {
+
+                        if (result.status === 'error') {
+                            swal({
+                                title: "Error!",
+                                text: "There was an error. Please try again later",
+                                type: 'error',
+                                timer: 2000,
+                                showConfirmButton: false
+                            });
+
+                            $('#btn-save').show();
+                            $('#update-loading').hide();
+
+                            return false;
+                        } else {
+                            swal({
+                                title: "Success.!",
+                                text: "Property image saved successfully.",
+                                type: 'success',
+                                timer: 2000,
+                                showConfirmButton: false
+                            });
+
+                            window.location.replace("view-property-photos.php?id=" + result.id);
+                        }
+                    }
+                });
+            }
+        } else {
             swal({
                 title: "Error!",
-                text: "Please select image...",
+                text: "You are exceeding the maximum photo limit.",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
+
             });
-            $('#btn-save').show();
-            $('#update-loading').hide();
-
-        } else {
-
-            var formData = new FormData($("form#property-photo-form")[0]);
-
-            $.ajax({
-                url: "ajax/property-photo.php",
-                type: 'POST',
-                data: formData,
-                async: false,
-                cache: false,
-                contentType: false,
-                processData: false,
-                dataType: "JSON",
-                success: function(result) {
-
-                    if (result.status === 'error') {
-                        swal({
-                            title: "Error!",
-                            text: "There was an error. Please try again later",
-                            type: 'error',
-                            timer: 2000,
-                            showConfirmButton: false
-                        });
-
-                        $('#btn-save').show();
-                        $('#update-loading').hide();
-
-                        return false;
-                    } else {
-                        swal({
-                            title: "Success.!",
-                            text: "Property image saved successfully.",
-                            type: 'success',
-                            timer: 2000,
-                            showConfirmButton: false
-                        });
-
-                        window.location.replace("view-property-photos.php?id=" + result.id);
-                    }
-                }
-            });
+            return false;
         }
         return false;
     });

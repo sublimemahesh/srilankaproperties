@@ -12,9 +12,12 @@ if (isset($_POST['add-new-property'])) {
     $PROPERTY->address = $_POST['address'];
     $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
+    $PROPERTY->price_dollar = $_POST['price_dollar'];
     $PROPERTY->contact = $_POST['phone_number'];
     $PROPERTY->description = $_POST['description'];
-    
+    $PROPERTY->type = $_POST['type'];
+    $PROPERTY->no_of_bed_rooms = $_POST['no_of_bed_rooms'];
+
     $handle1 = new Upload($_FILES['image']);
     if ($handle1->uploaded) {
         $handle1->image_resize = true;
@@ -35,14 +38,26 @@ if (isset($_POST['add-new-property'])) {
         'sub_category' => ['required' => TRUE],
         'district' => ['required' => TRUE],
         'city' => ['required' => TRUE],
-        'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE],
+        'type' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {
         $res = $PROPERTY->create();
+        if ($res) {
+            if (isset($_POST['post-all-images'])) {
+                foreach ($_POST['post-all-images'] as $key => $img) {
+                    $key++;
+                    $PROPERTYPHOTO = new PropertyPhoto(NULL);
+                    $PROPERTYPHOTO->property = $res->id;
+                    $PROPERTYPHOTO->image_name = $img;
+                    $PROPERTYPHOTO->queue = $key;
+                    $PROPERTYPHOTO->create();
+                }
+            }
+        }
         $result = ["status" => 'success', "id" => $res->id];
         echo json_encode($result);
         exit();
@@ -53,7 +68,7 @@ if (isset($_POST['add-new-property'])) {
     }
 }
 if (isset($_POST['edit-property'])) {
-   
+
     $PROPERTY = new Property($_POST['id']);
     $PROPERTY->member = $_POST['member'];
     $PROPERTY->title = $_POST['title'];
@@ -64,9 +79,12 @@ if (isset($_POST['edit-property'])) {
     $PROPERTY->address = $_POST['address'];
     $PROPERTY->email = $_POST['email'];
     $PROPERTY->price = $_POST['price'];
+    $PROPERTY->price_dollar = $_POST['price_dollar'];
     $PROPERTY->contact = $_POST['phone_number'];
     $PROPERTY->description = $_POST['description'];
-    
+    $PROPERTY->type = $_POST['type'];
+    $PROPERTY->no_of_bed_rooms = $_POST['no_of_bed_rooms'];
+
     $handle1 = new Upload($_FILES['image']);
     $img = $_POST["image_name_old"];
     if ($handle1->uploaded) {
@@ -90,11 +108,11 @@ if (isset($_POST['edit-property'])) {
         'sub_category' => ['required' => TRUE],
         'district' => ['required' => TRUE],
         'city' => ['required' => TRUE],
-        'address' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE],
+        'type' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {
         $res = $PROPERTY->update();
@@ -110,7 +128,7 @@ if (isset($_POST['edit-property'])) {
 if ($_POST['option'] == 'delete') {
 
     $PROPERTY = new Property($_POST['id']);
-  
+
     $result = $PROPERTY->delete();
 
     if ($result) {

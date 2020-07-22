@@ -10,6 +10,7 @@ if (isset($_GET['id'])) {
 ?>
 <!doctype html>
 <html lang="en">
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -33,6 +34,7 @@ if (isset($_GET['id'])) {
     <link href="css/custom.css" type="text/css" rel="stylesheet">
     <link href="../control-panel/plugins/sweetalert/sweetalert.css" type="text/css" rel="stylesheet">
 </head>
+
 <body class="theme-2">
     <!-- LOADER -->
     <!--        <div id="preloader">
@@ -57,7 +59,7 @@ if (isset($_GET['id'])) {
                     <form class="form-horizontal" id="edit-property-form" method="post" action="" enctype="multipart/form-data">
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="title">Title <span class="text-danger">*</span></label>
+                                <label for="title">Property Title <span class="text-danger">*</span></label>
                             </div>
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
@@ -222,12 +224,34 @@ if (isset($_GET['id'])) {
                         </div>
                         <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                <label for="price">Price<span class="text-danger">*</span></label>
+                                <label for="price">Price (Rs)<span class="text-danger">*</span></label>
                             </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="price" id="price" class="form-control" autocomplete="off" name="price" value="<?= $PROPERTY->price; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-1 col-md-1 form-control-label text-right">
+                                <label for="price">Price ($)</label>
+                            </div>
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 p-bottom">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="price" id="price-dollar" class="form-control" autocomplete="off" name="price_dollar" value="<?= $PROPERTY->price_dollar; ?>">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="price">No of Bed Rooms</label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <input type="number" id="no-of-bed-rooms" class="form-control title-input" autocomplete="off" name="no_of_bed_rooms" required="true" value="<?= $PROPERTY->no_of_bed_rooms; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -240,6 +264,34 @@ if (isset($_GET['id'])) {
                                 <div class="form-group">
                                     <div class="form-line">
                                         <textarea id="description" name="description" class="form-control" rows="5"><?= $PROPERTY->description; ?></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
+                                <label for="district">Type <span class="text-danger">*</span></label>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
+                                <div class="form-group">
+                                    <div class="form-line">
+                                        <select class="form-control title-input" type="text" id="type" autocomplete="off" name="type">
+                                            <option value="" class="active light-c"> -- Please Select Your Type -- </option>
+                                            <?php
+                                            if ($PROPERTY->type == 'agent') {
+                                            ?>
+                                                <option value="agent" selected>Agent</option>
+                                                <option value="owner">Owner</option>
+                                            <?php
+                                            } else {
+                                            ?>
+                                                <option value="agent">Agent</option>
+                                                <option value="owner" selected>Owner</option>
+                                            <?php
+                                            }
+                                            ?>
+
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -297,4 +349,5 @@ if (isset($_GET['id'])) {
         });
     </script>
 </body>
+
 </html>
