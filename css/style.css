@@ -956,10 +956,12 @@ body.boxed .body {
 .top-header {
     height: 41px;
 }
-.h-height{
+
+.h-height {
     padding-top: 7px;
 }
-.header-icon{
+
+.header-icon {
     font-size: 19px !important;
     margin-top: 5px;
 }
@@ -3393,6 +3395,7 @@ span.progress-bar-tooltip:after {
     line-height: 18px;
 }
 
+
 /*.pricing-column ul li:first-child {
     border-top: 1px solid #eeeeee;
 }*/
@@ -4134,70 +4137,90 @@ span.progress-bar-tooltip:after {
 
 .banner-overlay {
     background: linear-gradient(0deg, rgba(200, 200, 200, 0.3), rgba(0, 0, 0, 0.67)), url(../images/page-header1.jpg);
-    background-size:cover;
+    background-size: cover;
 }
-.panel-primary > .panel-footer + .panel-collapse .panel-body, .widget .widgettitle {
+
+.panel-primary>.panel-footer+.panel-collapse .panel-body,
+.widget .widgettitle {
     border-bottom-color: #014586;
 }
 
-.contact-sec{
+.contact-sec {
     padding-top: 40px;
     padding-bottom: 40px;
 }
-.client-title-bar{
+
+.client-title-bar {
     padding-right: 18px !important;
 }
 
-.view-p-agent{
+.view-p-agent {
     color: #014586;
     font-size: 24px;
 }
-.a-text{
+
+.a-text {
     margin-top: -7px;
 }
-.amenities{
+
+.amenities {
     padding-top: 5px;
     padding-bottom: 5px;
     font-size: 15px;
-
 }
-.vision{
+
+.vision {
     margin-bottom: -60px;
 }
-.vision-sec{
+
+.vision-sec {
     margin-top: -80px;
 }
-.v-s{
+
+.v-s {
     margin-bottom: -62px !important;
 }
-.list-m{
+
+.list-m {
     margin-bottom: 15px;
 }
-.header-list{
+
+.header-list {
     margin-left: -38px !important;
 }
-.values{
+
+.values {
     margin-bottom: 0px !important;
     border-bottom: 0px !important;
 }
+
 .values .pricing-column ul li {
     padding: 10px 25px;
     color: #666666 !important;
     list-style: disc;
     line-height: 0px;
 }
-.bed{
+
+.bed {
     margin-top: 20px !important;
 }
-.icon-left{
+
+.icon-left {
     margin-right: 5px;
 }
-.terms{
+
+.terms {
     margin-top: 30px !important;
 }
-.t-des{
+
+.t-des {
     margin-top: -25px;
 }
-.t-sec{
+
+.t-sec {
     margin-bottom: 25px;
+}
+
+.hero-slider.flexslider .parallax {
+    cursor: pointer;
 }

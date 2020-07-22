@@ -88,7 +88,7 @@
     <div class="container">
         <div class="row">
             <div class="copyrights-col-left col-md-6 col-sm-6 ">
-                <p>&copy; <?php echo date('Y'); ?>. All rights reserved by Sri Lanka Properties.</p>
+                <p>&copy; <?php echo date('Y'); ?>. All rights reserved by srilankaproperty.lk.</p>
             </div>
 
             <div class="copyrights-col-right col-md-6 col-sm-6 copy-marg f-design padd res-padd">

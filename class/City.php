@@ -51,7 +51,7 @@ class City {
 
     public function all() {
 
-        $query = "SELECT * FROM `city` ORDER BY `sort` ASC";
+        $query = "SELECT * FROM `city` ORDER BY `name` ASC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -88,7 +88,7 @@ class City {
 
     public function GetCitiesByDistrict($district) {
 
-        $query = "SELECT * FROM `city` WHERE `district` = '" . $district . "'";
+        $query = "SELECT * FROM `city` WHERE `district` = '" . $district . "' ORDER BY `name` ASC";
     
         $db = new Database();
 
