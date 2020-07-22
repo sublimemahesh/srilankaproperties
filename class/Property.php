@@ -382,13 +382,16 @@ class Property
 
         return $array_res;
     }
-    public function search($category, $subcategory, $district, $city, $pageLimit, $setLimit)
+    public function search($keyword, $category, $subcategory, $district, $city, $pageLimit, $setLimit)
     {
 
         $w = array();
         $where = '';
 
 
+        if (!empty($keyword)) {
+            $w[] = "`title` LIKE '%" . $keyword . "%'";
+        }
         if (!empty($category)) {
             $w[] = "`category` = '" . $category . "' ";
         }
@@ -406,8 +409,7 @@ class Property
             $where = "WHERE " . implode(' AND ', $w);
         }
 
-        $query = "SELECT * FROM `property` $where AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `queue` ASC LIMIT " . $pageLimit . " , " . $setLimit . "";
-
+        $query = "SELECT * FROM `property` $where AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit . "";
 
         $db = new Database();
 
@@ -421,11 +423,13 @@ class Property
         return $array_res;
     }
 
-    public function showPaginationForSearch($category, $subcategory, $district, $city, $per_page, $page)
+    public function showPaginationForSearch($keyword, $category, $subcategory, $district, $city, $per_page, $page)
     {
         $w = array();
         $where = '';
-
+        if (!empty($keyword)) {
+            $w[] = "`title` LIKE '%" . $keyword . "%'";
+        }
         if (!empty($category)) {
             $w[] = "`category` = '" . $category . "' ";
         }
@@ -446,9 +450,9 @@ class Property
         $page_url = "?";
         $query = "SELECT COUNT(*) as totalCount FROM `property`  $where AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC";
         $rec = mysql_fetch_array(mysql_query($query));
-        
+
         $total = $rec['totalCount'];
-        
+
         $adjacents = "2";
 
         $page = ($page == 0 ? 1 : $page);

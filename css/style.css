@@ -1511,6 +1511,16 @@ html[xmlns] .slides {
     bottom: -107px;
     left: 0;
     width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.site-search-module-inside .col-md-2 {
+    padding-right: 0;
+}
+
+.site-search-module-inside .col-md-2:last-child {
+    padding-right: 15px;
 }
 
 .site-search-module-inside {
@@ -4071,10 +4081,6 @@ span.progress-bar-tooltip:after {
     margin-top: -25px;
     margin-bottom: 30px;
     margin-left: 15px;
-}
-
-.site-search-module-inside .col-md-2 {
-    padding-right: 0;
 }
 
 .pagination .disable a,

@@ -5,7 +5,11 @@ $category1 = '';
 $subcategory1 = '';
 $district = '';
 $city = '';
+$keyword = '';
 
+if (isset($_GET['keyword'])) {
+    $keyword = $_GET['keyword'];
+}
 if (isset($_GET['category'])) {
     $category1 = $_GET['category'];
 }
@@ -27,7 +31,7 @@ $setlimit = 40;
 
 $pagelimit = ($page * $setlimit) - $setlimit;
 
-$properties = Property::search($category1, $subcategory1, $district, $city, $pagelimit, $setlimit);
+$properties = Property::search($keyword, $category1, $subcategory1, $district, $city, $pagelimit, $setlimit);
 ?>
 
 <!DOCTYPE HTML>
@@ -73,7 +77,7 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-             <div class="parallax page-header banner-overlay">
+            <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -107,17 +111,17 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
-                                                    <h4>
-                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
-                                                            <?php
-                                                            if (strlen($property['title']) > 27) {
-                                                                echo substr($property['title'], 0, 23) . '...';
-                                                            } else {
-                                                                echo $property['title'];
-                                                            }
-                                                            ?>
-                                                        </a>
-                                                    </h4>
+                                                        <h4>
+                                                            <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                                <?php
+                                                                if (strlen($property['title']) > 27) {
+                                                                    echo substr($property['title'], 0, 23) . '...';
+                                                                } else {
+                                                                    echo $property['title'];
+                                                                }
+                                                                ?>
+                                                            </a>
+                                                        </h4>
                                                         <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
                                                         <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
                                                         <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
@@ -133,7 +137,7 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                 </ul>
                             </div>
                             <div class="">
-                                <?php Property::showPaginationForSearch($category1, $subcategory1, $district, $city, $setlimit, $page); ?>
+                                <?php Property::showPaginationForSearch($keyword, $category1, $subcategory1, $district, $city, $setlimit, $page); ?>
                             </div>
                         </div>
                         <!-- Start Sidebar -->
@@ -142,8 +146,9 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                 <h3 class="widgettitle">Search Properties</h3>
                                 <div class="full-search-form ">
                                     <form action="search.php" id="search-form">
+                                        <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
                                         <select name="category" id="category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>Category</option>
+                                            <option value="" selected>Select Category</option>
                                             <?php
                                             foreach (Category::all() as $category) :
                                             ?>
@@ -151,7 +156,7 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>Sub Category</option>
+                                            <option value="" selected>All Sub Categories</option>
                                             <?php
                                             foreach (SubCategory::all() as $subcategory) :
                                             ?>
@@ -159,7 +164,7 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">
-                                            <option value="" selected>District</option>
+                                            <option value="" selected>All Districts</option>
                                             <?php
                                             foreach (District::all() as $district) :
                                             ?>
@@ -167,7 +172,7 @@ $properties = Property::search($category1, $subcategory1, $district, $city, $pag
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="city" id="city" class="form-control input-lg selectpicker">
-                                            <option value="" selected>City</option>
+                                            <option value="" selected>All Cities</option>
                                             <?php
                                             foreach (City::all() as $city) :
                                             ?>
