@@ -24,7 +24,6 @@ if(isset($_GET['id'])) {
     <meta name="format-detection" content="telephone=no">
     <!-- CSS
           ================================================== -->
-    <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">

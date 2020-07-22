@@ -16,7 +16,7 @@ $CITY = new City($id);
         <title>Edit City || Admin  </title>
 
         <!-- Favicon-->
-        <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
               type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">

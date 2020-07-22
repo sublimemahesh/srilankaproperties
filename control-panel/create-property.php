@@ -9,7 +9,7 @@ include_once(dirname(__FILE__) . '/auth.php');
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Property</title>
         <!-- Favicon-->
-        <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
         <link href="plugins/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -85,10 +85,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <option value="<?php echo $sub_category['id'] ?>">
                                                             <?php echo $sub_category['name'] ?>
                                                         </option>
-                                                    <?php 
-                                                    
-                                                    }
-                                                    ?>
+                                                    <?php } ?>
                                                 </select>
                                             </div>
                                         </div>

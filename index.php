@@ -21,7 +21,6 @@ $comments = $COMMENT->all();
     <meta name="format-detection" content="telephone=no">
     <!-- CSS
           ================================================== -->
-    <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/style.css" rel="stylesheet" type="text/css">
     <link href="plugins/prettyphoto/css/prettyPhoto.css" rel="stylesheet" type="text/css">
@@ -76,7 +75,7 @@ $comments = $COMMENT->all();
                             <ul class="slides add">
                                 <?php if (COUNT(Advertisement::all())) : ?>
                                     <?php foreach (Advertisement::all() as $ad) : ?>
-                                <a href="about.php"><li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);"></li></a>
+                                        <li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);"></li>
                                     <?php endforeach; ?>
                                 <?php else : ?>
                                 <?php endif; ?>

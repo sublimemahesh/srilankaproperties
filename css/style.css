@@ -954,14 +954,7 @@ body.boxed .body {
 }
 
 .top-header {
-    height: 41px;
-}
-.h-height{
-    padding-top: 7px;
-}
-.header-icon{
-    font-size: 19px !important;
-    margin-top: 5px;
+    height: 30px;
 }
 
 .middle-header {
@@ -1087,7 +1080,7 @@ body.boxed .body {
 }
 
 .navigation>ul>li>a {
-    padding: 15px 18px;
+    padding: 15px 20px;
     display: block;
     text-decoration: none;
     border-right: 1px solid rgba(0, 0, 0, .05);
@@ -2419,9 +2412,9 @@ html[xmlns] .slides {
 }
 
 .widget ul>li {
-    padding: 0 0 12px 0;
-    margin-bottom: 12px;
-    border-bottom: 1px solid #efefef;
+    /*    padding: 0 0 12px 0;*/
+    /*    margin-bottom: 12px;*/
+    /*    border-bottom: 1px solid #efefef;*/.
 }
 
 .widget a {
@@ -3954,7 +3947,7 @@ span.progress-bar-tooltip:after {
     display: inline-block;
     width: 100px;
     height: 100px;
-    color: #014586;
+    color: #00c6fa;
     line-height: 100px;
     margin: 10px 0;
     font-size: 60px;
@@ -4099,7 +4092,7 @@ span.progress-bar-tooltip:after {
 }
 
 .category i {
-    color: #014586;
+    color: #00c1f9;
 }
 
 .property-contact-details .contact-info-blocks {
@@ -4137,7 +4130,7 @@ span.progress-bar-tooltip:after {
     background-size:cover;
 }
 .panel-primary > .panel-footer + .panel-collapse .panel-body, .widget .widgettitle {
-    border-bottom-color: #014586;
+    border-bottom-color: #00c1f9;
 }
 
 .contact-sec{
@@ -4149,7 +4142,7 @@ span.progress-bar-tooltip:after {
 }
 
 .view-p-agent{
-    color: #014586;
+    color: #00c1f9;
     font-size: 24px;
 }
 .a-text{
@@ -4172,23 +4165,4 @@ span.progress-bar-tooltip:after {
 }
 .list-m{
     margin-bottom: 15px;
-}
-.header-list{
-    margin-left: -38px !important;
-}
-.values{
-    margin-bottom: 0px !important;
-    border-bottom: 0px !important;
-}
-.values .pricing-column ul li {
-    padding: 10px 25px;
-    color: #666666 !important;
-    list-style: disc;
-    line-height: 0px;
-}
-.bed{
-    margin-top: 20px !important;
-}
-.icon-left{
-    margin-right: 5px;
 }
