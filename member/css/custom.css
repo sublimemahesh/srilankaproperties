@@ -492,3 +492,16 @@ table.table-bordered.dataTable tbody td {
     padding: 0;
     margin-bottom: 20px;
 }
+
+.form-check label {
+    padding-left: 50px;
+}
+
+.check-terms-and-conditions .checkmark {
+    position: absolute;
+    top: -16px;
+}
+
+.form-check.check-terms-and-conditions {
+    padding: 7px 0 7px 0;
+}

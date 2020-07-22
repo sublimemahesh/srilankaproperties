@@ -25,6 +25,7 @@ class Member
     public $isActive;
     public $email_verified;
     public $e_verification_code;
+    public $is_subscribed;
     
     public function __construct($id)
     {
@@ -48,6 +49,7 @@ class Member
             $this->isActive = $result['is_active'];
             $this->email_verified = $result['email_verified'];
             $this->e_verification_code = $result['e_verification_code'];
+            $this->is_subscribed = $result['is_subscribed'];
             return $this;
         }
     }
@@ -68,7 +70,8 @@ class Member
             . "`city`,"
             . "`picture`,"
             . "`description`,"
-            . "`is_active`"
+            . "`is_active`,"
+            . "`is_subscribed`"
             . ") VALUES  ('"
             . $createdAt . "','"
             . $this->name . "','"
@@ -81,7 +84,8 @@ class Member
             . $this->city . "', '"
             . $this->picture . "', '"
             . $this->description . "', '"
-            . 1 . "')";
+            . 1 . "', '"
+            . $this->is_subscribed . "')";
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {
