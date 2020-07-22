@@ -4192,3 +4192,12 @@ span.progress-bar-tooltip:after {
 .icon-left{
     margin-right: 5px;
 }
+.terms{
+    margin-top: 30px !important;
+}
+.t-des{
+    margin-top: -25px;
+}
+.t-sec{
+    margin-bottom: 25px;
+}
