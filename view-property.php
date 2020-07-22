@@ -133,7 +133,7 @@ if (isset($_GET['id'])) {
                                                         </div>
 
                                                         <?php
-                                                        if ($PROPERTY->no_bed_rooms != 0) {
+                                                        if ($PROPERTY->no_of_bed_rooms != 0) {
                                                             ?>
 
                                                             <div>

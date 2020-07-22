@@ -50,7 +50,7 @@ class District {
 
     public function all() {
 
-        $query = "SELECT * FROM `district` ORDER BY `sort` ASC";
+        $query = "SELECT * FROM `district` ORDER BY `name` ASC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();

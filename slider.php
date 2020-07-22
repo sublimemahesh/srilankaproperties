@@ -3,19 +3,15 @@
     <!-- Start Hero Slider -->
     <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
         <ul class="slides">
-            <?php if(COUNT(Slider::all())) : ?>
-                <?php foreach( Slider::all() as $slide) : ?>
-                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);"></li>
+            <?php if (COUNT(Slider::all())) : ?>
+                <?php foreach (Slider::all() as $slide) : ?>
+                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);" onclick="location.href='./view-property.php?id=<?= $slide['property'] ?>';"></li>
                 <?php endforeach; ?>
-            <?php else : ?>
-                    <li class="parallax" style="background-image:url(images/realstate/slider6.jpg);"></li>
-                    <li class="parallax" style="background-image:url(images/realstate/slider5.jpg);"></li>
-                    <li class="parallax" style="background-image:url(images/realstate/slider33.jpg);"></li>
             <?php endif; ?>
-            
+
         </ul>
     </div>
-    <!-- End Hero Slider --> 
+    <!-- End Hero Slider -->
     <!-- Site Search Module -->
     <div class="site-search-module">
         <div class="container">
@@ -28,7 +24,7 @@
                                     <option value="" selected>Category</option>
                                     <?php
                                     foreach (Category::all() as $category) :
-                                        ?>
+                                    ?>
                                         <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -38,7 +34,7 @@
                                     <option value="" selected>Sub Category</option>
                                     <?php
                                     foreach (SubCategory::all() as $subcategory) :
-                                        ?>
+                                    ?>
                                         <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -48,7 +44,7 @@
                                     <option value="" selected>District</option>
                                     <?php
                                     foreach (District::all() as $district) :
-                                        ?>
+                                    ?>
                                         <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -58,7 +54,7 @@
                                     <option value="" selected>City</option>
                                     <?php
                                     foreach (City::all() as $city) :
-                                        ?>
+                                    ?>
                                         <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
