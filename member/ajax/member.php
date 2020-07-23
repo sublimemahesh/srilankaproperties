@@ -10,7 +10,8 @@ $MEMBER->city = $_POST['city'];
 $MEMBER->address = $_POST['address'];
 $MEMBER->nic = $_POST['nic'];
 $MEMBER->description = $_POST['description'];
-/////NIC PHOTO FRONT
+$MEMBER->type = $_POST['type'];
+
 $handle1 = new Upload($_FILES['image_name']);
 if ($handle1->uploaded) {
     $handle1->image_resize = true;
@@ -37,7 +38,8 @@ $VALID->check($MEMBER, [
     'address' => ['required' => TRUE],
     'nic' => ['required' => TRUE],
     'picture' => ['required' => TRUE],
-    'description' => ['required' => TRUE]
+    'description' => ['required' => TRUE],
+    'type' => ['required' => TRUE]
 ]);
 $checkEmail = $MEMBER->checkEmail($_POST['id'], $_POST['email']);
 if (!$checkEmail || $checkEmail['id'] == $_POST['id']) {

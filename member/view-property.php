@@ -74,7 +74,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                     <td><?= $PROPERTY->createdAt; ?></td>
                                 </tr>
                                 <tr>
-                                    <th>Title</th>
+                                    <th>Property Title</th>
                                     <td><?= $PROPERTY->title; ?></td>
                                 </tr>
                                 <tr>
@@ -107,7 +107,18 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                 </tr>
                                 <tr>
                                     <th>Price</th>
-                                    <td><?= 'Rs.' . number_format($PROPERTY->price, 2); ?></td>
+                                    <td>
+                                        <?php
+                                        echo 'Rs.' . number_format($PROPERTY->price, 2);
+                                        if ($PROPERTY->price_dollar != 0.00) {
+                                            echo ' / $' . number_format($PROPERTY->price_dollar, 2);
+                                        }
+                                        ?>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>No of Bed Rooms</th>
+                                    <td><?= $PROPERTY->no_of_bed_rooms; ?></td>
                                 </tr>
                                 <tr>
                                     <th>Status</th>
@@ -124,10 +135,6 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                 <tr>
                                     <th>Description</th>
                                     <td><?= $PROPERTY->description; ?></td>
-                                </tr>
-                                <tr>
-                                    <th>Features</th>
-                                    <td><?= $PROPERTY->features; ?></td>
                                 </tr>
                             </table>
                         </div>

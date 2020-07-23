@@ -118,6 +118,17 @@ $(document).ready(function() {
             $('#btn-update').show();
             $('#update-loading').hide();
 
+        } else if (!$('#type').val() || $('#type').val().length === 0) {
+            swal({
+                title: "Error!",
+                text: "Please select the type...",
+                type: 'error',
+                timer: 2000,
+                showConfirmButton: false
+            });
+            $('#btn-update').show();
+            $('#update-loading').hide();
+
         } else {
 
             var formData = new FormData($("form#member-form")[0]);

@@ -269,34 +269,6 @@ if (isset($_GET['id'])) {
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                <label for="district">Type <span class="text-danger">*</span></label>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
-                                <div class="form-group">
-                                    <div class="form-line">
-                                        <select class="form-control title-input" type="text" id="type" autocomplete="off" name="type">
-                                            <option value="" class="active light-c"> -- Please Select Your Type -- </option>
-                                            <?php
-                                            if ($PROPERTY->type == 'agent') {
-                                            ?>
-                                                <option value="agent" selected>Agent</option>
-                                                <option value="owner">Owner</option>
-                                            <?php
-                                            } else {
-                                            ?>
-                                                <option value="agent">Agent</option>
-                                                <option value="owner" selected>Owner</option>
-                                            <?php
-                                            }
-                                            ?>
-
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
                             <div class="col-lg-3 col-md-3 form-control-label text-right">
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">

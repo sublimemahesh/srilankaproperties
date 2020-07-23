@@ -117,36 +117,9 @@ $(document).ready(function() {
             $('#btn-save').show();
             $('#update-loading').hide();
 
-        } else if (!$('#type').val() || $('#type').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please select your type...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-save').show();
-            $('#update-loading').hide();
-
         } else {
 
             var formData = new FormData($("form#property-form")[0]);
-            // var title = $('#title').val();
-            // var category = $('#category').val();
-            // var sub_category = $('#sub-category').val();
-            // var district = $('#district').val();
-            // var city = $('#city').val();
-            // var address = $('#address').val();
-            // var image = $('#image').val();
-            // var email = $('#email').val();
-            // var price = $('#price').val();
-            // var price_dollar = $('#price-dollar').val();
-            // var phone_number = $('#phone-number').val();
-            // var description = $('#description').val();
-            // var type = $('#type').val();
-            // var member = $('#member').val();
-            // var no_of_bed_rooms = $('#no_of_bed_rooms').val();
-
 
             $.ajax({
                 url: "ajax/property.php",
@@ -297,17 +270,6 @@ $(document).ready(function() {
             swal({
                 title: "Error!",
                 text: "Please enter the description...",
-                type: 'error',
-                timer: 2000,
-                showConfirmButton: false
-            });
-            $('#btn-update').show();
-            $('#update-loading').hide();
-
-        } else if (!$('#type').val() || $('#type').val().length === 0) {
-            swal({
-                title: "Error!",
-                text: "Please select your type...",
                 type: 'error',
                 timer: 2000,
                 showConfirmButton: false
