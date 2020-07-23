@@ -195,6 +195,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <div class="form-group">
                                     <div class="form-line">
                                         <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
+                                        <img src="img/blue-loader.gif" id="price_loader" />
                                     </div>
                                 </div>
                             </div>
@@ -242,41 +243,41 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     <div class="property-images-section col-md-12">
                                         <div class="panel-box form-box-inner">
                                             <!-- <form method="post" id="post-data"> -->
-                                                <div class="flipScrollableArea hidden" id="image-list" style="/*! height: 112px; */ /*! width: 100%; */">
-                                                    <div class="flipScrollableAreaWrap">
-                                                        <div class="flipScrollableAreaBody" style="height: 112px;">
-                                                            <div class="flipScrollableAreaContent">
-                                                                <div class="flipScrollableAreaContent1">
-                                                                </div>
-
-                                                                
-                                                                <span class="_uploadloaderbox abc">
-                                                                    <div class="_m _6a">
-                                                                        <a class="_uploadbox" rel="ignore">
-                                                                            <div class="_upload">
-                                                                                <img src="img/blue-loader.gif" id="img_loader" />
-                                                                            </div>
-                                                                        </a>
-                                                                    </div>
-                                                                </span>
+                                            <div class="flipScrollableArea hidden" id="image-list" style="/*! height: 112px; */ /*! width: 100%; */">
+                                                <div class="flipScrollableAreaWrap">
+                                                    <div class="flipScrollableAreaBody" style="height: 112px;">
+                                                        <div class="flipScrollableAreaContent">
+                                                            <div class="flipScrollableAreaContent1">
                                                             </div>
+
+
+                                                            <span class="_uploadloaderbox abc">
+                                                                <div class="_m _6a">
+                                                                    <a class="_uploadbox" rel="ignore">
+                                                                        <div class="_upload">
+                                                                            <img src="img/blue-loader.gif" id="img_loader" />
+                                                                        </div>
+                                                                    </a>
+                                                                </div>
+                                                            </span>
                                                         </div>
                                                     </div>
-                                                    <div class="flipScrollableAreaTrack invisible_elem" style="opacity: 0;">
-                                                        <div class="flipScrollableAreaGripper hidden_elem"></div>
-                                                    </div>
                                                 </div>
-                                                <div class="flie-list-section">
+                                                <div class="flipScrollableAreaTrack invisible_elem" style="opacity: 0;">
+                                                    <div class="flipScrollableAreaGripper hidden_elem"></div>
                                                 </div>
-                                                <div class="post-img" style="    margin-bottom: -10px;">
-                                                    <a href="#">
-                                                        <label class="custom-file-upload">
-                                                            <input type="file" data-toggle="tooltip" data-placement="top" title="Tooltip on top" id="upload_first_image" name="post-image"> <span class="fas fa fa-image"></span>
-                                                        </label>
-                                                    </a>
-                                                    <input type="hidden" name="upload-post-image" value="upload-post-image">
+                                            </div>
+                                            <div class="flie-list-section">
+                                            </div>
+                                            <div class="post-img" style="    margin-bottom: -10px;">
+                                                <a href="#">
+                                                    <label class="custom-file-upload">
+                                                        <input type="file" data-toggle="tooltip" data-placement="top" title="Tooltip on top" id="upload_first_image" name="post-image"> <span class="fas fa fa-image"></span>
+                                                    </label>
+                                                </a>
+                                                <input type="hidden" name="upload-post-image" value="upload-post-image">
 
-                                                </div>
+                                            </div>
                                             <!-- </form> -->
                                         </div>
                                     </div>
@@ -297,9 +298,10 @@ $MEMBER = new Member($_SESSION["m_id"]);
                 </div>
             </div>
         </div>
+        
         <div id="chart_div"></div>
     </div>
-  
+
     <?php include './footer.php'; ?>
     <!-- Jquery js -->
     <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
@@ -313,6 +315,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="js/upload-photos.js" type="text/javascript"></script>
     <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="js/email-verification.js" type="text/javascript"></script>
+    <script src="js/exchange-currency.js" type="text/javascript"></script>
     <script>
         tinymce.init({
             selector: "#description1",
