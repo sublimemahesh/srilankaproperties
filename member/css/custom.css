@@ -488,6 +488,11 @@ table.table-bordered.dataTable tbody td {
     left: 32px;
 }
 
+#price_loader {
+    width: 200px;
+    display: none;
+}
+
 .property-images-section {
     padding: 0;
     margin-bottom: 20px;
@@ -504,4 +509,8 @@ table.table-bordered.dataTable tbody td {
 
 .form-check.check-terms-and-conditions {
     padding: 7px 0 7px 0;
+}
+
+.button-add-property .col-lg-9 {
+    padding-right: 0;
 }
