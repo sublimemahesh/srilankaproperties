@@ -25,7 +25,7 @@
                         <?php
                         } else {
                         ?>
-                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Post Your Ad</a></li>
+                            <li class="dropdown"><a href="member/login.php"> Post Your Ad</a></li>
                         <?php
                         }
                         ?>
@@ -51,7 +51,7 @@
                         <?php
                         } else {
                         ?>
-                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user"></i> Login </a></li>
+                            <li class="dropdown"><a href="member/login.php"><i class="fa fa-user login-icon"></i> Login </a></li>
                         <?php
                         }
                         ?>
@@ -65,7 +65,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-8 col-xs-8">
-                    <h1 class="logo"><a href="index.php"><img src="images/realstate/sri-lanka-properties-logo.png"alt="Logo"></a></h1>
+                    <h1 class="logo"><a href="index.php"><img src="images/logo.png"alt="Logo"></a></h1>
                 </div>
                 <div class="col-md-8 col-sm-4 col-xs-4">
                     <div class="contact-info-blocks hidden-sm hidden-xs">

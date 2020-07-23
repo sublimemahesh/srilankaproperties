@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <div class="mobile-container visible-xs">
         <div class="topnav">
-            <a href="../"><img src="../images/realstate/sl-property-logo.png" alt="logo" class="active logo-width"></a>
+            <a href="../"><img src="../images/logo.png" alt="logo" class="active logo-width"></a>
             <div id="myLinks">
                 <!--                        <a href="index.php">Dashboard</a>
                                         <a href="add-new-property.php">Add New</a>
@@ -59,7 +59,7 @@
                 <div class="row">
                     <div class="col-md-12">
                         <nav class="navbar navbar-expand-lg categories_menu navbar-light header-full-mrg logo-line">
-                            <a href="../"><img src="../images/realstate/sl-property-logo.png" alt="logo" class="logo-padding logo-mobile logo-i"></a>
+                            <a href="../"><img src="../images/logo.png" alt="logo" class="logo-padding logo-mobile logo-i"></a>
 
                             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"></button>
 
