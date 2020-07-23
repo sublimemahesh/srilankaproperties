@@ -34,7 +34,7 @@ if (isset($_SESSION['m_id'])) {
 
 <body class="theme-2">
     <div class="container text-center">
-        <a href="../"><img src="../images/realstate/sl-property-logo.png" class="logo-login" style="width: 150px" /></a>
+        <a href="../"><img src="../images/logo.png" class="logo-login" style="width: 150px" /></a>
     </div>
     <!-- Start My Account Section -->
     <section class="">
@@ -88,14 +88,14 @@ if (isset($_SESSION['m_id'])) {
                         </div>
                         <div class="form-group form-check check-terms-and-conditions p-0">
                             <label>
-                                <input id="terms-and-conditions" class="defult-check" type="checkbox" checked="checked">
+                                <input id="terms-and-conditions" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                             <span class="forgot-password float-right">I agree to the company <a href="../terms-and-conditions.php">terms & conditions</a>.</span>
                         </div>
                         <div class="form-group form-check check-terms-and-conditions p-0">
                             <label>
-                                <input id="subscribe" name="subscribe" class="defult-check" type="checkbox" checked="checked">
+                                <input id="subscribe" name="subscribe" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
                             <span class="forgot-password float-right">Subscribe to stay updated with new products and offers!.</span>

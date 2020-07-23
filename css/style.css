@@ -1003,6 +1003,7 @@ body.boxed .body {
     text-decoration: none;
     border-right: 1px solid rgba(0, 0, 0, .1);
     color: #fff;
+    font-weight: 600;
 }
 
 .horiz-nav>li>a:hover {
@@ -4072,7 +4073,8 @@ span.progress-bar-tooltip:after {
 }
 
 .header-profile-pic {
-    width: 20px;
+    width: 23px;
+    margin-right: 5px;
 }
 
 .btn-inquiry-now {
@@ -4200,8 +4202,8 @@ span.progress-bar-tooltip:after {
     border-bottom: 0px !important;
 }
 
-.values .pricing-column ul li {
-    padding: 10px 25px;
+.values.pricing-column ul li {
+    padding: 10px 25px 10px 10px;
     color: #666666 !important;
     list-style: disc;
     line-height: 0px;
@@ -4229,4 +4231,12 @@ span.progress-bar-tooltip:after {
 
 .hero-slider.flexslider .parallax {
     cursor: pointer;
+}
+
+.property-info h4 a {
+    font-weight: 500;
+}
+
+i.login-icon {
+    margin-right: 5px;
 }

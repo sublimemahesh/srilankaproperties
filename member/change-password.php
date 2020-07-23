@@ -106,5 +106,6 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <!-- Custom css -->
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/change-password.js" type="text/javascript"></script>
+    <script src="js/email-verification.js" type="text/javascript"></script>
 </body>
 </html>
