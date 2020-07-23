@@ -125,7 +125,7 @@ if (isset($_GET['subcategory'])) {
                                         <?php endforeach;
                                     } else {
                                         ?>
-                                            <h5 class="db-mrg">No any <?= strtolower($title); ?> in the database.</h5>
+                                            <h5 class="db-mrg no-data">No any <?= strtolower($title); ?> in the database.</h5>
                                     <?php
                                     } ?>
                                 </ul>

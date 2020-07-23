@@ -13,7 +13,7 @@
                         <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter header-icon"></i></a></li>
                     </ul>
                 </div>
-                <div class="col-md-8 col-sm-8">
+                <div class="col-md-8 col-sm-8 header-i">
                     <ul class="horiz-nav pull-right">
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
@@ -102,7 +102,7 @@
                                     <?php
                                     if (count($subcategories) > 0) {
                                     ?>
-                                        <ul class="dropdown">
+                                        <ul class="dropdown h-drop header-drop h-drop-i header-drop-i">
                                             <?php
                                             foreach ($subcategories as $subcategory) {
                                             ?>
