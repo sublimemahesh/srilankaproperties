@@ -15,7 +15,6 @@ if (isset($_POST['add-new-property'])) {
     $PROPERTY->price_dollar = $_POST['price_dollar'];
     $PROPERTY->contact = $_POST['phone_number'];
     $PROPERTY->description = $_POST['description'];
-    $PROPERTY->type = $_POST['type'];
     $PROPERTY->no_of_bed_rooms = $_POST['no_of_bed_rooms'];
 
     $handle1 = new Upload($_FILES['image']);
@@ -41,8 +40,7 @@ if (isset($_POST['add-new-property'])) {
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE],
-        'type' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {
         $res = $PROPERTY->create();
@@ -82,7 +80,6 @@ if (isset($_POST['edit-property'])) {
     $PROPERTY->price_dollar = $_POST['price_dollar'];
     $PROPERTY->contact = $_POST['phone_number'];
     $PROPERTY->description = $_POST['description'];
-    $PROPERTY->type = $_POST['type'];
     $PROPERTY->no_of_bed_rooms = $_POST['no_of_bed_rooms'];
 
     $handle1 = new Upload($_FILES['image']);
@@ -111,8 +108,7 @@ if (isset($_POST['edit-property'])) {
         'price' => ['required' => TRUE],
         'contact' => ['required' => TRUE],
         'description' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE],
-        'type' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE]
     ]);
     if ($VALID->passed()) {
         $res = $PROPERTY->update();

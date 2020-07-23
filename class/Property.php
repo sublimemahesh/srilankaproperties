@@ -32,7 +32,6 @@ class Property
     public $features;
     public $queue;
     public $status;
-    public $type;
     public $no_of_bed_rooms;
 
     public function __construct($id)
@@ -63,7 +62,6 @@ class Property
             $this->features = $result['features'];
             $this->queue = $result['queue'];
             $this->status = $result['status'];
-            $this->type = $result['type'];
             $this->no_of_bed_rooms = $result['no_of_bed_rooms'];
 
             return $this;
@@ -92,7 +90,6 @@ class Property
             . "`email`,"
             . "`features`,"
             . "`queue`,"
-            . "`type`,"
             . "`no_of_bed_rooms`"
             . ") VALUES  ('"
             . $createdAt . "','"
@@ -111,7 +108,6 @@ class Property
             . $this->email . "', '"
             . $this->features . "', '"
             . $this->queue . "', '"
-            . $this->type . "', '"
             . $this->no_of_bed_rooms . "')";
 
         $db = new Database();
@@ -286,7 +282,6 @@ class Property
             . "`features` ='" . $this->features . "', "
             . "`status` ='" . 0 . "', "
             . "`queue` ='" . $this->queue . "', "
-            . "`type` ='" . $this->type . "', "
             . "`no_of_bed_rooms` ='" . $this->no_of_bed_rooms . "' "
             . "WHERE `id` = '" . $this->id . "'";
         $db = new Database();

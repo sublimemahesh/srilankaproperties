@@ -153,7 +153,7 @@ if (isset($_GET['id'])) {
                                     <a href="inquiry.php?id=<?= $PROPERTY->id; ?>" class="btn btn-primary btn-inquiry-now"> Inquiry Now</a>
                                 </div>
                                 <?php
-                                if ($PROPERTY->type == 'agent') {
+                                if ($MEMBER->type == 'agent') {
                                 ?>
                                     <div class="widget sidebar-widget featured-properties-widget">
                                         <h3 class="widgettitle">Agents</h3>

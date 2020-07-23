@@ -26,6 +26,7 @@ class Member
     public $email_verified;
     public $e_verification_code;
     public $is_subscribed;
+    public $type;
     
     public function __construct($id)
     {
@@ -50,6 +51,7 @@ class Member
             $this->email_verified = $result['email_verified'];
             $this->e_verification_code = $result['e_verification_code'];
             $this->is_subscribed = $result['is_subscribed'];
+            $this->type = $result['type'];
             return $this;
         }
     }
@@ -71,7 +73,8 @@ class Member
             . "`picture`,"
             . "`description`,"
             . "`is_active`,"
-            . "`is_subscribed`"
+            . "`is_subscribed`,"
+            . "`type`"
             . ") VALUES  ('"
             . $createdAt . "','"
             . $this->name . "','"
@@ -85,7 +88,8 @@ class Member
             . $this->picture . "', '"
             . $this->description . "', '"
             . 1 . "', '"
-            . $this->is_subscribed . "')";
+            . $this->is_subscribed . "', '"
+            . $this->type . "')";
         $db = new Database();
         $result = $db->readQuery($query);
         if ($result) {
@@ -270,7 +274,8 @@ class Member
             . "`picture` ='" . $this->picture . "', "
             . "`description` ='" . $this->description . "', "
             . "`email_verified` ='" . $this->email_verified . "', "
-            . "`e_verification_code` ='" . $this->e_verification_code . "' "
+            . "`e_verification_code` ='" . $this->e_verification_code . "', "
+            . "`type` ='" . $this->type . "' "
             . "WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
@@ -298,9 +303,9 @@ class Member
         }
         return $array_res;
     }
-    public function getActiveMembers($pageLimit, $setLimit)
+    public function getActiveAgents($pageLimit, $setLimit)
     {
-        $query = "SELECT * FROM `member` WHERE `is_active` = 1 ORDER BY `joined_at` ASC LIMIT " . $pageLimit . " , " . $setLimit . "";
+        $query = "SELECT * FROM `member` WHERE `is_active` = 1 AND `type` LIKE 'agent' ORDER BY `joined_at` ASC LIMIT " . $pageLimit . " , " . $setLimit . "";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -370,7 +375,7 @@ class Member
 
 
         $page_url = "?";
-        $query = "SELECT COUNT(*) as totalCount FROM `member` WHERE `is_active` = 1 ORDER BY `joined_at` asc";
+        $query = "SELECT COUNT(*) as totalCount FROM `member` WHERE `is_active` = 1 AND `type` LIKE 'agent' ORDER BY `joined_at` asc";
         $rec = mysql_fetch_array(mysql_query($query));
 
         $total = $rec['totalCount'];
@@ -458,7 +463,7 @@ class Member
     public function checkEmptyBasicData()
     {
 
-        $query = "SELECT `name`,`email`,`district`,`city`,`address`,`phone`,`nic`, `picture`, `description` FROM `member` WHERE `id` = '" . $this->id . "'";
+        $query = "SELECT `name`,`email`,`district`,`city`,`address`,`phone`,`nic`, `picture`, `description`, `type` FROM `member` WHERE `id` = '" . $this->id . "'";
 
         $db = new Database();
         $result = $db->readQuery($query);
@@ -469,7 +474,7 @@ class Member
                 $count++;
             }
         }
-        if ($count == '9') {
+        if ($count == '10') {
             return 1;
         } else {
             return 0;
