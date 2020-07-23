@@ -371,7 +371,7 @@ hr {
   margin-top: 20px;
   margin-bottom: 20px;
   border: 0;
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #898d86;
 }
 
 .sr-only {
@@ -2490,8 +2490,8 @@ fieldset[disabled] .btn-danger.active {
 
 .btn-success {
   color: #ffffff;
-  background-color: #00c6fa;
-  border-color: #00c6fa;
+  background-color: #014586;
+  border-color: #014586;
 }
 
 .btn-success:hover,
@@ -2536,8 +2536,8 @@ fieldset[disabled] .btn-success.active {
 
 .btn-info {
   color: #ffffff;
-  background-color: #00c6fa;
-  border-color: #00c6fa;
+  background-color: #014586;
+  border-color: #014586;
 }
 
 .btn-info:hover,

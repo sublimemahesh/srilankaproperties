@@ -230,8 +230,8 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 p-bottom">
                                         <div class="form-group">
                                             <div class="form-line">
-                                                <a href="../upload/member/profile/<?= $MEMBER->picture; ?>" target="_blank" class="btn btn-lg btn-info">
-                                                    <i class="fa fa-image"></i>
+                                                <a href="../upload/member/profile/<?= $MEMBER->picture; ?>" target="_blank" class="btn btn-lg btn-info bt-color img-icon">
+                                                    <i class="fa fa-image im-padd"></i>
                                                 </a>
                                             </div>
                                         </div>
@@ -299,7 +299,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     </div>
                                     <div class="col-lg-9  col-md-9 col-sm-12 col-xs-12 p-l-0">
                                         <input type="hidden" name="id" id="customer" value="<?= $MEMBER->id; ?>">
-                                        <input type="submit" name="update" id="btn-update" class="btn btn-info" value="Update Details" />
+                                        <input type="submit" name="update" id="btn-update" class="btn btn-info bt-color member-btn-mrg" value="Update Details" />
                                         <img src="img/loading.gif" id="update-loading" />
                                     </div>
                                 </div>
