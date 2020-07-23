@@ -67,6 +67,16 @@ and open the template in the editor.
     .code-i{
         margin-left: 70px;
     }
+    .header-i{
+        padding-left: 0px;
+    }
+    .header-drop-i{
+        background: #eeeeee !important;
+    }
+   
+    .h-drop-i{
+        margin-left: 20px !important;
+    }
 }
 
 @media (max-width: 767px){
@@ -163,7 +173,7 @@ and open the template in the editor.
 
 @media (min-width: 768px) and (max-width: 992px){
     .circle-title{
-        font-size: 19px;
+        font-size: 16px;
     }
 
     .box-mrg{
@@ -249,8 +259,8 @@ and open the template in the editor.
         padding-left: 14px;
     }
     .header-nav{
-        margin-top: -14px !important;
-        padding-bottom: 4px !important;
+        margin-top: -12px !important;
+        padding-bottom: 12px !important;
     }
     .search{
         margin-top: 0px;
@@ -264,6 +274,16 @@ and open the template in the editor.
     .no-p{
         font-size: 14px;
         margin-left: 15px;
+    }
+    .header-drop{
+        background: #eeeeee !important;
+        
+    }
+    .no-data{
+        margin-left: 10px;
+    }
+    .h-drop{
+        margin-left: 20px !important;
     }
 
 }

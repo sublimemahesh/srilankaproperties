@@ -19,7 +19,7 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
     <title>Properties || Sri Lanka Properties</title>
     <!-- Favicon Icon Css -->
-    <link rel="icon" type="../image/png" sizes="32x32" href="image/favicon-32x32.png">
+    <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
     <!-- Animation CSS -->
     <link rel="stylesheet" href="../css/animate.css" type="text/css">
     <!-- Font Css -->

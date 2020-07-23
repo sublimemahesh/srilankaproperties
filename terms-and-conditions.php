@@ -1,6 +1,6 @@
 <?php
 include_once 'class/include.php';
-$TERMS_AND_CONDITIONS = new Page(8);
+$TERMS_AND_CONDITIONS = new Page(10);
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">

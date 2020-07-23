@@ -19,7 +19,7 @@ $CITY = new City($CUSTOMER->city);
         <meta name="keywords" content="" />
         <meta name="robots" content="noodp,index,follow" />
         <meta name='revisit-after' content='1 days' />
-        <link rel="icon" href="../images/logo-favicon.png" type="images/logo-favicon.png">
+        <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
         <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet'>
         <link rel="stylesheet" type="text/css" href="../css/libs/font-awesome.min.css"/>
         <link rel="stylesheet" type="text/css" href="../css/libs/font-linearicons.css"/>
