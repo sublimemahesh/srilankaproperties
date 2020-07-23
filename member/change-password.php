@@ -87,7 +87,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
-                                <input type="submit" name="btn-change" id="btn-change" class="btn btn-info" value="Change Password" />
+                                <input type="submit" name="btn-change" id="btn-change" class="btn btn-info member-btn-mrg" value="Change Password" />
                                 <input type="hidden" name="change_password" />
                                 <img src="img/loading.gif" id="update-loading" />
                             </div>

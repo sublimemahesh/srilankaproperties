@@ -288,7 +288,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             </div>
                             <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                 <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />
-                                <input type="submit" name="btn-save" id="btn-save" class="btn btn-info" value="Add New Property" />
+                                <input type="submit" name="btn-save" id="btn-save" class="btn btn-info member-btn-mrg" value="Add New Property" />
                                 <input type="hidden" name="add-new-property" />
                                 <img src="img/loading.gif" id="update-loading" />
                             </div>
