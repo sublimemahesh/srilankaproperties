@@ -1,5 +1,6 @@
 $(document).ready(function() {
     $('#upload_first_image').change(function() {
+
         if ($('.property-images-section ._uploadedimagesbox').length < 8) {
 
             $('.flipScrollableArea').removeClass('hidden');

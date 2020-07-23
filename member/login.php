@@ -91,7 +91,7 @@ if (isset($_SESSION['m_id'])) {
                                 <input id="terms-and-conditions" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="forgot-password float-right">I agree to the company <a href="../terms-and-conditions.php">terms & conditions</a>.</span>
+                            <span class="forgot-password float-right">I agree to the company <a href="../terms-and-conditions.php" target="_blank">terms & conditions</a>.</span>
                         </div>
                         <div class="form-group form-check check-terms-and-conditions p-0">
                             <label>

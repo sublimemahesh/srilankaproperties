@@ -1,6 +1,6 @@
 <?php
-include '/../../class/include.php';
-// dd($_POST);
+include_once(dirname(__FILE__) . '/../../class/include.php');
+
 if (isset($_POST['upload-post-image'])) {
 
     $dir_dest = '../../../upload/properties/';
