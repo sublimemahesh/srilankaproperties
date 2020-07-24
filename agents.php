@@ -97,7 +97,9 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                     <div class="agent-info">
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
                                                         <h3><a class="a-name font-m"><?= $member['name']; ?></a></h3>
-                                                        <div class="a-details"><p><?= $member['description']; ?></p></div>
+                                                        <div class="a-details">
+                                                            <p><?= $member['description']; ?></p>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </li>
@@ -127,7 +129,9 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                         foreach ($properties as $key => $property) {
                                             if ($key < count($members)) {
                                                 $CATEGORY = new Category($property['category']);
+                                                $SUBCATEGORY = new SubCategory($property['sub_category']);
                                                 $DISTRICT = new District($property['district']);
+                                                $CITY = new City($property['city']);
                                     ?>
                                                 <li class="item property-block"> <a href="view-property.php?id=<?= $property['id']; ?>" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt=""> <span class="badges"><?= $CATEGORY->name; ?></span> </a>
                                                     <div class="property-info">
@@ -142,7 +146,18 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                                 ?>
                                                             </a>
                                                         </h4>
-                                                        <span class="location"><?= $DISTRICT->name; ?></span>
+                                                        <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
+                                                        <span class="category"><i class='fa fa-list'></i>
+                                                            <?php
+                                                            if (strlen($CATEGORY->name) > 17) {
+                                                                echo substr($CATEGORY->name, 0, 17);
+                                                            } else {
+                                                                echo $CATEGORY->name;
+                                                            }
+
+                                                            ?>
+                                                            <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?>
+                                                        </span>
                                                         <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                     </div>
                                                 </li>

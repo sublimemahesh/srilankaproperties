@@ -1657,7 +1657,8 @@ html[xmlns] .slides {
     padding: 5px 10px;
 }
 
-.property-featured-image .badges, .property-featured-image1 .badges  {
+.property-featured-image .badges,
+.property-featured-image1 .badges {
     position: absolute;
     z-index: 0;
     left: 10px;
@@ -1671,6 +1672,7 @@ html[xmlns] .slides {
     background: #fff;
     font-weight: 700;
 }
+
 .property-featured-image1 .badges {
     left: 40px;
 }
@@ -2534,7 +2536,8 @@ html[xmlns] .slides {
     margin-bottom: 0;
 }
 
-.featured-properties-widget .property-featured-image,.featured-properties-widget .property-featured-image1 {
+.featured-properties-widget .property-featured-image,
+.featured-properties-widget .property-featured-image1 {
     width: 100%;
 }
 
@@ -3913,7 +3916,7 @@ span.progress-bar-tooltip:after {
 }
 
 .footer-social-list {
-    margin-top: 23px;
+    margin-top: 12px;
 }
 
 .copy-marg {
@@ -4243,6 +4246,7 @@ span.progress-bar-tooltip:after {
 i.login-icon {
     margin-right: 5px;
 }
-.icon-top{
+
+.icon-top {
     margin-top: 70px;
 }

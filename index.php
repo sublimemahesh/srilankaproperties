@@ -76,8 +76,8 @@ $comments = $COMMENT->all();
                             <ul class="slides add">
                                 <?php if (COUNT(Advertisement::all())) : ?>
                                     <?php foreach (Advertisement::all() as $ad) : ?>
-                                            <li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);" onclick="location.href='./view-property.php?id=<?= $ad['property'] ?>';"></li>
-                                       
+                                        <li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);" onclick="location.href='./view-property.php?id=<?= $ad['property'] ?>';"></li>
+
                                     <?php endforeach; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
@@ -115,8 +115,8 @@ $comments = $COMMENT->all();
                                                     <h4>
                                                         <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                             <?php
-                                                            if (strlen($property['title']) > 23) {
-                                                                echo substr($property['title'], 0, 21) . '...';
+                                                            if (strlen($property['title']) > 22) {
+                                                                echo substr($property['title'], 0, 20) . '...';
                                                             } else {
                                                                 echo $property['title'];
                                                             }
@@ -124,7 +124,17 @@ $comments = $COMMENT->all();
                                                         </a>
                                                     </h4>
                                                     <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
-                                                    <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
+                                                    <span class="category"><i class='fa fa-list'></i>
+                                                        <?php
+                                                        if (strlen($CATEGORY->name) > 17) {
+                                                            echo substr($CATEGORY->name, 0, 17);
+                                                        } else {
+                                                            echo $CATEGORY->name;
+                                                        }
+
+                                                        ?>
+                                                        <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?>
+                                                    </span>
 
                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                 </div>
