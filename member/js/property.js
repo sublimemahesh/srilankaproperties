@@ -2,7 +2,6 @@
 $(document).ready(function() {
     $('#btn-save').click(function(event) {
         event.preventDefault();
-        tinyMCE.triggerSave();
 
         $('#btn-save').hide();
         $('#update-loading').show();
@@ -163,7 +162,6 @@ $(document).ready(function() {
     });
     $('#btn-update').click(function(event) {
         event.preventDefault();
-        tinyMCE.triggerSave();
         $('#btn-update').hide();
         $('#update-loading').show();
 

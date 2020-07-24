@@ -182,7 +182,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="phone-number" class="form-control title-input" autocomplete="off" name="phone_number" required="true" value="<?= $MEMBER->phone; ?>">
+                                        <input type="text" id="phone-number" class="form-control title-input phone-inputmask" autocomplete="off" name="phone_number" required="true" value="<?= $MEMBER->phone; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -313,50 +313,11 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property.js" type="text/javascript"></script>
     <script src="js/upload-photos.js" type="text/javascript"></script>
-    <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="js/email-verification.js" type="text/javascript"></script>
     <script src="js/exchange-currency.js" type="text/javascript"></script>
-    <script>
-        tinymce.init({
-            selector: "#description1",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
-            relative_urls: false
-        });
-    </script>
-    <script>
-        // jQuery(document).ready(function($) {
-
-        //     var currency_input = 1;
-        //     var currency_from = "LKR"; // currency codes : http://en.wikipedia.org/wiki/ISO_4217
-        //     var currency_to = "USD";
-
-        //     var yql_base_url = "https://query.yahooapis.com/v1/public/yql";
-        //     var yql_query = 'select%20*%20from%20yahoo.finance.xchange%20where%20pair%20in%20("' + currency_from + currency_to + '")';
-        //     var yql_query_url = yql_base_url + "?q=" + yql_query + "&format=json&env=store%3A%2F%2Fdatatables.org%2Falltableswithkeys";
-
-        //     var op_data = 0;
-
-        //     $.get(yql_query_url, function(data) {
-        //         op_data = data.query.results.rate.Rate;
-        //         console.log(op_data);
-        //     });
-
-        // });
-    </script>
+    <script src="lib/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/mask.init.js" type="text/javascript"></script>
+    
 </body>
 
 </html>

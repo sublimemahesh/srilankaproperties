@@ -217,7 +217,7 @@ if (isset($_GET['id'])) {
                             <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                 <div class="form-group">
                                     <div class="form-line">
-                                        <input type="text" id="phone-number" class="form-control" autocomplete="off" name="phone_number" value="<?= $PROPERTY->contact; ?>">
+                                        <input type="text" id="phone-number" class="form-control phone-inputmask" autocomplete="off" name="phone_number" value="<?= $PROPERTY->contact; ?>">
                                     </div>
                                 </div>
                             </div>
@@ -297,30 +297,11 @@ if (isset($_GET['id'])) {
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/sub-category.js" type="text/javascript"></script>
     <script src="js/property.js" type="text/javascript"></script>
-    <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="js/email-verification.js" type="text/javascript"></script>
     <script src="js/exchange-currency.js" type="text/javascript"></script>
-    <script>
-        tinymce.init({
-            selector: "#description1",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
-            relative_urls: false
-        });
-    </script>
+    <script src="lib/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/mask.init.js" type="text/javascript"></script>
+    
 </body>
 
 </html>

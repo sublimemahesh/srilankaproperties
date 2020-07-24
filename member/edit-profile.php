@@ -82,7 +82,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                                     $class = 'border-danger';
                                                 }
                                                 ?>
-                                                <input type="text" id="phone" class="form-control <?= $class; ?>" autocomplete="off" name="phone" required="true" value="<?= $MEMBER->phone; ?>">
+                                                <input type="text" id="phone" class="form-control <?= $class; ?> phone-inputmask" autocomplete="off" name="phone" required="true" value="<?= $MEMBER->phone; ?>">
                                             </div>
                                         </div>
                                     </div>
@@ -321,32 +321,9 @@ $MEMBER = new Member($_SESSION["m_id"]);
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/member.js" type="text/javascript"></script>
     <script src="js/email-verification.js" type="text/javascript"></script>
-    <script src="../control-panel/tinymce/js/tinymce/tinymce.min.js"></script>
-    <script>
-        tinymce.init({
-            selector: "#description",
-            // ===========================================
-            // INCLUDE THE PLUGIN
-            // ===========================================
-
-            plugins: [
-                "advlist autolink lists link image charmap print preview anchor",
-                "searchreplace visualblocks code fullscreen",
-                "insertdatetime media table contextmenu paste"
-            ],
-            // ===========================================
-            // PUT PLUGIN'S BUTTON on the toolbar
-            // ===========================================
-
-            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image jbimages",
-            // ===========================================
-            // SET RELATIVE_URLS to FALSE (This is required for images to display properly)
-            // ===========================================
-
-            relative_urls: false
-
-        });
-    </script>
+    <script src="lib/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/mask.init.js" type="text/javascript"></script>
+    
 </body>
 
 </html>
