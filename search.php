@@ -3,8 +3,8 @@ include_once 'class/include.php';
 
 $category1 = '';
 $subcategory1 = '';
-$district = '';
-$city = '';
+$district1 = '';
+$city1 = '';
 $keyword = '';
 
 if (isset($_GET['keyword'])) {
@@ -17,10 +17,10 @@ if (isset($_GET['sub_category'])) {
     $subcategory1 = $_GET['sub_category'];
 }
 if (isset($_GET['district'])) {
-    $district = $_GET['district'];
+    $district1 = $_GET['district'];
 }
 if (isset($_GET['city'])) {
-    $city = $_GET['city'];
+    $city1 = $_GET['city'];
 }
 if (isset($_GET["page"])) {
     $page = (int) $_GET["page"];
@@ -31,7 +31,7 @@ $setlimit = 40;
 
 $pagelimit = ($page * $setlimit) - $setlimit;
 
-$properties = Property::search($keyword, $category1, $subcategory1, $district, $city, $pagelimit, $setlimit);
+$properties = Property::search($keyword, $category1, $subcategory1, $district1, $city1, $pagelimit, $setlimit);
 ?>
 
 <!DOCTYPE HTML>
@@ -137,7 +137,7 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district, $
                                 </ul>
                             </div>
                             <div class="">
-                                <?php Property::showPaginationForSearch($keyword, $category1, $subcategory1, $district, $city, $setlimit, $page); ?>
+                                <?php Property::showPaginationForSearch($keyword, $category1, $subcategory1, $district1, $city1, $setlimit, $page); ?>
                             </div>
                         </div>
                         <!-- Start Sidebar -->
@@ -151,32 +151,48 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district, $
                                             <option value="" selected>Select Category</option>
                                             <?php
                                             foreach (Category::all() as $category) :
+                                                $selected = '';
+                                                if ($category['id'] == $category1) :
+                                                    $selected = 'selected';
+                                                endif;
                                             ?>
-                                                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <option value="<?php echo $category['id']; ?>" <?= $selected; ?>><?php echo $category['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                             <option value="" selected>All Sub Categories</option>
                                             <?php
                                             foreach (SubCategory::all() as $subcategory) :
+                                                $selected = '';
+                                                if ($subcategory['id'] == $subcategory1) :
+                                                    $selected = 'selected';
+                                                endif;
                                             ?>
-                                                <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                <option value="<?php echo $subcategory['id']; ?>" <?= $selected; ?>><?php echo $subcategory['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">
                                             <option value="" selected>All Districts</option>
                                             <?php
                                             foreach (District::all() as $district) :
+                                                $selected = '';
+                                                if ($district['id'] == $district1) :
+                                                    $selected = 'selected';
+                                                endif;
                                             ?>
-                                                <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                <option value="<?php echo $district['id']; ?>" <?= $selected; ?>><?php echo $district['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <select name="city" id="city" class="form-control input-lg selectpicker">
                                             <option value="" selected>All Cities</option>
                                             <?php
                                             foreach (City::all() as $city) :
+                                                $selected = '';
+                                                if ($city['id'] == $city1) :
+                                                    $selected = 'selected';
+                                                endif;
                                             ?>
-                                                <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
+                                                <option value="<?php echo $city['id']; ?>" <?= $selected; ?>><?php echo $city['name']; ?></option>
                                             <?php endforeach; ?>
                                         </select>
                                         <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>

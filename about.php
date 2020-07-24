@@ -64,7 +64,7 @@ $VALUES = new Page(4);
                 <div class="row">
                     <div class="col-md-6 col-sm-6 abt-txt">
                         <div class="widget sidebar-widget featured-properties-widget">
-                            <h3 class="widgettitle">CO / MD Message</h3>
+                            <h3 class="widgettitle">CEO / MD Message</h3>
                         </div>
                         <?= $WHO_WE_ARE->description; ?>
                     </div>

@@ -20,7 +20,7 @@ if ($MEMBER->checkEmailForResetPassword($email)) {
 
         $todayis = date("l, F j, Y, g:i a");
 
-        $subject = 'Member Dashboard - Sri Lanka Properties - Password Reset';
+        $subject = 'Member Dashboard - Password Reset';
         $from = 'noreply@srilankaproperties.lk'; // give from email address
 
 

@@ -71,7 +71,7 @@ if (isset($_GET['subcategory'])) {
         <!-- Site Showcase -->
         <div class="site-showcase">
             <!-- Start Page Header -->
-             <div class="parallax page-header banner-overlay">
+            <div class="parallax page-header banner-overlay">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
@@ -105,19 +105,29 @@ if (isset($_GET['subcategory'])) {
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
-                                                    <h4>
-                                                        <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
-                                                            <?php
-                                                            if (strlen($property['title']) > 23) {
-                                                                echo substr($property['title'], 0, 21) . '...';
-                                                            } else {
-                                                                echo $property['title'];
-                                                            }
-                                                            ?>
-                                                        </a>
-                                                    </h4>
+                                                        <h4>
+                                                            <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
+                                                                <?php
+                                                                if (strlen($property['title']) > 23) {
+                                                                    echo substr($property['title'], 0, 21) . '...';
+                                                                } else {
+                                                                    echo $property['title'];
+                                                                }
+                                                                ?>
+                                                            </a>
+                                                        </h4>
                                                         <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
-                                                                    <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
+                                                        <span class="category"><i class='fa fa-list'></i>
+                                                            <?php
+                                                            if (strlen($CATEGORY->name) > 17) {
+                                                                echo substr($CATEGORY->name, 0, 17);
+                                                            } else {
+                                                                echo $CATEGORY->name;
+                                                            }
+
+                                                            ?>
+                                                            <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?>
+                                                        </span>
                                                         <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                     </div>
                                                 </div>
@@ -125,7 +135,7 @@ if (isset($_GET['subcategory'])) {
                                         <?php endforeach;
                                     } else {
                                         ?>
-                                            <h5 class="db-mrg no-data">No any <?= strtolower($title); ?> in the database.</h5>
+                                        <h5 class="db-mrg no-data">No any <?= strtolower($title); ?> in the database.</h5>
                                     <?php
                                     } ?>
                                 </ul>
@@ -139,7 +149,7 @@ if (isset($_GET['subcategory'])) {
                             <div class="widget sidebar-widget">
                                 <h3 class="widgettitle">Search Properties</h3>
                                 <div class="full-search-form ">
-                                <form action="search.php" id="search-form">
+                                    <form action="search.php" id="search-form">
                                         <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
                                         <select name="category" id="category" class="form-control input-lg selectpicker">
                                             <option value="" selected>Select Category</option>

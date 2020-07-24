@@ -128,7 +128,7 @@ if (isset($_GET['id'])) {
                                             }
                                             ?>
                                             <div class="property-contact-details">
-                                                <div class="contact-info-blocks hidden-sm hidden-xs">
+                                                <div class="contact-info-blocks">
                                                     <div>
                                                         <i class="fa fa-phone"></i> Phone
                                                         <span><?= $PROPERTY->contact; ?></span>
@@ -220,8 +220,17 @@ if (isset($_GET['id'])) {
                                                                         </a>
                                                                     </h4>
                                                                     <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
-                                                                    <span class="category"><i class='fa fa-list'></i> <?= $CATEGORY->name; ?> <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?></span>
+                                                                    <span class="category"><i class='fa fa-list'></i>
+                                                                        <?php
+                                                                        if (strlen($CATEGORY->name) > 17) {
+                                                                            echo substr($CATEGORY->name, 0, 17);
+                                                                        } else {
+                                                                            echo $CATEGORY->name;
+                                                                        }
 
+                                                                        ?>
+                                                                        <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?>
+                                                                    </span>
                                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                                 </div>
                                                             </li>
