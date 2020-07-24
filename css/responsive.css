@@ -285,5 +285,8 @@ and open the template in the editor.
     .h-drop{
         margin-left: 20px !important;
     }
+    .r-img.owl-carousel{
+        margin-left: 0px;
+    }
 
 }
