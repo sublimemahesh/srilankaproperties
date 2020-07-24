@@ -1657,7 +1657,7 @@ html[xmlns] .slides {
     padding: 5px 10px;
 }
 
-.property-featured-image .badges {
+.property-featured-image .badges, .property-featured-image1 .badges  {
     position: absolute;
     z-index: 0;
     left: 10px;
@@ -1670,6 +1670,9 @@ html[xmlns] .slides {
     text-align: center;
     background: #fff;
     font-weight: 700;
+}
+.property-featured-image1 .badges {
+    left: 40px;
 }
 
 .property-info,
@@ -2531,7 +2534,7 @@ html[xmlns] .slides {
     margin-bottom: 0;
 }
 
-.featured-properties-widget .property-featured-image {
+.featured-properties-widget .property-featured-image,.featured-properties-widget .property-featured-image1 {
     width: 100%;
 }
 
@@ -4239,4 +4242,7 @@ span.progress-bar-tooltip:after {
 
 i.login-icon {
     margin-right: 5px;
+}
+.icon-top{
+    margin-top: 70px;
 }
