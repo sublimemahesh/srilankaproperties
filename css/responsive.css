@@ -73,7 +73,7 @@ and open the template in the editor.
     .header-drop-i{
         background: #eeeeee !important;
     }
-   
+
     .h-drop-i{
         margin-left: 20px !important;
     }
@@ -277,7 +277,7 @@ and open the template in the editor.
     }
     .header-drop{
         background: #eeeeee !important;
-        
+
     }
     .no-data{
         margin-left: 10px;
@@ -287,6 +287,11 @@ and open the template in the editor.
     }
     .r-img.owl-carousel{
         margin-left: 0px;
+    }
+    .view-mo{
+        margin-left: -20px !important;
+        margin-top: -9px !important;
+
     }
 
 }
