@@ -14,8 +14,8 @@ if (isset($_POST['add-new-property-image'])) {
         $handle1->image_ratio_crop = 'C';
         $handle1->file_new_name_body = $img;
         $handle1->file_overwrite = TRUE;
-        $handle1->image_x = 1500;
-        $handle1->image_y = 700;
+        $handle1->image_x = 850;
+        $handle1->image_y = 400;
         $handle1->Process('../../upload/properties/gallery/');
         
 
@@ -60,8 +60,8 @@ if (isset($_POST['edit-property-image'])) {
         $handle1->file_new_name_ext = FALSE;
         $handle1->image_ratio_crop = 'C';
         $handle1->file_new_name_body = $img;
-        $handle1->image_x = 1500;
-        $handle1->image_y = 700;
+        $handle1->image_x = 850;
+        $handle1->image_y = 400;
         $handle1->Process('../../upload/properties/gallery/');
         $img = $handle1->file_dst_name;
 
