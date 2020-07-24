@@ -116,7 +116,7 @@ $comments = $COMMENT->all();
                                                         <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                             <?php
                                                             if (strlen($property['title']) > 23) {
-                                                                echo substr($property['title'], 0, 22) . '...';
+                                                                echo substr($property['title'], 0, 21) . '...';
                                                             } else {
                                                                 echo $property['title'];
                                                             }
