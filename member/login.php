@@ -76,7 +76,7 @@ if (isset($_SESSION['m_id'])) {
                         </div>
                         <div class="form-group">
                             <label>Phone<span class="required text-danger">*</span></label>
-                            <input type="text" required="" class="form-control" name="phone" id="phone">
+                            <input type="text" required="" class="form-control phone-inputmask" name="phone" id="phone">
                         </div>
                         <div class="form-group">
                             <label>Email address <span class="required text-danger">*</span></label>
@@ -119,6 +119,9 @@ if (isset($_SESSION['m_id'])) {
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/login.js" type="text/javascript"></script>
+    <script src="lib/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
+    <script src="js/mask.init.js" type="text/javascript"></script>
+    
 </body>
 
 </html>

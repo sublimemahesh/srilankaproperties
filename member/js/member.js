@@ -2,7 +2,7 @@
 $(document).ready(function() {
     $('#btn-update').click(function(event) {
         event.preventDefault();
-        tinyMCE.triggerSave();
+        // tinyMCE.triggerSave();
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
         $('#btn-update').hide();
