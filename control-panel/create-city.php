@@ -113,14 +113,14 @@ $DISTRICT = new District($id)
                                                 <td><?php echo $city['name']; ?></td>
 
                                                 <td>
-                                                    <a href="edit-city.php?id=<?php echo $city['id']; ?>" class="op-link btn btn-sm btn-success"><i class="glyphicon glyphicon-pencil"></i>
+                                                    <a href="edit-city.php?id=<?php echo $city['id']; ?>" class="op-link btn btn-sm btn-success" title="Edit City"><i class="glyphicon glyphicon-pencil"  title="Edit City"></i>
                                                     </a>
 
-                                                    <a href="#" class="delete-city btn btn-sm btn-danger" data-id="<?php echo $city['id']; ?>">
+                                                    <a href="#" class="delete-city btn btn-sm btn-danger" title="Delete City" data-id="<?php echo $city['id']; ?>">
                                                         <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                     </a>
 
-                                                    <a href="arrange-city.php?id=<?php echo $id ?>" class="btn btn-sm btn-primary"><i class="glyphicon glyphicon-random"></i>
+                                                    <a href="arrange-city.php?id=<?php echo $id ?>" class="btn btn-sm btn-primary" title="Arrange City"><i class="glyphicon glyphicon-random"></i>
                                                     </a>
                                                 </td>
                                             </tr>

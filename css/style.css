@@ -2083,7 +2083,7 @@ html[xmlns] .slides {
 
 .location {
     font-size: 60%;
-    color: #999;
+    color: #000000;
     font-family: 'Open Sans', sans-serif!important;
     font-style: italic;
 }
@@ -2434,6 +2434,7 @@ html[xmlns] .slides {
     padding-bottom: 5px;
     text-transform: uppercase;
     font-size: 16px;
+    margin-right: 63px;
 }
 
 .widget ul>li {
@@ -4110,7 +4111,7 @@ span.progress-bar-tooltip:after {
     display: block;
     font-size: 100%;
     padding: 0 0 10px 0;
-    color: #999;
+    color: #000000;
     font-family: 'Open Sans', sans-serif !important;
     font-style: italic;
 }
@@ -4249,4 +4250,18 @@ i.login-icon {
 
 .icon-top {
     margin-top: 70px;
+}
+div.column {
+    max-width: 800px;
+}
+
+figure.fixedratio {
+    padding-top: 56.25% !important;  /* 450px/800px = 0.5625 */
+}
+.title-n{
+    border-bottom: 2px solid #014586;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    font-size: 16px;
+    margin-right: 285px; 
 }

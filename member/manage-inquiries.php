@@ -82,7 +82,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                         <td><?php echo $inquiry['name']; ?> </td>
                                         <td><?php echo $inquiry['phone']; ?> </td>
                                         <td class="text-center">
-                                            <a href="view-inquiry.php?id=<?= $inquiry['id']; ?>" class="edit-property btn btn-sm btn-warning" data-id=""> <i class="fa fa-eye"></i></a>
+                                            <a href="view-inquiry.php?id=<?= $inquiry['id']; ?>" class="edit-property btn btn-sm btn-warning" title="View Inquiry Details" data-id=""> <i class="fa fa-eye"></i></a>
                                         </td>
                                     </tr>
                                 <?php

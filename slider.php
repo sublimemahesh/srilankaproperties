@@ -1,14 +1,16 @@
 <div class="site-showcase">
     <div class="slider-mask overlay-transparent"></div>
     <!-- Start Hero Slider -->
+<!--    <div class="column">
+        <figure class="fluidratio"></figure>
+    </div>-->
     <div class="hero-slider flexslider clearfix" data-autoplay="yes" data-pagination="no" data-arrows="yes" data-style="fade" data-pause="yes">
         <ul class="slides">
             <?php if (COUNT(Slider::all())) : ?>
                 <?php foreach (Slider::all() as $slide) : ?>
-                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);" onclick="location.href='./view-property.php?id=<?= $slide['property'] ?>';"></li>
+                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);" onclick="location.href = './view-property.php?id=<?= $slide['property'] ?>';"></li>
                 <?php endforeach; ?>
             <?php endif; ?>
-
         </ul>
     </div>
     <!-- End Hero Slider -->
@@ -27,7 +29,7 @@
                                     <option value="" selected>Select Category</option>
                                     <?php
                                     foreach (Category::all() as $category) :
-                                    ?>
+                                        ?>
                                         <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -37,7 +39,7 @@
                                     <option value="" selected>All Sub Categories</option>
                                     <?php
                                     foreach (SubCategory::all() as $subcategory) :
-                                    ?>
+                                        ?>
                                         <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -47,7 +49,7 @@
                                     <option value="" selected>All Districts</option>
                                     <?php
                                     foreach (District::all() as $district) :
-                                    ?>
+                                        ?>
                                         <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>
@@ -57,7 +59,7 @@
                                     <option value="" selected>All Cities</option>
                                     <?php
                                     foreach (City::all() as $city) :
-                                    ?>
+                                        ?>
                                         <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
                                     <?php endforeach; ?>
                                 </select>

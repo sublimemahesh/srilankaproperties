@@ -111,7 +111,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                         <?php
                                         echo 'Rs.' . number_format($PROPERTY->price, 2);
                                         if ($PROPERTY->price_dollar != 0.00) {
-                                            echo ' / $' . number_format($PROPERTY->price_dollar, 2);
+                                            echo ' / USD' . number_format($PROPERTY->price_dollar, 2);
                                         }
                                         ?>
                                     </td>
