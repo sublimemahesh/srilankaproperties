@@ -99,8 +99,8 @@ if (isset($_GET['type'])) {
                                                             <td><?= $property['category_name']; ?></td>
                                                             <td><?= $DISTRICT->name; ?></td>
                                                             <td>
-                                                                <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="	glyphicon glyphicon-eye-open edit-btn"></button></a>
-                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"> </button> </a>
+                                                                <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-eye-open edit-btn" title="View Property"></button></a>
+                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="Approve Property"> </button> </a>
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>

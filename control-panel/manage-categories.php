@@ -169,25 +169,25 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                         <td>  
 
                                                             <a href="edit-category.php?id=<?php echo $category['id']; ?>"> 
-                                                                <button class="glyphicon glyphicon-pencil edit-btn"></button></a>
+                                                                <button class="glyphicon glyphicon-pencil edit-btn"  title="Edit Category"></button></a>
 
 
                                                             |  
 
                                                             <a href="#" > 
-                                                                <button class="glyphicon glyphicon-trash delete-btn delete-category" data-id="<?php echo $category['id']; ?>"></button>
+                                                                <button class="glyphicon glyphicon-trash delete-btn delete-category"  title="Delete Category" data-id="<?php echo $category['id']; ?>"></button>
                                                             </a>
 
                                                             |
 
                                                             <a href="arrange-category.php?id="> 
-                                                                <button class="glyphicon glyphicon-random arrange-btn"></button>
+                                                                <button class="glyphicon glyphicon-random arrange-btn"  title="Arrange Category"></button>
                                                             </a>
 
                                                             |
 
                                                             <a href="manage-sub-categories.php?id=<?php echo $category['id']; ?>"> 
-                                                                <button class=" glyphicon glyphicon-list list-btn"></button>
+                                                                <button class=" glyphicon glyphicon-list list-btn"  title="Sub Categories"></button>
                                                             </a>
 
                                                         </td>

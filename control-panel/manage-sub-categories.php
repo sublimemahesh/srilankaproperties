@@ -110,19 +110,19 @@ $CATEGORY = new Category($id);
 <!--                                                        <td><?php echo $sub_category['category']; ?></td> -->
                                                         <td>  
 
-                                                            <a href="edit-sub-category.php?id=<?php echo $sub_category['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"></button>
+                                                            <a href="edit-sub-category.php?id=<?php echo $sub_category['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn"  title="Edit Sub Category"></button>
                                                             </a>
 
                                                             |  
 
                                                             <a href="#" > 
-                                                                <button class="glyphicon glyphicon-trash delete-btn delete-sub-category" data-id="<?php echo $sub_category['id']; ?>"></button>
+                                                                <button class="glyphicon glyphicon-trash delete-btn delete-sub-category"  title="Delete Sub Category" data-id="<?php echo $sub_category['id']; ?>"></button>
                                                             </a>
 
                                                             |
 
                                                             <a href="arrange-sub-category.php?id="> 
-                                                                <button class="glyphicon glyphicon-random arrange-btn"></button>
+                                                                <button class="glyphicon glyphicon-random arrange-btn"  title="Arrange Sub Category"></button>
                                                             </a>
 
                                                            

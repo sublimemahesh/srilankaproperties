@@ -11149,3 +11149,11 @@ html.ie11 .bs-searchbox .form-control {
     opacity: 0.5;
     width: 12px;
 }
+.hide {
+  display: none;
+}
+    
+.myDIV:hover + .hide {
+  display: block;
+  color: red;
+}

@@ -41,8 +41,8 @@ if (isset($_SESSION['m_id'])) {
         <div class="container">
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
-                    <div class="title">
-                        <h4>Member Sign in...</h4>
+                    <div class="title-n">
+                        <div>Member Sign in...</div>
                     </div>
                     <form method="post" class="login_form " id="login-form">
                         <div class="form-group">
@@ -66,8 +66,8 @@ if (isset($_SESSION['m_id'])) {
                     </form>
                 </div>
                 <div class="col-md-6">
-                    <div class="title register-mob">
-                        <h4>New Member Register</h4>
+                    <div class="title-nn register-mob">
+                        <div>New Member Register</div>
                     </div>
                     <form method="post" class="login_form " id="registration-form">
                         <div class="form-group">
