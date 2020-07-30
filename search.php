@@ -114,7 +114,7 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                                         <h4>
                                                             <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                 <?php
-                                                                if (strlen($property['title']) > 24) {
+                                                                if (strlen($property['title']) > 22) {
                                                                     echo substr($property['title'], 0, 20) . '...';
                                                                 } else {
                                                                     echo $property['title'];
@@ -143,7 +143,7 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 serch-dev">
                             <div class="widget sidebar-widget">
-                                <h3 class="widgettitle">Search Properties</h3>
+                                <h3 class="widgettitle search-under">Search Properties</h3>
                                 <div class="full-search-form ">
                                     <form action="search.php" id="search-form">
                                         <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />

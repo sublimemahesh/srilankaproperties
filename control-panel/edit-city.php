@@ -9,12 +9,10 @@ $CITY = new City($id);
 ﻿
 <!DOCTYPE html>
 <html>
-
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
         <title>Edit City || Admin  </title>
-
         <!-- Favicon-->
         <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
@@ -27,10 +25,8 @@ $CITY = new City($id);
         <link href="css/style.css" rel="stylesheet">
         <link href="css/themes/all-themes.css" rel="stylesheet" />
     </head>
-
     <body class="theme-red">
         <?php include '/navigation-and-header.php'; ?>
-
             <section class="content">
                 <?php
                 $vali = new Validator();
@@ -39,7 +35,6 @@ $CITY = new City($id);
                 ?>
                 <div class="container-fluid">
                     <!-- Body Copy -->
-
                     <div class="row clearfix">
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="card">
@@ -86,7 +81,6 @@ $CITY = new City($id);
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row clearfix">
                                             <div class="col-lg-2 col-md-2 hidden-sm hidden-xs form-control-label">
                                                 <label for="name">Name</label>
@@ -102,7 +96,6 @@ $CITY = new City($id);
                                                 </div>
                                             </div>
                                         </div>
-
                                         <div class="row clearfix">
                                             <div class="col-lg-offset-2 col-md-offset-2 col-sm-offset-4 col-xs-offset-4">
                                                 <input type="hidden" id="id" value="<?php echo $CITY->id; ?>" name="id" />
@@ -116,7 +109,6 @@ $CITY = new City($id);
                             </div>
                         </div>
                     </div>
-
                 </div>
             </section>
            

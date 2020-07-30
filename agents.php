@@ -96,7 +96,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                 <div class="col-md-8 col-sm-8 agent-name upper-padd a-i">
                                                     <div class="agent-info">
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
-                                                        <h3><a class="a-name font-m"><?= $member['name']; ?></a></h3>
+                                                        <h3><a href="view-property.php?agent=<?= $member['id']; ?>" class="a-name font-m"><?= $member['name']; ?></a></h3>
                                                         <div class="a-details">
                                                             <p><?= $member['description']; ?></p>
                                                         </div>
@@ -121,7 +121,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3">
                             <div class="widget sidebar-widget featured-properties-widget">
-                                <h3 class="widgettitle">Featured Properties</h3>
+                                <h3 class="widgettitle search-f">Featured Properties</h3>
                                 <ul class="">
                                     <?php
                                     $properties = Property::getAllPropertiesByLimit($pagelimit, $setlimit);

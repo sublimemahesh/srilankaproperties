@@ -42,7 +42,7 @@ if (isset($_SESSION['m_id'])) {
             <div class="row">
                 <div class="col-md-6 mb-4 mb-md-0">
                     <div class="title-n">
-                        <div>Member Sign in...</div>
+                        <div>Member Sign in</div>
                     </div>
                     <form method="post" class="login_form " id="login-form">
                         <div class="form-group">

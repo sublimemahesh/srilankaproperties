@@ -98,7 +98,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                         <td class="text-center">
                                             <a href="view-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-warning" title="View Property" data-id=""> <i class="fa fa-eye"></i></a> |
                                             <a href="edit-property.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-info" title="Edit Property" data-id=""> <i class="fa fa-pencil"></i></a> |
-                                            <a href="view-property-photos.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-success" title="View Property Photos" data-id=""> <i class="fa fa-image"></i></a> |
+                                            <a href="view-property-photos.php?id=<?= $property['id']; ?>" class="edit-property btn btn-sm btn-success" title="Manage Property Photos" data-id=""> <i class="fa fa-image"></i></a> |
                                             <a class="delete-property btn btn-sm btn-danger" title="Delete Property" data-id="<?= $property['id']; ?>"> <i class="fa fa-trash"></i></a>
                                         </td>
                                     </tr>

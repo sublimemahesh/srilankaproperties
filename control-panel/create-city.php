@@ -120,7 +120,7 @@ $DISTRICT = new District($id)
                                                         <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                     </a>
 
-                                                    <a href="arrange-city.php?id=<?php echo $id ?>" class="btn btn-sm btn-primary" title="Arrange City"><i class="glyphicon glyphicon-random"></i>
+                                                    <a href="arrange-city.php?id=<?php echo $id ?>" class="btn btn-sm btn-primary" title="Arrange Cities"><i class="glyphicon glyphicon-random"></i>
                                                     </a>
                                                 </td>
                                             </tr>

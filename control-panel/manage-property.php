@@ -51,13 +51,13 @@ if (isset($_GET['type'])) {
                             <h2>
                                 <?= $title; ?> Properties
                             </h2>
-                            <ul class="header-dropdown">
+<!--                            <ul class="header-dropdown">
                                 <li>
                                     <a href="create-property.php">
                                         <i class="material-icons">add</i>
                                     </a>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </div>
                         <div class="body">
                             <!-- <div class="table-responsive">-->
@@ -100,7 +100,7 @@ if (isset($_GET['type'])) {
                                                             <td><?= $DISTRICT->name; ?></td>
                                                             <td>
                                                                 <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-eye-open edit-btn" title="View Property"></button></a>
-                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="Approve Property"> </button> </a>
+                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="<?= $property['status'] == 0 ? "Approve this Property" : "Reject this Property" ?>"> </button> </a>
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>

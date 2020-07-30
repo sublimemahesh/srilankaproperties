@@ -2434,7 +2434,6 @@ html[xmlns] .slides {
     padding-bottom: 5px;
     text-transform: uppercase;
     font-size: 16px;
-    margin-right: 63px;
 }
 
 .widget ul>li {
@@ -4252,16 +4251,13 @@ i.login-icon {
     margin-top: 70px;
 }
 div.column {
-    max-width: 800px;
+    max-width: 100%;
 }
 
-figure.fixedratio {
-    padding-top: 56.25% !important;  /* 450px/800px = 0.5625 */
+
+.search-under{
+    margin-right: 63px !important;
 }
-.title-n{
-    border-bottom: 2px solid #014586;
-    margin-bottom: 25px;
-    text-transform: uppercase;
-    font-size: 16px;
-    margin-right: 285px; 
+.search-f{
+    margin-right: 40px !important;
 }
