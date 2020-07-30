@@ -293,5 +293,8 @@ and open the template in the editor.
         margin-top: -9px !important;
 
     }
+    .view-p-list{
+       margin-left: 19px !important;
+    }
 
 }

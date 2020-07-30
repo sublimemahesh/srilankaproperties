@@ -147,7 +147,7 @@ if (isset($_GET['subcategory'])) {
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 serch-dev">
                             <div class="widget sidebar-widget">
-                                <h3 class="widgettitle">Search Properties</h3>
+                                <h3 class="widgettitle search-under">Search Properties</h3>
                                 <div class="full-search-form ">
                                     <form action="search.php" id="search-form">
                                         <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />

@@ -114,9 +114,9 @@ if (isset($_GET['id'])) {
                                     <div class="img-caption">
                                         <p class="maxlinetitle"><?= $photo['caption']; ?></p>
                                         <div class="d">
-                                            <a href="edit-property-photo.php?id=<?= $photo['id']; ?>" class="btn btn-sm btn-info" title="Edit Property Photos"> <i class="fa fa-pencil"></i></a>
+                                            <a href="edit-property-photo.php?id=<?= $photo['id']; ?>" class="btn btn-sm btn-info" title="Edit Property Photo"> <i class="fa fa-pencil"></i></a>
                                             <a href="arrange-property-photos.php?id=<?= $photo['property']; ?>" class="btn btn-sm btn-warning" title="Arrange Property Photos"> <i class="fa fa-random"></i></a>
-                                            <a data-id="<?= $photo['id']; ?>" class="delete-property-photo btn btn-sm btn-danger" title="Delete Property Photos"> <i class="fa fa-trash"></i></a>
+                                            <a data-id="<?= $photo['id']; ?>" class="delete-property-photo btn btn-sm btn-danger" title="Delete Property Photo"> <i class="fa fa-trash"></i></a>
                                         </div>
                                     </div>
                                 </div>

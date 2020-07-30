@@ -79,11 +79,11 @@ $DISTRICT = new District(NULL);
                                                             <i class="glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a>
 
-                                                        <a href="arrange-district.php" class="btn btn-sm btn-primary" title="Arrange District">
+                                                        <a href="arrange-district.php" class="btn btn-sm btn-primary" title="Arrange Districts">
                                                             <i class="glyphicon glyphicon-random"></i>
                                                         </a>
 
-                                                        <a href="create-city.php?id=<?php echo $district['id']; ?>" class="btn btn-sm btn-warning" title="Cities of Districts">
+                                                        <a href="create-city.php?id=<?php echo $district['id']; ?>" class="btn btn-sm btn-warning" title="Cities of District">
                                                             <i class="glyphicon glyphicon-map-marker"></i>
                                                         </a>
                                                     </td>

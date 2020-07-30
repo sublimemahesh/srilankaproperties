@@ -181,13 +181,13 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                             |
 
                                                             <a href="arrange-category.php?id="> 
-                                                                <button class="glyphicon glyphicon-random arrange-btn"  title="Arrange Category"></button>
+                                                                <button class="glyphicon glyphicon-random arrange-btn"  title="Arrange Categories"></button>
                                                             </a>
 
                                                             |
 
                                                             <a href="manage-sub-categories.php?id=<?php echo $category['id']; ?>"> 
-                                                                <button class=" glyphicon glyphicon-list list-btn"  title="Sub Categories"></button>
+                                                                <button class=" glyphicon glyphicon-list list-btn"  title="Manage Sub Categories"></button>
                                                             </a>
 
                                                         </td>

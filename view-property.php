@@ -129,19 +129,11 @@ if (isset($_GET['id'])) {
                                             ?>
                                             <div class="property-contact-details">
                                                 <div class="contact-info-blocks">
-                                                    <div>
+                                                    <div class="view-p-list">
                                                         <i class="fa fa-phone"></i> Phone
                                                         <span><?= $PROPERTY->contact; ?></span>
                                                     </div>
-                                                    <div>
-                                                        <i class="fa fa-envelope"></i> Email
-                                                        <span><?= $PROPERTY->email; ?></span>
-                                                    </div>
-                                                    <div>
-                                                        <i class="fa fa-map-marker"></i> Address
-                                                        <span><?= $PROPERTY->address; ?></span>
-                                                    </div>
-
+                                                    
                                                     <?php
 
                                                     if ($PROPERTY->no_of_bed_rooms != 0) {
@@ -154,6 +146,15 @@ if (isset($_GET['id'])) {
                                                     <?php
                                                     }
                                                     ?>
+
+                                                    <div>
+                                                        <i class="fa fa-envelope"></i> Email
+                                                        <span><?= $PROPERTY->email; ?></span>
+                                                    </div>
+                                                    <div>
+                                                        <i class="fa fa-map-marker"></i> Address
+                                                        <span><?= $PROPERTY->address; ?></span>
+                                                    </div>
 
                                                 </div>
                                             </div>
@@ -255,7 +256,7 @@ if (isset($_GET['id'])) {
                             </div>
                             <div class="sidebar right-sidebar col-md-3 serch-dev search">
                                 <div class="widget sidebar-widget">
-                                    <h3 class="widgettitle">Search Properties</h3>
+                                    <h3 class="widgettitle search-under">Search Properties</h3>
                                     <div class="full-search-form ">
                                         <form action="search.php" id="search-form">
                                             <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />

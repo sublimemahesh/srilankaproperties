@@ -214,7 +214,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-bottom text-input-i">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <select class="form-control title-input" autocomplete="off" type="number" id="no-of-bed-rooms" autocomplete="off" name="no-of-bed-rooms" required="TRUE">
+                                            <select class="form-control title-input" autocomplete="off" type="number" id="no-of-bed-rooms" autocomplete="off" name="no_of_bed_rooms" required="TRUE">
                                                 <option value="" class="active light-c"> -- No of Rooms -- </option>
                                                 <?php 
                                                 for($i = 1; $i<=50; $i++) {

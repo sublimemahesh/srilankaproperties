@@ -101,9 +101,9 @@ include_once(dirname(__FILE__) . '/auth.php');
                                             <div class="img-caption">
                                                 <p class="maxlinetitle"><?= $ad['caption']; ?></p>
                                                 <div class="d">
-                                                    <a href="#" class="delete-ads-slider" data-id="<?= $ad['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete Slider"></button></a>
-                                                    <a href="edit-ads-slider.php?id=<?= $ad['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn" title="Edit Slider"></button></a>
-                                                    <a href="arrange-slider.php"> <button class="glyphicon glyphicon-random arrange-btn" title="Arrange Slider"></button></a>
+                                                    <a href="#" class="delete-ads-slider" data-id="<?= $ad['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete Ad Image"></button></a>
+                                                    <a href="edit-ads-slider.php?id=<?= $ad['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn" title="Edit Ad Image"></button></a>
+                                                    <a href="arrange-slider.php"> <button class="glyphicon glyphicon-random arrange-btn" title="Arrange Ad Images"></button></a>
                                                 </div>
                                             </div>
                                         </div>

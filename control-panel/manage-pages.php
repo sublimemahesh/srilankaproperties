@@ -78,7 +78,7 @@ $PAGES = new Page(NULL);
                                                   
                                                  
                                                     <td> 
-                                                        <a href="edit-pages.php?id=<?php echo $page['id']; ?>" class="op-link btn btn-sm btn-default" title="Edit Pages"><i class="glyphicon glyphicon-pencil"></i></a>  
+                                                        <a href="edit-pages.php?id=<?php echo $page['id']; ?>" class="op-link btn btn-sm btn-default" title="Edit Page"><i class="glyphicon glyphicon-pencil"></i></a>  
 <!--                                                        <a href="#" class="delete-pages btn btn-sm btn-danger" data-id="<?php echo $page['id']; ?>">
                                                             <i class="waves-effect glyphicon glyphicon-trash" data-type="cancel"></i>
                                                         </a> |   -->
