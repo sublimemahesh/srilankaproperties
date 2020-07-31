@@ -213,6 +213,20 @@ class Property
 
         return $array_res;
     }
+    public function getPropertiesByMemberWithLimit($member, $pageLimit, $setLimit) {
+
+        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` ASC LIMIT " . $pageLimit . " , " . $setLimit;
+        $db = new Database();
+        $result = $db->readQuery($query);
+
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
     public function getPropertiesBySubCategoryWithLimit($subcategory, $pageLimit, $setLimit)
     {
 
@@ -524,7 +538,7 @@ class Property
         echo $setPaginate;
     }
 
-    public function showPagination($category, $subcategory, $per_page, $page)
+    public function showPagination($category, $subcategory,$agent, $per_page, $page)
     {
         $w = array();
         $where = '';
@@ -534,6 +548,9 @@ class Property
         }
         if (!empty($subcategory)) {
             $w[] = "`sub_category` = '" . $subcategory . "' ";
+        }
+        if (!empty($agent)) {
+            $w[] = "`member` = '" . $agent . "' ";
         }
 
         if (count($w)) {
