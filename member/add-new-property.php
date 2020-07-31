@@ -55,7 +55,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                         <form class="form-horizontal" id="property-form" method="post" action="" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
-                                    <label for="title">Property Title <span class="text-danger">*</span></label>
+                                    <label for="title">Property Heading <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
                                     <div class="form-group">

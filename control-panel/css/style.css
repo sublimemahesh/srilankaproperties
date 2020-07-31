@@ -11150,10 +11150,20 @@ html.ie11 .bs-searchbox .form-control {
     width: 12px;
 }
 .hide {
-  display: none;
+    display: none;
 }
-    
+
 .myDIV:hover + .hide {
-  display: block;
-  color: red;
+    display: block;
+    color: red;
+}
+.view-p-img{
+    margin-left: -18px;
+}
+.img-sec{
+    margin-right: 25px !important;
+    margin-left: 45px !important;
+}
+.back-btn{
+    margin-left: 27px;
 }

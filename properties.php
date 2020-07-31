@@ -115,15 +115,23 @@ if (isset($_GET['agent'])) {
                                                         <h4>
                                                             <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                 <?php
-                                                                if (strlen($property['title']) > 23) {
-                                                                    echo substr($property['title'], 0, 21) . '...';
+                                                                if (strlen($property['title']) > 21) {
+                                                                    echo substr($property['title'], 0, 19) . '...';
                                                                 } else {
                                                                     echo $property['title'];
                                                                 }
                                                                 ?>
                                                             </a>
                                                         </h4>
-                                                        <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
+                                                        <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i>
+                                                              <?php
+                                                            if (strlen ($CITY->name) > 14) {
+                                                                echo substr($CITY->name, 0, 10) . '...';
+                                                            } else {
+                                                                echo $CITY->name;
+                                                            }
+                                                            ?>
+                                                        </span>
                                                         <span class="category"><i class='fa fa-list'></i>
                                                             <?php
                                                             if (strlen($CATEGORY->name) > 17) {
@@ -152,6 +160,7 @@ if (isset($_GET['agent'])) {
                             </div>
                         </div>
                         <!-- Start Sidebar -->
+
                         <div class="sidebar right-sidebar col-md-3 serch-dev <?= isset($_GET['agent']) ? "order-1" : "" ?>">
                             <?php if (isset($_GET['agent'])) : ?>
                                 <div class="widget sidebar-widget popular-agent column"> 
@@ -170,6 +179,7 @@ if (isset($_GET['agent'])) {
                                             <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> 
                                         </div> 
                                     </div>
+
                                 </div>
                             <?php else : ?>
                                 <div class="widget sidebar-widget">

@@ -59,7 +59,7 @@ if (isset($_GET['id'])) {
                         <form class="form-horizontal" id="edit-property-form" method="post" action="" enctype="multipart/form-data">
                             <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right">
-                                    <label for="title">Property Title <span class="text-danger">*</span></label>
+                                    <label for="title">Property Heading<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
                                     <div class="form-group">
@@ -222,14 +222,14 @@ if (isset($_GET['id'])) {
                                     </div>
                                 </div>
                             </div>
-                               <div class="row">
+                            <div class="row">
                                 <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                     <label for="price">Price (Rs)<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-bottom text-input-i">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true">
+                                            <input type="price" id="price" class="form-control title-input" autocomplete="off" name="price" required="true" value="<?= $PROPERTY->price; ?>">
                                             <img src="img/blue-loader.gif" id="price_loader" />
                                         </div>
                                     </div>
@@ -240,25 +240,28 @@ if (isset($_GET['id'])) {
                                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-bottom text-input-i">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <input type="price" id="price-dollar" class="form-control title-input" autocomplete="off" name="price_dollar" required="true">
+                                            <input type="price" id="price-dollar" class="form-control title-input" autocomplete="off" name="price_dollar" required="true" value="<?= $PROPERTY->price_dollar; ?>">
                                         </div>
                                     </div>
                                 </div>
-                                 <div class="col-lg-2 col-md-2 form-control-label text-right title-mobile text-i">
-                                    <label for="price">No of Bed Rooms</label>
+                                <div class="col-lg-2 col-md-2 form-control-label text-right title-mobile text-i">
+                                    <label for="no_of_bed_rooms">No of Bed Rooms</label>
                                 </div>
                                 <div class="col-lg-2 col-md-2 col-sm-12 col-xs-12 p-bottom text-input-i">
                                     <div class="form-group">
                                         <div class="form-line">
-                                            <select class="form-control title-input" autocomplete="off" type="number" id="no-of-bed-rooms" autocomplete="off" name="no-of-bed-rooms" required="TRUE">
+                                            <select class="form-control title-input" autocomplete="off" type="number" id="no-of-bed-rooms" autocomplete="off" name="no_of_bed_rooms" required="TRUE">
                                                 <option value="" class="active light-c"> -- No of Rooms -- </option>
-                                                <?php 
-                                                for($i = 1; $i<=50; $i++) {
-                                                   ?>
-                                                 <option value="<?php echo $i; ?>" class="active light-c"><?php echo $i; ?></option>
-                                                 
                                                 <?php
-                                                
+                                                for ($i = 1; $i <= 50; $i++) {
+                                                    $selected = '';
+                                                    if($PROPERTY->no_of_bed_rooms == $i) {
+                                                        $selected = 'selected';
+                                                    }
+                                                    ?>
+                                                    <option value="<?php echo $i; ?>" <?= $selected; ?> class="active light-c"><?php echo $i; ?></option>
+
+                                                    <?php
                                                 }
                                                 ?>
                                             </select>

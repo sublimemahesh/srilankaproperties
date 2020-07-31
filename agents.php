@@ -95,8 +95,10 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                 </div>
                                                 <div class="col-md-8 col-sm-8 agent-name upper-padd a-i">
                                                     <div class="agent-info">
+
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
                                                         <h3><a href="properties.php?agent=<?= $member['id']; ?>" class="a-name font-m"><?= $member['name']; ?></a></h3>
+
                                                         <div class="a-details">
                                                             <p><?= $member['description']; ?></p>
                                                         </div>
