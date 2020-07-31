@@ -123,7 +123,17 @@ $comments = $COMMENT->all();
                                                             ?>
                                                         </a>
                                                     </h4>
-                                                    <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i> <?= $CITY->name; ?></span>
+                                                    <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i>
+                                                        
+                                                              <?php
+                                                            if (strlen ($CITY->name) > 14) {
+                                                                echo substr($CITY->name, 0, 10) . '...';
+                                                            } else {
+                                                                echo $CITY->name;
+                                                            }
+                                                            ?>
+                                                        
+                                                    </span>
                                                     <span class="category"><i class='fa fa-list'></i>
                                                         <?php
                                                         if (strlen($CATEGORY->name) > 17) {
@@ -192,12 +202,6 @@ $comments = $COMMENT->all();
                     </div>
                 </div>
             </div>
-            <!--                    <select name="search" class=" chosen-select" data-placeholder="Choose a country..." multiple  >
-                  <option selected>Location</option>
-                  <option selected>Colombo</option>
-                  <option>Maharagama</option>
-              </select>-->
-
             <!-- Start Site Footer -->
             <?php include './footer.php'; ?>
             <!-- End Site Footer -->

@@ -120,14 +120,14 @@ $PROPERTY = new Property($id);
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-md-12">
+<!--                                    <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="housetype" class="form-control"  value="<?php echo $PROPERTY->housetype; ?>" autocomplete="off" name="housetype" required="true">
                                                 <label class="form-label">House Type</label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -136,22 +136,22 @@ $PROPERTY = new Property($id);
                                             </div>
                                         </div>
                                     </div> 
-                                    <div class="col-sm-12">
+<!--                                    <div class="col-sm-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="short_description" class="form-control" value="<?php echo $PROPERTY->short_description; ?>"  name="short_description">
                                                 <label class="form-label">Location</label>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-12">
+                                    </div>-->
+<!--                                    <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="map" class="form-control" value="<?php echo $PROPERTY->map; ?>" autocomplete="off" name="map" required="true">
                                                 <label class="form-label">Map Code</label>
                                             </div>
                                         </div>
-                                    </div>
+                                    </div>-->
                                     <div class="col-md-12">                                       
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -169,7 +169,6 @@ $PROPERTY = new Property($id);
                                             </div>
                                         </div>
                                     </div>
-
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -178,13 +177,14 @@ $PROPERTY = new Property($id);
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+<!--                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label for="features">Features</label>
                                         <div class="form-line">
                                             <textarea id="features" name="features" class="form-control" rows="5"><?php echo $PROPERTY->features; ?></textarea> 
                                         </div>
 
-                                    </div>
+                                    </div>-->
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label for="description">Description</label>
                                         <div class="form-line">
