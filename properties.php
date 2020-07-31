@@ -3,6 +3,7 @@ include_once 'class/include.php';
 
 $category1 = '';
 $subcategory1 = '';
+$agent = '';
 $page = '';
 if (isset($_GET["page"])) {
     $page = (int) $_GET["page"];
@@ -23,6 +24,12 @@ if (isset($_GET['subcategory'])) {
     $SUBCATEGORY = new SubCategory($subcategory1);
     $properties = Property::getPropertiesBySubCategoryWithLimit($subcategory1, $pagelimit, $setlimit);
     $title = $SUBCATEGORY->name;
+}
+if (isset($_GET['agent'])) {
+    $agent = $_GET['agent'];
+    $MEMBER = new Member($agent);
+    $properties = Property::getPropertiesByMemberWithLimit($agent, $pagelimit, $setlimit);
+    $title = $MEMBER->name;
 }
 
 
@@ -86,8 +93,8 @@ if (isset($_GET['subcategory'])) {
             <div class="spacer-40"></div>
             <div id="content" class="content full">
                 <div class="container">
-                    <div class="row">
-                        <div class="col-md-9">
+                    <div class="row d-flex">
+                        <div class="col-md-9 <?= isset($_GET['agent']) ? "order-2" : "" ?>">
                             <div class="property-grid">
                                 <ul class="grid-holder col-3">
                                     <?php
@@ -141,52 +148,72 @@ if (isset($_GET['subcategory'])) {
                                 </ul>
                             </div>
                             <div class="">
-                                <?php Property::showPagination($category1, $subcategory1, $setlimit, $page); ?>
+                                <?php Property::showPagination($category1, $subcategory1, $agent, $setlimit, $page); ?>
                             </div>
                         </div>
                         <!-- Start Sidebar -->
-                        <div class="sidebar right-sidebar col-md-3 serch-dev">
-                            <div class="widget sidebar-widget">
-                                <h3 class="widgettitle search-under">Search Properties</h3>
-                                <div class="full-search-form ">
-                                    <form action="search.php" id="search-form">
-                                        <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
-                                        <select name="category" id="category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>Select Category</option>
-                                            <?php
-                                            foreach (Category::all() as $category) :
-                                            ?>
-                                                <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
-                                            <option value="" selected>All Sub Categories</option>
-                                            <?php
-                                            foreach (SubCategory::all() as $subcategory) :
-                                            ?>
-                                                <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <select name="district" id="district" class="form-control input-lg selectpicker">
-                                            <option value="" selected>All Districts</option>
-                                            <?php
-                                            foreach (District::all() as $district) :
-                                            ?>
-                                                <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <select name="city" id="city" class="form-control input-lg selectpicker">
-                                            <option value="" selected>All Cities</option>
-                                            <?php
-                                            foreach (City::all() as $city) :
-                                            ?>
-                                                <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
-                                            <?php endforeach; ?>
-                                        </select>
-                                        <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
-                                    </form>
+                        <div class="sidebar right-sidebar col-md-3 serch-dev <?= isset($_GET['agent']) ? "order-1" : "" ?>">
+                            <?php if (isset($_GET['agent'])) : ?>
+                                <div class="widget sidebar-widget popular-agent column"> 
+                                    <a href="agent-detail.html"><img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="" class="img-thumbnail"></a>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                        <h3 class="margin-0"><?= $MEMBER->name ?></h3>
+                                        <?php
+                                            if (strlen($MEMBER->description) > 100) {
+                                                echo substr($MEMBER->description, 0, 100) . '...';
+                                            } else {
+                                                echo $MEMBER->description;
+                                            }
+                                        ?>  
+                                        
+                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> 
+                                        </div> 
+                                    </div>
                                 </div>
-                            </div>
+                            <?php else : ?>
+                                <div class="widget sidebar-widget">
+                                    <h3 class="widgettitle search-under">Search Properties</h3>
+                                    <div class="full-search-form ">
+                                        <form action="search.php" id="search-form">
+                                            <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
+                                            <select name="category" id="category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>Select Category</option>
+                                                <?php
+                                                foreach (Category::all() as $category) :
+                                                ?>
+                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
+                                                <option value="" selected>All Sub Categories</option>
+                                                <?php
+                                                foreach (SubCategory::all() as $subcategory) :
+                                                ?>
+                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="district" id="district" class="form-control input-lg selectpicker">
+                                                <option value="" selected>All Districts</option>
+                                                <?php
+                                                foreach (District::all() as $district) :
+                                                ?>
+                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <select name="city" id="city" class="form-control input-lg selectpicker">
+                                                <option value="" selected>All Cities</option>
+                                                <?php
+                                                foreach (City::all() as $city) :
+                                                ?>
+                                                    <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
+                                                <?php endforeach; ?>
+                                            </select>
+                                            <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
+                                        </form>
+                                    </div>
+                                </div>
+                            <?php endif; ?>
                         </div>
                     </div>
                 </div>
