@@ -2084,8 +2084,8 @@ html[xmlns] .slides {
 .location {
     font-size: 60%;
     color: #000000;
-    font-family: 'Open Sans', sans-serif!important;
-    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
 }
 
 .location>i {
@@ -4111,8 +4111,8 @@ span.progress-bar-tooltip:after {
     font-size: 100%;
     padding: 0 0 10px 0;
     color: #000000;
-    font-family: 'Open Sans', sans-serif !important;
-    font-style: italic;
+    font-family: "Times New Roman", Times, serif;
+    font-weight: bold;
 }
 
 .category i {
@@ -4240,7 +4240,7 @@ span.progress-bar-tooltip:after {
 }
 
 .property-info h4 a {
-    font-weight: 500;
+    font-weight: bold;
 }
 
 i.login-icon {
