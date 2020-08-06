@@ -91,6 +91,10 @@ $MEMBER = new Member($PROPERTY->member);
                                                         <td><?= $CITY->name; ?></td>
                                                     </tr>
                                                     <tr>
+                                                        <th>Image</th>
+                                                        <td><img src="../upload/properties/<?= $PROPERTY->image_name; ?>" /></td>
+                                                    </tr>
+                                                    <tr>
                                                         <th>Address</th>
                                                         <td><?= $PROPERTY->address; ?></td>
                                                     </tr>
@@ -104,7 +108,7 @@ $MEMBER = new Member($PROPERTY->member);
                                                     </tr>
                                                     <tr>
                                                         <th>Price (Rs)</th>
-                                                        <td><?= 'Rs.' . number_format($PROPERTY->price, 2); ?></td>
+                                                        <td><?= 'Rs. ' . number_format($PROPERTY->price, 2); ?></td>
                                                     </tr>
                                                     <tr>
                                                         <th>Price (USD)</th>

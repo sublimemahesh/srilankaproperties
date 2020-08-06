@@ -62,7 +62,7 @@ $PROPERTY = new Property($id);
                                         <div class="form-group form-float">
                                             <div class="form-line">
                                                 <input type="text" id="title" class="form-control"  value="<?php echo $PROPERTY->title; ?>"  name="title"  required="TRUE">
-                                                <label class="form-label">Title</label>
+                                                <label class="form-label">Property Heading</label>
                                             </div>
                                         </div>
                                     </div>
