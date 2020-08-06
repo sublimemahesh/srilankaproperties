@@ -330,6 +330,15 @@ class Property {
             $PROPERTY_PHOTOS->delete();
         }
     }
+    public function deleteProperty() {
+
+        $query = 'DELETE FROM `property` WHERE id="' . $this->id . '"';
+        unlink(Helper::getSitePath() . "upload/property/" . $this->image_name);
+
+        $db = new Database();
+
+        return $db->readQuery($query);
+    }
 
     public function arrange($key, $img) {
         $query = "UPDATE `property` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";

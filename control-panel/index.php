@@ -101,6 +101,7 @@ $SLIDER_IMAGES = count(Slider::all());
                             </div>
                         </div>
                     </a>
+                    <a href="manage-pages.php">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="info-box bg-orange hover-expand-effect">
                             <div class="icon">
@@ -112,6 +113,7 @@ $SLIDER_IMAGES = count(Slider::all());
                             </div>
                         </div>
                     </div>
+                     </a>
                      <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                         <div class="card">
                             <div class="header bg-blue-grey">

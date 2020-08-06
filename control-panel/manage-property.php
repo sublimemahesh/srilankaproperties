@@ -101,6 +101,7 @@ if (isset($_GET['type'])) {
                                                             <td>
                                                                 <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-eye-open edit-btn" title="View Property"></button></a>
                                                                 <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="<?= $property['status'] == 0 ? "Approve this Property" : "Reject this Property" ?>"> </button> </a>
+                                                                <a href="#" class="delete-properties" data-id="<?= $properties['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete this Property"></button></a>
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>
@@ -138,7 +139,7 @@ if (isset($_GET['type'])) {
     <script src="plugins/jquery-datatable/extensions/export/vfs_fonts.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/buttons.html5.min.js"></script>
     <script src="plugins/jquery-datatable/extensions/export/buttons.print.min.js"></script>
-
+    <script src="delete/js/properties.js" type="text/javascript"></script>
     <script src="js/admin.js"></script>
     <script src="js/pages/tables/jquery-datatable.js"></script>
 
