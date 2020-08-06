@@ -144,11 +144,6 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                             </div>
                         </div>
                          <div class="card">
-                            <div class="header">
-                                <h2>
-                                    View Property Photos
-                                </h2>
-                            </div>
                             <div class="body">
                                 <div>
                                     <div class="row clearfix">
@@ -176,7 +171,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                                                             </div>-->
                                         <div class="row">
                                             <div class="col-md-12">
-                                                <div class="panel-box form-box-inner img-sec">
+                                                <div class="panel-box form-box-inner img-sec view-img-box">
                                                     <div class="row clearfix">
                                                         <?php
                                                         $PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
@@ -206,14 +201,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-md-12">
-                                                <div class="btn-back">
-                                                    <a href="manage-property.php?type=<?= $PROPERTY->status; ?>" class="btn btn-success back-btn">Back</a>
-                                                </div>
-                                            </div>
-                                        </div>
-
+                                       
                                     </div>
                                 </div>
                             </div>

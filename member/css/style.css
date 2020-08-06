@@ -7852,3 +7852,7 @@ a.forgot-password:hover {
 .btn-edit{
     margin-left: -15px !important;
 }
+.view-img-box{
+    padding-left: 14px !important;
+    padding-right: 16px !important;
+}
