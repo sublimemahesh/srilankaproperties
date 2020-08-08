@@ -181,7 +181,7 @@ class Property {
 
     public function getPropertiesByCategoryWithLimit($category, $pageLimit, $setLimit) {
 
-        $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` ASC  LIMIT " . $pageLimit . " , " . $setLimit;
+        $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC  LIMIT " . $pageLimit . " , " . $setLimit;
         $db = new Database();
         $result = $db->readQuery($query);
 
@@ -210,7 +210,7 @@ class Property {
     }
     public function getPropertiesByMemberWithLimit($member, $pageLimit, $setLimit) {
 
-        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` ASC LIMIT " . $pageLimit . " , " . $setLimit;
+        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit;
         $db = new Database();
         $result = $db->readQuery($query);
 
@@ -225,7 +225,7 @@ class Property {
     public function getPropertiesBySubCategoryWithLimit($subcategory, $pageLimit, $setLimit)
     {
 
-        $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` ASC LIMIT " . $pageLimit . " , " . $setLimit;
+        $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit;
         $db = new Database();
         $result = $db->readQuery($query);
 
@@ -240,7 +240,7 @@ class Property {
 
     public function getPropertiesBySubCategory($subcategory) {
 
-        $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` ASC";
+        $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
 
