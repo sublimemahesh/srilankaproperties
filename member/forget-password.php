@@ -32,15 +32,15 @@ if (isset($_SESSION['m_id'])) {
     </head>
     <body class="theme-2">
         <div class="container text-center">
-            <img src="../images/realstate/sl-property-logo.png" class="logo-login" style="width: 150px"/><B class="memberr-log">Member</B>
+            <img src="../images/realstate/sl-property-logo.png" class="logo-login logo-f" style="width: 150px"/><B class="memberr-log"></B>
         </div>
         <!-- Start My Account Section -->
         <section class="">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6  col-md-offset-3 mb-4 mb-md-0">
-                        <div class="title">
-                            <h4>Forget Password...</h4>
+                        <div class="title-f">
+                            <h4>Forget Password</h4>
                         </div>
                         
                         <small>Please enter your emil address to change password or username.

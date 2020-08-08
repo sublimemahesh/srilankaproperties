@@ -83,7 +83,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                         <?php
                                                         if (isset($member['picture']) && !empty($member['picture'])) {
                                                         ?>
-                                                            <img src="upload/member/profile/<?= $member['picture']; ?>" alt="">
+                                                        <a href="agent-properties.php"><img src="upload/member/profile/<?= $member['picture']; ?>" alt=""></a>
                                                         <?php
                                                         } else {
                                                         ?>
@@ -97,7 +97,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                     <div class="agent-info">
 
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
-                                                        <h3><a href="agent-properties.php" class="a-name font-m"><?= $member['name']; ?></a></h3>
+                                                        <h3><a href="agent-properties.php?agent=<?= $member['id']; ?>" class="a-name font-m"><?= $member['name']; ?></a></h3>
 
                                                         <div class="a-details">
                                                             <p><?= $member['description']; ?></p>
@@ -135,7 +135,16 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                 $DISTRICT = new District($property['district']);
                                                 $CITY = new City($property['city']);
                                     ?>
-                                                <li class="item property-block"> <a href="view-property.php?id=<?= $property['id']; ?>" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt=""> <span class="badges"><?= $CATEGORY->name; ?></span> </a>
+                                                <li class="item property-block"> <a href="view-property.php?id=<?= $property['id']; ?>" class="property-featured-image"> <img src="upload/properties/<?= $property['image_name']; ?>" alt="">
+                                                         <?php
+                                                        if ($property['no_of_bed_rooms'] != 0) {
+                                                            ?>
+                                                            <span class="images-count">
+                                                                <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+                                                            <?php
+                                                        }
+                                                        ?>
+                                                        <span class="badges"><?= $CATEGORY->name; ?></span> </a>
                                                     <div class="property-info">
                                                         <h4>
                                                             <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
