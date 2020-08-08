@@ -4278,4 +4278,8 @@ div.column {
 }
 .agent-d{
     margin-top: 15px;
+    
+}
+.agent-contact-details {
+    text-align: justify;
 }
