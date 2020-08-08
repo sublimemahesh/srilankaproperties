@@ -164,7 +164,7 @@ if (isset($_GET['agent'])) {
                         <div class="sidebar right-sidebar col-md-3 serch-dev <?= isset($_GET['agent']) ? "order-1" : "" ?>">
                             <?php if (isset($_GET['agent'])) : ?>
                                 <div class="widget sidebar-widget popular-agent column"> 
-                                    <a href="agent-detail.html"><img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="" class="img-thumbnail"></a>
+                                    <a href="#"><img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="" class="img-thumbnail"></a>
                                     <div class="row">
                                         <div class="col-md-12">
                                         <h3 class="margin-0"><?= $MEMBER->name ?></h3>
@@ -176,7 +176,7 @@ if (isset($_GET['agent'])) {
                                             }
                                         ?>  
                                         
-                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> 
+<!--                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> -->
                                         </div> 
                                     </div>
 
