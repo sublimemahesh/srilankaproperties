@@ -133,7 +133,7 @@ if (isset($_GET['id'])) {
                                                         <i class="fa fa-phone"></i> Phone
                                                         <span><?= $PROPERTY->contact; ?></span>
                                                     </div>
-                                                    
+
                                                     <?php
 
                                                     if ($PROPERTY->no_of_bed_rooms != 0) {
@@ -264,32 +264,48 @@ if (isset($_GET['id'])) {
                                                 <option value="" selected>Select Category</option>
                                                 <?php
                                                 foreach (Category::all() as $category) :
+                                                    $selected = '';
+                                                    if ($category['id'] == $PROPERTY->category) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                    <option value="<?php echo $category['id']; ?>" <?= $selected; ?>><?php echo $category['name']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                                 <option value="" selected>All Sub Categories</option>
                                                 <?php
-                                                foreach (SubCategory::all() as $subcategory) :
+                                                foreach (SubCategory::getSubCategoriesByCategory($PROPERTY->category) as $subcategory) :
+                                                    $selected = '';
+                                                    if ($subcategory['id'] == $PROPERTY->sub_category) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
+                                                    <option value="<?php echo $subcategory['id']; ?>" <?= $selected; ?>><?php echo $subcategory['name']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <select name="district" id="district" class="form-control input-lg selectpicker">
                                                 <option value="" selected>All Districts</option>
                                                 <?php
                                                 foreach (District::all() as $district) :
+                                                    $selected = '';
+                                                    if ($district['id'] == $PROPERTY->district) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $district['id']; ?>"><?php echo $district['name']; ?></option>
+                                                    <option value="<?php echo $district['id']; ?>" <?= $selected; ?>><?php echo $district['name']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <select name="city" id="city" class="form-control input-lg selectpicker">
                                                 <option value="" selected>All Cities</option>
                                                 <?php
-                                                foreach (City::all() as $city) :
+                                                foreach (City::GetCitiesByDistrict($PROPERTY->district) as $city) :
+                                                    $selected = '';
+                                                    if ($city['id'] == $PROPERTY->city) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $city['id']; ?>"><?php echo $city['name']; ?></option>
+                                                    <option value="<?php echo $city['id']; ?>" <?= $selected; ?>><?php echo $city['name']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <button type="submit" class="btn btn-primary btn-block" id="btn-search"><i class="fa fa-search"></i> Search</button>
