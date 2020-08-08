@@ -15,6 +15,7 @@ $setlimit = 40;
 $pagelimit = ($page * $setlimit) - $setlimit;
 if (isset($_GET['category'])) {
     $category1 = $_GET['category'];
+    $cat = $_GET['category'];
     $CATEGORY = new Category($category1);
     $properties = Property::getPropertiesByCategoryWithLimit($category1, $pagelimit, $setlimit);
     $title = $CATEGORY->name;
@@ -22,6 +23,7 @@ if (isset($_GET['category'])) {
 if (isset($_GET['subcategory'])) {
     $subcategory1 = $_GET['subcategory'];
     $SUBCATEGORY = new SubCategory($subcategory1);
+    $cat = $SUBCATEGORY->category;
     $properties = Property::getPropertiesBySubCategoryWithLimit($subcategory1, $pagelimit, $setlimit);
     $title = $SUBCATEGORY->name;
 }
@@ -124,8 +126,8 @@ if (isset($_GET['agent'])) {
                                                             </a>
                                                         </h4>
                                                         <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i>
-                                                              <?php
-                                                            if (strlen ($CITY->name) > 14) {
+                                                            <?php
+                                                            if (strlen($CITY->name) > 14) {
                                                                 echo substr($CITY->name, 0, 10) . '...';
                                                             } else {
                                                                 echo $CITY->name;
@@ -163,21 +165,21 @@ if (isset($_GET['agent'])) {
 
                         <div class="sidebar right-sidebar col-md-3 serch-dev <?= isset($_GET['agent']) ? "order-1" : "" ?>">
                             <?php if (isset($_GET['agent'])) : ?>
-                                <div class="widget sidebar-widget popular-agent column"> 
+                                <div class="widget sidebar-widget popular-agent column">
                                     <a href="agent-detail.html"><img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="" class="img-thumbnail"></a>
                                     <div class="row">
                                         <div class="col-md-12">
-                                        <h3 class="margin-0"><?= $MEMBER->name ?></h3>
-                                        <?php
+                                            <h3 class="margin-0"><?= $MEMBER->name ?></h3>
+                                            <?php
                                             if (strlen($MEMBER->description) > 100) {
                                                 echo substr($MEMBER->description, 0, 100) . '...';
                                             } else {
                                                 echo $MEMBER->description;
                                             }
-                                        ?>  
-                                        
-                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> 
-                                        </div> 
+                                            ?>
+
+                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4>
+                                        </div>
                                     </div>
 
                                 </div>
@@ -191,17 +193,27 @@ if (isset($_GET['agent'])) {
                                                 <option value="" selected>Select Category</option>
                                                 <?php
                                                 foreach (Category::all() as $category) :
+                                                    $selected = '';
+                                                    if ($category['id'] == $cat) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $category['id']; ?>"><?php echo $category['name']; ?></option>
+                                                    <option value="<?php echo $category['id']; ?>" <?= $selected; ?>><?php echo $category['name']; ?></option>
                                                 <?php endforeach; ?>
                                             </select>
                                             <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                                 <option value="" selected>All Sub Categories</option>
                                                 <?php
-                                                foreach (SubCategory::all() as $subcategory) :
+                                                foreach (SubCategory::getSubCategoriesByCategory($cat) as $subcategory) :
+                                                    $selected = '';
+                                                    if ($subcategory['id'] == $subcategory1) :
+                                                        $selected = 'selected';
+                                                    endif;
                                                 ?>
-                                                    <option value="<?php echo $subcategory['id']; ?>"><?php echo $subcategory['name']; ?></option>
-                                                <?php endforeach; ?>
+                                                    <option value="<?php echo $subcategory['id']; ?>" <?= $selected; ?>><?php echo $subcategory['name']; ?></option>
+                                                <?php
+                                                endforeach;
+                                                ?>
                                             </select>
                                             <select name="district" id="district" class="form-control input-lg selectpicker">
                                                 <option value="" selected>All Districts</option>
