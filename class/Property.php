@@ -166,7 +166,7 @@ class Property {
 
     public function getPropertiesByCategory($category) {
 
-        $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` ASC";
+        $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
 
@@ -196,7 +196,7 @@ class Property {
 
     public function getPropertiesByMember($member) {
 
-        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` ASC";
+        $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
 
@@ -377,6 +377,32 @@ class Property {
     public function getAllPropertiesByLimit($pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `property` WHERE `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit;
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+    public function getDistinctCategoriesByMember($id) {
+
+        $query = "SELECT `category` FROM `property` WHERE `member` = $id AND `status` = 1 GROUP BY `category` ORDER BY `category` ASC";
+        $db = new Database();
+        $result = $db->readQuery($query);
+        $array_res = array();
+
+        while ($row = mysql_fetch_array($result)) {
+            array_push($array_res, $row);
+        }
+
+        return $array_res;
+    }
+    public function getPropertiesByMemberAndCategory($id, $category) {
+
+        $query = "SELECT * FROM `property` WHERE `member` = $id AND `status` = 1 AND `category` = $category ORDER BY `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
