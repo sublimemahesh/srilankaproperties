@@ -8,7 +8,7 @@ if (isset($_POST['create'])) {
     $VALID = new Validator();
 
     $ADVERTISEMENT->caption = $_POST['caption']; 
-    $ADVERTISEMENT->property = $_POST['property']; 
+    $ADVERTISEMENT->url = $_POST['url']; 
 
     $dir_dest = '../../upload/advertisement/';
 
@@ -36,8 +36,7 @@ if (isset($_POST['create'])) {
 
     $VALID->check($ADVERTISEMENT, [
         'caption' => ['required' => TRUE], 
-        'image_name' => ['required' => TRUE],
-        'property' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
@@ -91,14 +90,13 @@ if (isset($_POST['update'])) {
 
     $ADVERTISEMENT->image_name = $_POST['oldImageName'];
     $ADVERTISEMENT->caption = $_POST['caption'];
-    $ADVERTISEMENT->property = $_POST['property'];
+    $ADVERTISEMENT->url = $_POST['url'];
      
  
     $VALID = new Validator();
     $VALID->check($ADVERTISEMENT, [
         'caption' => ['required' => TRUE], 
-        'image_name' => ['required' => TRUE],
-        'property' => ['required' => TRUE]
+        'image_name' => ['required' => TRUE]
     ]);
 
     if ($VALID->passed()) {
