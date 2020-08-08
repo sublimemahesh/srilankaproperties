@@ -59,7 +59,7 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
+                                <!-- <div class="col-md-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
                                             <select class="form-control" name="property" id="property">
@@ -70,13 +70,21 @@ include_once(dirname(__FILE__) . '/auth.php');
                                                     foreach ($properties as $key => $property) {
                                                 ?>
                                                         <option value="<?= $property['id'] ?>">
-                                                            <?= '#' . $property['id'] . ' - ' .$property['title'] ?>
+                                                            <?= '#' . $property['id'] . ' - ' . $property['title'] ?>
                                                         </option>
                                                 <?php
                                                     }
                                                 }
                                                 ?>
                                             </select>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <div class="col-md-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
+                                            <input type="text" id="url" class="form-control" autocomplete="off" name="url" required="true">
+                                            <label class="form-label">Url</label>
                                         </div>
                                     </div>
                                 </div>

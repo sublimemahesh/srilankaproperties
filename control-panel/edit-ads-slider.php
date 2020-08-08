@@ -46,7 +46,7 @@ $ADVERTISEMENT = new Advertisement($id);
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Edit slider
+                                Edit Advertiesment Banner
                             </h2>
 
                         </div>
@@ -71,6 +71,14 @@ $ADVERTISEMENT = new Advertisement($id);
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
+                                            <input type="text" id="url" class="form-control" value="<?php echo $ADVERTISEMENT->url; ?>" name="url" required="TRUE">
+                                            <label class="form-label">Url</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-md-12">
+                                    <div class="form-group form-float">
+                                        <div class="form-line">
                                             <select class="form-control" name="property" id="property">
                                                 <option value=""> --Please Select the Property-- </option>
                                                 <?php
@@ -92,7 +100,7 @@ $ADVERTISEMENT = new Advertisement($id);
                                             </select>
                                         </div>
                                     </div>
-                                </div>
+                                </div> -->
 
 
                                 <div class="col-md-12">
