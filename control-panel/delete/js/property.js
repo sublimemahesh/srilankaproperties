@@ -2,38 +2,40 @@ $(document).ready(function () {
     $('.delete-property').click(function () {
 
         var id = $(this).attr("data-id");
-
-        swal({
-            title: "Are you sure?",
-            text: "You will not be able to recover this imaginary file!",
-            type: "warning",
+        Swal.fire({
+            title: 'Are you sure?',
+            text: `You'r about to delete this proprty!`,
+            icon:  `warning`,
             showCancelButton: true,
-            confirmButtonColor: "#DD6B55",
-            confirmButtonText: "Yes, delete it!",
-            closeOnConfirm: false
-        }, function () {
-
-            $.ajax({
-                url: "delete/ajax/property.php",
-                type: "POST",
-                data: {id: id, option: 'delete'},
-                dataType: "JSON",
-                success: function (jsonStr) {
-                    if (jsonStr.status) {
-
-                        swal({
-                            title: "Deleted!",
-                            text: "Your imaginary file has been deleted.",
-                            type: 'success',
-                            timer: 2000,
-                            showConfirmButton: false
-                        });
-
-                        $('#div' + id).remove();
-
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: `Yes, delete it!`
+          }).then((result) => {
+            if (result.value) {
+                $.ajax({
+                    url: "delete/ajax/property.php",
+                    type: "POST",
+                    data: {
+                        id,
+                        option: 'delete'
+                    },
+                    dataType: "JSON",
+                    success: function (data) {
+                        if (data.status) {
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Deleted!',
+                                text: 'Proprty has been deleted.',
+                                showConfirmButton: false,
+                                timer: 1500
+                              })
+                            $('#row_' + id).remove();
+                        }
+                        
                     }
-                }
-            });
-        });
+        
+                })
+            }
+          })
     });
 });

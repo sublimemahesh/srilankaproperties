@@ -91,7 +91,7 @@ if (isset($_GET['type'])) {
                                                         $MEM = New Member($property['member']);
                                                         $DISTRICT = new District($property['district']);
                                                         ?>
-                                                        <tr>
+                                                        <tr id="row_<?= $property['id']; ?>">
                                                             <!-- <td><img src="../upload/property/<?php echo $property['image_name']; ?>" class="img-responsive img-thumbnail" width="100"></td> -->
                                                             <td><?= $property['id']; ?></td>
                                                             <td><?= $property['title']; ?></td>
@@ -101,7 +101,7 @@ if (isset($_GET['type'])) {
                                                             <td>
                                                                 <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-eye-open edit-btn" title="View Property"></button></a>
                                                                 <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="<?= $property['status'] == 0 ? "Approve this Property" : "Reject this Property" ?>"> </button> </a>
-                                                                <a href="#" class="delete-properties" data-id="<?= $properties['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete this Property"></button></a>
+                                                                <a href="#" class="delete-property" data-id="<?= $property['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete this Property"></button></a>
                                                             </td>
                                                         </tr>
                                                     <?php endforeach; ?>

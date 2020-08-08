@@ -308,7 +308,6 @@ class Property {
         unlink(Helper::getSitePath() . "upload/properties/" . $this->image_name);
 
         $query = 'DELETE FROM `property` WHERE id="' . $this->id . '"';
-
         $db = new Database();
 
         return $db->readQuery($query);
