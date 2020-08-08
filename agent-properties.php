@@ -172,6 +172,7 @@ if (isset($_GET['id'])) {
                                                                     <?php
                                                                     foreach ($properties as $key => $property) :
                                                                         // if ($key < 20) :
+
                                                                         $CATEGORY = new Category($property['category']);
                                                                         $SUBCATEGORY = new SubCategory($property['sub_category']);
                                                                         $DISTRICT = new District($property['district']);
@@ -232,6 +233,7 @@ if (isset($_GET['id'])) {
                                                         }
                                                     }
                                                     ?>
+
                                                 </div>
                                             </div>
                                         </div>

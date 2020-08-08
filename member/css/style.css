@@ -7856,3 +7856,20 @@ a.forgot-password:hover {
     padding-left: 14px !important;
     padding-right: 16px !important;
 }
+.title-f{
+    position: relative !important;
+    border-bottom: 2px solid #014586;
+    margin-bottom: 25px !important;
+/*    text-transform: uppercase !important;*/
+    font-size: 25px;
+    margin-right: 265px !important;
+    font-weight: bold !important;
+    text-transform: uppercase !important;
+    padding-bottom: 10px !important;
+}
+.logo-f{
+    margin-left: -25px;
+}
+.no-bed{
+    margin-right: 3px !important;
+}

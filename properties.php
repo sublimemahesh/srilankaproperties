@@ -111,6 +111,14 @@ if (isset($_GET['agent'])) {
                                                 <div class="property-block">
                                                     <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                         <img src="upload/properties/<?= $property['image_name'] ?>">
+                                                         <?php
+                                                        if ($property['no_of_bed_rooms'] != 0) {
+                                                            ?>
+                                                            <span class="images-count">
+                                                                <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
