@@ -4272,3 +4272,10 @@ div.column {
 .order-2 {
     order: 2;
 }
+.tab-padd{
+    padding-left: 18.5px !important;
+    padding-right: 18.5px !important;
+}
+.agent-d{
+    margin-top: 15px;
+}
