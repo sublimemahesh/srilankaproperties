@@ -138,7 +138,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                     <label for="image">Main Image <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
@@ -150,7 +150,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                     <label for="address">Address</label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">
@@ -163,7 +163,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right title-mobile text-i">
                                     <label for="email">Email<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom text-input-i">

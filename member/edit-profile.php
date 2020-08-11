@@ -212,7 +212,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                     <div class="col-lg-3 col-md-3 form-control-label text-right text-l text-i">
                                         <label for="nic_fr_photo">Profile Picture<span class="text-danger">*</span></label>
                                     </div>
-                                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-10 p-bottom ">
+                                    <div class="col-lg-7 col-md-7 col-sm-11 col-xs-10 p-bottom p-l-sm-20">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <?php
@@ -227,7 +227,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2 p-bottom">
+                                    <div class="col-lg-2 col-md-2 col-sm-1 col-xs-2 p-bottom">
                                         <div class="form-group">
                                             <div class="form-line">
                                                 <a href="../upload/member/profile/<?= $MEMBER->picture; ?>" target="_blank" class="btn btn-lg btn-info bt-color img-icon">

@@ -112,13 +112,14 @@ $PROPERTY = new Property($INQUIRY->property);
                 </div>
             </div>
         </div>
-        <?php include './footer.php'; ?>
+    </div>
+    <?php include './footer.php'; ?>
 
-        <!-- Jquery js -->
-        <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
+    <!-- Jquery js -->
+    <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
 
-        <script src="../js/bootstrap.js" type="text/javascript"></script>
-        <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
+    <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <script src="js/email-verification.js" type="text/javascript"></script>
 
 </body>

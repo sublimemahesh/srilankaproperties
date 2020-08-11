@@ -35,7 +35,7 @@
         <div class="navbar-header">
             <a href="javascript:void(0);" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
             <a href="javascript:void(0);" class="bars"></a>
-            <a class="navbar-brand" href="index.php">SUBLIME - WEB SITE CONTROL PANEL</a>
+            <a class="navbar-brand" href="index.php">SYNOTEC HOLDINGS - WEB SITE CONTROL PANEL</a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse">
             <ul class="nav navbar-nav navbar-right">
@@ -439,7 +439,7 @@
         <!-- Footer -->
         <div class="legal">
             <div class="copyright">
-                &copy; <?php echo date('Y'); ?> <a href="javascript:void(0);">BY : SUBLIME HOLDINGS</a>.
+                &copy; <?php echo date('Y'); ?> <a href="javascript:void(0);">BY : SYNOTEC HOLDINGS (PVT) LTD</a>.
             </div>
             <div class="version">
                 <b>Version: </b> 1.0.0

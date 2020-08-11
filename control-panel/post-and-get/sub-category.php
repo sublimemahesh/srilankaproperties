@@ -69,13 +69,15 @@ if (isset($_POST['update'])) {
     }
 }
 
-if (isset($_POST['save-data'])) {
+if (isset($_POST['save-arrange'])) {
 
-    foreach ($_POST['sort'] as $key => $id) {
+    foreach ($_POST['sort'] as $key => $img) {
         $key = $key + 1;
 
-        $SUB_CATEGORY = SubCategory::arrange($key, $id);
-
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        $SUB_CATEGORY = SubCategory::arrange($key, $img);
     }
-}    
+    $VALID = new Validator();
+        $VALID->addError("Your data was arranged successfully", 'success');
+        $_SESSION['ERRORS'] = $VALID->errors();
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+}

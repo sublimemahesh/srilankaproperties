@@ -178,7 +178,7 @@ $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                                         if (count($PHOTO) > 0) {
                                                             foreach ($PHOTO as $key => $photo) {
                                                                 ?>
-                                                                <div class="col-md-3" id="div<?= $photo['id']; ?>">
+                                                                <div class="col-md-3 col-sm-4" id="div<?= $photo['id']; ?>">
                                                                     <div class="photo-img-container view-p-img">
                                                                         <img src="../upload/properties/gallery/thumb/<?= $photo['image_name']; ?>" class="img-responsive">
                                                                     </div>

@@ -37,7 +37,7 @@ $VALUES = new Page(4);
 </head>
 
 <body>
-    <div class="body">
+    <div class="body about-us-page">
         <!-- Start Site Header -->
         <?php include './header.php'; ?>
         <!-- End Site Header -->

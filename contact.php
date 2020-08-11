@@ -36,10 +36,7 @@ include_once 'class/include.php';
 </head>
 
 <body>
-    <!--[if lt IE 7]>
-                    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-            <![endif]-->
-    <div class="body">
+    <div class="body contact-us-page">
         <!-- Start Site Header -->
         <?php include './header.php'; ?>
         <!-- End Site Header -->
@@ -58,8 +55,9 @@ include_once 'class/include.php';
         </div>
         <!-- Start Content -->
         <div class="main" role="main">
-            <div class="full">
-                <div class="container contact-sec">
+        <div class="spacer-40"></div>
+            <div id="content" class="content full">
+                <div class="container">
                     <div class="page">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">

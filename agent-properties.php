@@ -42,7 +42,7 @@ if (isset($_GET['id'])) {
 </head>
 
 <body>
-    <div class="body">
+    <div class="body agent-properties-page">
         <!-- Start Site Header -->
         <?php include './header.php'; ?>
         <!-- End Site Header -->
@@ -63,28 +63,24 @@ if (isset($_GET['id'])) {
 
         <div class="main" role="main">
             <div class="main" role="main">
+            <div class="spacer-40"></div>
                 <div id="content" class="content full">
                     <div class="container">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="single-agent">
-                                    <!--                                        <div class="counts pull-right"><strong>18</strong><span>Properties</span></div>
-                                        <h2 class="page-title">Mia Kennedy</h2>-->
                                     <div class="row">
-                                        <div class="col-md-3 col-sm-3">
-                                            <img src="../srilankaproperties/images/realstate/a2 (1).png" alt="Mia Kennedy" class="img-thumbnail">
-                                            <!--                                            </div>-->
-
-                                            <!--                                             <div class="col-md-3 col-sm-3">-->
-                                            <div class="agent-contact-details">
-                                                <p class="agent-d">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam euismod sollicitudin nunc, eget pretium massa. Ut sed adipiscing enim, pellentesque ultrices erat. Integer placerat felis neque, et semper augue ullamcorper in. Pellentesque iaculis leo iaculis aliquet ultrices. Suspendisse potenti. Aenean ac magna faucibus, consectetur ligula vel, feugiat est. Nullam imperdiet semper neque eget euismod. Nunc commodo volutpat semper.</p>
+                                        <div class="col-md-3 col-sm-12">
+                                            <div class="col-md-12 col-sm-4">
+                                                <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="Mia Kennedy" class="img-thumbnail">
+                                            </div>
+                                            <div class="col-md-12 col-sm-8">
+                                                <div class="agent-contact-details">
+                                                    <p class="agent-d"><?= $MEMBER->description; ?></p>
+                                                </div>
                                             </div>
                                         </div>
-
-                                        <!--                                        </div>
-                                                                                    <div class="row">-->
-
-                                        <div class="col-md-9 col-sm-9">
+                                        <div class="col-md-9 col-sm-12">
                                             <div class="tabs">
                                                 <ul class="nav nav-tabs">
                                                     <li class="active"> <a data-toggle="tab" href="#all" class="tab-padd"> All </a> </li>
@@ -115,14 +111,22 @@ if (isset($_GET['id'])) {
                                                                     <div class="item property-block">
                                                                         <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                                             <img src="upload/properties/<?= $property['image_name'] ?>">
+                                                                            <?php
+                                                                            if ($property['no_of_bed_rooms'] != 0) {
+                                                                            ?>
+                                                                                <span class="images-count">
+                                                                                    <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+                                                                            <?php
+                                                                            }
+                                                                            ?>
                                                                             <span class="badges"><?= $CATEGORY->name; ?></span>
                                                                         </a>
                                                                         <div class="property-info">
                                                                             <h4>
                                                                                 <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                                     <?php
-                                                                                    if (strlen($property['title']) > 22) {
-                                                                                        echo substr($property['title'], 0, 20) . '...';
+                                                                                    if (strlen($property['title']) > 21) {
+                                                                                        echo substr($property['title'], 0, 19) . '...';
                                                                                     } else {
                                                                                         echo $property['title'];
                                                                                     }
@@ -183,14 +187,22 @@ if (isset($_GET['id'])) {
                                                                             <div class="item property-block">
                                                                                 <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                                                     <img src="upload/properties/<?= $property['image_name'] ?>">
+                                                                                    <?php
+                                                                                    if ($property['no_of_bed_rooms'] != 0) {
+                                                                                    ?>
+                                                                                        <span class="images-count">
+                                                                                            <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+                                                                                    <?php
+                                                                                    }
+                                                                                    ?>
                                                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                                                 </a>
                                                                                 <div class="property-info">
                                                                                     <h4>
                                                                                         <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                                             <?php
-                                                                                            if (strlen($property['title']) > 22) {
-                                                                                                echo substr($property['title'], 0, 20) . '...';
+                                                                                            if (strlen($property['title']) > 21) {
+                                                                                                echo substr($property['title'], 0, 19) . '...';
                                                                                             } else {
                                                                                                 echo $property['title'];
                                                                                             }

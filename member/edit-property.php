@@ -58,7 +58,7 @@ if (isset($_GET['id'])) {
                     <div class="panel-box form-box-inner">
                         <form class="form-horizontal" id="edit-property-form" method="post" action="" enctype="multipart/form-data">
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="title">Property Heading<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -70,7 +70,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="district">Category <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -96,7 +96,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="city">Sub Category <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -122,7 +122,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="district">District <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -148,7 +148,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="city">City <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -174,7 +174,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="image">Image <span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -187,7 +187,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="address">Address<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -199,7 +199,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="email">Email<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -211,7 +211,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="contact">Phone Number<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -270,7 +270,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                     <label for="description">Description<span class="text-danger">*</span></label>
                                 </div>
                                 <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12 p-bottom">
@@ -282,7 +282,7 @@ if (isset($_GET['id'])) {
                                 </div>
                             </div>
                             <div class="row">
-                                <div class="col-lg-3 col-md-3 form-control-label text-right">
+                                <div class="col-lg-3 col-md-3 form-control-label text-right text-i">
                                 </div>
                                 <div class="col-lg-9  col-md-9 col-sm-9 col-xs-12 p-l-0">
                                     <input type="hidden" name="member" value="<?= $_SESSION['m_id']; ?>" />

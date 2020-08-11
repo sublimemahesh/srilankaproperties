@@ -138,7 +138,7 @@ class Property {
 
     public function getAllPendingProperties() {
 
-        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 0 ORDER BY queue ASC";
+        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 0 ORDER BY `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();
@@ -152,7 +152,7 @@ class Property {
 
     public function getAllApprovedProperties() {
 
-        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 1 ORDER BY queue ASC";
+        $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 1 ORDER BY  `id` DESC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();

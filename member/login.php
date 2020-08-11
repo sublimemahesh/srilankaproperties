@@ -40,7 +40,7 @@ if (isset($_SESSION['m_id'])) {
     <section class="">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 mb-4 mb-md-0">
+                <div class="col-md-6 col-sm-6 mb-4 mb-md-0">
                     <div class="title-n">
                         <div>Member Sign in</div>
                     </div>
@@ -65,7 +65,7 @@ if (isset($_SESSION['m_id'])) {
                         </div>
                     </form>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 col-sm-6">
                     <div class="title-nn register-mob">
                         <div>New Member Register</div>
                     </div>
@@ -91,14 +91,14 @@ if (isset($_SESSION['m_id'])) {
                                 <input id="terms-and-conditions" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="forgot-password float-right">I agree to the company <a href="../terms-and-conditions.php" target="_blank">terms & conditions</a>.</span>
+                            <span class="forgot-password agree-label float-right">I agree to the company <a href="../terms-and-conditions.php" target="_blank">terms & conditions</a>.</span>
                         </div>
                         <div class="form-group form-check check-terms-and-conditions p-0">
                             <label>
                                 <input id="subscribe" name="subscribe" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="forgot-password float-right">Subscribe to stay updated with new products and offers!.</span>
+                            <span class="forgot-password agree-label float-right">Subscribe to stay updated with new products and offers!.</span>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary" name="register" id="register" value="Register">Register</button>

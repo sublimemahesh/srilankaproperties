@@ -18,7 +18,7 @@
                 <h3 class="widgettitle">Useful Links</h3>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="about.php">About Us</a></li>
+                    <li><a href="customer-feedback.php">Custome Feedback</a></li>
                     <li><a href="agents.php">Agents</a></li>
                     <li><a href="contact.php">Contact Us</a></li>
                     <li><a href="terms-and-conditions.php">Terms & Conditions</a></li>

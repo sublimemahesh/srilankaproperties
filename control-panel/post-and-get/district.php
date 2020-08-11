@@ -35,7 +35,7 @@ if (isset($_POST['add-district'])) {
             $info = getimagesize($handle->file_dst_pathname);
             $imgName = $handle->file_dst_name;
         }
-     
+
         $handle->image_resize = true;
         $handle->file_new_name_body = TRUE;
         $handle->file_new_name_ext = 'jpg';
@@ -89,7 +89,7 @@ if (isset($_POST['edit-district'])) {
 
     $handle = new Upload($_FILES['image']);
 
-    $img = $_POST ["oldImageName"];
+    $img = $_POST["oldImageName"];
 
     if ($img == '') {
         $img = Helper::randamId();
@@ -108,7 +108,7 @@ if (isset($_POST['edit-district'])) {
                 $info = getimagesize($handle->file_dst_pathname);
                 $imgName = $handle->file_dst_name;
             }
-             
+
             if ($handle->processed) {
                 $info = getimagesize($handle->file_dst_pathname);
                 $imgName = $handle->file_dst_name;
@@ -146,7 +146,7 @@ if (isset($_POST['edit-district'])) {
                 $info = getimagesize($handle->file_dst_pathname);
                 $img = $handle->file_dst_name;
             }
-             
+
 
             $handle->image_resize = true;
             $handle->file_new_name_body = TRUE;
@@ -170,7 +170,8 @@ if (isset($_POST['edit-district'])) {
     $DISTRICT->name = $_POST['name'];
 
     $VALID = new Validator();
-    $VALID->check($DISTRICT, ['name' =>
+    $VALID->check($DISTRICT, [
+        'name' =>
         ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
@@ -203,7 +204,9 @@ if (isset($_POST['save-arrange'])) {
         $key = $key + 1;
 
         $DISTRICT = District::arrange($key, $img);
-
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+        $VALID = new Validator();
+        $VALID->addError("Your data was arranged successfully", 'success');
+        $_SESSION['ERRORS'] = $VALID->errors();
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

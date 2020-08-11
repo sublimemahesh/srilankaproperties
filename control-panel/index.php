@@ -2,10 +2,12 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
-$COUNT_COMMENT = count(Comments::pendingComments());
-$COUNT_PENDING_PROPERTY = count(Property::getAllPendingProperties());
-$COUNT_APPROVED_PROPERTY = count(Property::getAllApprovedProperties());
-$SLIDER_IMAGES = count(Slider::all());
+$COUNT_COMMENTS = count(Comments::pendingComments());
+$COUNT_PENDING_PROPERTIES = count(Property::getAllPendingProperties());
+$COUNT_APPROVED_PROPERTIES = count(Property::getAllApprovedProperties());
+$COUNT_PAGES = count(Page::all());
+$COUNT_CATEGORIES = count(Category::all());
+$COUNT_PROPERTIES = count(Property::all());
 ?> 
 <!DOCTYPE html>
 <html> 
@@ -69,7 +71,7 @@ $SLIDER_IMAGES = count(Slider::all());
                                 </div>
                                 <div class="content">
                                     <div class="text">PENDING PROPERTIES</div>
-                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PENDING_PROPERTY; ?>" data-speed="1000"" data-fresh-interval="20"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PENDING_PROPERTIES; ?>" data-speed="1000"" data-fresh-interval="20"></div>
                                 </div>
                             </div>
                         </div>
@@ -82,20 +84,20 @@ $SLIDER_IMAGES = count(Slider::all());
                                 </div>
                                 <div class="content">
                                     <div class="text">APPROVED PROPERTIES</div>
-                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_APPROVED_PROPERTY; ?>" data-speed="1000" data-fresh-interval="20"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_APPROVED_PROPERTIES; ?>" data-speed="1000" data-fresh-interval="20"></div>
                                 </div>
                             </div>
                         </div>
                     </a>
-                    <a href="manage-comments.php">
+                    <a href="manage-comments.php?status=0">
                         <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                             <div class="info-box bg-light-green hover-expand-effect">
                                 <div class="icon">
                                     <i class="material-icons">forum</i>
                                 </div>
                                 <div class="content">
-                                    <div class="text">NEW COMMENTS</div>
-                                    <div class="number count-to" data-from="0" data-to=" <?php echo $COUNT_COMMENT; ?>" data-speed="1500" data-fresh-interval="1"></div>
+                                    <div class="text">PENDING COMMENTS</div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_COMMENTS; ?>" data-speed="1500" data-fresh-interval="20"></div>
 
                                 </div>
                             </div>
@@ -109,7 +111,7 @@ $SLIDER_IMAGES = count(Slider::all());
                             </div>
                             <div class="content">
                                 <div class="text">TOTAL PAGES</div>
-                                <div class="number count-to" data-from="0" data-to="0" data-speed="1000" data-fresh-interval="20"></div>
+                                <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PAGES; ?>" data-speed="1000" data-fresh-interval="20"></div>
                             </div>
                         </div>
                     </div>
@@ -119,7 +121,7 @@ $SLIDER_IMAGES = count(Slider::all());
                             <div class="header bg-blue-grey">
                                 <h2>  CATEGORY   </h2>
                                 <ul class="header-dropdown m-r--5">
-                                    <div class="number count-to" data-from="0" data-to=" <?php echo $CATEGORY; ?>" data-speed="1500" data-fresh-interval="1"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_CATEGORIES; ?>" data-speed="1500" data-fresh-interval="1"></div>
                                 </ul>
                             </div>
                             <div class="body">
@@ -136,7 +138,7 @@ $SLIDER_IMAGES = count(Slider::all());
                             <div class="header bg-blue-grey">
                                 <h2>  PROPERTY  </h2>
                                 <ul class="header-dropdown m-r--5">
-                                    <div class="number count-to" data-from="0" data-to=" <?php echo $COUNT_PROPERTY; ?>" data-speed="1500" data-fresh-interval="1"></div>
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_PROPERTIES; ?>" data-speed="1500" data-fresh-interval="1"></div>
                                 </ul>
                             </div>
                             <div class="body">

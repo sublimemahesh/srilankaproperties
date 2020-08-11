@@ -7,294 +7,469 @@ and open the template in the editor.
     Created on : Jun 16, 2020, 10:19:32 AM
     Author     : user
 */
-@media (min-width: 992px) and (max-width: 1199px){
-    .circle-bottom{
+@media (min-width: 992px) and (max-width: 1199px) {
+    .circle-bottom {
         margin-bottom: 51px;
     }
 }
 
-@media (max-width: 991px){
-    .partners{
-        margin-left: -16px;
+@media (max-width: 991px) {
+    .partners {
+        margin-left : -16px;
         margin-right: -16px;
     }
-    .submit-left{
+
+    .submit-left {
         margin-left: 1px;
     }
-    .a-img{
+
+    .a-img {
         margin-left: 145px;
     }
-    .a-img-p{
+
+    .a-img-p {
         margin-left: 0px;
     }
-    .btn-i{
+
+    .btn-i {
         margin-left: -75px;
     }
-    .agent-name{
+
+    .agent-name {
         margin-top: 20px;
     }
-    .code-i{
+
+    .code-i {
         margin-left: 70px;
     }
-    .footer-sec1{
+
+    .footer-sec1 {
         margin-left: 1px;
     }
-    .footer-sec2{
+
+    .footer-sec2 {
         margin-left: -2px;
     }
-    .a-i{
+
+    .a-i {
         margin-top: 0px;
     }
-    .ami-f{
+
+    .ami-f {
         font-size: 13px;
     }
-    .pricing-m{
+
+    .pricing-m {
         margin-bottom: 10px;
     }
-    .mg{
+
+    .mg {
         padding-left: 1px;
     }
-    .detail-box{
+
+    .detail-box {
         margin-right: 0px;
-        margin-left: 1px;
+        margin-left : 1px;
     }
-    .no-p-i{
+
+    .no-p-i {
         margin-left: 15px;
     }
-    .a-detail-i{
+
+    /* .a-detail-i {
         padding-bottom: 1px !important;
-    }
-    .code-i{
+    } */
+
+    .code-i {
         margin-left: 70px;
     }
-    .header-i{
+
+    .header-i {
         padding-left: 0px;
     }
-    .header-drop-i{
+
+    .header-drop-i {
         background: #eeeeee !important;
     }
 
-    .h-drop-i{
+    .h-drop-i {
         margin-left: 20px !important;
     }
+    
 }
 
-@media (max-width: 767px){
-    .submit{
+@media (max-width: 767px) {
+    .submit {
         margin-left: 1px;
     }
-    .f-mrg{
+
+    .f-mrg {
         margin-left: 22px;
     }
-    .padd{
-        margin-left: 0!important;
+
+    .padd {
+        margin-left: 0 !important;
     }
 
 }
 
 
-@media (max-width: 480px){
-    .abt-txt{
-        margin-left: 25px;
+@media (max-width: 480px) {
+    .abt-txt {
+        margin-left : 25px;
         margin-right: 25px;
     }
-    .f-design{
+
+    .f-design {
         padding-left: 0;
     }
-    .agent-h{
+
+    .agent-h {
         margin-left: -4px;
     }
-    .c-form-submit{
+
+    .c-form-submit {
         margin-left: 1px;
     }
-    .location-box{
+
+    .location-box {
         margin-right: -105px;
     }
-    .social-f{
+
+    .social-f {
         margin-left: 20px;
     }
-    .view-city{
+
+    .view-city {
         font-size: 23px;
     }
-    .view-d-a{
+
+    .view-d-a {
         margin-top: 1px;
     }
-    .location-box-s{
-        margin-right: 88px!important;
-        margin-right: 0!important;
-        padding-right: 0!important;
+
+    .location-box-s {
+        margin-right : 88px !important;
+        margin-right : 0 !important;
+        padding-right: 0 !important;
     }
-    .f{
-        margin-left: 0!important;
+
+    .f {
+        margin-left: 0 !important;
     }
-    .add{
+
+    .add {
         height: 123px;
     }
-    .soci{
+
+    .soci {
         margin-left: 0px;
     }
-    .refresh-res{
+
+    .refresh-res {
         margin-left: -56px;
     }
-    .our{
+
+    .our {
         margin-top: 65px;
     }
-    .view-font-span{
+
+    .view-font-span {
         font-size: 10px;
     }
-    .view-font{
+
+    .view-font {
         font-size: 10px;
     }
-    .mrg{
+
+    .mrg {
         margin-left: 0px;
     }
-    .our-location{
+
+    .our-location {
         margin-top: 55px;
     }
-    .btn-m{
-        margin-left: -83px ;
+
+    .btn-m {
+        margin-left: -83px;
     }
-    .slider-heading{
+
+    .slider-heading {
         margin-right: 14px;
     }
-    .img-padding{
-        padding-left: 15px !important;
-        padding-top: 17px;
+
+    .img-padding {
+        padding-left  : 15px !important;
+        padding-top   : 17px;
         padding-bottom: 20px;
     }
-    .a-name{
+
+    .a-name {
         margin-right: 2px;
     }
+
+    .search-under {
+        margin-right: 153px !important;
+    }
+
+    .spacer-40 {
+        height: 0;
+    }
+
+    .serch-dev .widget {
+        margin-bottom: 0;
+    }
+
+    .property-slider {
+        margin: 0px 0 35px 0;
+    }
+
+    .home-abt-img-padd {
+        padding-top: 50px;
+    }
+
+    .features.v-s {
+        height: 140px;
+    }
+
+    .pricing-column.highlight {
+        margin-bottom: 30px !important;
+    }
+
+    .pricing-column-content,
+    .pricing-table h3 {
+        border-left: 1px solid #eeeeee !important;
+    }
+
+    .contact-location-box .col-md-12.contact-social-box {
+        padding-left : 0;
+        padding-right: 16px !important;
+        margin-left  : 0;
+        margin-right : 0px !important;
+    }
+
+    .feedback-form-section {
+        border     : 0;
+        padding-top: 0px;
+    }
+
+    .agent-properties-page .single-agent .img-thumbnail {
+        margin-bottom: 0;
+    }
+    .agent-properties-page .single-agent .agent-d {
+        margin-bottom: 30px;
+    }
+   
 }
 
-@media (max-width: 320px){
 
-}
+@media (max-width: 320px) {}
 
-@media (min-width: 768px) and (max-width: 992px){
-    .circle-title{
+@media (min-width: 768px) and (max-width: 992px) {
+    .circle-title {
         font-size: 16px;
     }
 
-    .box-mrg{
+    .box-mrg {
         margin-top: 0px;
     }
 
-    .res-padd{
+    .res-padd {
         padding-left: 104px;
     }
-    .slider-i{
+
+    .slider-i {
         margin-right: 14px;
     }
-    .db-mrg{
+
+    .db-mrg {
         margin-left: 22px;
     }
-    .b-overlay{
 
+    .spacer-40 {
+        height: 0;
     }
 
+    .home-abt-img-padd {
+        margin-top: 50px;
+    }
+
+    .about-us-page .widget {
+        margin-bottom: 0;
+    }
+
+    .contact-sec {
+        padding-top: 50px;
+    }
+
+    .serch-dev .widget {
+        margin-bottom: 0;
+    }
+
+    .serch-dev {
+        margin-top: 0;
+    }
+
+    .agent-properties-page .tabs {
+        margin-bottom: 0;
+    }
+
+    .agent-properties-page .tab-content {
+        padding-bottom: 0;
+    }
+
+    .abt-txt {
+        margin-right: 30px;
+    }
+
+    .featured-properties-widget .images-count {
+        top  : 169px;
+        right: 45px;
+    }
+
+    .property-slider {
+        margin-top: 0;
+    }
+
+    .widget.agent-widget {
+        margin-bottom: 0;
+    }
+
+    .customer-feedback-page .agents-listing>ul>li {
+        height: 200px;
+    }
+    .property-info {
+        padding: 15px 10px;
+    }
 }
 
-@media (min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
     /*    .circle-title{
             font-size: 19px;
         }*/
 
-    .circle-bottom{
+    .circle-bottom {
         margin-bottom: 51px;
     }
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (max-width: 576px) {
     .testi-padd {
-        padding-left: 50px;
+        padding-left : 50px;
         padding-right: 50px;
     }
+
     .footer-m {
         margin-bottom: 0px !important;
     }
-    .mobile-nav{
+
+    .mobile-nav {
         padding: 11px 20.5px !important;
     }
-    .text-m{
+
+    .text-m {
         margin-bottom: 33px;
     }
-    .abt-icon-m{
+
+    .abt-icon-m {
         margin: 0px;
     }
-    .im-sec{
+
+    .im-sec {
         padding-bottom: 1px;
     }
-    .price-mrg{
+
+    .price-mrg {
         margin-bottom: 12px;
     }
-    .title-m{
+
+    .title-m {
         margin-left: 18px;
     }
-    .font-m{
+
+    .font-m {
         font-size: 18px;
     }
-    .a-details{
+
+    .a-details {
         margin-top: -9px;
     }
-    .upper-padd{
+
+    .upper-padd {
         margin-top: 6px;
     }
-    .code-m{
+
+    .code-m {
         margin-left: 125px !important;
     }
-    .l-box-m{
+
+    .l-box-m {
         margin-right: 15px;
     }
-    .social{
+
+    .social {
         margin-left: -22px;
     }
-    .add{
+
+    .add {
         margin-left: -13px;
     }
-    .view-am{
+
+    .view-am {
         font-size: 13px;
     }
-    .a-mar{
+
+    .a-mar {
         padding-left: 14px;
     }
-    .header-nav{
-        margin-top: -12px !important;
+
+    .header-nav {
+        margin-top    : -12px !important;
         padding-bottom: 12px !important;
     }
-    .search{
+
+    .search {
         margin-top: 0px;
     }
-    .tab-m{
+
+    .tab-m {
         margin-left: 9px;
     }
-    .list-m{
+
+    .list-m {
         margin-bottom: 15px;
     }
-    .no-p{
-        font-size: 14px;
+
+    .no-p {
+        font-size  : 14px;
         margin-left: 15px;
     }
-    .header-drop{
+
+    .header-drop {
         background: #eeeeee !important;
 
     }
-    .no-data{
+
+    .no-data {
         margin-left: 10px;
     }
-    .h-drop{
+
+    .h-drop {
         margin-left: 20px !important;
     }
-    .r-img.owl-carousel{
+
+    .r-img.owl-carousel {
         margin-left: 0px;
     }
-    .view-mo{
+
+    .view-mo {
         margin-left: -20px !important;
-        margin-top: -9px !important;
+        margin-top : -9px !important;
 
     }
-    .view-p-list{
-       margin-left: 19px !important;
+
+    .view-p-list {
+        margin-left: 19px !important;
     }
 
 }

@@ -252,5 +252,4 @@ $MEMBER = new Member($PROPERTY->member);
             });
         </script>
     </body>
-
 </html>
