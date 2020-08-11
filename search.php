@@ -162,7 +162,7 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                             <option value="" selected>All Sub Categories</option>
                                             <?php
-                                            foreach (SubCategory::all() as $subcategory) :
+                                            foreach (SubCategory::getSubCategoriesByCategory($category1) as $subcategory) :
                                                 $selected = '';
                                                 if ($subcategory['id'] == $subcategory1) :
                                                     $selected = 'selected';

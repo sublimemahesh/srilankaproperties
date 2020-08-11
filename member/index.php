@@ -46,7 +46,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
         </div>
 
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <a class="sub-box text-center text-c dash-box " href="add-new-property.php">
                     <b class="font-member-box">Add New Properties</b>
                     <hr />
@@ -55,7 +55,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
 
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <a class="sub-box text-center text-c dash-box " href="manage-properties.php?status=0">
                     <b class="font-member-box">Pending Properties</b>
                     <hr />
@@ -64,7 +64,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
 
                 </a>
             </div>
-            <div class="col-md-3 box-bottom ">
+            <div class="col-md-3 col-sm-6 box-bottom ">
                 <a class="sub-box text-center text-c " href="manage-properties.php?status=1">
                     <b class="font-member-box">Approved Properties</b>
                     <hr />
@@ -72,7 +72,7 @@ $MEMBER = new Member($_SESSION["m_id"]);
                     <hr />
                 </a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-3 col-sm-6">
                 <a class="sub-box text-center text-c" href="manage-inquiries.php">
                     <b class="font-member-box">Inquiries</b>
                     <hr />

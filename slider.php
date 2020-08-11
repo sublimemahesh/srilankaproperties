@@ -21,10 +21,10 @@
                 <form action="search.php" id="search-form">
                     <div class="form-group slider-heading slider-i">
                         <div class="row">
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-12">
                                 <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-6">
                                 <select name="category" id="category" class="form-control input-lg selectpicker">
                                     <option value="" selected>Select Category</option>
                                     <?php
@@ -34,7 +34,7 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-6">
                                 <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                     <option value="" selected>All Sub Categories</option>
                                     <?php
@@ -44,7 +44,7 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-6">
                                 <select name="district" id="district" class="form-control input-lg selectpicker">
                                     <option value="" selected>All Districts</option>
                                     <?php
@@ -54,7 +54,7 @@
                                     <?php endforeach; ?>
                                 </select>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-2 col-sm-6">
                                 <select name="city" id="city" class="form-control input-lg selectpicker">
                                     <option value="" selected>All Cities</option>
                                     <?php

@@ -39,7 +39,7 @@ $VALUES = new Page(4);
 </head>
 
 <body>
-    <div class="body">
+    <div class="body customer-feedback-page">
         <!-- Start Site Header -->
         <?php include './header.php'; ?>
         <!-- End Site Header -->
@@ -58,6 +58,7 @@ $VALUES = new Page(4);
             <!-- End Page Header -->
         </div>
         <div class="main" role="main">
+        <div class="spacer-40"></div>
             <div id="content" class="content full im-sec">
                 <div class="container">
                     <div class="page">
@@ -111,7 +112,7 @@ $VALUES = new Page(4);
             </div>
         </div>
         <div class="main" role="main">
-            <div id="content" class="content full im-sec">
+            <div id="content" class="content full">
                 <div class="container">
                     <div class="agents-listing">
                         <ul>
@@ -121,7 +122,7 @@ $VALUES = new Page(4);
                                 foreach ($comments as $key => $comment) {
                             ?>
                                     <li class="col-md-12">
-                                        <div class="col-md-2">
+                                        <div class="col-md-2 col-sm-3">
                                             <a href="" class="agent-featured-image">
                                                 <div class="overlay" style="line-height:151px">
                                                     <i class="fa fa-plus"></i>
@@ -129,7 +130,7 @@ $VALUES = new Page(4);
                                                 <img src="upload/comments/<?= $comment['image_name']; ?>" alt="">
                                             </a>
                                         </div>
-                                        <div class="col-md-10">
+                                        <div class="col-md-10 col-sm-9">
                                             <div class="agent-info">
                                                 <h3><a href=""><?= $comment['name']; ?></a></h3>
                                                 <p><?= $comment['comment']; ?></p>

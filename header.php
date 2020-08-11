@@ -119,8 +119,9 @@
                             }
                             ?>
                                 <li><a class="header-nav" href="agents.php">Agents</a></li>
-                            <li class="visible-xs"><a class="header-nav" href="about.php">About Us</a></li>
-                            <li class="visible-xs"><a class="header-nav" href="contact.php">Contact Us</a></li>
+                            <li class="visible-sm visible-xs"><a class="header-nav" href="customer-feedback.php">Customer Feedback</a></li>
+                            <li class="visible-sm visible-xs"><a class="header-nav" href="about.php">About Us</a></li>
+                            <li class="visible-sm visible-xs"><a class="header-nav" href="contact.php">Contact Us</a></li>
                         </ul>
                     </nav>
                 </div>

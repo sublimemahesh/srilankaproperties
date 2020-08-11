@@ -27,13 +27,25 @@ $(document).ready(function () {
                     dataType: "JSON",
                     success: function (data) {
                         if (data == "approved") {
-                            Swal.fire('Approved!','Proprty has been approved.','success')
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Approved!',
+                                text: 'Proprty has been approved.',
+                                showConfirmButton: false,
+                                timer: 1500
+                              });
                               setTimeout(() => { 
                                   location.reload();
                               }, 1000);
                         }
                         if (data == "rejected") {
-                            Swal.fire('Rejected!','Proprty has been rejected.','success');
+                            Swal.fire({
+                                icon: 'success',
+                                title: 'Rejected!',
+                                text: 'Proprty has been rejected.',
+                                showConfirmButton: false,
+                                timer: 1500
+                              });
                               setTimeout(() => { 
                                 location.reload();
                             }, 1000);

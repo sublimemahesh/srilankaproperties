@@ -48,7 +48,13 @@ $PAGES = new Page($id);
                                 <h2>
                                     Edit Pages
                                 </h2>
-
+                                <ul class="header-dropdown">
+                                    <li class="">
+                                        <a href="manage-pages.php">
+                                            <i class="material-icons">list</i> 
+                                        </a>
+                                    </li>
+                                </ul>
                             </div>
                             <div class="body row">
                                 <form class="form-horizontal" method="post" action="post-and-get/pages.php" enctype="multipart/form-data"> 

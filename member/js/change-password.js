@@ -1,5 +1,5 @@
-$(document).ready(function() {
-    $('#btn-change').click(function(event) {
+$(document).ready(function () {
+    $('#btn-change').click(function (event) {
         event.preventDefault();
 
         $('#btn-change').hide();
@@ -51,12 +51,13 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
-                    if (result.status === 'error') {
+                    if (result.status === 'error1') {
+
                         swal({
                             title: "Error!",
-                            text: "There was an error. Please try again later",
+                            text: "Your old password is wrong...",
                             type: 'error',
                             timer: 2000,
                             showConfirmButton: false
@@ -66,10 +67,10 @@ $(document).ready(function() {
                         $('#update-loading').hide();
 
                         return false;
-                    } else if (result.status === 'error1') {
+                    } else if (result.status === 'error') {
                         swal({
                             title: "Error!",
-                            text: "Your old password is wrong...",
+                            text: "There was an error. Please try again later",
                             type: 'error',
                             timer: 2000,
                             showConfirmButton: false

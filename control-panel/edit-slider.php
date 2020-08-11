@@ -48,7 +48,13 @@ $SLIDER = new Slider($id);
                             <h2>
                                 Edit slider
                             </h2>
-
+                            <ul class="header-dropdown">
+                                <li class="">
+                                    <a href="create-slider.php">
+                                        <i class="material-icons">list</i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="body">
                             <form class="form-horizontal" method="post" action="post-and-get/slider.php" enctype="multipart/form-data">

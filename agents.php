@@ -65,6 +65,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
             <!-- End Page Header -->
         </div>
         <div class="main" role="main">
+            <div class="spacer-40"></div>
             <div id="content" class="content full">
                 <div class="container">
                     <div class="row">
@@ -83,7 +84,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                         <?php
                                                         if (isset($member['picture']) && !empty($member['picture'])) {
                                                         ?>
-                                                        <a href="agent-properties.php"><img src="upload/member/profile/<?= $member['picture']; ?>" alt=""></a>
+                                                        <a href="agent-properties.php?id=<?= $member['id']; ?>"><img src="upload/member/profile/<?= $member['picture']; ?>" alt=""></a>
                                                         <?php
                                                         } else {
                                                         ?>
@@ -97,7 +98,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                     <div class="agent-info">
 
                                                         <div class="counts"><strong><?= count($properties); ?></strong><span>Properties</span></div>
-                                                        <h3><a href="agent-properties.php?agent=<?= $member['id']; ?>" class="a-name font-m"><?= $member['name']; ?></a></h3>
+                                                        <h3><a href="agent-properties.php?id=<?= $member['id']; ?>" class="a-name font-m"><?= $member['name']; ?></a></h3>
 
                                                         <div class="a-details">
                                                             <p><?= $member['description']; ?></p>
@@ -121,7 +122,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
 
                         </div>
                         <!-- Start Sidebar -->
-                        <div class="sidebar right-sidebar col-md-3">
+                        <div class="sidebar right-sidebar col-md-3 hidden-sm">
                             <div class="widget sidebar-widget featured-properties-widget">
                                 <h3 class="widgettitle search-f">Featured Properties</h3>
                                 <ul class="">

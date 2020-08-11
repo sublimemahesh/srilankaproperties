@@ -7,10 +7,10 @@ $PROPERTY = [];
 $title = "Manage";
 if (isset($_GET['type'])) {
     if ($_GET['type'] == 0) {
-        $PROPERTY = Property::getAllPendingProperties();
+        $properties = Property::getAllPendingProperties();
         $title = "Pending";
     } elseif ($_GET['type'] == 1) {
-        $PROPERTY = Property::getAllApprovedProperties();
+        $properties = Property::getAllApprovedProperties();
         $title = "Approved";
     }
 }
@@ -63,7 +63,7 @@ if (isset($_GET['type'])) {
                             <!-- <div class="table-responsive">-->
                             <div>
                                 <div class="row clearfix">
-                                    <?php if (count($PROPERTY) > 0) : ?>
+                                    <?php if (count($properties) > 0) : ?>
                                         <div class="table-responsive m-l-20 m-r-20">
                                             <table class="table table-bordered table-striped table-hover js-basic-example dataTable">
                                                 <thead>
@@ -87,13 +87,13 @@ if (isset($_GET['type'])) {
                                                     </tr>
                                                 </tfoot>
                                                 <tbody>
-                                                    <?php foreach ($PROPERTY as $property) : 
+                                                    <?php foreach ($properties as $key=>$property) : 
                                                         $MEM = New Member($property['member']);
                                                         $DISTRICT = new District($property['district']);
                                                         ?>
                                                         <tr id="row_<?= $property['id']; ?>">
                                                             <!-- <td><img src="../upload/property/<?php echo $property['image_name']; ?>" class="img-responsive img-thumbnail" width="100"></td> -->
-                                                            <td><?= $property['id']; ?></td>
+                                                            <td><?= $key+1; ?></td>
                                                             <td><?= $property['title']; ?></td>
                                                             <td><?= $MEM->name; ?></td>
                                                             <td><?= $property['category_name']; ?></td>

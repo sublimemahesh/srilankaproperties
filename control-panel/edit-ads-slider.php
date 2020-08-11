@@ -48,7 +48,13 @@ $ADVERTISEMENT = new Advertisement($id);
                             <h2>
                                 Edit Advertiesment Banner
                             </h2>
-
+                            <ul class="header-dropdown">
+                                <li>
+                                    <a href="create-ads-slider.php">
+                                        <i class="material-icons">list</i>
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <div class="body">
                             <form class="form-horizontal" method="post" action="post-and-get/ads-slider.php" enctype="multipart/form-data">
@@ -86,7 +92,7 @@ $ADVERTISEMENT = new Advertisement($id);
                                                 if (count($properties) > 0) {
                                                     foreach ($properties as $key => $property) {
                                                         $selected = '';
-                                                        if($property['id'] == $ADVERTISEMENT->property) {
+                                                        if ($property['id'] == $ADVERTISEMENT->property) {
                                                             $selected = 'selected';
                                                         }
                                                 ?>

@@ -95,8 +95,8 @@ if (isset($_GET['agent'])) {
             <div class="spacer-40"></div>
             <div id="content" class="content full">
                 <div class="container">
-                    <div class="row d-flex">
-                        <div class="col-md-9 <?= isset($_GET['agent']) ? "order-2" : "" ?>">
+                    <div class="row">
+                        <div class="col-md-9 col-xs-12">
                             <div class="property-grid">
                                 <ul class="grid-holder col-3">
                                     <?php
@@ -111,12 +111,12 @@ if (isset($_GET['agent'])) {
                                                 <div class="property-block">
                                                     <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                         <img src="upload/properties/<?= $property['image_name'] ?>">
-                                                         <?php
+                                                        <?php
                                                         if ($property['no_of_bed_rooms'] != 0) {
-                                                            ?>
+                                                        ?>
                                                             <span class="images-count">
                                                                 <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
-                                                            <?php
+                                                        <?php
                                                         }
                                                         ?>
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
@@ -171,9 +171,9 @@ if (isset($_GET['agent'])) {
                         </div>
                         <!-- Start Sidebar -->
 
-                        <div class="sidebar right-sidebar col-md-3 serch-dev <?= isset($_GET['agent']) ? "order-1" : "" ?>">
+                        <div class="sidebar right-sidebar col-md-3 col-sm-6 col-xs-12 serch-dev">
                             <?php if (isset($_GET['agent'])) : ?>
-                                <div class="widget sidebar-widget popular-agent column"> 
+                                <div class="widget sidebar-widget popular-agent column">
                                     <a href="#"><img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="" class="img-thumbnail"></a>
                                     <div class="row">
                                         <div class="col-md-12">
@@ -184,10 +184,10 @@ if (isset($_GET['agent'])) {
                                             } else {
                                                 echo $MEMBER->description;
                                             }
-                                        ?>  
-                                        
-<!--                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> -->
-                                        </div> 
+                                            ?>
+
+                                            <!--                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> -->
+                                        </div>
                                     </div>
 
                                 </div>

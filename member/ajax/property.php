@@ -24,8 +24,8 @@ if (isset($_POST['add-new-property'])) {
         $handle1->image_ratio_crop = 'C';
         $handle1->file_new_name_body = Helper::randamId();
         $handle1->file_overwrite = TRUE;
-        $handle1->image_x = 300;
-        $handle1->image_y = 200;
+        $handle1->image_x = 330;
+        $handle1->image_y = 220;
         $handle1->Process('../../upload/properties/');
         $PROPERTY->image_name = $handle1->file_dst_name;
     }
@@ -91,8 +91,8 @@ if (isset($_POST['edit-property'])) {
         $handle1->file_new_name_ext = FALSE;
         $handle1->image_ratio_crop = 'C';
         $handle1->file_new_name_body = $img;
-        $handle1->image_x = 300;
-        $handle1->image_y = 200;
+        $handle1->image_x = 330;
+        $handle1->image_y = 220;
         $handle1->Process('../../upload/properties/');
         $img = $handle1->file_dst_name;
     }

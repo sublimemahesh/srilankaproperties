@@ -39,9 +39,6 @@ $comments = $COMMENT->all();
     </head>
 
     <body class="home">
-        <!--[if lt IE 7]>
-                    <p class="chromeframe">You are using an outdated browser. <a href="http://browsehappy.com/">Upgrade your browser today</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to better experience this site.</p>
-            <![endif]-->
         <div class="body">
             <!-- Start Site Header -->
             <?php include './header.php'; ?>
@@ -124,8 +121,8 @@ $comments = $COMMENT->all();
                                                         <h4>
                                                             <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                 <?php
-                                                                if (strlen($property['title']) > 22) {
-                                                                    echo substr($property['title'], 0, 20) . '...';
+                                                                if (strlen($property['title']) > 21) {
+                                                                    echo substr($property['title'], 0, 19) . '...';
                                                                 } else {
                                                                     echo $property['title'];
                                                                 }
@@ -175,6 +172,7 @@ $comments = $COMMENT->all();
                                                     <div class="row client-title-bar">
                                                         <div class="block-heading">
                                                             <h4><span class="heading-icon"><i class="fa fa-users"></i></span>Client Testimonials</h4>
+                                                            <a href="customer-feedback.php" class="btn btn-primary btn-sm pull-right">Add New Feedback <i class="fa fa-long-arrow-right"></i></a>
                                                         </div>
                                                     </div>
                                                     <ul class="testimonials owl-carousel img-thumbnail testi-padd test-bottom" id="clients-slider" data-columns="1" data-autoplay="yes" data-pagination="yes" data-arrows="no" data-single-item="no" data-items-desktop="1" data-items-desktop-small="1" data-items-mobile="1" data-items-tablet="1">

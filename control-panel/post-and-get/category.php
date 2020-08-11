@@ -130,6 +130,10 @@ if (isset($_POST['save-data'])) {
 
         $CATEGORY = Category::arrange($key, $img);
 
-        header('Location: ' . $_SERVER['HTTP_REFERER']);
+        // header('Location: ' . $_SERVER['HTTP_REFERER']);
     }
+    $VALID = new Validator();
+    $VALID->addError("Your data was arranged successfully", 'success');
+    $_SESSION['ERRORS'] = $VALID->errors();
+    header('Location: ' . $_SERVER['HTTP_REFERER']);
 }

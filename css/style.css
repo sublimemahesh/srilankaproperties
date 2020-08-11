@@ -1658,6 +1658,16 @@ html[xmlns] .slides {
     padding   : 5px 10px;
 }
 
+.featured-properties-widget .images-count {
+    position  : absolute;
+    top       : 130px;
+    right     : 0;
+    z-index   : 9;
+    color     : #ffffff;
+    background: rgba(0, 0, 0, .5);
+    padding   : 5px 10px;
+}
+
 .property-featured-image .badges,
 .property-featured-image1 .badges {
     position             : absolute;
@@ -3591,7 +3601,7 @@ span.progress-bar-tooltip:after {
     }
 
     .navigation>ul>li>a {
-        padding      : 20px 25px;
+        padding      : 12px 25px;
         border-bottom: 1px solid #ccc;
         border-right : 0;
     }
@@ -3992,6 +4002,7 @@ span.progress-bar-tooltip:after {
 
 .home-abt-img-padd {
     padding-bottom: 34px;
+    margin-top    : 50px;
 }
 
 .testi-padd {
@@ -4180,7 +4191,7 @@ span.progress-bar-tooltip:after {
 .btn-inquiry-now {
     width        : 120px;
     padding      : 10px;
-    margin-top   : -25px;
+    margin-top   : 0px;
     margin-bottom: 30px;
     margin-left  : 15px;
 }
@@ -4402,4 +4413,34 @@ div.column {
 .feedback-form-section:hover {
     border    : 1px solid #eee;
     box-shadow: 5px 5px 5px #eee;
+}
+
+.list-group-item .badge {
+    color           : #000;
+    background-color: #fff;
+}
+
+.property-details-table {
+    margin-top: 20px;
+}
+
+.property-details-section.widget {
+    margin-bottom: 0;
+}
+
+.property-details-section.widget .widgettitle {
+    margin-bottom: 0;
+}
+
+.bd {
+    margin-right: 5px;
+}
+
+.contact-location-box .col-md-12.contact-social-box {
+    padding-left : 0;
+    padding-right: 0;
+}
+
+.contact-us-page .content {
+    padding-bottom: 0;
 }
