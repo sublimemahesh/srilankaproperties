@@ -11084,6 +11084,13 @@ html.ie11 .bs-searchbox .form-control {
     border-radius: 3px;
     border: 0;
 }
+.warning-btn {
+    padding: 5px 8px;
+    color: #fff;
+    background-color: #ff9600;
+    border-radius: 3px;
+    border: 0;
+}
 
 .approvation-btn-warning {
     padding: 5px 8px;

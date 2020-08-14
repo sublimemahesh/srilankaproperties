@@ -69,7 +69,7 @@ if (isset($_GET['status'])) {
                                                     <div class="d">
                                                         <a href="#" class="delete-comment" data-id="<?php echo $comment['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete Comment"></button></a>
                                                         <a href="edit-comment.php?id=<?php echo $comment['id']; ?>"> <button class="glyphicon glyphicon-pencil edit-btn" title="Edit Comment"></button></a>
-                                                        <a href="arrange-comment.php?id=<?php echo $comment['id']; ?>"> <button class="glyphicon glyphicon-random arrange-btn" title="Arrange Comment"></button></a>
+                                                        <a href="arrange-comments.php"> <button class="glyphicon glyphicon-random arrange-btn" title="Arrange Comment"></button></a>
                                                         <?php
                                                         if ($comment['is_active'] == 1) {
                                                             echo 'Active';

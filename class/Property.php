@@ -421,7 +421,7 @@ class Property {
 
 
         if (!empty($keyword)) {
-            $w[] = "`title` LIKE '%" . $keyword . "%'";
+            $w[] = "(`title` LIKE '%" . $keyword . "%' OR `category` IN (SELECT `id` FROM `category` WHERE `name` LIKE '%" . $keyword . "%') OR  `sub_category` IN (SELECT `id` FROM `sub_category` WHERE `name` LIKE '%" . $keyword . "%') OR  `district` IN (SELECT `id` FROM `district` WHERE `name` LIKE '%" . $keyword . "%') OR  `city` IN (SELECT `id` FROM `city` WHERE `name` LIKE '%" . $keyword . "%'))";
         }
         if (!empty($category)) {
             $w[] = "`category` = '" . $category . "' ";
@@ -441,7 +441,7 @@ class Property {
         }
 
         $query = "SELECT * FROM `property` $where AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit . "";
-
+// dd($query);
         $db = new Database();
 
         $result = $db->readQuery($query);

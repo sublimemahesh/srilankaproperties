@@ -5,7 +5,8 @@ $id = '';
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
 }
-$OFFER = new Offer($id)
+$PHOTOS = new PropertyPhoto($id);
+$PROPERTY = new Property($id);
 ?> 
 <!DOCTYPE html>
 
@@ -14,7 +15,7 @@ $OFFER = new Offer($id)
     <head>
         <meta charset="UTF-8">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Offer-photos</title>
+        <title>Property Photos</title>
         <!-- Favicon-->
         <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -43,49 +44,25 @@ $OFFER = new Offer($id)
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="card">
                             <div class="header">
-                                <h2>Create Property Photos</h2>
+                                <h2>Manage Property Photos</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-property.php">
+                                        <a href="manage-property.php?type=<?= $PROPERTY->status; ?>">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" action="post-and-get/property-photo.php" enctype="multipart/form-data"> 
-                                    <div class="col-md-12">                                       
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="file" id="image" class="form-control" name="image"  required="true">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="caption" class="form-control" autocomplete="off" name="caption" required="true">
-                                                <label class="form-label">Caption</label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12"> 
-                                        <input type="hidden" id="id" value="<?php echo $PROPERTY->id; ?>" name="id"/>
-                                        <input type="submit" name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
-                                    </div>
-                                </form>
-                                <div class="row">
-                                </div>
-                                <hr/>
                                 <div class="row clearfix">
                                     <?php
-                                    $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosById($id);
+                                    $PROPERTY_PHOTO = PropertyPhoto::getPropertyPhotosByProperty($id);
                                     if (count($PROPERTY_PHOTO) > 0) {
                                         foreach ($PROPERTY_PHOTO as $key => $property_photo) {
                                             ?>
                                             <div class="col-md-3"  id="div<?php echo $property_photo['id']; ?>">
                                                 <div class="photo-img-container">
-                                                    <img src="../upload/property/gallery/thumb/<?php echo $property_photo['image_name']; ?>" class="img-responsive ">
+                                                    <img src="../upload/properties/gallery/thumb/<?php echo $property_photo['image_name']; ?>" class="img-responsive ">
                                                 </div>
                                                 <div class="img-caption">
                                                     <p class="maxlinetitle"><?php echo $property_photo['caption']; ?></p>

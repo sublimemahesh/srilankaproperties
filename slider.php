@@ -8,7 +8,7 @@
         <ul class="slides">
             <?php if (COUNT(Slider::all())) : ?>
                 <?php foreach (Slider::all() as $slide) : ?>
-                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);" onclick="location.href = './view-property.php?id=<?= $slide['property'] ?>';"></li>
+                    <li class=" parallax" style="background-image:url(upload/slider/<?= $slide['image_name'] ?>);" onclick="location.href = '<?= $slide['url'] ?>';"></li>
                 <?php endforeach; ?>
             <?php endif; ?>
         </ul>

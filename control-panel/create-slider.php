@@ -62,22 +62,9 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <select class="form-control" name="property" id="property">
-                                                <option value=""> --Please Select the Property-- </option>
-                                                <?php
-                                                $properties = Property::getAllPropertiesByActiveMembers();
-                                                if (count($properties) > 0) {
-                                                    foreach ($properties as $key => $property) {
-                                                ?>
-                                                        <option value="<?= $property['id'] ?>">
-                                                            <?= '#' . $property['id'] . ' - ' . $property['title'] ?>
-                                                        </option>
-                                                <?php
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
+                                        <div class="form-line focused">
+                                            <input type="text" id="url" class="form-control" autocomplete="off" name="url" required="true" placeholder="https://abc.abc/">
+                                            <label class="form-label">Url</label>
                                         </div>
                                     </div>
                                 </div>

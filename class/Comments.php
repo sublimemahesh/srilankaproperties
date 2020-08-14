@@ -112,7 +112,7 @@ class Comments {
     
         public function activeComments() {
 
-        $query = "SELECT * FROM `comments` WHERE is_active = '1'";
+        $query = "SELECT * FROM `comments` WHERE is_active = '1' ORDER BY `queue` ASC";
         $db = new Database();
         $result = $db->readQuery($query);
         $array_res = array();

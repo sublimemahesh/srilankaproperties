@@ -31,8 +31,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = Helper::randamId();
-        $handle->image_x = 364;
-        $handle->image_y = 254;
+        $handle->image_x = 330;
+        $handle->image_y = 220;
 
         $handle->Process($dir_dest);
 
@@ -76,7 +76,7 @@ if (isset($_POST['create'])) {
 }
 
 if (isset($_POST['update'])) {
-    $dir_dest = '../../upload/property/';
+    $dir_dest = '../../upload/properties/';
     $handle1 = new Upload($_FILES['image']);
 
     $imgName = null;
@@ -88,8 +88,8 @@ if (isset($_POST['update'])) {
         $handle1->file_new_name_ext = FALSE;
         $handle1->image_ratio_crop = 'C';
         $handle1->file_new_name_body = $_POST ["oldImageName"];
-        $handle1->image_x = 364;
-        $handle1->image_y = 254;
+        $handle1->image_x = 330;
+        $handle1->image_y = 220;
 
         $handle1->Process($dir_dest);
 
@@ -101,27 +101,37 @@ if (isset($_POST['update'])) {
 
     $PROPERTY = new Property($_POST['id']);
 
+    $PROPERTY->member = $_POST['member'];
     $PROPERTY->image_name = $_POST['oldImageName'];
     $PROPERTY->title = $_POST['title'];
-    $PROPERTY->short_description = $_POST['short_description'];
-    $PROPERTY->description = $_POST['description'];
-    $PROPERTY->price = $_POST['price'];
     $PROPERTY->category = $_POST['category'];
     $PROPERTY->sub_category = $_POST['sub_category'];
-    $PROPERTY->housetype = $_POST['housetype'];
+    $PROPERTY->district = $_POST['district'];
+    $PROPERTY->city = $_POST['city'];
+    $PROPERTY->address = $_POST['address'];
+    $PROPERTY->email = $_POST['email'];
     $PROPERTY->contact = $_POST['contact'];
-    $PROPERTY->map = $_POST['map'];
-    $PROPERTY->features = $_POST['features'];
+    $PROPERTY->price = $_POST['price'];
+    $PROPERTY->price_dollar = $_POST['price_dollar'];
+    $PROPERTY->no_of_bed_rooms = $_POST['no_of_bed_rooms'];
+    $PROPERTY->description = $_POST['description'];
 
 
     $VALID = new Validator();
 
     $VALID->check($PROPERTY, [
         'title' => ['required' => TRUE],
-        'short_description' => ['required' => TRUE],
-        'description' => ['required' => TRUE],
+        'category' => ['required' => TRUE],
+        'sub_category' => ['required' => TRUE],
+        'district' => ['required' => TRUE],
+        'city' => ['required' => TRUE],
+        'address' => ['required' => TRUE],
+        'email' => ['required' => TRUE],
+        'contact' => ['required' => TRUE],
         'price' => ['required' => TRUE],
-        'image_name' => ['required' => TRUE]
+        'price_dollar' => ['required' => TRUE],
+        'no_of_bed_rooms' => ['required' => TRUE],
+        'description' => ['required' => TRUE],
     ]);
 
 

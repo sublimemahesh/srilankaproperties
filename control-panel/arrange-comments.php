@@ -2,7 +2,6 @@
 include_once(dirname(__FILE__) . '/../class/include.php');
 include_once(dirname(__FILE__) . '/auth.php');
 
-$COMMENTS = new Comments(NULL);
 ?>
 <!DOCTYPE html>
 <html> 
@@ -51,8 +50,9 @@ $COMMENTS = new Comments(NULL);
                                             <div class="col-md-12 arrange-container">
                                                 <ul id="sortable">
                                                     <?php
-                                                    if (count($COMMENTS->all()) > 0) {
-                                                        foreach ($COMMENTS->all() as $key => $img) {
+                                                    $comments = Comments::activeComments();
+                                                    if (count($comments) > 0) {
+                                                        foreach ($comments as $key => $img) {
                                                             ?>
                                                             <div class="col-md-3" style="list-style: none;">
                                                                 <li class="ui-state-default">
@@ -67,7 +67,7 @@ $COMMENTS = new Comments(NULL);
                                                         }
                                                     } else {
                                                         ?> 
-                                                        <b>No images in the database.</b> 
+                                                        <b>No any comments.</b> 
                                                     <?php } ?> 
 
                                                 </ul>  
