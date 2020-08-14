@@ -77,32 +77,9 @@ $SLIDER = new Slider($id);
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
                                         <div class="form-line">
-                                            <select class="form-control" name="property" id="property">
-                                                <option value=""> --Please Select the Property-- </option>
-                                                <?php
-                                                $properties = Property::getAllPropertiesByActiveMembers();
-                                                if (count($properties) > 0) {
-                                                    foreach ($properties as $key => $property) {
-                                                        $selected = '';
-                                                        if ($property['id'] == $SLIDER->property) {
-                                                            $selected = 'selected';
-                                                        }
-                                                ?>
-                                                        <option value="<?= $property['id'] ?>" <?= $selected ?>>
-                                                            <?= '#' . $property['id'] . ' - ' . $property['title'] ?>
-                                                        </option>
-                                                <?php
-                                                    }
-                                                }
-                                                ?>
-                                            </select>
+                                            <input type="text" id="url" class="form-control" value="<?php echo $SLIDER->url; ?>" name="url" required="TRUE">
+                                            <label class="form-label">Url</label>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hidden">
-                                    <label for="description">Description</label>
-                                    <div class="form-line">
-                                        <textarea id="description" name="description" class="form-control" rows="5"><?php echo $SLIDER->description; ?></textarea>
                                     </div>
                                 </div>
 

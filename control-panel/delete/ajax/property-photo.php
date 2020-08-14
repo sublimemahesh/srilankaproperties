@@ -7,8 +7,8 @@ if ($_POST['option'] == 'delete') {
 
     $PROPERTY_PHOTO = new PropertyPhoto($_POST['id']);
 
-    unlink('../../../upload/property/gallery/' . $PROPERTY_PHOTO->image_name);
-    unlink('../../../upload/property/gallery/thumb/' . $PROPERTY_PHOTO->image_name);
+    unlink('../../../upload/properties/gallery/' . $PROPERTY_PHOTO->image_name);
+    unlink('../../../upload/properties/gallery/thumb/' . $PROPERTY_PHOTO->image_name);
 
     $result = $PROPERTY_PHOTO->delete();
 

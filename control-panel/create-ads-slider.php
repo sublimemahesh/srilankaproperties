@@ -81,8 +81,8 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 </div> -->
                                 <div class="col-md-12">
                                     <div class="form-group form-float">
-                                        <div class="form-line">
-                                            <input type="text" id="url" class="form-control" autocomplete="off" name="url" required="true">
+                                        <div class="form-line focused">
+                                            <input type="text" id="url" class="form-control" autocomplete="off" name="url" required="true" placeholder="https://abc.abc/">
                                             <label class="form-label">Url</label>
                                         </div>
                                     </div>

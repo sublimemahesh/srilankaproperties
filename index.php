@@ -2,7 +2,7 @@
 include_once 'class/include.php';
 
 $COMMENT = new Comments(NULL);
-$comments = $COMMENT->all();
+$comments = $COMMENT->activeComments();
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">
@@ -193,7 +193,7 @@ $comments = $COMMENT->all();
                                                             }
                                                         } else {
                                                             ?>
-                                                            <h6>There no any comments in database</h6>
+                                                            <h6>There no any comments.</h6>
                                                             <?php
                                                         }
                                                         ?>

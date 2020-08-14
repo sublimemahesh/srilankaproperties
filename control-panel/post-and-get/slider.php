@@ -8,7 +8,7 @@ if (isset($_POST['create'])) {
     $VALID = new Validator();
 
     $SLIDER->title = $_POST['title'];
-    $SLIDER->property = $_POST['property'];
+    $SLIDER->url = $_POST['url'];
 
     $dir_dest = '../../upload/slider/';
 
@@ -36,7 +36,7 @@ if (isset($_POST['create'])) {
 
     $VALID->check($SLIDER, [
         'title' => ['required' => TRUE],
-        'property' => ['required' => TRUE],
+        'url' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
 
@@ -91,13 +91,13 @@ if (isset($_POST['update'])) {
 
     $SLIDER->image_name = $_POST['oldImageName'];
     $SLIDER->title = $_POST['title'];
-    $SLIDER->property = $_POST['property'];
+    $SLIDER->url = $_POST['url'];
 
 
     $VALID = new Validator();
     $VALID->check($SLIDER, [
         'title' => ['required' => TRUE],
-        'property' => ['required' => TRUE],
+        'url' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
     ]);
 

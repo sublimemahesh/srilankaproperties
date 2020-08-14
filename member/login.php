@@ -55,7 +55,7 @@ if (isset($_SESSION['m_id'])) {
                         </div>
                         <div class="form-group form-check p-0">
                             <label>Remember me
-                                <input class="defult-check" type="checkbox" checked="checked">
+                                <input class="defult-check" type="checkbox" name="remember" id="remember">
                                 <span class="checkmark"></span>
                             </label>
                             <a href="forget-password.php" class="forgot-password float-right">Forgot Password ?</a>
@@ -114,11 +114,15 @@ if (isset($_SESSION['m_id'])) {
     <!-- Jquery js -->
     <script src="../js/jquery-2.0.0.min.js" type="text/javascript"></script>
     <script src="../js/bootstrap.js" type="text/javascript"></script>
+    <!-- remeber be cookies plugin -->
+    <script src="js/jquery.cookie.js" type="text/javascript"></script> 
     <script src="../control-panel/plugins/sweetalert/sweetalert.min.js" type="text/javascript"></script>
     <!-- Custom css -->
     <script src="js/custom.js" type="text/javascript"></script>
     <script src="js/city.js" type="text/javascript"></script>
     <script src="js/login.js" type="text/javascript"></script>
+    <!-- check cookies for remember me -->
+    <script src="js/check-cookies.js" type="text/javascript"></script>
     <script src="lib/inputmask/dist/min/jquery.inputmask.bundle.min.js"></script>
     <script src="js/mask.init.js" type="text/javascript"></script>
     

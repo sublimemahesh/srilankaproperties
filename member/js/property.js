@@ -1,6 +1,6 @@
 //update
-$(document).ready(function() {
-    $('#btn-save').click(function(event) {
+$(document).ready(function () {
+    $('#btn-save').click(function (event) {
         event.preventDefault();
 
         $('#btn-save').hide();
@@ -129,7 +129,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'error') {
                         swal({
@@ -152,15 +152,17 @@ $(document).ready(function() {
                             timer: 2000,
                             showConfirmButton: false
                         });
+                        setTimeout(() => {
+                            window.location.replace("manage-properties.php?status=0");
+                        }, 1500);
 
-                        window.location.replace("manage-properties.php?status=0");
                     }
                 }
             });
         }
         return false;
     });
-    $('#btn-update').click(function(event) {
+    $('#btn-update').click(function (event) {
         event.preventDefault();
         $('#btn-update').hide();
         $('#update-loading').show();
@@ -288,7 +290,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'error') {
                         swal({
@@ -311,15 +313,17 @@ $(document).ready(function() {
                             timer: 2000,
                             showConfirmButton: false
                         });
-
-                        window.location.replace("edit-property.php?id=" + result.id);
+                        setTimeout(() => {
+                            window.location.replace("edit-property.php?id=" + result.id);
+                        }, 1500);
+                        
                     }
                 }
             });
         }
         return false;
     });
-    $('.delete-property').click(function() {
+    $('.delete-property').click(function () {
 
         var id = $(this).attr("data-id");
 
@@ -331,14 +335,14 @@ $(document).ready(function() {
             confirmButtonColor: "#DD6B55",
             confirmButtonText: "Yes, delete it!",
             closeOnConfirm: false
-        }, function() {
+        }, function () {
 
             $.ajax({
                 url: "ajax/property.php",
                 type: "POST",
                 data: { id: id, option: 'delete' },
                 dataType: "JSON",
-                success: function(jsonStr) {
+                success: function (jsonStr) {
                     if (jsonStr.status) {
 
                         swal({

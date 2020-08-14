@@ -162,15 +162,19 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                         <select name="sub_category" id="sub-category" class="form-control input-lg selectpicker">
                                             <option value="" selected>All Sub Categories</option>
                                             <?php
-                                            foreach (SubCategory::getSubCategoriesByCategory($category1) as $subcategory) :
-                                                $selected = '';
-                                                if ($subcategory['id'] == $subcategory1) :
-                                                    $selected = 'selected';
-                                                endif;
-                                            ?>
+                                            if($category1 != '') {
+                                                $subcategories = SubCategory::getSubCategoriesByCategory($category1);
+                                                foreach (SubCategory::getSubCategoriesByCategory($category1) as $subcategory) :
+                                                    $selected = '';
+                                                    if ($subcategory['id'] == $subcategory1) :
+                                                        $selected = 'selected';
+                                                    endif;
+                                                    ?>
                                                 <option value="<?php echo $subcategory['id']; ?>" <?= $selected; ?>><?php echo $subcategory['name']; ?></option>
-                                            <?php 
-                                        endforeach;
+                                                <?php
+                                                endforeach;
+                                            } 
+                                        
                                          ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">

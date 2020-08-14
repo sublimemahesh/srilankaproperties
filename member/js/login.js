@@ -1,7 +1,7 @@
 //loging validation
-$(document).ready(function() {
+$(document).ready(function () {
 
-    $('#login').click(function(event) {
+    $('#login').click(function (event) {
         event.preventDefault();
 
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -41,7 +41,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'error') {
                         swal({
@@ -52,7 +52,24 @@ $(document).ready(function() {
                             showConfirmButton: false
                         });
                     } else {
-                        window.location.replace("index.php");
+                        if ($('#remember').is(':checked')) {
+                            
+                            var username = $('#login_email').val();
+                            var password = $('#login_password').val();
+                            
+                            // set cookies to expire in 14 days
+                            $.cookie('username', username, { expires: 14 });
+                            $.cookie('password', password, { expires: 14 });
+                            $.cookie('remember', true, { expires: 14 });
+                            window.location.replace("index.php");
+                        } else {
+                            // reset cookies
+                            $.cookie('username', null);
+                            $.cookie('password', null);
+                            $.cookie('remember', null);
+                            window.location.replace("index.php");
+                        }
+                        
 
                     }
                 }
@@ -61,7 +78,7 @@ $(document).ready(function() {
         return false;
     });
 
-    $('#register').click(function(event) {
+    $('#register').click(function (event) {
 
         event.preventDefault();
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -126,7 +143,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'emailex') {
                         swal({
@@ -145,7 +162,7 @@ $(document).ready(function() {
         }
         return false;
     });
-    $('#send-email').click(function(event) {
+    $('#send-email').click(function (event) {
         event.preventDefault();
 
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
@@ -177,7 +194,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'error') {
                         swal({
@@ -210,7 +227,7 @@ $(document).ready(function() {
         }
         return false;
     });
-    $('#reset-password').click(function(event) {
+    $('#reset-password').click(function (event) {
         event.preventDefault();
         if (!$('#code').val() || $('#code').val().length === 0 || $('#code').val() == 0) {
             swal({
@@ -256,7 +273,7 @@ $(document).ready(function() {
                 contentType: false,
                 processData: false,
                 dataType: "JSON",
-                success: function(result) {
+                success: function (result) {
 
                     if (result.status === 'error') {
                         swal({

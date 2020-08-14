@@ -17,13 +17,13 @@ class Slider {
     public $title;
     public $image_name;
     public $description;
-    public $property;
+    public $url;
     public $queue;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`title`,`image_name`,`description`,`property`,`queue` FROM `slider` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`title`,`image_name`,`description`,`url`,`queue` FROM `slider` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -33,7 +33,7 @@ class Slider {
             $this->title = $result['title'];
             $this->image_name = $result['image_name'];
             $this->description = $result['description'];
-            $this->property = $result['property'];
+            $this->url = $result['url'];
             $this->queue = $result['queue'];
 
             return $this;
@@ -42,11 +42,11 @@ class Slider {
 
     public function create() {
 
-        $query = "INSERT INTO `slider` (`title`,`image_name`,`description`,`property`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `slider` (`title`,`image_name`,`description`,`url`,`queue`) VALUES  ('"
                 . $this->title . "','"
                 . $this->image_name . "', '"
                 . $this->description . "', '"
-                . $this->property . "', '"
+                . $this->url . "', '"
                 . $this->queue . "')";
 
         $db = new Database();
@@ -82,7 +82,7 @@ class Slider {
                 . "`title` ='" . $this->title . "', "
                 . "`image_name` ='" . $this->image_name . "', "
                 . "`description` ='" . $this->description . "', "
-                . "`property` ='" . $this->property . "', "
+                . "`url` ='" . $this->url . "', "
                 . "`queue` ='" . $this->queue . "' "
                 . "WHERE `id` = '" . $this->id . "'";
 
