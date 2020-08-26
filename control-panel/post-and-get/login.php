@@ -7,17 +7,12 @@ $USER = new User(NULL);
 $username = filter_var($_POST['username'], FILTER_SANITIZE_STRING);
 $password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
 
-
-if (empty($username) || empty($password)) {
-    header('Location: ../login.php?message=6');
-    exit();
-}
-
 if ($USER->login($username, $password)) {
-    header('Location: ../?message=5');
+    $result = ["status" => 'success'];
+    echo json_encode($result);
     exit();
 } else {
-    header('Location: ../login.php?message=7');
+    $result = ["status" => 'error'];
+    echo json_encode($result);
     exit();
 }
-

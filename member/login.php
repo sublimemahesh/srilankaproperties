@@ -44,7 +44,7 @@ if (isset($_SESSION['m_id'])) {
                     <div class="title-n">
                         <div>Member Sign in</div>
                     </div>
-                    <form method="post" class="login_form " id="login-form">
+                    <form method="post" class="login_form" id="login-form">
                         <div class="form-group">
                             <label>Email <span class="required text-danger">*</span></label>
                             <input type="email" required="" class="form-control" name="login_email" id="login_email">
@@ -91,14 +91,14 @@ if (isset($_SESSION['m_id'])) {
                                 <input id="terms-and-conditions" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="forgot-password agree-label float-right">I agree to the company <a href="../terms-and-conditions.php" target="_blank">terms & conditions</a>.</span>
+                            <span class="terms-and-conditions-label agree-label float-right">I agree to the company <a href="../terms-and-conditions.php" target="_blank">terms & conditions</a>.</span>
                         </div>
                         <div class="form-group form-check check-terms-and-conditions p-0">
                             <label>
                                 <input id="subscribe" name="subscribe" class="defult-check" type="checkbox">
                                 <span class="checkmark"></span>
                             </label>
-                            <span class="forgot-password agree-label float-right">Subscribe to stay updated with new products and offers!.</span>
+                            <span class="subscribe-label agree-label float-right">Subscribe to stay updated with new products and offers!.</span>
                         </div>
                         <div class="form-group">
                             <button type="submit" class="btn btn-primary" name="register" id="register" value="Register">Register</button>

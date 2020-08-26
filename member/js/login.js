@@ -58,9 +58,9 @@ $(document).ready(function () {
                             var password = $('#login_password').val();
                             
                             // set cookies to expire in 14 days
-                            $.cookie('username', username, { expires: 14 });
-                            $.cookie('password', password, { expires: 14 });
-                            $.cookie('remember', true, { expires: 14 });
+                            $.cookie('username', username, { expires: 31 });
+                            $.cookie('password', password, { expires: 31 });
+                            $.cookie('remember', true, { expires: 31 });
                             window.location.replace("index.php");
                         } else {
                             // reset cookies
