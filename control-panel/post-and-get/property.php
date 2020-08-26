@@ -46,7 +46,6 @@ if (isset($_POST['create'])) {
 
     $VALID->check($PROPERTY, [
         'title' => ['required' => TRUE],
-        'short_description' => ['required' => TRUE],
         'description' => ['required' => TRUE],
         'price' => ['required' => TRUE],
         'image_name' => ['required' => TRUE]
@@ -121,17 +120,9 @@ if (isset($_POST['update'])) {
 
     $VALID->check($PROPERTY, [
         'title' => ['required' => TRUE],
-        'category' => ['required' => TRUE],
-        'sub_category' => ['required' => TRUE],
-        'district' => ['required' => TRUE],
-        'city' => ['required' => TRUE],
-        'address' => ['required' => TRUE],
-        'email' => ['required' => TRUE],
-        'contact' => ['required' => TRUE],
-        'price' => ['required' => TRUE],
-        'price_dollar' => ['required' => TRUE],
-        'no_of_bed_rooms' => ['required' => TRUE],
         'description' => ['required' => TRUE],
+        'price' => ['required' => TRUE],
+        'image_name' => ['required' => TRUE]
     ]);
 
 

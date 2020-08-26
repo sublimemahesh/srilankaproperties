@@ -441,7 +441,6 @@ class Property {
         }
 
         $query = "SELECT * FROM `property` $where AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit . "";
-// dd($query);
         $db = new Database();
 
         $result = $db->readQuery($query);
@@ -458,7 +457,7 @@ class Property {
         $w = array();
         $where = '';
         if (!empty($keyword)) {
-            $w[] = "`title` LIKE '%" . $keyword . "%'";
+            $w[] = "(`title` LIKE '%" . $keyword . "%' OR `category` IN (SELECT `id` FROM `category` WHERE `name` LIKE '%" . $keyword . "%') OR  `sub_category` IN (SELECT `id` FROM `sub_category` WHERE `name` LIKE '%" . $keyword . "%') OR  `district` IN (SELECT `id` FROM `district` WHERE `name` LIKE '%" . $keyword . "%') OR  `city` IN (SELECT `id` FROM `city` WHERE `name` LIKE '%" . $keyword . "%'))";
         }
         if (!empty($category)) {
             $w[] = "`category` = '" . $category . "' ";
@@ -509,7 +508,7 @@ class Property {
                     if ($counter == $page)
                         $setPaginate .= "<li class='active'><a>$counter</a></li>";
                     else
-                        $setPaginate .= "<li><a href='{$page_url}page=$counter&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
+                        $setPaginate .= "<li><a href='{$page_url}page=$counter&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
                 }
             } elseif ($setLastpage > 5 + ($adjacents * 2)) {
                 if ($page < 1 + ($adjacents * 2)) {
@@ -517,33 +516,33 @@ class Property {
                         if ($counter == $page)
                             $setPaginate .= "<li class='active'><a>$counter</a></li>";
                         else
-                            $setPaginate .= "<li><a href='{$page_url}page=$counter&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
                     }
                     $setPaginate .= "<li class='dot'><a>...</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1&category=$category&sub_category=$subcategory&district=$district&city=$city'>$lpm1</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage&category=$category&sub_category=$subcategory&district=$district&city=$city'>$setLastpage</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$lpm1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$setLastpage</a></li>";
                 } elseif ($setLastpage - ($adjacents * 2) > $page && $page > ($adjacents * 2)) {
-                    $setPaginate .= "<li><a href='{$page_url}page=1&category=$category&sub_category=$subcategory&district=$district&city=$city'>1</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=2&category=$category&sub_category=$subcategory&district=$district&city=$city'>2</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=1&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=2&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>2</a></li>";
                     $setPaginate .= "<li class='dot'><a>...</a></li>";
                     for ($counter = $page - $adjacents; $counter <= $page + $adjacents; $counter++) {
                         if ($counter == $page)
                             $setPaginate .= "<li class='active'><a>$counter</a></li>";
                         else
-                            $setPaginate .= "<li><a href='{$page_url}page=$counter&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
                     }
                     $setPaginate .= "<li class='dot'><a>...</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1&category=$category&sub_category=$subcategory&district=$district&city=$city'>$lpm1</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage&category=$category&sub_category=$subcategory&district=$district&city=$city'>$setLastpage</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$lpm1&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$lpm1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=$setLastpage&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$setLastpage</a></li>";
                 } else {
-                    $setPaginate .= "<li><a href='{$page_url}page=1&category=$category&sub_category=$subcategory&district=$district&city=$city'>1</a></li>";
-                    $setPaginate .= "<li><a href='{$page_url}page=2&category=$category&sub_category=$subcategory&district=$district&city=$city'>2</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=1&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>1</a></li>";
+                    $setPaginate .= "<li><a href='{$page_url}page=2&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>2</a></li>";
                     $setPaginate .= "<li class='dot'><a>...</a></li>";
                     for ($counter = $setLastpage - (2 + ($adjacents * 2)); $counter <= $setLastpage; $counter++) {
                         if ($counter == $page)
                             $setPaginate .= "<li class='active'><a>$counter</a></li>";
                         else
-                            $setPaginate .= "<li><a href='{$page_url}page=$counter&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
+                            $setPaginate .= "<li><a href='{$page_url}page=$counter&keyword=$keyword&category=$category&sub_category=$subcategory&district=$district&city=$city'>$counter</a></li>";
                     }
                 }
             }

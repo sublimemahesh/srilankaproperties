@@ -32,7 +32,7 @@ if (isset($_SESSION['m_id'])) {
     </head>
     <body class="theme-2">
         <div class="container text-center">
-            <img src="../images/realstate/sl-property-logo.png" class="logo-login logo-f" style="width: 150px"/><B class="memberr-log"></B>
+        <a href="../"><img src="../images/realstate/sl-property-logo.png" class="logo-login logo-f" style="width: 150px"/></a>
         </div>
         <!-- Start My Account Section -->
         <section class="">

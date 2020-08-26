@@ -373,6 +373,16 @@ label {
 .title {
     position: relative;
 }
+.title-r {
+    border-bottom: 2px solid #014586;
+    margin-bottom: 25px !important;
+    text-transform: uppercase !important;
+    font-size: 25px;
+    margin-right: 55% !important;
+    font-weight: bold;
+    text-transform: uppercase !important;
+    padding-bottom: 10px !important;
+}
 
 .title.text-center:before {
     right: 0;
@@ -1857,10 +1867,10 @@ header {
     content: "\f00c";
     position: absolute;
     font-family: FontAwesome;
-    top: -1px;
+    top: 2px;
     line-height: 18px;
-    left: 1px;
-    color: #cacaca;
+    left: 4px;
+    color: #014586;
 }
 
 
@@ -1941,8 +1951,15 @@ header {
 
 .forgot-password {
     font-size: 14px;
+    float: right;
+}
+.terms-and-conditions-label {
+    font-size: 14px;
 }
 
+.subscribe-label {
+    font-size: 14px;
+}
 .mfp-content .subscribe-popup-form input {
     margin: 0 0 12px 0;
 }
