@@ -55,10 +55,9 @@ include_once 'class/include.php';
         </div>
         <!-- Start Content -->
         <div class="main" role="main">
-        <div class="spacer-40"></div>
             <div id="content" class="content full">
                 <div class="container">
-                    <div class="page">
+                    <div class="page contact-map">
                         <div class="row">
                             <div class="col-md-6 col-sm-6">
                                 <h3 class="contact-mrg">Contact Form</h3>

@@ -55,7 +55,6 @@ $VALUES = new Page(4);
             </div>
             <!-- End Page Header -->
         </div>
-        <div class="spacer-40"></div>
         <div class="container home-abt-img-padd">
             <div class="row">
                 <div class="col-md-6 col-sm-6  text-m">

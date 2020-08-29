@@ -48,7 +48,7 @@ $comments = $COMMENT->activeComments();
             <!-- Start Content -->
             <div class="main index-set" role="main">
                 <div id="content" class="content full">
-                    <div class="featured-blocks">
+                    <div>
                         <div class="featured-blocks">
                             <div class="container">
                                 <div class="row">

@@ -63,7 +63,6 @@ if (isset($_GET['id'])) {
 
         <div class="main" role="main">
             <div class="main" role="main">
-            <div class="spacer-40"></div>
                 <div id="content" class="content full">
                     <div class="container">
                         <div class="row">

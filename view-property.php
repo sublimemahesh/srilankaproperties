@@ -67,7 +67,7 @@ if (isset($_GET['id'])) {
             <div class="site-showcase">
             </div>
             <div class="main" role="main">
-            <div class="spacer-40"></div>
+<!--            <div class="spacer-40"></div>-->
                 <div id="content" class="content full">
                     <div class="container">
                         <div class="row">
@@ -276,7 +276,7 @@ if (isset($_GET['id'])) {
                                 <?php
                                 }
                                 ?>
-                                <div class="widget sidebar-widget featured-properties-widget">
+                                <div class="widget sidebar-widget featured-properties-widget rel-pro">
                                     <h3 class="widgettitle">Related Properties</h3>
                                     <div class="property-grid">
                                         <div class="row">

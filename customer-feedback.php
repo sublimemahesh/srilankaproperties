@@ -58,7 +58,6 @@ $VALUES = new Page(4);
             <!-- End Page Header -->
         </div>
         <div class="main" role="main">
-        <div class="spacer-40"></div>
             <div id="content" class="content full im-sec">
                 <div class="container">
                     <div class="page">
