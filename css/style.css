@@ -2119,7 +2119,7 @@ html[xmlns] .slides {
 }
 
 .property-slider {
-    margin: 25px 0 35px 0;
+    margin: 7px 0 35px 0;
 }
 
 .touch .property-slider .flex-direction-nav {
@@ -2436,7 +2436,7 @@ html[xmlns] .slides {
 /* Widgets */
 
 .widget {
-    margin-bottom: 40px;
+    margin-bottom: 0px;
 }
 
 .widget .widgettitle {
@@ -2554,7 +2554,7 @@ html[xmlns] .slides {
 
 .featured-properties-widget .property-info {
     width        : 100%;
-    padding      : 10px 0px;
+    padding      : 0px 0px;
     border-bottom: 0;
 }
 
@@ -4240,7 +4240,7 @@ span.progress-bar-tooltip:after {
 
 .padding-t50b20 {
     padding-top   : 50px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
 .page-bg {
@@ -4443,4 +4443,28 @@ div.column {
 
 .contact-us-page .content {
     padding-bottom: 0;
+}
+.rel-pro{
+    margin-top: 40px;
+}
+.fea-pro{
+    margin-top: -5px !important;
+}
+.contact-map{
+    margin-bottom: 30px;
+}
+.content.property-page{
+    margin-bottom: 0px !important;
+}
+.search-p{
+    margin-bottom: 50px;
+}
+.pro-ul{
+    margin-bottom: -35px;
+}
+.ftr-btm{
+    padding-bottom: 45px !important;
+}
+.search-page{
+    margin-bottom: -40px;
 }

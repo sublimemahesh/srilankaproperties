@@ -65,7 +65,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
             <!-- End Page Header -->
         </div>
         <div class="main" role="main">
-            <div class="spacer-40"></div>
+<!--            <div class="spacer-40"></div>-->
             <div id="content" class="content full">
                 <div class="container">
                     <div class="row">
@@ -124,7 +124,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 hidden-sm">
                             <div class="widget sidebar-widget featured-properties-widget">
-                                <h3 class="widgettitle search-f">Featured Properties</h3>
+                                <h3 class="widgettitle search-f fea-pro">Featured Properties</h3>
                                 <ul class="">
                                     <?php
                                     $properties = Property::getAllPropertiesByLimit($pagelimit, $setlimit);

@@ -89,11 +89,10 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
         </div>
         <!-- End Page Header -->
         <div class="main" role="main">
-            <div class="spacer-40"></div>
             <div id="content" class="content full">
                 <div class="container">
                     <div class="row">
-                        <div class="col-md-9">
+                        <div class="col-md-9 search-page">
                             <div class="property-grid">
                                 <ul class="grid-holder col-3">
                                     <?php

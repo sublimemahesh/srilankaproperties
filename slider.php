@@ -22,7 +22,7 @@
                     <div class="form-group slider-heading slider-i">
                         <div class="row">
                             <div class="col-md-2 col-sm-12">
-                                <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
+                                <input type="text" name="keyword" placeholder="Keyword" id="keyword" class="form-control input-lg" />
                             </div>
                             <div class="col-md-2 col-sm-6">
                                 <select name="category" id="category" class="form-control input-lg selectpicker">

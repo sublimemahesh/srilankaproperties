@@ -92,13 +92,12 @@ if (isset($_GET['agent'])) {
         </div>
         <!-- End Page Header -->
         <div class="main" role="main">
-            <div class="spacer-40"></div>
-            <div id="content" class="content full">
+            <div id="content" class="content property-page full">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-9 col-xs-12">
                             <div class="property-grid">
-                                <ul class="grid-holder col-3">
+                                <ul class="grid-holder col-3 pro-ul">
                                     <?php
                                     if (count($properties) > 0) {
                                         foreach ($properties as $property) :
@@ -192,8 +191,8 @@ if (isset($_GET['agent'])) {
 
                                 </div>
                             <?php else : ?>
-                                <div class="widget sidebar-widget">
-                                    <h3 class="widgettitle search-under">Search Properties</h3>
+                                <div class="widget sidebar-widget search-p">
+                                    <h3 class="widgettitle search-under fea-pro">Search Properties</h3>
                                     <div class="full-search-form ">
                                         <form action="search.php" id="search-form">
                                             <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
