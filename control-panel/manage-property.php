@@ -12,6 +12,9 @@ if (isset($_GET['type'])) {
     } elseif ($_GET['type'] == 1) {
         $properties = Property::getAllApprovedProperties();
         $title = "Approved";
+    } elseif ($_GET['type'] == 2) {
+        $properties = Property::getBoostedProperties();
+        $title = "Boosted";
     }
 }
 
@@ -51,7 +54,7 @@ if (isset($_GET['type'])) {
                             <h2>
                                 <?= $title; ?> Properties
                             </h2>
-<!--                            <ul class="header-dropdown">
+                            <!--                            <ul class="header-dropdown">
                                 <li>
                                     <a href="create-property.php">
                                         <i class="material-icons">add</i>
@@ -87,13 +90,13 @@ if (isset($_GET['type'])) {
                                                     </tr>
                                                 </tfoot>
                                                 <tbody>
-                                                    <?php foreach ($properties as $key=>$property) : 
-                                                        $MEM = New Member($property['member']);
+                                                    <?php foreach ($properties as $key => $property) :
+                                                        $MEM = new Member($property['member']);
                                                         $DISTRICT = new District($property['district']);
-                                                        ?>
+                                                    ?>
                                                         <tr id="row_<?= $property['id']; ?>">
                                                             <!-- <td><img src="../upload/property/<?php echo $property['image_name']; ?>" class="img-responsive img-thumbnail" width="100"></td> -->
-                                                            <td><?= $key+1; ?></td>
+                                                            <td><?= $key + 1; ?></td>
                                                             <td><?= $property['title']; ?></td>
                                                             <td><?= $MEM->name; ?></td>
                                                             <td><?= $property['category_name']; ?></td>
@@ -102,7 +105,14 @@ if (isset($_GET['type'])) {
                                                                 <a href="edit-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-pencil arrange-btn" title="Edit Property"></button></a>
                                                                 <a href="view-property-photos.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-picture warning-btn" title="Edit Property"></button></a>
                                                                 <a href="view-property.php?id=<?php echo $property['id']; ?>"> <button class="glyphicon glyphicon-eye-open edit-btn" title="View Property"></button></a>
-                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>"  title="<?= $property['status'] == 0 ? "Approve this Property" : "Reject this Property" ?>"> </button> </a>
+                                                                <a href="#" class="toggle-approvation" toggler="<?= $property['status']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon glyphicon-check <?= $property['status'] == 0 ? "approvation-btn-warning" : "approvation-btn-success" ?>" title="<?= $property['status'] == 0 ? "Approve this Property" : "Reject this Property" ?>"> </button> </a>
+                                                                <?php
+                                                                if ($property['status'] == 1) {
+                                                                ?>
+                                                                    <a href="#" class="toggle-boost" toggler="<?= $property['is_boosted']; ?>" data-id="<?php echo $property['id']; ?>"> <button type="button" class="glyphicon <?= $property['is_boosted'] == 0 ? "glyphicon-upload warning-btn" : "glyphicon-download delete-btn" ?>" title="<?= $property['is_boosted'] == 0 ? "Boost this Property" : "Down this Property" ?>"> </button> </a>
+                                                                <?php
+                                                                }
+                                                                ?>
                                                                 <a href="#" class="delete-property" data-id="<?= $property['id']; ?>"> <button class="glyphicon glyphicon-trash delete-btn" title="Delete this Property"></button></a>
                                                             </td>
                                                         </tr>
@@ -153,6 +163,7 @@ if (isset($_GET['type'])) {
     <script src="js/demo.js"></script>
     <script src="delete/js/property.js" type="text/javascript"></script>
     <script src="js/property-approve.js" type="text/javascript"></script>
+    <script src="js/boost-property.js" type="text/javascript"></script>
 </body>
 
 </html>

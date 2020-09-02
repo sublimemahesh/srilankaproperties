@@ -107,6 +107,19 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                                 <div class="property-block">
                                                     <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                         <img src="upload/properties/<?= $property['image_name'] ?>">
+                                                        <?php
+                                                        if ($property['is_boosted'] == 1) {
+                                                            ?>
+                                                            <span class="boost-ad">
+                                                                <i class="fa fa-star"></i></span>
+                                                            <?php
+                                                        } elseif ($property['no_of_bed_rooms'] != 0) {
+                                                            ?>
+                                                            <span class="images-count">
+                                                                <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+                                                            <?php
+                                                        }
+                                                        ?>
                                                         <span class="badges"><?= $CATEGORY->name; ?></span>
                                                     </a>
                                                     <div class="property-info">
@@ -130,7 +143,7 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                         <?php endforeach;
                                     } else {
                                         ?>
-                                        <h5>No any properties in the database.</h5>
+                                        <h5>Search result is empty.</h5>
                                     <?php
                                     } ?>
                                 </ul>

@@ -159,7 +159,6 @@ if (isset($_POST['save-data'])) {
     }
 }
 
-
 if ($_POST['option'] == "APPROVEPROPERTY") {
     
     if (Property::approveOrRejectProperty($_POST['property'],1)) {
@@ -176,6 +175,27 @@ if ($_POST['option'] == "REJECTPROPERTY") {
     if (Property::approveOrRejectProperty($_POST['property'],0)) {
         
         echo json_encode("rejected");
+        exit;
+
+    }
+
+}
+
+if ($_POST['option'] == "BOOSTPROPERTY") {
+    
+    if (Property::boostProperty($_POST['property'])) {
+        
+        echo json_encode("boosted");
+        exit;
+
+    }
+
+}
+if ($_POST['option'] == "STOPBOOST") {
+    
+    if (Property::stopBoost($_POST['property'])) {
+        
+        echo json_encode("stop");
         exit;
 
     }

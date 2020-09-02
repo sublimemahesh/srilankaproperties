@@ -353,6 +353,12 @@
                                 <span>Manage Approved Properties</span>
                             </a>
                         </li>
+                        <li>
+                            <a href="manage-property.php?type=2">
+                                <i class="material-icons">list</i>
+                                <span>Manage Boosted Properties</span>
+                            </a>
+                        </li>
                     </ul>
                 </li>
                 <li>
