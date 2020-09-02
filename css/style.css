@@ -4444,7 +4444,15 @@ div.column {
 .contact-us-page .content {
     padding-bottom: 0;
 }
-.rel-pro{
+.property-featured-image .boost-ad {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 9;
+    color: #ffe838;
+    background: rgba(0, 0, 0, .5);
+    padding: 5px 10px;
+}.rel-pro{
     margin-top: 40px;
 }
 .fea-pro{
