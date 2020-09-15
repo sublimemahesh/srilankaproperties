@@ -8,7 +8,6 @@ if (isset($_POST['create'])) {
     $VALID = new Validator();
 
     $SERVICE->title = $_POST['title'];
-    $SERVICE->short_description = $_POST['short_description'];
     $SERVICE->description = $_POST['description'];
 
     $dir_dest = '../../upload/service/';
@@ -22,8 +21,8 @@ if (isset($_POST['create'])) {
         $handle->file_new_name_ext = 'jpg';
         $handle->image_ratio_crop = 'C';
         $handle->file_new_name_body = Helper::randamId();
-        $handle->image_x = 741;
-        $handle->image_y = 999;
+        $handle->image_x = 600;
+        $handle->image_y = 400;
 
         $handle->Process($dir_dest);
 
@@ -32,13 +31,32 @@ if (isset($_POST['create'])) {
             $imgName = $handle->file_dst_name;
         }
     }
-
     $SERVICE->image_name = $imgName;
-    $SERVICE->create();
+    $VALID->check($SERVICE, [
+        'title' => ['required' => TRUE],
+        'description' => ['required' => TRUE],
+        'image_name' => ['required' => TRUE]
+    ]);
 
-    $result = ["id" => $SERVICE->id];
-    echo json_encode($result);
-    exit();
+    if ($VALID->passed()) {
+        $SERVICE->create();
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $VALID->addError("Your data was saved successfully", 'success');
+        $_SESSION['ERRORS'] = $VALID->errors();
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        $_SESSION['ERRORS'] = $VALID->errors();
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
 }
 
 if (isset($_POST['update'])) {
@@ -54,9 +72,9 @@ if (isset($_POST['update'])) {
         $handle->file_overwrite = TRUE;
         $handle->file_new_name_ext = FALSE;
         $handle->image_ratio_crop = 'C';
-        $handle->file_new_name_body = $_POST ["oldImageName"];
-        $handle->image_x = 741;
-        $handle->image_y = 999;
+        $handle->file_new_name_body = $_POST["oldImageName"];
+        $handle->image_x = 600;
+        $handle->image_y = 400;
 
         $handle->Process($dir_dest);
 
@@ -67,16 +85,37 @@ if (isset($_POST['update'])) {
     }
 
     $SERVICE = new Service($_POST['id']);
+    $VALID = new Validator();
 
     $SERVICE->image_name = $_POST['oldImageName'];
     $SERVICE->title = $_POST['title'];
-    $SERVICE->short_description = $_POST['short_description'];
     $SERVICE->description = $_POST['description'];
 
-    $SERVICE->update();
-    $result = ["id" => $_POST['id']];
-    echo json_encode($result);
-    exit();
+    $VALID->check($SERVICE, [
+        'title' => ['required' => TRUE],
+        'description' => ['required' => TRUE],
+        'image_name' => ['required' => TRUE]
+    ]);
+
+    if ($VALID->passed()) {
+        $SERVICE->update();
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+        $VALID->addError("Your changes saved successfully", 'success');
+        $_SESSION['ERRORS'] = $VALID->errors();
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    } else {
+
+        if (!isset($_SESSION)) {
+            session_start();
+        }
+
+        $_SESSION['ERRORS'] = $VALID->errors();
+
+        header('Location: ' . $_SERVER['HTTP_REFERER']);
+    }
 }
 
 if (isset($_POST['save-data'])) {
@@ -86,6 +125,6 @@ if (isset($_POST['save-data'])) {
 
         $SERVICE = Service::arrange($key, $img);
 
-       header('Location:../arrange-services.php?message=9');
+        header('Location:../arrange-services.php?message=9');
     }
 }

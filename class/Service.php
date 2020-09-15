@@ -16,14 +16,13 @@ class Service {
     public $id;
     public $title;
     public $image_name;
-    public $short_description;
     public $description;
     public $queue;
 
     public function __construct($id) {
         if ($id) {
 
-            $query = "SELECT `id`,`title`,`image_name`,`short_description`,`description`,`queue` FROM `service` WHERE `id`=" . $id;
+            $query = "SELECT `id`,`title`,`image_name`,`description`,`queue` FROM `service` WHERE `id`=" . $id;
 
             $db = new Database();
 
@@ -32,7 +31,6 @@ class Service {
             $this->id = $result['id'];
             $this->title = $result['title'];
             $this->image_name = $result['image_name'];
-            $this->short_description = $result['short_description'];
             $this->description = $result['description'];
             $this->queue = $result['queue'];
 
@@ -42,10 +40,9 @@ class Service {
 
     public function create() {
 
-        $query = "INSERT INTO `service` (`title`,`image_name`,`short_description`,`description`,`queue`) VALUES  ('"
+        $query = "INSERT INTO `service` (`title`,`image_name`,`description`,`queue`) VALUES  ('"
                 . $this->title . "','"
                 . $this->image_name . "', '"
-                . $this->short_description . "', '"
                 . $this->description . "', '"
                 . $this->queue . "')";
 
@@ -81,7 +78,6 @@ class Service {
         $query = "UPDATE  `service` SET "
                 . "`title` ='" . $this->title . "', "
                 . "`image_name` ='" . $this->image_name . "', "
-                . "`short_description` ='" . $this->short_description . "', "
                 . "`description` ='" . $this->description . "', "
                 . "`queue` ='" . $this->queue . "' "
                 . "WHERE `id` = '" . $this->id . "'";
@@ -99,8 +95,6 @@ class Service {
 
     public function delete() {
 
-        $this->deletePhotos();
-
         unlink(Helper::getSitePath() . "upload/service/" . $this->image_name);
 
         $query = 'DELETE FROM `service` WHERE id="' . $this->id . '"';
@@ -108,23 +102,6 @@ class Service {
         $db = new Database();
 
         return $db->readQuery($query);
-    }
-
-    public function deletePhotos() {
-
-        $SERVICE_PHOTO = new ServicePhoto(NULL);
-
-        $allPhotos = $SERVICE_PHOTO->getServicePhotosById($this->id);
-
-        foreach ($allPhotos as $photo) {
-
-            $IMG = $SERVICE_PHOTO->image_name = $photo["image_name"];
-            unlink(Helper::getSitePath() . "upload/service/gallery/" . $IMG);
-            unlink(Helper::getSitePath() . "upload/service/gallery/thumb/" . $IMG);
-
-            $SERVICE_PHOTO->id = $photo["id"];
-            $SERVICE_PHOTO->delete();
-        }
     }
 
     public function arrange($key, $img) {
