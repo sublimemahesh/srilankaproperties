@@ -8,7 +8,7 @@ $site_link = "http://" . $_SERVER['HTTP_HOST'];
 $comany_name = "Sri Lanka Properties";
 $website_name = "www.srilankaproperties.lk";
 $comConNumber = "+94 11 111 111";
-$comEmail = "info@srilankaproperties.com";
+$comEmail = "noreply@srilankaproperties.lk";
 $comOwner = "Mr. Shehan";
 $customer_msg = 'Hello, and thank you for your interest in ' . $comany_name . '.We have received your enquiry, and we will get back to you as soon as possible.';
 //----------------------- LOGO ---------------------------------
@@ -24,10 +24,10 @@ $message = $_POST['message'];
 
 //---------------------- SERVER WEBMAIL LOGIN ------------------------
 $host = "sg1-ls7.a2hosting.com";
-$username = "test@airportcars.lk";
-$password = "TestEmail123";
+$username = "noreply@srilankaproperties.lk";
+$password = "u{Sb,7;wP4FK";
 //------------------------ MAIL ESSENTIALS --------------------------------
-$webmail = "test@airportcars.lk";
+$webmail = "noreply@srilankaproperties.lk";
 $visitorSubject = "Thank You " . $visitor_name . " - Sri Lanka Properties";
 $companySubject = "Contact Inquiry - " . $visitor_name;
 //----------------------CAPTCHACODE---------------------

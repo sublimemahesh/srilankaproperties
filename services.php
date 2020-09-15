@@ -75,6 +75,9 @@ include './class/include.php';
                                                     <div class="property-info">
                                                         <h3><a><?= $service['title']; ?></a></h3>
                                                         <?= $service['description']; ?>
+                                                        <a href="contact.php">
+                                                            <button type="button" class="btn btn-primary s-list">Learn More</button>
+                                                        </a>
                                                     </div>
                                                 </div>
                                             </li>
