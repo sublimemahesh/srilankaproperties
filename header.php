@@ -15,7 +15,7 @@
                 </div>
                 <div class="col-md-8 col-sm-8 header-i">
                     <ul class="horiz-nav pull-right">
-                        <li><a href="services.php">Services</a></li>
+                        <li class="hidden-sm"><a href="services.php">Services</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                          <?php
@@ -120,6 +120,7 @@
                             }
                             ?>
                                 <li><a class="header-nav" href="agents.php">Agents</a></li>
+                            <li class="visible-sm visible-xs"><a class="header-nav" href="customer-feedback.php">Service</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="customer-feedback.php">Customer Feedback</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="about.php">About Us</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="contact.php">Contact Us</a></li>
