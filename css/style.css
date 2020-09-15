@@ -4476,3 +4476,10 @@ div.column {
 .search-page{
     margin-bottom: -40px;
 }
+.service-sub{
+    font-weight: bold !important;
+    font-size: 15px !important;
+}
+.s-list{
+    margin-top: 20px !important;
+}
