@@ -15,6 +15,7 @@
                 </div>
                 <div class="col-md-8 col-sm-8 header-i">
                     <ul class="horiz-nav pull-right">
+                        <li><a href="services.php">Services</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
                          <?php
