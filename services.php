@@ -71,12 +71,12 @@ include './class/include.php';
                                                 <div class="col-md-6">
                                                     <img src="upload/service/<?= $service['image_name']; ?>" alt=""></a>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 serv-des">
                                                     <div class="property-info">
                                                         <h3><a><?= $service['title']; ?></a></h3>
                                                         <?= $service['description']; ?>
                                                         <a href="contact.php">
-                                                            <button type="button" class="btn btn-primary s-list">Learn More</button>
+                                                            <button type="button" class="btn btn-primary s-btn">Learn More</button>
                                                         </a>
                                                     </div>
                                                 </div>

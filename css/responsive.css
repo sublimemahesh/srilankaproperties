@@ -95,7 +95,7 @@ and open the template in the editor.
     .h-drop-i {
         margin-left: 20px !important;
     }
-    
+
 }
 
 @media (max-width: 767px) {
@@ -110,6 +110,7 @@ and open the template in the editor.
     .padd {
         margin-left: 0 !important;
     }
+    
 
 }
 
@@ -259,7 +260,21 @@ and open the template in the editor.
     .agent-properties-page .single-agent .agent-d {
         margin-bottom: 30px;
     }
-   
+    .serv-des{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .search-prp{
+        margin-top: 35px !important;
+    }
+    .f-pro{
+        margin-top: 5px;
+    }
+    .tnc-sect{
+        margin-right: 1px !important;
+        margin-left: 1px !important;
+    }
+
 }
 
 
@@ -306,9 +321,9 @@ and open the template in the editor.
         margin-bottom: 0;
     }
 
-    .serch-dev {
-        margin-top: 0;
-    }
+    /*    .serch-dev {
+            margin-top: 0;
+        }*/
 
     .agent-properties-page .tabs {
         margin-bottom: 0;
@@ -341,6 +356,11 @@ and open the template in the editor.
     .property-info {
         padding: 15px 10px;
     }
+    .i-ser-un{
+    margin-right: 165px !important;
+    }
+    
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

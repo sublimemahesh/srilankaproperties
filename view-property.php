@@ -352,7 +352,7 @@ if (isset($_GET['id'])) {
                             </div>
                             <div class="sidebar right-sidebar col-md-3 col-sm-6 col-xs-12 serch-dev search">
                                 <div class="widget sidebar-widget">
-                                    <h3 class="widgettitle search-under">Search Properties</h3>
+                                    <h3 class="widgettitle i-ser-un search-under search-prp">Search Properties</h3>
                                     <div class="full-search-form ">
                                         <form action="search.php" id="search-form">
                                             <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />

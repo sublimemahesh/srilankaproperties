@@ -124,7 +124,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                         <!-- Start Sidebar -->
                         <div class="sidebar right-sidebar col-md-3 hidden-sm">
                             <div class="widget sidebar-widget featured-properties-widget">
-                                <h3 class="widgettitle search-f fea-pro">Featured Properties</h3>
+                                <h3 class="widgettitle search-f fea-pro f-pro">Featured Properties</h3>
                                 <ul class="">
                                     <?php
                                     $properties = Property::getAllPropertiesByLimit($pagelimit, $setlimit);
@@ -146,7 +146,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                         }
                                                         ?>
                                                         <span class="badges"><?= $CATEGORY->name; ?></span> </a>
-                                                    <div class="property-info">
+                                                    <div class="property-info f-pro">
                                                         <h4>
                                                             <a href="view-property.php?id=<?= $property['id']; ?>" title="<?= $property['title'] ?>">
                                                                 <?php
