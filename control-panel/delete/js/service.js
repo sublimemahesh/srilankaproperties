@@ -5,7 +5,7 @@ $(document).ready(function () {
 
         swal({
             title: "Are you sure?",
-            text: "You will not be able to recover this imaginary file!",
+            text: "You will not be able to recover this service!",
             type: "warning",
             showCancelButton: true,
             confirmButtonColor: "#DD6B55",
@@ -23,7 +23,7 @@ $(document).ready(function () {
 
                         swal({
                             title: "Deleted!",
-                            text: "Your imaginary file has been deleted.",
+                            text: "Service has been deleted.",
                             type: 'success',
                             timer: 2000,
                             showConfirmButton: false

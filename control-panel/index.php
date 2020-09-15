@@ -8,6 +8,8 @@ $COUNT_APPROVED_PROPERTIES = count(Property::getAllApprovedProperties());
 $COUNT_PAGES = count(Page::all());
 $COUNT_CATEGORIES = count(Category::all());
 $COUNT_PROPERTIES = count(Property::all());
+$COUNT_SERVICES = count(Service::all());
+$COUNT_ADS = count(Advertisement::all());
 ?> 
 <!DOCTYPE html>
 <html> 
@@ -15,7 +17,7 @@ $COUNT_PROPERTIES = count(Property::all());
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=Edge">
         <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-        <title>Dashbord - www.sublime.lk</title>
+        <title>Dashbord - www.synotec.lk</title>
         <!-- Favicon-->
         <link rel="icon" href="../images/realstate/sl-property-fav.png" type="image/x-icon">
 
@@ -145,6 +147,42 @@ $COUNT_PROPERTIES = count(Property::all());
                                 <div class="list-group">
                                     <a href="manage-property.php?type=0"><button type="button" class="list-group-item">Pending Property</button></a>
                                     <a href="manage-property.php?type=1"><button type="button" class="list-group-item">Approved Property</button></a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="card">
+                            <div class="header bg-blue-grey">
+                                <h2>  SERVICE  </h2>
+                                <ul class="header-dropdown m-r--5">
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_SERVICES; ?>" data-speed="1500" data-fresh-interval="1"></div>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div class="list-group">
+                                    <a href="create-service.php"><button type="button" class="list-group-item">Add New</button></a>
+                                    <a href="manage-services.php"><button type="button" class="list-group-item">Manage</button></a>
+                                    <a href="arrange-services.php"><button type="button" class="list-group-item">Arrange</button></a>
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                        <div class="card">
+                            <div class="header bg-blue-grey">
+                                <h2>  ADVERTIESMENT  </h2>
+                                <ul class="header-dropdown m-r--5">
+                                    <div class="number count-to" data-from="0" data-to="<?php echo $COUNT_ADS; ?>" data-speed="1500" data-fresh-interval="1"></div>
+                                </ul>
+                            </div>
+                            <div class="body">
+                                <div class="list-group">
+                                    <a href="create-ads-slider.php"><button type="button" class="list-group-item">Add New</button></a>
+                                    <a href="create-ads-slider.php"><button type="button" class="list-group-item">Manage</button></a>
+                                    <a href="arrange-ads-slider.php"><button type="button" class="list-group-item">Arrange</button></a>
                                    
                                 </div>
                             </div>

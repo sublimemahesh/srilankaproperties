@@ -48,7 +48,7 @@ $SERVICE = new Service(NULL);
                                 <h2>Arrange Service</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-service.php">
+                                        <a href="manage-services.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
@@ -77,13 +77,13 @@ $SERVICE = new Service(NULL);
                                                         }
                                                     } else {
                                                         ?> 
-                                                        <b>No images in the database.</b> 
+                                                        <b>No any services.</b> 
                                                     <?php } ?> 
 
                                                 </ul>  
                                                 <div class="row">
                                                     <div class="col-sm-12 text-center" style="margin-top: 19px;">
-                                                        <input type="submit" class="btn btn-info" id="btn-submit" value="Save Images" name="save-data">
+                                                        <input type="submit" class="btn btn-info" id="btn-submit" value="Arrange Services" name="save-data">
                                                     </div>
                                                 </div>
                                             </div>

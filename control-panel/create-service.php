@@ -43,14 +43,14 @@ include_once(dirname(__FILE__) . '/auth.php');
                                 <h2>Create Service</h2>
                                 <ul class="header-dropdown">
                                     <li class="">
-                                        <a href="manage-service.php">
+                                        <a href="manage-services.php">
                                             <i class="material-icons">list</i> 
                                         </a>
                                     </li>
                                 </ul>
                             </div>
                             <div class="body">
-                                <form class="form-horizontal"  method="post" id="form-data"   enctype="multipart/form-data"> 
+                            <form class="form-horizontal"  method="post" action="post-and-get/service.php" enctype="multipart/form-data"> 
                                     <div class="col-md-12">
                                         <div class="form-group form-float">
                                             <div class="form-line">
@@ -68,15 +68,6 @@ include_once(dirname(__FILE__) . '/auth.php');
                                         </div>
                                     </div>
 
-                                    <div class="col-md-12 hidden">
-                                        <div class="form-group form-float">
-                                            <div class="form-line">
-                                                <input type="text" id="short_description" value="t" class="form-control" autocomplete="off" name="short_description" required="true">
-                                                <label class="form-label">Short Description</label>
-                                            </div>
-                                        </div>
-                                    </div>
-
                                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                         <label for="description">Description</label>
                                         <div class="form-line">
@@ -85,8 +76,7 @@ include_once(dirname(__FILE__) . '/auth.php');
 
                                     </div>
                                     <div class="col-md-12"> 
-                                        <input type="hidden" name="create"value="create"/>
-                                        <input type="submit" id="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
+                                        <input type="submit" id="create"  name="create" class="btn btn-primary m-t-15 waves-effect" value="create"/>
                                     </div>
                                 </form>
                                 <div class="row clearfix">  </div>
@@ -110,7 +100,6 @@ include_once(dirname(__FILE__) . '/auth.php');
         <script src="plugins/node-waves/waves.js"></script>
         <script src="js/admin.js"></script>
         <script src="js/demo.js"></script>
-        <script src="js/add-new-ad.js" type="text/javascript"></script>
 
         <script src="plugins/sweetalert/sweetalert.min.js"></script>
         <script src="tinymce/js/tinymce/tinymce.min.js"></script>
@@ -142,7 +131,6 @@ include_once(dirname(__FILE__) . '/auth.php');
           
         </script>
         <script src="js/jm.spinner.js" type="text/javascript"></script>
-        <script src="js/ajax/services.js" type="text/javascript"></script>
     </body>
 
 </html>
