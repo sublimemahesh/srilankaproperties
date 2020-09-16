@@ -52,8 +52,8 @@ $TERMS_AND_CONDITIONS = new Page(10);
                 </div>
                 <!-- End Page Header -->
             </div>
-            <div class="container home-abt-img-padd">
-                <div class="row t-sec">
+            <div class="container home-abt-img-padd tnc-sect">
+                <div class=" row t-sec t-con i-trm">
                     <?= $TERMS_AND_CONDITIONS->description; ?>
                 </div>
             </div>

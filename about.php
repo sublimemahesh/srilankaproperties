@@ -57,11 +57,11 @@ $VALUES = new Page(4);
         </div>
         <div class="container home-abt-img-padd">
             <div class="row">
-                <div class="col-md-6 col-sm-6  text-m">
+                <div class="col-md-6 col-sm-12 text-m">
                     <img src="upload/page/<?= $WHO_WE_ARE->image_name; ?>" alt="" class="img-thumbnail">
                 </div>
                 <div class="row">
-                    <div class="col-md-6 col-sm-6 abt-txt">
+                    <div class="col-md-6 col-sm-12 abt-txt">
                         <div class="widget sidebar-widget featured-properties-widget">
                             <h3 class="widgettitle">CEO / MD Message</h3>
                         </div>
@@ -79,7 +79,7 @@ $VALUES = new Page(4);
                                 <div class="widget sidebar-widget featured-properties-widget">
                                     <h3 class="widgettitle">Our Importance</h3>
                                     <div class="pricing-table three-cols margin-0">
-                                        <div class="pricing-column col-sm-4">
+                                        <div class="pricing-column col-sm-3">
                                             <h3>Vision</h3>
                                             <div class="pricing-column-content">
                                                 <ul class="features v-s">
@@ -90,18 +90,18 @@ $VALUES = new Page(4);
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="values pricing-column highlight accent-color col-sm-4">
+                                        <div class="values pricing-column highlight accent-color col-sm-6">
                                             <h3>Our Values<span class="highlight-reason"></span></h3>
                                             <div class="pricing-column-content">
                                                 <ul class="features">
-                                                    <li><?= $VALUES->description; ?></li>
+                                                    <li class="abut-va"><?= $VALUES->description; ?></li>
                                                 </ul>
                                                 <div class="fact-ico-about">
                                                     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="pricing-column col-sm-4">
+                                        <div class="pricing-column col-sm-3">
                                             <h3>Mission</h3>
                                             <div class="pricing-column-content">
                                                 <ul class="features v-s">

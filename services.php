@@ -67,16 +67,16 @@ include './class/include.php';
                                     if (count($services) > 0) {
                                         foreach ($services as $service) {
                                     ?>
-                                            <li class="type-rent col-md-12">
-                                                <div class="col-md-6">
+                                            <li class="type-rent col-md-12 col-sm-12">
+                                                <div class="col-md-6 col-sm-6">
                                                     <img src="upload/service/<?= $service['image_name']; ?>" alt=""></a>
                                                 </div>
-                                                <div class="col-md-6">
+                                                <div class="col-md-6 col-sm-6 serv-des">
                                                     <div class="property-info">
                                                         <h3><a><?= $service['title']; ?></a></h3>
                                                         <?= $service['description']; ?>
                                                         <a href="contact.php">
-                                                            <button type="button" class="btn btn-primary s-list">Learn More</button>
+                                                            <button type="button" class="btn btn-primary s-btn">Learn More</button>
                                                         </a>
                                                     </div>
                                                 </div>

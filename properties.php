@@ -197,7 +197,7 @@ if (isset($_GET['agent'])) {
                                 </div>
                             <?php else : ?>
                                 <div class="widget sidebar-widget search-p">
-                                    <h3 class="widgettitle search-under fea-pro">Search Properties</h3>
+                                    <h3 class="widgettitle i-ser-un search-under fea-pro">Search Properties</h3>
                                     <div class="full-search-form ">
                                         <form action="search.php" id="search-form">
                                             <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
