@@ -153,9 +153,9 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                             </div>
                         </div>
                         <!-- Start Sidebar -->
-                        <div class="sidebar right-sidebar col-md-3 serch-dev">
+                        <div class="sidebar right-sidebar col-md-3 col-sm-6 serch-dev">
                             <div class="widget sidebar-widget">
-                                <h3 class="widgettitle search-under">Search Properties</h3>
+                                <h3 class="widgettitle i-ser-un search-under">Search Properties</h3>
                                 <div class="full-search-form ">
                                     <form action="search.php" id="search-form">
                                         <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />

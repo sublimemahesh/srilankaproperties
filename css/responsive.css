@@ -110,7 +110,7 @@ and open the template in the editor.
     .padd {
         margin-left: 0 !important;
     }
-    
+
 
 }
 
@@ -225,9 +225,9 @@ and open the template in the editor.
         margin: 0px 0 35px 0;
     }
 
-    .home-abt-img-padd {
-        padding-top: 50px;
-    }
+    /*    .home-abt-img-padd {
+            padding-top: 50px;
+        }*/
 
     .features.v-s {
         height: 140px;
@@ -273,6 +273,10 @@ and open the template in the editor.
     .tnc-sect{
         margin-right: 1px !important;
         margin-left: 1px !important;
+    }
+    .t-con{
+        margin-left: 1px;
+        margin-right: 1px;
     }
 
 }
@@ -334,7 +338,9 @@ and open the template in the editor.
     }
 
     .abt-txt {
-        margin-right: 30px;
+        margin-top: 15px;
+        padding-left: 28px;
+        padding-right: 39px;
     }
 
     .featured-properties-widget .images-count {
@@ -357,9 +363,22 @@ and open the template in the editor.
         padding: 15px 10px;
     }
     .i-ser-un{
-    margin-right: 165px !important;
+        margin-right: 165px !important;
     }
-    
+    .i-val{
+        line-height: 12px !important;
+    }
+    .thu-ic{
+        margin-top: 64px;
+    }
+    .i-trm{
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+    }
+    .abut-va{
+        line-height: 11px !important;
+    }
+
 
 }
 
