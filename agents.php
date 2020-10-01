@@ -139,6 +139,7 @@ $pagelimit = ($page * $setlimit) - $setlimit;
                                                                 ?>
                                                                 <span class="m-ag-bd images-count ">
                                                                     <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
+
                                                                 <?php
                                                             }
                                                             ?>
