@@ -22,6 +22,9 @@ and open the template in the editor.
     .submit-left {
         margin-left: 1px;
     }
+    .submit-left-f {
+        margin-left: 170px;
+    }
 
     .a-img {
         margin-left: 145px;
@@ -94,6 +97,9 @@ and open the template in the editor.
 
     .h-drop-i {
         margin-left: 20px !important;
+    }
+    .fee-b{
+        margin-left: 169px !important;
     }
 
 }
@@ -278,7 +284,17 @@ and open the template in the editor.
         margin-left: 1px;
         margin-right: 1px;
     }
-
+    .a-rel{
+        margin-top: 190px !important;
+    }
+    /*    .feed-b{
+            margin-left: 175px !important;
+        }*/
+    .m-bed-icon{
+        margin-top: 40px !important;
+        margin-right: 30px !important;
+    }
+   
 }
 
 
@@ -378,6 +394,10 @@ and open the template in the editor.
     .abut-va{
         line-height: 11px !important;
     }
+     m-ag-bd{
+        margin-top: 60px !important;
+    }
+
 
 
 }

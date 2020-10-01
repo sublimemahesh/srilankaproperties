@@ -7,8 +7,8 @@ $site_link = "http://" . $_SERVER['HTTP_HOST'];
 //----------------------- DISPLAY STRINGS ---------------------
 $comany_name = "Sri Lanka Properties";
 $website_name = "www.srilankaproperties.lk";
-$comConNumber = "+94 11 111 111";
-$comEmail = "noreply@srilankaproperties.lk";
+$comConNumber = "+94 76 881 1228";
+$comEmail = "admin@srilankaproperties.lk";
 $comOwner = "Mr. Shehan";
 $customer_msg = 'Hello, and thank you for your interest in ' . $comany_name . '.We have received your enquiry, and we will get back to you as soon as possible.';
 //----------------------- LOGO ---------------------------------
@@ -46,7 +46,7 @@ $visitorHeaders = array('MIME-Version' => '1.0', 'Content-Type' => "text/html; c
     'Reply-To' => $comEmail,
     'Subject' => $visitorSubject);
 $companyHeaders = array('MIME-Version' => '1.0', 'Content-Type' => "text/html; charset=ISO-8859-1", 'From' => $webmail,
-    'To' => $webmail,
+    'To' => $comEmail,
     'Reply-To' => $visitor_email,
     'Subject' => $companySubject);
 

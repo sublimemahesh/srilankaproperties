@@ -174,7 +174,6 @@ if (isset($_GET['agent'])) {
                             </div>
                         </div>
                         <!-- Start Sidebar -->
-
                         <div class="sidebar right-sidebar col-md-3 col-sm-6 col-xs-12 serch-dev">
                             <?php if (isset($_GET['agent'])) : ?>
                                 <div class="widget sidebar-widget popular-agent column">
@@ -189,11 +188,9 @@ if (isset($_GET['agent'])) {
                                                 echo $MEMBER->description;
                                             }
                                             ?>
-
                                             <!--                                            <h4><a href="agent-detail.html">Brooklyn Coyle</a></h4> -->
                                         </div>
                                     </div>
-
                                 </div>
                             <?php else : ?>
                                 <div class="widget sidebar-widget search-p">

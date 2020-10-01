@@ -1,9 +1,10 @@
 <?php
 include_once 'class/include.php';
-$WHO_WE_ARE = new Page(1);
+$CEO_MD_MESSAGE = new Page(1);
 $VISION = new Page(2);
 $MISSION = new Page(3);
 $VALUES = new Page(4);
+$ABOUT = new Page(11);
 ?>
 <!DOCTYPE HTML>
 <html class="no-js">
@@ -55,17 +56,29 @@ $VALUES = new Page(4);
             </div>
             <!-- End Page Header -->
         </div>
-        <div class="container home-abt-img-padd">
+          <div class="container home-abt-img-padd">
             <div class="row">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 abt-txt">
+                        <div class="widget sidebar-widget featured-properties-widget">
+                            <h3 class="widgettitle">About Us</h3>
+                        </div>
+                        <?= $ABOUT->description; ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container home-abt-img-padd">
+            <div class="row padd-ceo">
                 <div class="col-md-6 col-sm-12 text-m">
-                    <img src="upload/page/<?= $WHO_WE_ARE->image_name; ?>" alt="" class="img-thumbnail">
+                    <img src="upload/page/<?= $CEO_MD_MESSAGE->image_name; ?>" alt="" class="img-thumbnail">
                 </div>
                 <div class="row">
                     <div class="col-md-6 col-sm-12 abt-txt">
                         <div class="widget sidebar-widget featured-properties-widget">
                             <h3 class="widgettitle">CEO / MD Message</h3>
                         </div>
-                        <?= $WHO_WE_ARE->description; ?>
+                        <?= $CEO_MD_MESSAGE->description; ?>
                     </div>
                 </div>
             </div>

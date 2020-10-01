@@ -121,9 +121,9 @@ class Inquiry
         //----------------------- DISPLAY STRINGS ---------------------
         $comany_name = "Sri Lanka Properties";
         $website_name = "www.srilankaproperties.lk";
-        $comConNumber = "+94 11 111 111";
-        $comEmail = "noreply@srilankaproperties.lk";
-        $comOwner = "";
+        $comConNumber = "+94 76 881 1228";
+        $comEmail = "admin@srilankaproperties.lk";
+        $comOwner = "Mr. Shehan";
         $customer_msg = 'Hello, and thank you for your interest in ' . $comany_name . '.We have received your property inquiry, and we will get back to you as soon as possible.';
         //----------------------- LOGO ---------------------------------
         $logo = $site_link . '/contact-form/img/logo.png';
@@ -353,9 +353,9 @@ class Inquiry
         //----------------------- DISPLAY STRINGS ---------------------
         $comany_name = "Sri Lanka Properties";
         $website_name = "www.srilankaproperties.lk";
-        $comConNumber = "+94 11 111 111";
-        $comEmail = "noreply@srilankaproperties.lk";
-        $comOwner = "Sri Lanka Properties";
+        $comConNumber = "+94 76 881 1228";
+        $comEmail = "admin@srilankaproperties.lk";
+        $comOwner = "Mr. Shehan";
         //----------------------- LOGO ---------------------------------
         $logo = $site_link . '/contact-form/img/logo.png';
         //$logo = 'https://ci4.googleusercontent.com/proxy/lz0tSijRTHwJ3I7PQ1iXA67lYFfULG0evRbR_St785VeiABNukQPJl-JGBcLKTkZz1q4pG6g25P1uxTW4dYkOznHHNV3f-zB=s0-d-e1-ft#http://http://sunilayurveda.galle.website/contact-form/img/logo.jpg';

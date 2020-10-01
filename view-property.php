@@ -264,7 +264,7 @@ if (isset($_GET['id'])) {
                                                     <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="<?= $MEMBER->name; ?>">
                                                 </div>
                                                 <div class="col-md-8 col-sm-8">
-                                                    <h3><a href="agent-properties.php?agent=<?= $MEMBER->id; ?>" class="a-name font-m"><?= $MEMBER->name; ?></a></h3>
+                                                    <h3><a href="agent-properties.php?id=<?= $MEMBER->id; ?>" class="a-name font-m"><?= $MEMBER->name; ?></a></h3>
                                                     <?= $MEMBER->description; ?>
                                                     <div class="agent-contacts clearfix">
                                                         <!-- <a href="#" class="btn btn-primary pull-right btn-sm">Contact Agent</a> -->
@@ -300,7 +300,7 @@ if (isset($_GET['id'])) {
                                                                     <?php
                                                                     if ($property['no_of_bed_rooms'] != 0) {
                                                                     ?>
-                                                                        <span class="images-count">
+                                                                        <span class="images-count m-bed-icon">
                                                                             <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
                                                                     <?php
                                                                     }

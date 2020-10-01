@@ -186,7 +186,6 @@ $properties = Property::search($keyword, $category1, $subcategory1, $district1, 
                                                 <?php
                                                 endforeach;
                                             } 
-                                        
                                          ?>
                                         </select>
                                         <select name="district" id="district" class="form-control input-lg selectpicker">
