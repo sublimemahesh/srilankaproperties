@@ -22,6 +22,9 @@ and open the template in the editor.
     .submit-left {
         margin-left: 1px;
     }
+    .submit-left-f {
+        margin-left: 170px;
+    }
 
     .a-img {
         margin-left: 145px;
@@ -95,7 +98,10 @@ and open the template in the editor.
     .h-drop-i {
         margin-left: 20px !important;
     }
-    
+    .fee-b{
+        margin-left: 169px !important;
+    }
+
 }
 
 @media (max-width: 767px) {
@@ -110,6 +116,7 @@ and open the template in the editor.
     .padd {
         margin-left: 0 !important;
     }
+
 
 }
 
@@ -224,9 +231,9 @@ and open the template in the editor.
         margin: 0px 0 35px 0;
     }
 
-    .home-abt-img-padd {
-        padding-top: 50px;
-    }
+    /*    .home-abt-img-padd {
+            padding-top: 50px;
+        }*/
 
     .features.v-s {
         height: 140px;
@@ -258,6 +265,34 @@ and open the template in the editor.
     }
     .agent-properties-page .single-agent .agent-d {
         margin-bottom: 30px;
+    }
+    .serv-des{
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .search-prp{
+        margin-top: 35px !important;
+    }
+    .f-pro{
+        margin-top: 5px;
+    }
+    .tnc-sect{
+        margin-right: 1px !important;
+        margin-left: 1px !important;
+    }
+    .t-con{
+        margin-left: 1px;
+        margin-right: 1px;
+    }
+    .a-rel{
+        margin-top: 190px !important;
+    }
+    /*    .feed-b{
+            margin-left: 175px !important;
+        }*/
+    .m-bed-icon{
+        margin-top: 40px !important;
+        margin-right: 30px !important;
     }
    
 }
@@ -306,9 +341,9 @@ and open the template in the editor.
         margin-bottom: 0;
     }
 
-    .serch-dev {
-        margin-top: 0;
-    }
+    /*    .serch-dev {
+            margin-top: 0;
+        }*/
 
     .agent-properties-page .tabs {
         margin-bottom: 0;
@@ -319,7 +354,9 @@ and open the template in the editor.
     }
 
     .abt-txt {
-        margin-right: 30px;
+        margin-top: 15px;
+        padding-left: 28px;
+        padding-right: 39px;
     }
 
     .featured-properties-widget .images-count {
@@ -341,6 +378,28 @@ and open the template in the editor.
     .property-info {
         padding: 15px 10px;
     }
+    .i-ser-un{
+        margin-right: 165px !important;
+    }
+    .i-val{
+        line-height: 12px !important;
+    }
+    .thu-ic{
+        margin-top: 64px;
+    }
+    .i-trm{
+        margin-left: 1px !important;
+        margin-right: 1px !important;
+    }
+    .abut-va{
+        line-height: 11px !important;
+    }
+     m-ag-bd{
+        margin-top: 60px !important;
+    }
+
+
+
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

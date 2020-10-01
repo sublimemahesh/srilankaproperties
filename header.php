@@ -1,13 +1,12 @@
 <?php
- session_start();
- ?>
+session_start();
+?>
 <header class="site-header">
     <div class="top-header h-height hidden-xs">
         <div class="container">
             <div class="row">
                 <div class="col-md-4 col-sm-4">
                     <ul class="horiz-nav pull-left">
-
                         <li><a href="http://instagram.com/" target="_blank"><i class="fa fa-instagram header-icon"></i></a></li>
                         <li><a href="http://facebook.com/" target="_blank"><i class="fa fa-facebook header-icon"></i></a></li>
                         <li><a href="http://twitter.com/" target="_blank"><i class="fa fa-twitter header-icon"></i></a></li>
@@ -18,45 +17,41 @@
                         <li class="hidden-sm"><a href="services.php">Services</a></li>
                         <li><a href="about.php">About Us</a></li>
                         <li><a href="contact.php">Contact Us</a></li>
-                         <?php
-                        
+                        <?php
                         if (isset($_SESSION['m_id'])) {
-                        ?>
-                           <li class="dropdown"><a href="member/">Post Your Ad </a></li>
-                        <?php
+                            ?>
+                            <li class="dropdown"><a href="member/">Post Your Ad </a></li>
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <li class="dropdown"><a href="member/login.php"> Post Your Ad</a></li>
-                        <?php
+                            <?php
                         }
                         ?>
-                            
                         <?php
-                       
                         if (isset($_SESSION['m_id'])) {
-                        ?>
+                            ?>
                             <li class="dropdown"><a href="member/">
                                     <?php
                                     if (isset($_SESSION['m_picture']) && !empty($_SESSION['m_picture'])) {
-                                    ?>
+                                        ?>
                                         <img src="upload/member/profile/<?= $_SESSION['m_picture']; ?>" class="header-profile-pic img-circle">
-                                    <?php
+                                        <?php
                                     } else {
-                                    ?>
+                                        ?>
                                         <img src="images/member.jpg" class="header-profile-pic img-circle">
-                                    <?php
+                                        <?php
                                     }
                                     ?>
 
                                     My Account </a></li>
-                        <?php
+                            <?php
                         } else {
-                        ?>
+                            ?>
                             <li class="dropdown"><a href="member/login.php"><i class="fa fa-user login-icon"></i> Login </a></li>
-                        <?php
+                            <?php
                         }
                         ?>
-
                     </ul>
                 </div>
             </div>
@@ -72,11 +67,7 @@
                     <div class="contact-info-blocks hidden-sm hidden-xs">
                         <div>
                             <i class="fa fa-phone"></i> Phone
-                            <span>+94 11 366 3500</span>
-                        </div>
-                        <div>
-                            <i class="fa fa-envelope"></i> Email
-                            <span>mail@synotec.lk</span>
+                            <span>+94 76 881 1228</span>
                         </div>
                         <div>
                             <i class="fa fa-clock-o"></i> Working Hours
@@ -98,29 +89,29 @@
                             <?php
                             foreach (Category::all() as $category) {
                                 $subcategories = SubCategory::getSubCategoriesByCategory($category['id']);
-                            ?>
+                                ?>
                                 <li><a class="header-nav" href="properties.php?category=<?= $category['id']; ?>"><?= $category['name']; ?></a>
                                     <?php
                                     if (count($subcategories) > 0) {
-                                    ?>
+                                        ?>
                                         <ul class="dropdown h-drop header-drop h-drop-i header-drop-i">
                                             <?php
                                             foreach ($subcategories as $subcategory) {
-                                            ?>
+                                                ?>
                                                 <li><a href="properties.php?subcategory=<?= $subcategory['id']; ?>"><?= $subcategory['name']; ?></a></li>
-                                            <?php
+                                                <?php
                                             }
                                             ?>
                                         </ul>
-                                    <?php
+                                        <?php
                                     }
                                     ?>
                                 </li>
-                            <?php
+                                <?php
                             }
                             ?>
-                                <li><a class="header-nav" href="agents.php">Agents</a></li>
-                            <li class="visible-sm visible-xs"><a class="header-nav" href="customer-feedback.php">Service</a></li>
+                            <li><a class="header-nav" href="agents.php">Agents</a></li>
+                            <li class="visible-sm visible-xs"><a class="header-nav" href="services.php">Service</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="customer-feedback.php">Customer Feedback</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="about.php">About Us</a></li>
                             <li class="visible-sm visible-xs"><a class="header-nav" href="contact.php">Contact Us</a></li>

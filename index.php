@@ -55,7 +55,6 @@ $comments = $COMMENT->activeComments();
                                 <?php
                                 foreach (Category::all() as $category) :
                                 ?>
-
                                     <div class="col-md-4 col-sm-4 featured-block"> <img src="upload/category/<?= $category['image_name'] ?>" alt="" class="img-thumbnail">
                                         <h3 class="circle-title"><?php echo $category['name']; ?></h3>
                                         <p>
@@ -81,7 +80,6 @@ $comments = $COMMENT->activeComments();
                                 <?php if (COUNT(Advertisement::all())) : ?>
                                     <?php foreach (Advertisement::all() as $ad) : ?>
                                         <li class="parallax" style="background-image:url(upload/advertisement/<?= $ad['image_name'] ?>);" onclick="location.href = '<?= $ad['url'] ?>';"></li>
-
                                     <?php endforeach; ?>
                                 <?php else : ?>
                                 <?php endif; ?>
@@ -108,12 +106,10 @@ $comments = $COMMENT->activeComments();
                                         $DISTRICT = new District($property['district']);
                                         $CITY = new City($property['city']);
                                 ?>
-
-                                        <div class="col-md-3 col-sm-4">
+                                       <div class="col-md-3 col-sm-4">
                                             <div class="item property-block">
                                                 <a href="view-property.php?id=<?= $property['id'] ?>" class="property-featured-image">
                                                     <img src="upload/properties/<?= $property['image_name'] ?>">
-
                                                     <?php
                                                     if ($property['is_boosted'] == 1) {
                                                     ?>
@@ -127,7 +123,6 @@ $comments = $COMMENT->activeComments();
                                                     <?php
                                                     }
                                                     ?>
-
                                                     <span class="badges"><?= $CATEGORY->name; ?></span>
                                                 </a>
                                                 <div class="property-info">
@@ -143,7 +138,6 @@ $comments = $COMMENT->activeComments();
                                                         </a>
                                                     </h4>
                                                     <span class="location"><?= $DISTRICT->name; ?> <i class='fa fa-chevron-right'></i>
-
                                                         <?php
                                                         if (strlen($CITY->name) > 14) {
                                                             echo substr($CITY->name, 0, 10) . '...';
@@ -151,7 +145,6 @@ $comments = $COMMENT->activeComments();
                                                             echo $CITY->name;
                                                         }
                                                         ?>
-
                                                     </span>
                                                     <span class="category"><i class='fa fa-list'></i>
                                                         <?php
@@ -163,7 +156,6 @@ $comments = $COMMENT->activeComments();
                                                         ?>
                                                         <i class='fa fa-chevron-right'></i> <?= $SUBCATEGORY->name; ?>
                                                     </span>
-
                                                     <div class="price"><strong>Rs</strong><span><?= number_format($property['price'], 2); ?></span></div>
                                                 </div>
                                             </div>

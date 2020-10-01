@@ -4005,6 +4005,10 @@ span.progress-bar-tooltip:after {
     margin-top    : 50px;
 }
 
+.padd-ceo {
+    margin-top: -60px !important;
+}
+
 .testi-padd {
     padding-top   : 15px;
     padding-bottom: 15px;
@@ -4090,7 +4094,10 @@ span.progress-bar-tooltip:after {
 }
 
 .submit-mrg {
-    margin-left: 135px;
+    margin-left: 170px;
+}
+.submit-mrg-f {
+    margin-left: 170px;
 }
 
 .contact-mrg {
@@ -4482,4 +4489,7 @@ div.column {
 }
 .s-list{
     margin-top: 20px !important;
+}
+.s-btn{
+    margin-top: 10px !important;
 }

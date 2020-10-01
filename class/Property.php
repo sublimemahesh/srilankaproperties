@@ -11,8 +11,7 @@
  *
  * @author Suharshana DsW
  */
-class Property
-{
+class Property {
 
     public $id;
     public $createdAt;
@@ -36,8 +35,7 @@ class Property
     public $isBoosted;
     public $boostedAt;
 
-    public function __construct($id)
-    {
+    public function __construct($id) {
         if ($id) {
 
             $query = "SELECT * FROM `property` WHERE `id`=" . $id;
@@ -72,55 +70,55 @@ class Property
         }
     }
 
-    public function create()
-    {
+    public function create() {
         date_default_timezone_set('Asia/Colombo');
         $createdAt = date('Y-m-d H:i:s');
+        $db = new Database();
 
         $query = "INSERT INTO `property` ("
-            . "`created_at`,"
-            . "`member`,"
-            . "`title`,"
-            . "`category`,"
-            . "`sub_category`,"
-            . "`district`,"
-            . "`city`,"
-            . "`image_name`,"
-            . "`description`,"
-            . "`price`,"
-            . "`price_dollar`,"
-            . "`contact`,"
-            . "`address`,"
-            . "`email`,"
-            . "`features`,"
-            . "`queue`,"
-            . "`status`,"
-            . "`no_of_bed_rooms`,"
-            . "`is_boosted`,"
-            . "`boosted_at`"
-            . ") VALUES  ('"
-            . $createdAt . "','"
-            . $this->member . "','"
-            . $this->title . "','"
-            . $this->category . "', '"
-            . $this->sub_category . "', '"
-            . $this->district . "', '"
-            . $this->city . "', '"
-            . $this->image_name . "', '"
-            . $this->description . "', '"
-            . $this->price . "', '"
-            . $this->price_dollar . "', '"
-            . $this->contact . "', '"
-            . $this->address . "', '"
-            . $this->email . "', '"
-            . $this->features . "', '"
-            . $this->queue . "', '"
-            . 0 . "', '"
-            . $this->no_of_bed_rooms . "', '"
-            . $this->isBoosted . "', '"
-            . $this->boostedAt . "')";
+                . "`created_at`,"
+                . "`member`,"
+                . "`title`,"
+                . "`category`,"
+                . "`sub_category`,"
+                . "`district`,"
+                . "`city`,"
+                . "`image_name`,"
+                . "`description`,"
+                . "`price`,"
+                . "`price_dollar`,"
+                . "`contact`,"
+                . "`address`,"
+                . "`email`,"
+                . "`features`,"
+                . "`queue`,"
+                . "`status`,"
+                . "`no_of_bed_rooms`,"
+                . "`is_boosted`,"
+                . "`boosted_at`"
+                . ") VALUES  ('"
+                . $createdAt . "','"
+                . $this->member . "','"
+                . mysql_real_escape_string($this->title) . "','"
+                . $this->category . "', '"
+                . $this->sub_category . "', '"
+                . $this->district . "', '"
+                . $this->city . "', '"
+                . $this->image_name . "', '"
+                . mysql_real_escape_string($this->description) . "', '"
+                . $this->price . "', '"
+                . $this->price_dollar . "', '"
+                . $this->contact . "', '"
+                . mysql_real_escape_string($this->address) . "', '"
+                . $this->email . "', '"
+                . mysql_real_escape_string($this->features) . "', '"
+                . $this->queue . "', '"
+                . 0 . "', '"
+                . $this->no_of_bed_rooms . "', '"
+                . $this->isBoosted . "', '"
+                . $this->boostedAt . "')";
 
-        $db = new Database();
+
         $result = $db->readQuery($query);
 
 
@@ -133,8 +131,7 @@ class Property
         }
     }
 
-    public function all()
-    {
+    public function all() {
 
         $query = "SELECT * FROM `property` ORDER BY queue ASC";
         $db = new Database();
@@ -148,8 +145,7 @@ class Property
         return $array_res;
     }
 
-    public function getAllPendingProperties()
-    {
+    public function getAllPendingProperties() {
 
         $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 0 ORDER BY `id` DESC";
         $db = new Database();
@@ -163,8 +159,7 @@ class Property
         return $array_res;
     }
 
-    public function getAllApprovedProperties()
-    {
+    public function getAllApprovedProperties() {
 
         $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.status = 1 ORDER BY  `id` DESC";
         $db = new Database();
@@ -178,8 +173,7 @@ class Property
         return $array_res;
     }
 
-    public function getBoostedProperties()
-    {
+    public function getBoostedProperties() {
 
         $query = "SELECT p.*,c.name category_name,sc.name sub_category_name FROM `property` p, `category` c , `sub_category` sc WHERE c.id = p.category AND sc.id = p.sub_category AND p.is_boosted = 1 ORDER BY  `boosted_at` DESC";
         $db = new Database();
@@ -193,8 +187,7 @@ class Property
         return $array_res;
     }
 
-    public function getPropertiesByCategory($category)
-    {
+    public function getPropertiesByCategory($category) {
 
         $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
@@ -209,8 +202,7 @@ class Property
         return $array_res;
     }
 
-    public function getPropertiesByCategoryWithLimit($category, $pageLimit, $setLimit)
-    {
+    public function getPropertiesByCategoryWithLimit($category, $pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `property` WHERE `category` = $category AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 
          ORDER BY CASE
@@ -229,8 +221,7 @@ class Property
         return $array_res;
     }
 
-    public function getPropertiesByMember($member)
-    {
+    public function getPropertiesByMember($member) {
 
         $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
@@ -244,8 +235,8 @@ class Property
 
         return $array_res;
     }
-    public function getPropertiesByMemberWithLimit($member, $pageLimit, $setLimit)
-    {
+
+    public function getPropertiesByMemberWithLimit($member, $pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = 1 
         ORDER BY CASE
@@ -264,8 +255,8 @@ class Property
 
         return $array_res;
     }
-    public function getPropertiesBySubCategoryWithLimit($subcategory, $pageLimit, $setLimit)
-    {
+
+    public function getPropertiesBySubCategoryWithLimit($subcategory, $pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1
          ORDER BY CASE
@@ -284,8 +275,7 @@ class Property
         return $array_res;
     }
 
-    public function getPropertiesBySubCategory($subcategory)
-    {
+    public function getPropertiesBySubCategory($subcategory) {
 
         $query = "SELECT * FROM `property` WHERE `sub_category` = $subcategory AND `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC";
         $db = new Database();
@@ -300,8 +290,7 @@ class Property
         return $array_res;
     }
 
-    public function boostProperty($property)
-    {
+    public function boostProperty($property) {
         date_default_timezone_set('Asia/Colombo');
         $boostedAt = date('Y-m-d H:i:s');
 
@@ -319,8 +308,8 @@ class Property
             return FALSE;
         }
     }
-    public function stopBoost($property)
-    {
+
+    public function stopBoost($property) {
         $query = "UPDATE `property` SET  `is_boosted`= 0, `boosted_at` = '' WHERE `id` = $property";
 
         $db = new Database();
@@ -335,8 +324,8 @@ class Property
             return FALSE;
         }
     }
-    public function approveOrRejectProperty($property, $approvation)
-    {
+
+    public function approveOrRejectProperty($property, $approvation) {
 
         $query = "UPDATE `property` SET  `status`= $approvation WHERE `id` = $property";
 
@@ -353,28 +342,28 @@ class Property
         }
     }
 
-    public function update()
-    {
-
-        $query = "UPDATE  `property` SET "
-            . "`title` ='" . $this->title . "', "
-            . "`category` ='" . $this->category . "', "
-            . "`sub_category` ='" . $this->sub_category . "', "
-            . "`district` ='" . $this->district . "', "
-            . "`city` ='" . $this->city . "', "
-            . "`image_name` ='" . $this->image_name . "', "
-            . "`description` ='" . $this->description . "', "
-            . "`price` ='" . $this->price . "', "
-            . "`price_dollar` ='" . $this->price_dollar . "', "
-            . "`contact` ='" . $this->contact . "', "
-            . "`address` ='" . $this->address . "', "
-            . "`email` ='" . $this->email . "', "
-            . "`features` ='" . $this->features . "', "
-            . "`status` ='" . 0 . "', "
-            . "`queue` ='" . $this->queue . "', "
-            . "`no_of_bed_rooms` ='" . $this->no_of_bed_rooms . "' "
-            . "WHERE `id` = '" . $this->id . "'";
+    public function update() {
+        
         $db = new Database();
+        $query = "UPDATE  `property` SET "
+                . "`title` ='" . mysql_real_escape_string($this->title) . "', "
+                . "`category` ='" . $this->category . "', "
+                . "`sub_category` ='" . $this->sub_category . "', "
+                . "`district` ='" . $this->district . "', "
+                . "`city` ='" . $this->city . "', "
+                . "`image_name` ='" . $this->image_name . "', "
+                . "`description` ='" . mysql_real_escape_string($this->description) . "', "
+                . "`price` ='" . $this->price . "', "
+                . "`price_dollar` ='" . $this->price_dollar . "', "
+                . "`contact` ='" . $this->contact . "', "
+                . "`address` ='" . mysql_real_escape_string($this->address) . "', "
+                . "`email` ='" . $this->email . "', "
+                . "`features` ='" . mysql_real_escape_string($this->features) . "', "
+                . "`status` ='" . 0 . "', "
+                . "`queue` ='" . $this->queue . "', "
+                . "`no_of_bed_rooms` ='" . $this->no_of_bed_rooms . "' "
+                . "WHERE `id` = '" . $this->id . "'";
+
 
         $result = $db->readQuery($query);
 
@@ -385,8 +374,7 @@ class Property
         }
     }
 
-    public function delete()
-    {
+    public function delete() {
 
         $this->deletePhotos();
 
@@ -398,8 +386,7 @@ class Property
         return $db->readQuery($query);
     }
 
-    public function deletePhotos()
-    {
+    public function deletePhotos() {
 
         $PROPERTY_PHOTOS = new PropertyPhoto(NULL);
 
@@ -415,8 +402,8 @@ class Property
             $PROPERTY_PHOTOS->delete();
         }
     }
-    public function deleteProperty()
-    {
+
+    public function deleteProperty() {
 
         $query = 'DELETE FROM `property` WHERE id="' . $this->id . '"';
         unlink(Helper::getSitePath() . "upload/property/" . $this->image_name);
@@ -426,16 +413,14 @@ class Property
         return $db->readQuery($query);
     }
 
-    public function arrange($key, $img)
-    {
+    public function arrange($key, $img) {
         $query = "UPDATE `property` SET `queue` = '" . $key . "'  WHERE id = '" . $img . "'";
         $db = new Database();
         $result = $db->readQuery($query);
         return $result;
     }
 
-    public function getPropertiseByMemberAndStatus($member, $status)
-    {
+    public function getPropertiseByMemberAndStatus($member, $status) {
 
         $query = "SELECT * FROM `property` WHERE `member` = $member AND `status` = $status ORDER BY `id` DESC";
         $db = new Database();
@@ -449,8 +434,7 @@ class Property
         return $array_res;
     }
 
-    public function getAllPropertiesByActiveMembers()
-    {
+    public function getAllPropertiesByActiveMembers() {
 
         $query = "SELECT * FROM `property` WHERE `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY CASE
         WHEN `is_boosted` = 1 THEN 1
@@ -467,8 +451,7 @@ class Property
         return $array_res;
     }
 
-    public function getAllPropertiesByLimit($pageLimit, $setLimit)
-    {
+    public function getAllPropertiesByLimit($pageLimit, $setLimit) {
 
         $query = "SELECT * FROM `property` WHERE `member` IN (SELECT `id` FROM `member` WHERE `is_active` = 1) AND `status` = 1 ORDER BY `id` DESC LIMIT " . $pageLimit . " , " . $setLimit;
         $db = new Database();
@@ -481,8 +464,8 @@ class Property
 
         return $array_res;
     }
-    public function getDistinctCategoriesByMember($id)
-    {
+
+    public function getDistinctCategoriesByMember($id) {
 
         $query = "SELECT `category` FROM `property` WHERE `member` = $id AND `status` = 1 GROUP BY `category` ORDER BY `category` ASC";
         $db = new Database();
@@ -495,8 +478,8 @@ class Property
 
         return $array_res;
     }
-    public function getPropertiesByMemberAndCategory($id, $category)
-    {
+
+    public function getPropertiesByMemberAndCategory($id, $category) {
 
         $query = "SELECT * FROM `property` WHERE `member` = $id AND `status` = 1 AND `category` = $category ORDER BY `id` DESC";
         $db = new Database();
@@ -510,8 +493,7 @@ class Property
         return $array_res;
     }
 
-    public function search($keyword, $category, $subcategory, $district, $city, $pageLimit, $setLimit)
-    {
+    public function search($keyword, $category, $subcategory, $district, $city, $pageLimit, $setLimit) {
 
         $w = array();
         $where = '';
@@ -552,8 +534,7 @@ class Property
         return $array_res;
     }
 
-    public function showPaginationForSearch($keyword, $category, $subcategory, $district, $city, $per_page, $page)
-    {
+    public function showPaginationForSearch($keyword, $category, $subcategory, $district, $city, $per_page, $page) {
         $w = array();
         $where = '';
         if (!empty($keyword)) {
@@ -658,8 +639,7 @@ class Property
         echo $setPaginate;
     }
 
-    public function showPagination($category, $subcategory, $agent, $per_page, $page)
-    {
+    public function showPagination($category, $subcategory, $agent, $per_page, $page) {
 
         $w = array();
         $where = '';
@@ -766,4 +746,5 @@ class Property
 
         echo $setPaginate;
     }
+
 }

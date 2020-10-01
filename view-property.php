@@ -264,7 +264,7 @@ if (isset($_GET['id'])) {
                                                     <img src="upload/member/profile/<?= $MEMBER->picture; ?>" alt="<?= $MEMBER->name; ?>">
                                                 </div>
                                                 <div class="col-md-8 col-sm-8">
-                                                    <h3><a href="agent-properties.php?agent=<?= $MEMBER->id; ?>" class="a-name font-m"><?= $MEMBER->name; ?></a></h3>
+                                                    <h3><a href="agent-properties.php?id=<?= $MEMBER->id; ?>" class="a-name font-m"><?= $MEMBER->name; ?></a></h3>
                                                     <?= $MEMBER->description; ?>
                                                     <div class="agent-contacts clearfix">
                                                         <!-- <a href="#" class="btn btn-primary pull-right btn-sm">Contact Agent</a> -->
@@ -300,7 +300,7 @@ if (isset($_GET['id'])) {
                                                                     <?php
                                                                     if ($property['no_of_bed_rooms'] != 0) {
                                                                     ?>
-                                                                        <span class="images-count">
+                                                                        <span class="images-count m-bed-icon">
                                                                             <i class="fa fa-bed bd"></i><?= $property['no_of_bed_rooms']; ?></span>
                                                                     <?php
                                                                     }
@@ -352,7 +352,7 @@ if (isset($_GET['id'])) {
                             </div>
                             <div class="sidebar right-sidebar col-md-3 col-sm-6 col-xs-12 serch-dev search">
                                 <div class="widget sidebar-widget">
-                                    <h3 class="widgettitle search-under">Search Properties</h3>
+                                    <h3 class="widgettitle i-ser-un search-under search-prp">Search Properties</h3>
                                     <div class="full-search-form ">
                                         <form action="search.php" id="search-form">
                                             <input type="text" name="keyword" placeholder="Keyword" class="form-control input-lg" />
