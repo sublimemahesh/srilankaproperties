@@ -12,22 +12,23 @@ if ($MEMBER->checkEmailForResetPassword($email)) {
     if ($MEMBER->GenarateCode($email)) {
         $res = $MEMBER->selectForgetMember($email);
 
-        $name = $MEMBER->name;
-        $email = $MEMBER->email;
-        $resetcode = $MEMBER->resetcode;
-
+        require_once "Mail.php";
         date_default_timezone_set('Asia/Colombo');
-
         $todayis = date("l, F j, Y, g:i a");
+        $site_link = "http://" . $_SERVER['HTTP_HOST'];
 
-        $subject = 'Member Dashboard - Password Reset';
-        $from = 'noreply@srilankaproperties.lk'; // give from email address
+        $name = $MEMBER->name;
+        $visitor_email = $MEMBER->email;
+        $resetcode = $MEMBER->resetcode;
+        //---------------------- SERVER WEBMAIL LOGIN ------------------------
+        $host = "sg1-ls7.a2hosting.com";
+        $username = "noreply@srilankaproperties.lk";
+        $password = "u{Sb,7;wP4FK";
+        //------------------------ MAIL ESSENTIALS --------------------------------
 
-
-        $headers = "From: " . $from . "\r\n";
-        $headers .= "Reply-To: " . $email . "\r\n";
-        $headers .= "MIME-Version: 1.0\r\n";
-        $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+        $comEmail = "admin@srilankaproperties.lk";
+        $webmail = "noreply@srilankaproperties.lk";
+        $visitorSubject = "Member Dashboard - Password Reset";
 
         $html = "<table style='border:solid 1px #F0F0F0; font-size: 15px; font-family: sans-serif; padding: 0;'>";
 
@@ -41,18 +42,30 @@ if ($MEMBER->checkEmailForResetPassword($email)) {
 
         $html .= "</table>";
 
-        if (mail($email, $subject, $html, $headers)) {
-            $result = ["status" => 'success'];
+        $visitorHeaders = array(
+            'MIME-Version' => '1.0', 'Content-Type' => "text/html; charset=ISO-8859-1", 'From' => $webmail,
+            'To' => $visitor_email,
+            'Reply-To' => $comEmail,
+            'Subject' => $visitorSubject
+        );
+        $smtp = Mail::factory('smtp', array(
+            'host' => $host,
+            'auth' => true,
+            'username' => $username,
+            'password' => $password
+        ));
+        $visitorMail = $smtp->send($visitor_email, $visitorHeaders, $html);
+
+        if (PEAR::isError($visitorMail && $companyMail)) {
+            $result = ["status" => 'error'];
             echo json_encode($result);
             exit();
         } else {
-            $result = ["status" => 'error'];
+            $result = ["status" => 'success'];
             echo json_encode($result);
             exit();
         }
     }
-
-
 
     exit();
 } else {
