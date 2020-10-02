@@ -52,7 +52,7 @@ include_once(dirname(__FILE__) . '/../class/include.php');
         <div class="login-box">
             <div class="logo">
                 <a href="javascript:void(0);">Web <b>Mananger</b></a>
-                <small>Lorem ipsum dolor sit amet.</small>
+                <!-- <small>Lorem ipsum dolor sit amet.</small> -->
             </div>
             <div class="card">
                 <div class="body">
