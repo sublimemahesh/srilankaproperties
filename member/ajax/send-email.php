@@ -22,12 +22,13 @@ if ($MEMBER->checkEmailForResetPassword($email)) {
         $resetcode = $MEMBER->resetcode;
         //---------------------- SERVER WEBMAIL LOGIN ------------------------
         $host = "sg1-ls7.a2hosting.com";
-        $username = "noreply@srilankaproperties.lk";
-        $password = "u{Sb,7;wP4FK";
+        $username = "info@srilankaproperties.lk";
+        $password = "x_EC#_KC!,7s";
+        $port = 465;
         //------------------------ MAIL ESSENTIALS --------------------------------
 
         $comEmail = "admin@srilankaproperties.lk";
-        $webmail = "noreply@srilankaproperties.lk";
+        $webmail = "info@srilankaproperties.lk";
         $visitorSubject = "Member Dashboard - Password Reset";
 
         $html = "<table style='border:solid 1px #F0F0F0; font-size: 15px; font-family: sans-serif; padding: 0;'>";
@@ -56,7 +57,7 @@ if ($MEMBER->checkEmailForResetPassword($email)) {
         ));
         $visitorMail = $smtp->send($visitor_email, $visitorHeaders, $html);
 
-        if (PEAR::isError($visitorMail && $companyMail)) {
+        if (PEAR::isError($visitorMail)) {
             $result = ["status" => 'error'];
             echo json_encode($result);
             exit();
