@@ -12,10 +12,10 @@ if ($_POST['action'] == 'send_email_verification') {
 
     //---------------------- SERVER WEBMAIL LOGIN ------------------------
     $host = "sg1-ls7.a2hosting.com";
-    $username = "noreply@srilankaproperties.lk";
-    $password = "u{Sb,7;wP4FK";
+    $username = "info@srilankaproperties.lk";
+    $password = "x_EC#_KC!,7s";
     //------------------------ MAIL ESSENTIALS --------------------------------
-    $webmail = "noreply@srilankaproperties.lk";
+    $webmail = "info@srilankaproperties.lk";
     $visitorSubject = "Email Verification Code - www.srilankaproperties.lk";
 
     // Compose a simple HTML email message
@@ -31,7 +31,7 @@ if ($_POST['action'] == 'send_email_verification') {
     $message .= '<p>Thanks & Best Regards!.. <br/> www.srilankaproperties.lk<p/>';
     $message .= '<small>*Please do not reply to this email. This is an automated email & you will not receive a response.</small><br/>';
     $message .= '<span>Hotline: +94 77 455 4141 </span><br/>';
-    $message .= '<span>Email: noreply@srilankaproperties.lk</span>';
+    $message .= '<span>Email: info@srilankaproperties.lk</span>';
     $message .= '</div>';
     $message .= '</body>';
     $message .= '</html>';
@@ -98,7 +98,7 @@ if ($_POST['action'] == 'change_email') {
 
     $to = '<' . $MEMBER->email . '>';
     $subject = 'Email Verification Code - www.srilankaproperties.lk';
-    $from = 'SRI LANKA PROPERTY NOREPLY <noreply@srilankaproperties.lk>';
+    $from = 'SRI LANKA PROPERTY NOREPLY <info@srilankaproperties.lk>';
 
     // To send HTML mail, the Content-type header must be set
     $headers = 'MIME-Version: 1.0' . "\r\n";
